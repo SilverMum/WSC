@@ -67,6 +67,20 @@ body {
     margin: 0 auto;
 }
 
+.hero {
+    text-align: center;
+    padding: 120px 20px;
+    background-image: url('https://via.placeholder.com/1600x500');
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.hero h1,
+.hero p {
+    text-shadow: 0 2px 6px rgba(0,0,0,0.4);
+}
+
 /* ------------------------------
    CONTENT SECTIONS
 --------------------------------*/
