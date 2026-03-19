@@ -25,9 +25,9 @@ body {
 --------------------------------*/
 .main-nav {
     display: flex;
-    justify-content: flex-start; /* pulls nav links closer to center */
+    justify-content: flex-start;
     align-items: center;
-    gap: 60px; /* spacing between LOGO and nav links */
+    gap: 60px;
     padding: 20px 40px;
     background-color: #ffffff;
     border-bottom: 1px solid #ddd;
@@ -47,14 +47,14 @@ body {
     display: flex;
     gap: 35px;
     align-items: center;
-    margin-left: 40px; /* shifts nav links slightly left */
+    margin-left: 40px;
 }
 
 .nav-links a {
     text-decoration: underline;
     color: #222;
     font-weight: 600;
-    font-size: 2rem;
+    font-size: 2rem; /* DOUBLED SIZE */
     padding: 6px 10px;
     border-radius: 4px;
     transition: all 0.2s ease;
@@ -82,13 +82,13 @@ body {
 .dropdown-menu {
     display: none;
     position: absolute;
-    top: 32px;
+    top: 48px; /* raised to match larger text */
     left: 0;
     background-color: #ffffff;
     border: 1px solid #ddd;
     padding: 10px 0;
     list-style: none;
-    min-width: 180px;
+    min-width: 220px; /* wider for bigger text */
     box-shadow: 0 4px 8px rgba(0,0,0,0.15);
     z-index: 2000;
 }
@@ -99,10 +99,11 @@ body {
 
 .dropdown-menu li a {
     display: block;
-    padding: 8px 15px;
+    padding: 12px 20px;
     text-decoration: underline;
     color: #222;
     font-weight: 600;
+    font-size: 1.4rem; /* scaled to match new nav size */
     transition: all 0.2s ease;
 }
 
@@ -123,7 +124,7 @@ body {
     background-position: center;
     background-color: #e3e3e3;
     color: white;
-    scroll-margin-top: 0; /* prevents auto-scroll offset */
+    scroll-margin-top: 0;
 }
 
 .hero h1,
