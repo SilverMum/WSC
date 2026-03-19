@@ -38,7 +38,6 @@ body {
     font-weight: bold;
 }
 
-/* NAVIGATION LINKS — HORIZONTAL + BUTTON FEEL */
 .nav-links {
     list-style: none;
     display: flex;
@@ -185,8 +184,16 @@ footer {
 /* ------------------------------
    LOGIN PAGE STYLING
 --------------------------------*/
+.login-page-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+}
+
 .login-form {
     max-width: 400px;
+    width: 100%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -195,7 +202,6 @@ footer {
 
 .login-form label {
     font-weight: 600;
-    text-align: left;
 }
 
 .login-form input {
