@@ -57,7 +57,7 @@ body {
     text-decoration: underline;
     color: #222;
     font-weight: 600;
-    font-size: 1.5rem; /* BIG NAV TEXT */
+    font-size: 2rem; /* BIG NAV TEXT */
     padding: 6px 10px;
     border-radius: 4px;
     transition: all 0.2s ease;
