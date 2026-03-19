@@ -50,7 +50,7 @@ body {
     display: flex;
     gap: 45px;
     align-items: center;
-    padding-right: 40px; /* shifts nav links further right */
+    padding-right: 40px;
 }
 
 .nav-links a {
@@ -71,7 +71,7 @@ body {
 }
 
 /* ------------------------------
-   DROPDOWN MENU — ADJUSTED FOR LARGER TEXT
+   DROPDOWN MENU — UPDATED
 --------------------------------*/
 .dropdown {
     position: relative;
@@ -82,6 +82,7 @@ body {
     cursor: pointer;
 }
 
+/* Base dropdown menu styling */
 .dropdown-menu {
     display: none;
     position: absolute;
@@ -96,7 +97,13 @@ body {
     z-index: 2000;
 }
 
+/* Show menu when hovering over parent */
 .dropdown:hover > .dropdown-menu {
+    display: block;
+}
+
+/* ⭐ KEEP MENU OPEN WHEN HOVERING INSIDE IT ⭐ */
+.dropdown-menu:hover {
     display: block;
 }
 
