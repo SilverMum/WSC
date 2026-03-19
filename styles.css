@@ -57,7 +57,7 @@ body {
     text-decoration: underline;
     color: #222;
     font-weight: 600;
-    font-size: 1rem; /* BIG NAV TEXT */
+    font-size: 1rem;
     padding: 6px 10px;
     border-radius: 4px;
     transition: all 0.2s ease;
@@ -246,4 +246,27 @@ footer {
 .login-links a {
     text-decoration: underline;
     font-size: 0.9rem;
+}
+
+/* ------------------------------
+   KITCHEN SECTION LAYOUT
+--------------------------------*/
+.kitchen-layout {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.kitchen-badge {
+    max-width: 220px;
+    height: auto;
+}
+
+.kitchen-description {
+    font-size: 1.2rem;
+    color: #444;
+    max-width: 500px;
+    line-height: 1.6;
+    text-align: left;
 }
