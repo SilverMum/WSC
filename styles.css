@@ -64,12 +64,8 @@ body {
 }
 
 /* ------------------------------
-   DROPDOWN MENU
---------------------------------*/
-/* ------------------------------
    DROPDOWN MENU — FIXED BEHAVIOR
 --------------------------------*/
-
 .dropdown {
     position: relative;
     display: inline-block; /* prevents full-width hover area */
