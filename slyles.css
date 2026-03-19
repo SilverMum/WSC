@@ -7,6 +7,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth; /* Smooth scrolling enabled */
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
@@ -24,6 +28,9 @@ body {
     padding: 20px 40px;
     background-color: #ffffff;
     border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .logo {
