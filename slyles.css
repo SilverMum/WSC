@@ -52,8 +52,17 @@ body {
 --------------------------------*/
 .hero {
     text-align: center;
-    padding: 100px 20px;
-    background-color: #e3e3e3; /* Placeholder background */
+    padding: 120px 20px;
+    background-image: url('https://via.placeholder.com/1600x500');
+    background-size: cover;
+    background-position: center;
+    background-color: #e3e3e3; /* fallback if image fails */
+    color: white;
+}
+
+.hero h1,
+.hero p {
+    text-shadow: 0 2px 6px rgba(0,0,0,0.4);
 }
 
 .hero h1 {
@@ -65,20 +74,6 @@ body {
     font-size: 1.2rem;
     max-width: 600px;
     margin: 0 auto;
-}
-
-.hero {
-    text-align: center;
-    padding: 120px 20px;
-    background-image: url('https://via.placeholder.com/1600x500');
-    background-size: cover;
-    background-position: center;
-    color: white;
-}
-
-.hero h1,
-.hero p {
-    text-shadow: 0 2px 6px rgba(0,0,0,0.4);
 }
 
 /* ------------------------------
