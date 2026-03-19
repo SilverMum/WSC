@@ -68,14 +68,13 @@ body {
 --------------------------------*/
 .dropdown {
     position: relative;
-    display: inline-block; /* prevents full-width hover area */
+    display: inline-block;
 }
 
 .dropdown > a {
     cursor: pointer;
 }
 
-/* Hide menu until hovering directly over the parent */
 .dropdown-menu {
     display: none;
     position: absolute;
@@ -90,12 +89,10 @@ body {
     z-index: 2000;
 }
 
-/* Show ONLY when hovering over the dropdown parent */
 .dropdown:hover > .dropdown-menu {
     display: block;
 }
 
-/* Dropdown link styling */
 .dropdown-menu li a {
     display: block;
     padding: 8px 15px;
@@ -105,7 +102,6 @@ body {
     transition: all 0.2s ease;
 }
 
-/* Hover glow */
 .dropdown-menu li a:hover {
     background-color: #eaeaea;
     color: #000;
