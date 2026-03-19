@@ -9,6 +9,8 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 0 !important;
+    scroll-margin-top: 0 !important;
 }
 
 body {
@@ -23,8 +25,9 @@ body {
 --------------------------------*/
 .main-nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start; /* pulls nav links closer to center */
     align-items: center;
+    gap: 60px; /* spacing between LOGO and nav links */
     padding: 20px 40px;
     background-color: #ffffff;
     border-bottom: 1px solid #ddd;
@@ -38,11 +41,13 @@ body {
     font-weight: bold;
 }
 
+/* NAVIGATION LINKS — HORIZONTAL + BUTTON FEEL */
 .nav-links {
     list-style: none;
     display: flex;
     gap: 35px;
     align-items: center;
+    margin-left: 40px; /* shifts nav links slightly left */
 }
 
 .nav-links a {
@@ -118,6 +123,7 @@ body {
     background-position: center;
     background-color: #e3e3e3;
     color: white;
+    scroll-margin-top: 0; /* prevents auto-scroll offset */
 }
 
 .hero h1,
