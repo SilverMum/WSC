@@ -79,19 +79,40 @@ body {
 /* ------------------------------
    CONTENT SECTIONS
 --------------------------------*/
+
+/* Alternating background colors for readability */
+.content-section:nth-of-type(odd) {
+    background-color: #ffffff;
+}
+
+.content-section:nth-of-type(even) {
+    background-color: #f0f0f0;
+}
+
+/* Section spacing + layout */
 .content-section {
-    padding: 60px 20px;
+    padding: 70px 20px;
     max-width: 900px;
     margin: 0 auto;
+    border-bottom: 1px solid #ddd;
 }
 
+/* Section titles */
 .content-section h2 {
-    font-size: 2rem;
-    margin-bottom: 15px;
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
 }
 
+/* Section text */
 .content-section p {
-    font-size: 1.1rem;
+    font-size: 1.15rem;
+    line-height: 1.7;
+    text-align: center;
+    color: #444;
+    max-width: 700px;
+    margin: 0 auto;
 }
 
 /* ------------------------------
