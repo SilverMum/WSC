@@ -27,7 +27,7 @@ body {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    gap: 60px;
+    gap: 80px; /* pushes nav links slightly right */
     padding: 20px 40px;
     background-color: #ffffff;
     border-bottom: 1px solid #ddd;
@@ -45,16 +45,16 @@ body {
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 35px;
+    gap: 45px; /* wider spacing for larger text */
     align-items: center;
-    margin-left: 40px;
+    margin-left: 60px; /* shifts nav links to the right */
 }
 
 .nav-links a {
     text-decoration: underline;
     color: #222;
     font-weight: 600;
-    font-size: 2rem; /* DOUBLED SIZE */
+    font-size: 2.5rem; /* increased from 2rem */
     padding: 6px 10px;
     border-radius: 4px;
     transition: all 0.2s ease;
@@ -68,7 +68,7 @@ body {
 }
 
 /* ------------------------------
-   DROPDOWN MENU — FIXED BEHAVIOR
+   DROPDOWN MENU — ADJUSTED FOR LARGER TEXT
 --------------------------------*/
 .dropdown {
     position: relative;
@@ -82,13 +82,13 @@ body {
 .dropdown-menu {
     display: none;
     position: absolute;
-    top: 48px; /* raised to match larger text */
+    top: 60px; /* increased to match taller nav text */
     left: 0;
     background-color: #ffffff;
     border: 1px solid #ddd;
     padding: 10px 0;
     list-style: none;
-    min-width: 220px; /* wider for bigger text */
+    min-width: 260px; /* wider for bigger text */
     box-shadow: 0 4px 8px rgba(0,0,0,0.15);
     z-index: 2000;
 }
@@ -99,11 +99,11 @@ body {
 
 .dropdown-menu li a {
     display: block;
-    padding: 12px 20px;
+    padding: 14px 22px;
     text-decoration: underline;
     color: #222;
     font-weight: 600;
-    font-size: 1.4rem; /* scaled to match new nav size */
+    font-size: 1.6rem; /* scaled up to match new nav size */
     transition: all 0.2s ease;
 }
 
