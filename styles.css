@@ -25,15 +25,18 @@ body {
 --------------------------------*/
 .main-nav {
     display: flex;
-    justify-content: flex-start;
     align-items: center;
-    gap: 80px; /* pushes nav links slightly right */
     padding: 20px 40px;
     background-color: #ffffff;
     border-bottom: 1px solid #ddd;
     position: sticky;
     top: 0;
     z-index: 1000;
+}
+
+/* FLEX SPACER — pushes nav links to the right */
+.nav-spacer {
+    flex: 1;
 }
 
 .logo {
@@ -45,16 +48,16 @@ body {
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 45px; /* wider spacing for larger text */
+    gap: 45px;
     align-items: center;
-    margin-left: 60px; /* shifts nav links to the right */
+    padding-right: 40px; /* shifts nav links further right */
 }
 
 .nav-links a {
     text-decoration: underline;
     color: #222;
     font-weight: 600;
-    font-size: 2.5rem; /* increased from 2rem */
+    font-size: 2.5rem; /* BIG NAV TEXT */
     padding: 6px 10px;
     border-radius: 4px;
     transition: all 0.2s ease;
@@ -82,13 +85,13 @@ body {
 .dropdown-menu {
     display: none;
     position: absolute;
-    top: 60px; /* increased to match taller nav text */
+    top: 60px;
     left: 0;
     background-color: #ffffff;
     border: 1px solid #ddd;
     padding: 10px 0;
     list-style: none;
-    min-width: 260px; /* wider for bigger text */
+    min-width: 260px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.15);
     z-index: 2000;
 }
@@ -103,7 +106,7 @@ body {
     text-decoration: underline;
     color: #222;
     font-weight: 600;
-    font-size: 1.6rem; /* scaled up to match new nav size */
+    font-size: 1.6rem;
     transition: all 0.2s ease;
 }
 
