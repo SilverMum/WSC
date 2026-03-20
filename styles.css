@@ -34,7 +34,6 @@ body {
     z-index: 1000;
 }
 
-/* FLEX SPACER — pushes nav links to the right */
 .nav-spacer {
     flex: 1;
 }
@@ -44,7 +43,7 @@ body {
     font-weight: bold;
 }
 
-/* NAVIGATION LINKS — HORIZONTAL + BUTTON FEEL */
+/* NAVIGATION LINKS */
 .nav-links {
     list-style: none;
     display: flex;
@@ -82,11 +81,10 @@ body {
     cursor: pointer;
 }
 
-/* Base dropdown menu styling */
 .dropdown-menu {
     display: none;
     position: absolute;
-    top: 28px;
+    top: 28px; /* adjusted to remove hover gap */
     left: 0;
     background-color: #ffffff;
     border: 1px solid #ddd;
@@ -97,12 +95,10 @@ body {
     z-index: 2000;
 }
 
-/* Show menu when hovering over parent */
 .dropdown:hover > .dropdown-menu {
     display: block;
 }
 
-/* ⭐ KEEP MENU OPEN WHEN HOVERING INSIDE IT ⭐ */
 .dropdown-menu:hover {
     display: block;
 }
@@ -113,7 +109,7 @@ body {
     text-decoration: underline;
     color: #222;
     font-weight: 600;
-    font-size: 1rem;
+    font-size: 1rem; /* unified with nav */
     transition: all 0.2s ease;
 }
 
@@ -142,9 +138,10 @@ body {
     text-shadow: 0 2px 6px rgba(0,0,0,0.4);
 }
 
+/* ⭐ Updated hero title size + spacing */
 .hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 15px;
+    font-size: 3.5rem; /* increased by 1rem */
+    margin-bottom: 35px; /* extra spacing above pledge */
 }
 
 .hero p {
@@ -199,7 +196,7 @@ footer {
 }
 
 /* ------------------------------
-   LOGIN PAGE STYLING
+   LOGIN PAGE
 --------------------------------*/
 .login-page-wrapper {
     display: flex;
