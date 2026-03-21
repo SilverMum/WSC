@@ -41,17 +41,14 @@ body {
 .logo {
     font-size: 1.5rem;
     font-weight: bold;
-
-    /* ⭐ Optional but recommended: centers the image vertically */
     display: flex;
     align-items: center;
 }
 
-/* ⭐ NEW — Logo image styling */
 .logo img {
-    height: 60px;      /* Perfect height for your nav bar */
-    width: auto;       /* Keeps proportions correct */
-    display: block;    /* Removes extra spacing */
+    height: 60px;
+    width: auto;
+    display: block;
 }
 
 /* NAVIGATION LINKS */
@@ -95,7 +92,7 @@ body {
 .dropdown-menu {
     display: none;
     position: absolute;
-    top: 28px; /* adjusted to remove hover gap */
+    top: 28px;
     left: 0;
     background-color: #ffffff;
     border: 1px solid #ddd;
@@ -120,7 +117,7 @@ body {
     text-decoration: underline;
     color: #222;
     font-weight: 600;
-    font-size: 1rem; /* unified with nav */
+    font-size: 1rem;
     transition: all 0.2s ease;
 }
 
@@ -149,16 +146,27 @@ body {
     text-shadow: 0 2px 6px rgba(0,0,0,0.4);
 }
 
-/* ⭐ Updated hero title size + spacing */
 .hero h1 {
-    font-size: 3.5rem; /* increased by 1rem */
-    margin-bottom: 35px; /* extra spacing above pledge */
+    font-size: 3.5rem;
+    margin-bottom: 35px;
 }
 
 .hero p {
     font-size: 1.2rem;
     max-width: 600px;
     margin: 0 auto;
+}
+
+/* ⭐ NEW — Facebook button under pledge */
+.facebook-button {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.facebook-button img {
+    height: 60px;
+    width: auto;
+    display: inline-block;
 }
 
 /* ------------------------------
