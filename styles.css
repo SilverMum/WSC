@@ -168,7 +168,7 @@ body {
 
 .header-underline img {
     width: 100%;
-    max-width: 1600px;     /* keeps it crisp and proportional */
+    max-width: 1200px;     /* keeps it crisp and proportional */
     height: auto;
     display: block;
     margin: 0 auto;
