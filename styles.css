@@ -158,6 +158,23 @@ body {
 }
 
 /* ------------------------------
+   HEADER UNDERLINE IMAGE (NEW)
+--------------------------------*/
+.header-underline {
+    text-align: center;
+    margin-top: 20px;      /* space between title and image */
+    margin-bottom: 40px;   /* space between image and pledge */
+}
+
+.header-underline img {
+    width: 100%;
+    max-width: 1600px;     /* keeps it crisp and proportional */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* ------------------------------
    FACEBOOK BUTTON UNDER PLEDGE
 --------------------------------*/
 .facebook-button {
