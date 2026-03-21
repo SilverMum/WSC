@@ -157,7 +157,9 @@ body {
     margin: 0 auto;
 }
 
-/* ⭐ NEW — Facebook button under pledge */
+/* ------------------------------
+   FACEBOOK BUTTON UNDER PLEDGE
+--------------------------------*/
 .facebook-button {
     text-align: center;
     margin-top: 40px;
@@ -167,6 +169,13 @@ body {
     height: 60px;
     width: auto;
     display: inline-block;
+    transition: all 0.2s ease;
+}
+
+/* ⭐ Clean hover effect */
+.facebook-button img:hover {
+    transform: translateY(-3px);
+    filter: brightness(1.1);
 }
 
 /* ------------------------------
