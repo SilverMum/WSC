@@ -41,6 +41,17 @@ body {
 .logo {
     font-size: 1.5rem;
     font-weight: bold;
+
+    /* ⭐ Optional but recommended: centers the image vertically */
+    display: flex;
+    align-items: center;
+}
+
+/* ⭐ NEW — Logo image styling */
+.logo img {
+    height: 60px;      /* Perfect height for your nav bar */
+    width: auto;       /* Keeps proportions correct */
+    display: block;    /* Removes extra spacing */
 }
 
 /* NAVIGATION LINKS */
