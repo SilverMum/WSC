@@ -278,3 +278,24 @@ footer {
     line-height: 1.6;
     text-align: left;
 }
+
+/* ------------------------------
+   SLIDESHOW
+--------------------------------*/
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.slideshow-container img {
+    width: 100%;
+    height: auto;
+    display: none;
+    border-radius: 10px;
+}
+
+.slideshow-container img.active {
+    display: block;
+}
