@@ -55,7 +55,7 @@ body {
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 45px;
+    gap: 40px;
     align-items: center;
     padding-right: 40px;
 }
