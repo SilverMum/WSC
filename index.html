@@ -51,20 +51,24 @@
         <img src="images/Sportsmen's-Header.png" alt="Header underline image">
     </div>
 
-    <!-- ⭐ PLEDGE TITLE WITH OFFSET SHADOW -->
-    <div style="position: relative; display: block; width: 100%; text-align: center; margin-top: 10px;">
+    <!-- ⭐ PLEDGE TITLE WITH PERFECT 0.2px OFFSET SHADOW -->
+    <div style="position: relative; text-align: center; margin-top: 10px;">
+        
+        <!-- Grey shadow layer -->
         <span style="
             position: absolute;
-            top: 3px;
-            left: 3px;
-            width: 100%;
+            top: 0.2px;
+            left: 50%;
+            transform: translateX(calc(-50% + 0.2px));
             color: #888;
             font-size: 2rem;
             font-weight: 700;
+            pointer-events: none;
         ">
             Conservation Pledge
         </span>
 
+        <!-- Main red text -->
         <span style="
             position: relative;
             color: #e60000;
@@ -75,22 +79,27 @@
         </span>
     </div>
 
-    <!-- ⭐ PLEDGE TEXT WITH OFFSET SHADOW -->
+    <!-- ⭐ PLEDGE TEXT WITH PERFECT 0.2px OFFSET SHADOW -->
     <div style="position: relative; max-width: 800px; margin: 25px auto 0; text-align: center;">
+        
+        <!-- Grey shadow layer -->
         <p style="
             position: absolute;
-            top: 3px;
-            left: 3px;
-            width: 100%;
+            top: 0.2px;
+            left: 50%;
+            transform: translateX(calc(-50% + 0.2px));
             color: #888;
             font-size: 1.5rem;
             line-height: 1.7;
+            width: 100%;
+            pointer-events: none;
         ">
             I give my pledge as a Canadian, to save and faithfully defend from waste, 
             the natural resources of my country, its air, soil and minerals, its waters, 
             forests and wildlife.
         </p>
 
+        <!-- Main green text -->
         <p style="
             position: relative;
             color: #228b22;
@@ -103,7 +112,7 @@
         </p>
     </div>
 
-    <!-- FACEBOOK BUTTON MOVED UP -->
+    <!-- FACEBOOK BUTTON -->
     <div class="facebook-button" style="margin-top:10px;">
         <a href="https://www.facebook.com/groups/100671860008159/" target="_blank">
             <img src="images/facebook-button.png" alt="Find us on Facebook">
@@ -111,7 +120,7 @@
     </div>
 </section>
 
-<!-- ⭐ 6‑IMAGE ROTATING SLIDESHOW -->
+<!-- ⭐ SLIDESHOW -->
 <section class="content-section" id="slideshow">
     <div class="slideshow-container">
         <img src="images/slide1.jpg" class="slide active">
@@ -123,7 +132,7 @@
     </div>
 </section>
 
-<!-- ⭐ NEW IMAGE UNDER SLIDESHOW -->
+<!-- ⭐ IMAGE UNDER SLIDESHOW -->
 <section class="content-section" id="post-slideshow-image">
     <img src="images/519-Band.png" alt="519 Band" class="below-slideshow-img">
 </section>
@@ -163,7 +172,7 @@
     <p>© 2024 Windsor Sportsmen’s Club. All rights reserved.</p>
 </footer>
 
-<!-- ⭐ UPDATED SLIDESHOW SPEED -->
+<!-- ⭐ SLIDESHOW SPEED -->
 <script>
 let slides = document.querySelectorAll('.slide');
 let index = 0;
@@ -174,7 +183,7 @@ function showNextSlide() {
     slides[index].classList.add('active');
 }
 
-setInterval(showNextSlide, 5000); // now 5 seconds
+setInterval(showNextSlide, 5000);
 </script>
 
 </body>
