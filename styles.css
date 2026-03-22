@@ -161,7 +161,7 @@ body {
 --------------------------------*/
 .facebook-button {
     text-align: center;
-    margin-top: 10px; /* moved up */
+    margin-top: 10px;
 }
 
 .facebook-button img {
@@ -303,4 +303,15 @@ footer {
 .slideshow-container img.active {
     display: block;
     opacity: 1;
+}
+
+/* ------------------------------
+   IMAGE UNDER SLIDESHOW
+--------------------------------*/
+.below-slideshow-img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 900px;
+    border-radius: 10px;
 }
