@@ -161,7 +161,7 @@ body {
 --------------------------------*/
 .facebook-button {
     text-align: center;
-    margin-top: 10px;
+    margin-top: 10px; /* moved up */
 }
 
 .facebook-button img {
@@ -294,10 +294,8 @@ footer {
     height: auto;
     display: none;
     border-radius: 10px;
-}
 
-/* Fade transition */
-.slideshow-container img {
+    /* Fade transition */
     opacity: 0;
     transition: opacity 1s ease-in-out;
 }
