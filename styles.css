@@ -210,12 +210,20 @@ body {
 /* ------------------------------
    FOOTER
 --------------------------------*/
-footer {
+.site-footer {
+    background-color: #1877F2; /* Facebook blue */
+    color: #ffffff; /* white text */
     text-align: center;
-    padding: 20px;
-    background-color: #ffffff;
-    border-top: 1px solid #ddd;
+    padding: 25px 10px;
+    width: 100%;
     margin-top: 40px;
+}
+
+.site-footer p {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0;
+    color: #ffffff; /* ensure text stays white */
 }
 
 /* ------------------------------
