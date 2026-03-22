@@ -115,7 +115,7 @@ body {
 --------------------------------*/
 .hero {
     text-align: center;
-    padding: 35px 20px;
+    padding: 30px 20px; /* REDUCED BY 5PX */
     background-image: url('https://via.placeholder.com/1600x500');
     background-size: cover;
     background-position: center;
@@ -211,8 +211,8 @@ body {
    FOOTER
 --------------------------------*/
 .site-footer {
-    background-color: #1877F2; /* Facebook blue */
-    color: #ffffff; /* white text */
+    background-color: #1877F2;
+    color: #ffffff;
     text-align: center;
     padding: 25px 10px;
     width: 100%;
@@ -223,7 +223,7 @@ body {
     font-size: 1.1rem;
     font-weight: 600;
     margin: 0;
-    color: #ffffff; /* ensure text stays white */
+    color: #ffffff;
 }
 
 /* ------------------------------
@@ -294,7 +294,7 @@ body {
     display: block;
     margin: 0 auto;
     width: 100%;
-    max-width: 675px; /* 25% smaller */
+    max-width: 675px;
     border-radius: 10px;
 }
 
@@ -303,8 +303,6 @@ body {
     height: auto;
     display: none;
     border-radius: 10px;
-
-    /* Fade transition */
     opacity: 0;
     transition: opacity 1s ease-in-out;
 }
