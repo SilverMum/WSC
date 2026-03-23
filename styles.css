@@ -115,7 +115,7 @@ body {
 --------------------------------*/
 .hero {
     text-align: center;
-    padding: 20px 20px; /* REDUCED BY 5PX */
+    padding: 20px 20px 8px 20px; /* ⭐ tightened bottom padding */
     background-image: url('https://via.placeholder.com/1600x500');
     background-size: cover;
     background-position: center;
@@ -161,7 +161,7 @@ body {
 --------------------------------*/
 .facebook-button {
     text-align: center;
-    margin-top: 5px;
+    margin-top: 0; /* ⭐ tightened spacing above button */
 }
 
 .facebook-button img {
