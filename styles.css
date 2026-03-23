@@ -156,7 +156,7 @@ body {
 --------------------------------*/
 .facebook-button {
     text-align: center;
-    margin-top: 0;
+    margin-top: -40px; /* ⭐ moved upward */
 }
 
 .facebook-button img {
@@ -200,7 +200,7 @@ body {
 --------------------------------*/
 .range-layout {
     display: flex;
-    align-items: center;
+    align-items: flex-start; /* ⭐ logo moves to top-left */
     justify-content: center;
     gap: 40px;
     margin-top: 20px;
@@ -213,22 +213,12 @@ body {
 }
 
 .range-text {
-    text-align: center;
+    text-align: left; /* ⭐ default left alignment */
 }
 
-.range-text h2 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #e60000;
-    margin-bottom: 10px;
-}
-
+.range-text h2,
 .range-text h3 {
-    font-size: 2rem;
-    font-weight: 700;
-    color: #e60000;
-    line-height: 1.3;
-    margin-bottom: 20px;
+    text-align: center; /* ⭐ headings centered */
 }
 
 .range-link {
@@ -248,7 +238,7 @@ body {
 --------------------------------*/
 .range-details {
     margin-top: 40px;
-    margin-bottom: 40px; /* ⭐ Added breathing room */
+    margin-bottom: 40px; /* ⭐ added breathing room */
     padding: 20px;
 }
 
@@ -268,7 +258,12 @@ body {
     color: #000;
 }
 
+.range-details-body p {
+    text-align: left; /* ⭐ paragraphs left aligned */
+}
+
 .range-details-body ul {
+    text-align: center; /* ⭐ lists centered */
     margin: 15px 0 20px 0;
     padding-left: 25px;
 }
@@ -363,7 +358,7 @@ body {
    PARTNERSHIP IMAGE
 --------------------------------*/
 #partnership {
-    margin-top: 40px; /* ⭐ Added spacing above */
+    margin-top: 40px; /* ⭐ spacing above */
 }
 
 .partnership-img {
