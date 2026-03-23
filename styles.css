@@ -214,12 +214,12 @@ body {
     filter: brightness(1.1);
 }
 
-/* ⭐ NEW — Facebook note text */
+/* ⭐ Facebook note */
 .facebook-note {
     text-align: center;
     font-size: 1.4rem;
     margin-top: 10px;
-    color: #3B8BFF; /* baby blue */
+    color: #3B8BFF;
     font-weight: 600;
 }
 
@@ -320,14 +320,13 @@ body {
     text-align: left;
 }
 
-/* ⭐ NEW: Make headings red */
 .range-text h2,
 .range-text h3 {
     text-align: center;
     color: #e60000;
 }
 
-/* ⭐ NEW: Center the link */
+/* Center the link */
 .range-link {
     font-size: 1.4rem;
     font-weight: 700;
@@ -367,26 +366,20 @@ body {
     color: #000;
 }
 
-/* ⭐ NEW: Center all section titles */
-.range-details-body p strong {
-    display: block;
-    text-align: center;
-}
-
-/* ⭐ Keep normal paragraphs left-aligned */
+/* Picture 1 + Picture 2 fixes */
 .range-details-body p {
     text-align: left;
+    margin-bottom: 10px;
 }
 
-/* ⭐ Keep lists centered */
-.range-details-body ul {
-    text-align: center;
-    margin: 15px 0 20px 0;
+/* Picture 3 fixes */
+.improvements-list {
+    text-align: left !important;
     padding-left: 25px;
 }
 
-.range-details-body li {
-    margin-bottom: 6px;
+.improvements-list li {
+    margin-bottom: 8px;
 }
 
 /* ------------------------------
