@@ -358,6 +358,16 @@ body {
     text-align: left;
 }
 
+/* PARTNERSHIP IMAGE */
+.partnership-img {
+    display: block;
+    margin: 0 auto 40px auto;
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    border-radius: 10px;
+}
+
 /* ------------------------------
    SLIDESHOW
 --------------------------------*/
