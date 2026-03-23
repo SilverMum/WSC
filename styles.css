@@ -248,6 +248,7 @@ body {
 --------------------------------*/
 .range-details {
     margin-top: 40px;
+    margin-bottom: 40px; /* ⭐ Added breathing room */
     padding: 20px;
 }
 
@@ -358,7 +359,13 @@ body {
     text-align: left;
 }
 
-/* PARTNERSHIP IMAGE */
+/* ------------------------------
+   PARTNERSHIP IMAGE
+--------------------------------*/
+#partnership {
+    margin-top: 40px; /* ⭐ Added spacing above */
+}
+
 .partnership-img {
     display: block;
     margin: 0 auto 40px auto;
