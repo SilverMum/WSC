@@ -214,7 +214,7 @@ body {
     filter: brightness(1.1);
 }
 
-/* ⭐ Facebook note */
+/* ⭐ Facebook note moved upward */
 .facebook-note {
     text-align: center;
     font-size: 1.4rem;
@@ -299,6 +299,12 @@ body {
     text-align: left;
 }
 
+/* ⭐ Kitchen page only — 4× bigger logo */
+#kitchen-page .kitchen-badge {
+    transform: scale(4);
+    transform-origin: top left;
+}
+
 /* ------------------------------
    RANGE REOPEN SECTION
 --------------------------------*/
@@ -326,7 +332,6 @@ body {
     color: #e60000;
 }
 
-/* Center the link */
 .range-link {
     font-size: 1.4rem;
     font-weight: 700;
@@ -366,13 +371,11 @@ body {
     color: #000;
 }
 
-/* Picture 1 + Picture 2 fixes */
 .range-details-body p {
     text-align: left;
     margin-bottom: 10px;
 }
 
-/* Picture 3 fixes */
 .improvements-list {
     text-align: left !important;
     padding-left: 25px;
