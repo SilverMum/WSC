@@ -15,7 +15,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
     color: #222;
-    background-color: #f0f0f0; /* softer grey */
+    background-color: #f0f0f0;
 }
 
 /* ------------------------------
@@ -118,25 +118,12 @@ body {
     color: white;
 }
 
-.hero h1,
-.hero p {
+.hero-title {
+    font-size: 3.5rem;
+    margin-bottom: 35px;
     text-shadow: 0 2px 6px rgba(0,0,0,0.4);
 }
 
-.hero h1 {
-    font-size: 3.5rem;
-    margin-bottom: 35px;
-}
-
-.hero p {
-    font-size: 1.2rem;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-/* ------------------------------
-   HEADER UNDERLINE IMAGE
---------------------------------*/
 .header-underline {
     text-align: center;
     margin-top: 20px;
@@ -152,11 +139,68 @@ body {
 }
 
 /* ------------------------------
+   PLEDGE TEXT
+--------------------------------*/
+.pledge-title-wrapper {
+    position: relative;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.pledge-title-gold {
+    position: absolute;
+    top: 0.5px;
+    left: 0.5px;
+    color: #d4a017;
+    font-size: 2rem;
+    font-weight: 700;
+    width: 100%;
+    pointer-events: none;
+}
+
+.pledge-title-green {
+    position: relative;
+    color: #e60000;
+    font-size: 2rem;
+    font-weight: 700;
+    width: 100%;
+    display: inline-block;
+}
+
+.pledge-paragraph-wrapper {
+    position: relative;
+    max-width: 800px;
+    margin: 15px auto 0;
+    text-align: center;
+}
+
+.pledge-paragraph-gold {
+    position: absolute;
+    top: 0.5px;
+    left: 0.5px;
+    color: #d4a017;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.7;
+    width: 100%;
+    pointer-events: none;
+}
+
+.pledge-paragraph-green {
+    position: relative;
+    color: #32a852;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.7;
+    width: 100%;
+}
+
+/* ------------------------------
    FACEBOOK BUTTON
 --------------------------------*/
 .facebook-button {
     text-align: center;
-    margin-top: -40px; /* ⭐ moved upward */
+    margin-top: -40px;
 }
 
 .facebook-button img {
@@ -181,195 +225,19 @@ body {
     border-bottom: 1px solid #ddd;
 }
 
-.content-section h2 {
+.section-title {
     font-size: 2.2rem;
     margin-bottom: 20px;
     text-align: center;
 }
 
-.content-section p {
+.centered-text {
+    text-align: center;
     font-size: 1.15rem;
     line-height: 1.7;
-    text-align: center;
     max-width: 700px;
     margin: 0 auto;
 }
-
-/* ------------------------------
-   RANGE REOPEN SECTION
---------------------------------*/
-.range-layout {
-    display: flex;
-    align-items: flex-start; /* ⭐ logo moves to top-left */
-    justify-content: center;
-    gap: 40px;
-    margin-top: 20px;
-}
-
-.range-logo {
-    max-width: 220px;
-    width: 100%;
-    height: auto;
-}
-
-.range-text {
-    text-align: left; /* ⭐ default left alignment */
-}
-
-.range-text h2,
-.range-text h3 {
-    text-align: center; /* ⭐ headings centered */
-}
-
-.range-link {
-    font-size: 1.4rem;
-    font-weight: 700;
-    text-decoration: underline;
-    color: #000;
-    transition: 0.2s ease;
-}
-
-.range-link:hover {
-    color: #e60000;
-}
-
-/* ------------------------------
-   RANGE DETAILS BLOCK
---------------------------------*/
-.range-details {
-    margin-top: 40px;
-    margin-bottom: 40px; /* ⭐ added breathing room */
-    padding: 20px;
-}
-
-.range-details-title {
-    text-align: center;
-    font-size: 2rem;
-    font-weight: 700;
-    color: #e60000;
-    margin-bottom: 25px;
-}
-
-.range-details-body {
-    max-width: 800px;
-    margin: 0 auto;
-    font-size: 1.2rem;
-    line-height: 1.7;
-    color: #000;
-}
-
-.range-details-body p {
-    text-align: left; /* ⭐ paragraphs left aligned */
-}
-
-.range-details-body ul {
-    text-align: center; /* ⭐ lists centered */
-    margin: 15px 0 20px 0;
-    padding-left: 25px;
-}
-
-.range-details-body li {
-    margin-bottom: 6px;
-}
-
-/* ------------------------------
-   FOOTER
---------------------------------*/
-.site-footer {
-    background-color: #1877F2;
-    color: #ffffff;
-    text-align: center;
-    padding: 25px 10px;
-    width: 100%;
-    margin-top: 40px;
-}
-
-.site-footer p {
-    font-size: 1.1rem;
-    font-weight: 600;
-    margin: 0;
-    color: #ffffff;
-}
-
-/* ------------------------------
-   LOGIN PAGE
---------------------------------*/
-.login-page-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 70vh;
-}
-
-.login-form {
-    max-width: 400px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.login-form input {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-.login-btn {
-    padding: 10px;
-    background-color: #eaeaea;
-    border: none;
-    border-radius: 4px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.2s ease;
-}
-
-.login-btn:hover {
-    background-color: #d5d5d5;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.15);
-    transform: translateY(-2px);
-}
-
-/* ------------------------------
-   KITCHEN SECTION
---------------------------------*/
-.kitchen-layout {
-    display: flex;
-    align-items: flex-start;
-    gap: 40px;
-    margin-top: 30px;
-}
-
-.kitchen-badge {
-    max-width: 220px;
-    width: 100%;
-    height: auto;
-}
-
-.kitchen-description {
-    font-size: 1.2rem;
-    max-width: 500px;
-    line-height: 1.6;
-    text-align: left;
-}
-
-/* ------------------------------
-   PARTNERSHIP IMAGE
---------------------------------*/
-#partnership {
-    margin-top: 40px; /* ⭐ spacing above */
-}
-
-.partnership-img {
-    display: block;
-    margin: 0 auto 40px auto;
-    width: 100%;
-    max-width: 900px;
-    height: auto;
-    border-radius: 10px;
-}
-
 /* ------------------------------
    SLIDESHOW
 --------------------------------*/
@@ -396,4 +264,202 @@ body {
     width: 100%;
     max-width: 900px;
     border-radius: 10px;
+}
+
+/* ------------------------------
+   KITCHEN SECTION
+--------------------------------*/
+.kitchen-layout {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.kitchen-badge {
+    max-width: 220px;
+    width: 100%;
+    height: auto;
+}
+
+.kitchen-description {
+    font-size: 1.2rem;
+    max-width: 500px;
+    line-height: 1.6;
+    text-align: left;
+}
+
+/* ------------------------------
+   RANGE REOPEN SECTION
+--------------------------------*/
+.range-layout {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.range-logo {
+    max-width: 220px;
+    width: 100%;
+    height: auto;
+}
+
+.range-text {
+    text-align: left;
+}
+
+.range-text h2,
+.range-text h3 {
+    text-align: center;
+}
+
+.range-link {
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-decoration: underline;
+    color: #000;
+    transition: 0.2s ease;
+}
+
+.range-link:hover {
+    color: #e60000;
+}
+
+/* ------------------------------
+   RANGE DETAILS BLOCK
+--------------------------------*/
+.range-details {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding: 20px;
+}
+
+.range-details-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #e60000;
+    margin-bottom: 25px;
+}
+
+.range-details-body {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    line-height: 1.7;
+    color: #000;
+}
+
+.range-details-body p {
+    text-align: left;
+}
+
+.range-details-body ul {
+    text-align: center;
+    margin: 15px 0 20px 0;
+    padding-left: 25px;
+}
+
+.range-details-body li {
+    margin-bottom: 6px;
+}
+
+/* ------------------------------
+   EVENTS SECTION
+--------------------------------*/
+.event-title {
+    font-size: 3.5rem;
+    color: #e60000;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.event-time {
+    font-size: 3rem;
+    color: #e60000;
+    font-weight: 700;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.event-logo {
+    display: block;
+    margin: 0 auto 40px auto;
+    width: 400px;
+    max-width: 90%;
+}
+
+.event-image {
+    display: block;
+    margin: 0 auto;
+    width: 600px;
+    max-width: 90%;
+}
+
+/* ------------------------------
+   CONTACT SECTION
+--------------------------------*/
+.contact-text {
+    font-size: 1.5rem;
+    line-height: 1.7;
+    color: #000;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* ------------------------------
+   PARTNERSHIP IMAGE
+--------------------------------*/
+#partnership {
+    margin-top: 40px;
+}
+
+.partnership-img {
+    display: block;
+    margin: 0 auto 40px auto;
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* ------------------------------
+   ACTIVITIES SECTION
+--------------------------------*/
+.activities-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #000;
+    text-align: center;
+}
+
+.activities-text {
+    font-size: 1.5rem;
+    line-height: 1.8;
+    color: #000;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* ------------------------------
+   FOOTER
+--------------------------------*/
+.site-footer {
+    background-color: #1877F2;
+    color: #ffffff;
+    text-align: center;
+    padding: 25px 10px;
+    width: 100%;
+    margin-top: 40px;
+}
+
+.site-footer p {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0;
 }
