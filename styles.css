@@ -515,3 +515,27 @@ body {
     margin: 0 auto;
 }
 
+/* ------------------------------
+   PRIVATE EVENTS GALLERY
+--------------------------------*/
+.private-events-gallery {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.gallery-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.gallery-row img {
+    width: 100%;
+    max-width: 48%; /* ~380px inside an 800px area */
+    border-radius: 10px;
+    display: block;
+    object-fit: cover;
+}
+
