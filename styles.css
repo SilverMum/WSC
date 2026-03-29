@@ -149,8 +149,8 @@ body {
 
 .pledge-title-gold {
     position: absolute;
-    top: 20px;
-    left: 0.5px;
+    top: 25px;      /* was 20px → moved down 5px */
+    left: 5.5px;    /* was 0.5px → moved right 5px */
     color: #d4a017;
     font-size: 2rem;
     font-weight: 700;
@@ -177,8 +177,8 @@ body {
 
 .pledge-paragraph-gold {
     position: absolute;
-    top: 20px;
-    left: 0.5px;
+    top: 25px;      /* was 20px → moved down 5px */
+    left: 5.5px;    /* was 0.5px → moved right 5px */
     color: #d4a017;
     font-size: 1.5rem;
     font-weight: 700;
@@ -189,13 +189,13 @@ body {
 
 .pledge-paragraph-green {
     position: relative;
-    top: 20px; /* moves ONLY the green text down */
+    top: 20px;      /* your current value */
     color: #32a852;
     font-size: 1.5rem;
     font-weight: 700;
     line-height: 1.7;
     width: 100%;
-    margin-top: 0; /* allow top: to take effect */
+    margin-top: 0;
 }
 
 /* ------------------------------
