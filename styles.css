@@ -189,7 +189,7 @@ body {
 
 .pledge-paragraph-green {
     position: relative;
-    top: 15px; /* moves ONLY the green text down */
+    top: 20px; /* moves ONLY the green text down */
     color: #32a852;
     font-size: 1.5rem;
     font-weight: 700;
