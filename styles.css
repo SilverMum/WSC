@@ -508,9 +508,10 @@ body {
 }
 
 .private-events-text {
-    text-align: right;
+    text-align: center;
     font-size: 1.4rem;
     line-height: 1.7;
     max-width: 500px;
-    margin-left: auto;
+    margin: 0 auto;
 }
+
