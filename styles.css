@@ -239,6 +239,11 @@ body {
     text-align: center;
 }
 
+/* ⭐ ADDED — Contact title should be black */
+#contact .section-title {
+    color: black;
+}
+
 .centered-text {
     text-align: center;
     font-size: 1.15rem;
@@ -298,6 +303,12 @@ body {
     text-align: left;
 }
 
+/* ⭐ ADDED — Kitchen title + all kitchen text black */
+#kitchen .section-title,
+#kitchen .kitchen-description p {
+    color: black;
+}
+
 /* ⭐ Kitchen page only — scaled badge */
 #kitchen-page .kitchen-badge {
     transform: scale(1.2);
@@ -324,6 +335,12 @@ body {
 
 .range-text {
     text-align: center;
+}
+
+/* ⭐ ADDED — Range announcement text red */
+.range-text h2,
+.range-text h3 {
+    color: #e60000;
 }
 
 /* ------------------------------
