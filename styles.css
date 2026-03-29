@@ -221,7 +221,7 @@ body {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    top: 520px; /* starting position under button */
+    top: 720px; /* starting position under button */
     font-size: 1.4rem;
     color: #3B8BFF;
     font-weight: 600;
