@@ -214,7 +214,6 @@ body {
     filter: brightness(1.1);
 }
 
-/* ⭐ Facebook note moved up one more line */
 .facebook-note {
     text-align: center;
     font-size: 1.4rem;
@@ -299,9 +298,9 @@ body {
     text-align: left;
 }
 
-/* ⭐ Kitchen page only — 4× bigger logo */
+/* ⭐ Kitchen page only — scaled badge */
 #kitchen-page .kitchen-badge {
-    transform: scale(1.8);
+    transform: scale(1.2);
     transform-origin: top left;
 }
 
@@ -310,8 +309,8 @@ body {
 --------------------------------*/
 .range-layout {
     display: flex;
-    align-items: center;      /* centers logo + text vertically */
-    justify-content: center;  /* centers the pair horizontally */
+    align-items: center;
+    justify-content: center;
     gap: 40px;
     margin-top: 20px;
     text-align: center;
@@ -462,4 +461,39 @@ body {
     font-size: 1.1rem;
     font-weight: 600;
     margin: 0;
+}
+
+/* ------------------------------
+   ⭐ PRIVATE EVENTS LAYOUT
+--------------------------------*/
+.private-events-layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.pdf-box {
+    display: block;
+    max-width: 300px;
+}
+
+.pdf-image {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.pdf-image:hover {
+    transform: scale(1.05);
+}
+
+.private-events-text {
+    text-align: right;
+    font-size: 1.4rem;
+    line-height: 1.7;
+    max-width: 500px;
+    margin-left: auto;
 }
