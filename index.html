@@ -6,6 +6,7 @@
     <title>Windsor Sportsmen’s Club</title>
     <link rel="stylesheet" href="styles.css?v=8">
 </head>
+
 <body>
 
 <header>
@@ -17,8 +18,23 @@
         <div class="nav-spacer"></div>
 
         <ul class="nav-links">
+
+            <!-- HOME -->
             <li><a href="#hero">Home</a></li>
 
+            <!-- ⭐ NEW EVENTS DROPDOWN -->
+            <li class="dropdown">
+                <a href="#">Events ▾</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#events">Club Events</a></li>
+                    <li><a href="private-events.html">Private Events</a></li>
+                </ul>
+            </li>
+
+            <!-- KITCHEN -->
+            <li><a href="kitchen.html">Kitchen</a></li>
+
+            <!-- ⭐ GROUPS MOVED DOWN -->
             <li class="dropdown">
                 <a href="#">Groups ▾</a>
                 <ul class="dropdown-menu">
@@ -31,77 +47,66 @@
                 </ul>
             </li>
 
-            <li><a href="kitchen.html">Kitchen</a></li>
-            <li><a href="#events">Events</a></li>
+            <!-- CONTACT -->
             <li><a href="#contact">Contact</a></li>
 
+            <!-- LOGIN -->
             <li><a href="login.html">Login</a></li>
+
         </ul>
     </nav>
 </header>
 
 <main>
 
+<!-- HERO -->
 <section class="hero" id="hero">
-    <h1 class="hero-title">Welcome to the Windsor Sportsmen’s Club</h1>
+    <h1 class="hero-title">Windsor Sportsmen’s Club</h1>
 
     <div class="header-underline">
-        <img src="images/Sportsmen's-Header.png" alt="Header underline image">
+        <img src="images/underline.png" alt="Decorative underline">
     </div>
-
-    <!-- PLEDGE TITLE -->
-    <div class="pledge-title-wrapper">
-        <span class="pledge-title-gold">CONSERVATION PLEDGE</span>
-        <span class="pledge-title-green">CONSERVATION PLEDGE</span>
-    </div>
-
-    <!-- PLEDGE PARAGRAPH -->
-    <div class="pledge-paragraph-wrapper">
-        <div class="pledge-paragraph-gold">
-            I give my pledge as a Canadian, to save and faithfully defend from waste,
-            the natural resources of my country, its air, soil and minerals, its waters,
-            forests and wildlife.
-        </div>
-
-        <div class="pledge-paragraph-green">
-            I give my pledge as a Canadian, to save and faithfully defend from waste,
-            the natural resources of my country, its air, soil and minerals, its waters,
-            forests and wildlife.
-        </div>
-    </div>
-
-    <!-- FACEBOOK BUTTON -->
-    <div class="facebook-button">
-        <a href="https://www.facebook.com/groups/100671860008159/" target="_blank">
-            <img src="images/facebook-button.png" alt="Find us on Facebook">
-        </a>
-    </div>
-
-    <!-- FACEBOOK NOTE -->
-    <p class="facebook-note">
-        Follow us on Facebook for Up Coming Events and Restaurant Menu
-    </p>
-
 </section>
 
+<!-- PLEDGE -->
+<section class="content-section">
+    <div class="pledge-title-wrapper">
+        <div class="pledge-title-gold">OUR PLEDGE</div>
+        <div class="pledge-title-green">OUR PLEDGE</div>
+    </div>
+
+    <div class="pledge-paragraph-wrapper">
+        <div class="pledge-paragraph-gold">
+            We pledge to conserve wildlife, protect natural resources, and promote sportsmanship.
+        </div>
+        <div class="pledge-paragraph-green">
+            We pledge to conserve wildlife, protect natural resources, and promote sportsmanship.
+        </div>
+    </div>
+</section>
+
+<!-- FACEBOOK BUTTON -->
+<div class="facebook-button">
+    <a href="https://www.facebook.com" target="_blank">
+        <img src="images/facebook-button.png" alt="Facebook Button">
+    </a>
+</div>
+
+<p class="facebook-note">Follow us on Facebook for updates!</p>
+
 <!-- SLIDESHOW -->
-<section class="content-section" id="slideshow">
+<section class="content-section">
     <div class="slideshow-container">
         <img src="images/slide1.jpg" class="slide active">
         <img src="images/slide2.jpg" class="slide">
         <img src="images/slide3.jpg" class="slide">
-        <img src="images/slide4.jpg" class="slide">
-        <img src="images/slide5.jpg" class="slide">
-        <img src="images/slide6.jpg" class="slide">
     </div>
 </section>
 
 <!-- IMAGE UNDER SLIDESHOW -->
-<section class="content-section" id="post-slideshow-image-2">
-    <img src="images/519 BAND.png" alt="519 Band 2" class="below-slideshow-img">
-</section>
+<img src="images/below-slideshow.jpg" class="below-slideshow-img" alt="Decorative image">
 
-<!-- KITCHEN -->
+<!-- KITCHEN SECTION -->
 <section class="content-section" id="kitchen">
     <h2 class="section-title">Kitchen</h2>
 
@@ -149,7 +154,6 @@
 
     </div>
 
-    <!-- RANGE DETAILS BELOW (unchanged) -->
     <div class="range-details">
         <h2 class="range-details-title">Scheduled to be Updated</h2>
 
@@ -230,10 +234,9 @@
 
         </div>
     </div>
-
 </section>
 
-<!-- EVENTS -->
+<!-- EVENTS SECTION -->
 <section class="content-section" id="events">
 
     <h2 class="event-title">GENERAL MEMBERSHIP<br>MEETING</h2>
@@ -266,7 +269,7 @@
 
 </main>
 
-<!-- PARTNERSHIP IMAGE SECTION -->
+<!-- PARTNERSHIP IMAGE -->
 <section class="content-section" id="partnership">
     <img 
         src="images/Partnership.png" 
@@ -310,4 +313,3 @@ setInterval(showNextSlide, 5000);
 
 </body>
 </html>
-
