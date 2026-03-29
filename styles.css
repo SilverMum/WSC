@@ -186,6 +186,7 @@ body {
     width: 100%;
     pointer-events: none;
 }
+
 .pledge-paragraph-green {
     position: relative;
     top: 15px; /* moves ONLY the green text down */
