@@ -165,7 +165,7 @@ body {
     font-weight: 700;
     width: 100%;
     display: inline-block;
-    margin-top: 20px; /* keeps layers aligned */
+    margin-top: 20px;
 }
 
 .pledge-paragraph-wrapper {
@@ -194,7 +194,7 @@ body {
     font-weight: 700;
     line-height: 1.7;
     width: 100%;
-    margin-top: 20px; /* keeps layers aligned */
+    margin-top: 20px;
 }
 
 /* ------------------------------
@@ -202,7 +202,8 @@ body {
 --------------------------------*/
 .facebook-button {
     text-align: center;
-    margin-top: 20px;
+    margin-top: -25px; /* moved up 1 line */
+    position: relative; /* allows note to anchor to button */
 }
 
 .facebook-button img {
@@ -217,11 +218,14 @@ body {
 }
 
 .facebook-note {
-    text-align: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 460px; /* starting position under button */
     font-size: 1.4rem;
-    margin-top: -95px;
     color: #3B8BFF;
     font-weight: 600;
+    text-align: center;
 }
 
 /* ------------------------------
@@ -241,7 +245,6 @@ body {
     text-align: center;
 }
 
-/* ⭐ ADDED — Contact title should be black */
 #contact .section-title {
     color: black;
 }
@@ -305,13 +308,11 @@ body {
     text-align: left;
 }
 
-/* ⭐ ADDED — Kitchen title + all kitchen text black */
 #kitchen .section-title,
 #kitchen .kitchen-description p {
     color: black;
 }
 
-/* ⭐ Kitchen page only — scaled badge */
 #kitchen-page .kitchen-badge {
     transform: scale(1.2);
     transform-origin: top left;
@@ -339,7 +340,6 @@ body {
     text-align: center;
 }
 
-/* ⭐ ADDED — Range announcement text red */
 .range-text h2,
 .range-text h3 {
     color: #e60000;
@@ -513,8 +513,8 @@ body {
     text-align: center;
     font-size: 1.4rem;
     line-height: 1.7;
-    max-width: 380px; /* ⭐ narrower for cleaner line breaks */
-    margin: 0 auto;   /* centers the block */
+    max-width: 380px;
+    margin: 0 auto;
 }
 
 /* ------------------------------
@@ -535,9 +535,8 @@ body {
 
 .gallery-row img {
     width: 100%;
-    max-width: 48%; /* ~380px inside an 800px area */
+    max-width: 48%;
     border-radius: 10px;
     display: block;
     object-fit: cover;
 }
-
