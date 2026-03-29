@@ -301,7 +301,7 @@ body {
 
 /* ⭐ Kitchen page only — 4× bigger logo */
 #kitchen-page .kitchen-badge {
-    transform: scale(2.5);
+    transform: scale(1.8);
     transform-origin: top left;
 }
 
