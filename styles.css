@@ -511,8 +511,8 @@ body {
     text-align: center;
     font-size: 1.4rem;
     line-height: 1.7;
-    max-width: 500px;
-    margin: 0 auto;
+    max-width: 380px; /* ⭐ narrower for cleaner line breaks */
+    margin: 0 auto;   /* centers the block */
 }
 
 /* ------------------------------
