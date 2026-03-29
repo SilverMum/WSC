@@ -195,6 +195,8 @@ body {
     line-height: 1.7;
     width: 100%;
     margin-top: 20px;
+    margin-top: 35px; /* moved down 1 line */
+
 }
 
 /* ------------------------------
