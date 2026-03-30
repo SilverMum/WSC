@@ -554,6 +554,14 @@ body {
     margin: 0;
 }
 
+/* Restore Private Events text container */
+.private-events-text {
+    text-align: left;
+    font-size: 1.4rem;
+    line-height: 1.7;
+    max-width: 380px;
+}
+
 /* ------------------------------
    ⭐ PRIVATE EVENTS LAYOUT
 --------------------------------*/
