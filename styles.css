@@ -492,6 +492,10 @@ body {
     margin-top: 20px;
 }
 
+#contact {
+    border-bottom: none;
+}
+
 /* ------------------------------
    PARTNERSHIP IMAGE
 --------------------------------*/
