@@ -417,7 +417,7 @@ body {
    RANGE DETAILS BLOCK
 --------------------------------*/
 .range-details {
-    margin-top: 40px;
+    margin-top: -160px; /* moved up ~6 lines of text */
     margin-bottom: 40px;
     padding: 20px;
 }
