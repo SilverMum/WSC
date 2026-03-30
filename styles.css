@@ -360,6 +360,25 @@ body {
     color: #e60000; /* force red */
 }
 
+.fee-block {
+    text-align: left;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.fee-block p {
+    margin-bottom: 10px;
+}
+
+.fee-block ul {
+    padding-left: 25px;
+    margin-bottom: 20px;
+}
+
+.fee-block li {
+    margin-bottom: 6px;
+}
+
 /* ------------------------------
    RANGE DETAILS BLOCK
 --------------------------------*/
