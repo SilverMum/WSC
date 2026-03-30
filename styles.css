@@ -276,14 +276,14 @@ body {
 }
 
 /* ------------------------------
-   IMAGE UNDER SLIDESHOW
+   BAND SECTION
 --------------------------------*/
-.below-slideshow-img {
+#band-image {
     display: block;
-    margin: 0 auto;
-    width: 100%;
+    margin: 40px auto 0 auto;
     max-width: 900px;
-    border-radius: 10px;
+    width: 100%;
+    height: auto;
 }
 
 /* ------------------------------
