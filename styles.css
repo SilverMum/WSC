@@ -340,7 +340,7 @@ body {
 --------------------------------*/
 .range-layout {
     display: flex;
-    align-items: center;
+    align-items: flex-start; /* moved logo back up */
     justify-content: center;
     gap: 40px;
     margin-top: 20px;
@@ -373,9 +373,9 @@ body {
 /* NEW BUTTON STYLES */
 .range-button-link {
     display: inline-block;
-    text-align: center;
     margin-top: 12px;
     transition: transform 0.2s ease;
+    width: fit-content; /* hover area now matches button */
 }
 
 .range-button-link:hover {
@@ -386,7 +386,7 @@ body {
     width: auto;
     height: auto;
     max-width: 100%;
-    display: block;
+    display: block; /* prevents extra clickable space */
     margin: 0 auto;
 }
 
