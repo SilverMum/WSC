@@ -378,7 +378,8 @@ body {
     width: fit-content;
     margin-left: auto;
     margin-right: auto;
-    line-height: 0; /* removes top/bottom clickable padding */
+    line-height: 0; /* removes vertical clickable padding */
+    padding: 0; /* ensures no extra top/bottom hitbox */
 }
 
 .range-button-link:hover {
