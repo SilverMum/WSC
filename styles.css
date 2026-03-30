@@ -288,6 +288,16 @@ body {
     height: auto;
 }
 
+.band-kitchen-divider {
+    border: none;
+    border-top: 2px solid #ccc; /* soft grey line */
+    margin: 0 auto;
+    margin-top: 0;              /* band image sits right on it */
+    margin-bottom: 40px;        /* space before kitchen section */
+    width: 90%;
+    max-width: 900px;
+}
+
 /* ------------------------------
    KITCHEN SECTION
 --------------------------------*/
