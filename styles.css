@@ -492,6 +492,7 @@ body {
     margin-top: 20px;
 }
 
+/* Remove extra line under Contact */
 #contact {
     border-bottom: none;
 }
