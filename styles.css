@@ -149,8 +149,8 @@ body {
 
 .pledge-title-gold {
     position: absolute;
-    top: 22px;      /* moved up 3px */
-    left: 2.5px;    /* moved left 3px */
+    top: 20.5px;   /* was 21px → moved UP 0.5px */
+    left: 1px;     /* was 1.5px → moved LEFT 0.5px */
     color: #d4a017;
     font-size: 2rem;
     font-weight: 700;
@@ -177,8 +177,8 @@ body {
 
 .pledge-paragraph-gold {
     position: absolute;
-    top: 22px;      /* moved up 3px */
-    left: 2.5px;    /* moved left 3px */
+    top: 20.5px;   /* was 21px → moved UP 0.5px */
+    left: 1px;     /* was 1.5px → moved LEFT 0.5px */
     color: #d4a017;
     font-size: 1.5rem;
     font-weight: 700;
