@@ -360,6 +360,12 @@ body {
     color: #e60000; /* force red */
 }
 
+.range-link {
+    font-size: 1.5rem;   /* 2 text sizes bigger */
+    display: inline-block;
+    margin-top: 12px;    /* moves it down one line */
+}
+
 .fee-block {
     text-align: left;
     margin-top: 20px;
