@@ -580,6 +580,12 @@ body {
     max-width: 380px;
 }
 
+/* Fix PDF button size */
+.private-events-layout img {
+    max-width: 340px;
+    height: auto;
+}
+
 /* ------------------------------
    PRIVATE EVENTS GALLERY
 --------------------------------*/
