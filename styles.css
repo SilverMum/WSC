@@ -371,14 +371,21 @@ body {
 }
 
 /* ------------------------------
-   RANGE BUTTON — MATCH FACEBOOK BEHAVIOR
+   RANGE BUTTON — CLEANED + MERGED
 --------------------------------*/
 .range-button-link {
     display: inline-block;
-    margin-top: -120px;
     text-align: center;
     position: relative;
     line-height: 0;
+    padding: 0;
+    height: auto;
+    align-self: flex-start;
+    margin-top: -120px; /* your chosen value */
+}
+
+.range-button-link img {
+    display: block;
 }
 
 .range-button-img {
@@ -394,22 +401,8 @@ body {
     filter: brightness(1.1);
 }
 
-/* Fix oversized clickable area */
-.range-button-link {
-    display: inline-block;
-    line-height: 0;
-    padding: 0;
-    margin: 0;
-    height: auto;
-    align-self: flex-start; /* prevents flexbox from stretching it */
-}
-
-.range-button-link img {
-    display: block;
-}
-
 /* ------------------------------
-   RANGE DETAILS (CLEANED)
+   RANGE DETAILS
 --------------------------------*/
 .range-details {
     margin-top: -224px;
@@ -568,38 +561,32 @@ body {
     margin: 0;
 }
 
-/* Restore Private Events text container */
-.private-events-text {
-    text-align: left;
-    font-size: 1.4rem;
-    line-height: 1.7;
-    max-width: 380px;
-}
-
 /* ------------------------------
    ⭐ PRIVATE EVENTS LAYOUT
 --------------------------------*/
 .private-events-layout {
     display: flex;
-    justify-content: center;      /* keeps both items centered as a pair */
-    align-items: center;          /* centers the image vertically next to the text */
+    justify-content: center;
+    align-items: center;
     gap: 40px;
     margin-top: 20px;
 }
 
 /* LEFT SIDE — PDF IMAGE */
 .private-events-layout img {
-    max-width: 300px;             /* slightly bigger but still smaller than kitchen badge */
+    max-width: 300px;
     height: auto;
     display: block;
 }
 
 /* RIGHT SIDE — TEXT */
 .private-events-text {
-    text-align: left;             /* left-aligned text */
-    font-size: 1.2rem;            /* two sizes smaller */
+    text-align: left;
+    font-size: 1.2rem;
     line-height: 1.7;
     max-width: 380px;
+    color: #e60000;
+    padding-right: 10px;
 }
 
 /* ------------------------------
