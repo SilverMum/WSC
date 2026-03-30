@@ -404,6 +404,10 @@ body {
     align-self: flex-start; /* prevents flexbox from stretching it */
 }
 
+.range-button-link img {
+    display: block;
+}
+
 /* ------------------------------
    RANGE DETAILS (CLEANED)
 --------------------------------*/
