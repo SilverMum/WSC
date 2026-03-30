@@ -370,10 +370,24 @@ body {
     color: #e60000; /* force red */
 }
 
-.range-link {
-    font-size: 1.5rem;   /* 2 text sizes bigger */
+/* NEW BUTTON STYLES */
+.range-button-link {
     display: inline-block;
-    margin-top: 12px;    /* moves it down one line */
+    text-align: center;
+    margin-top: 12px;
+    transition: transform 0.2s ease;
+}
+
+.range-button-link:hover {
+    transform: scale(1.05);
+}
+
+.range-button-img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
 }
 
 .fee-block {
