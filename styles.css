@@ -370,30 +370,33 @@ body {
     color: #e60000; /* force red */
 }
 
-/* BUTTON POSITION */
-.range-button-link {
-    display: inline-block;
-    margin-top: -98px; /* perfect location */
-    width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
-    line-height: 0; /* tight vertical hitbox */
-    padding: 0;
+/* ------------------------------
+   RANGE BUTTON (CLONED FROM FACEBOOK BUTTON)
+--------------------------------*/
+.range-button {
+    text-align: center;
+    margin-top: -98px; /* keep your perfect position */
+    position: relative;
 }
 
-/* BUTTON IMAGE + HOVER */
-.range-button-img {
-    width: auto;
+.range-button img {
     height: auto;
-    max-width: 100%;
+    width: 440px; /* match Facebook button width */
+    transition: all 0.2s ease;
     display: block;
-    margin: 0;
-    padding: 0;
-    transition: transform 0.2s ease;
+    margin: 0 auto;
 }
 
-.range-button-img:hover {
-    transform: scale(1.05); /* hover restored */
+.range-button img:hover {
+    transform: translateY(-3px);
+    filter: brightness(1.1);
+}
+
+/* remove any leftover old styles */
+.range-button-link,
+.range-button-img {
+    line-height: 0;
+    padding: 0;
 }
 
 /* TEXT BLOCK */
