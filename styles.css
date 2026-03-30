@@ -581,23 +581,25 @@ body {
 --------------------------------*/
 .private-events-layout {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: center;      /* keeps both items centered as a pair */
+    align-items: center;          /* centers the image vertically next to the text */
     gap: 40px;
     margin-top: 20px;
 }
 
-.private-events-text {
-    text-align: left;
-    font-size: 1.2rem;
-    line-height: 1.7;
-    max-width: 380px;
+/* LEFT SIDE — PDF IMAGE */
+.private-events-layout img {
+    max-width: 300px;             /* slightly bigger but still smaller than kitchen badge */
+    height: auto;
+    display: block;
 }
 
-/* Fix PDF button size */
-.private-events-layout img {
-    max-width: 340px;
-    height: auto;
+/* RIGHT SIDE — TEXT */
+.private-events-text {
+    text-align: left;             /* left-aligned text */
+    font-size: 1.2rem;            /* two sizes smaller */
+    line-height: 1.7;
+    max-width: 380px;
 }
 
 /* ------------------------------
