@@ -149,8 +149,8 @@ body {
 
 .pledge-title-gold {
     position: absolute;
-    top: 20.5px;   /* was 21px → moved UP 0.5px */
-    left: 1px;     /* was 1.5px → moved LEFT 0.5px */
+    top: 20.5px;
+    left: 1px;
     color: #d4a017;
     font-size: 2rem;
     font-weight: 700;
@@ -177,8 +177,8 @@ body {
 
 .pledge-paragraph-gold {
     position: absolute;
-    top: 20.5px;   /* was 21px → moved UP 0.5px */
-    left: 1px;     /* was 1.5px → moved LEFT 0.5px */
+    top: 20.5px;
+    left: 1px;
     color: #d4a017;
     font-size: 1.5rem;
     font-weight: 700;
@@ -189,7 +189,7 @@ body {
 
 .pledge-paragraph-green {
     position: relative;
-    top: 20px;      /* your current value */
+    top: 20px;
     color: #32a852;
     font-size: 1.5rem;
     font-weight: 700;
@@ -203,8 +203,8 @@ body {
 --------------------------------*/
 .facebook-button {
     text-align: center;
-    margin-top: -25px; /* moved up 1 line */
-    position: relative; /* allows note to anchor to button */
+    margin-top: -25px;
+    position: relative;
 }
 
 .facebook-button img {
@@ -222,13 +222,13 @@ body {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    top: 340px; /* starting position under button */
+    top: 340px;
     font-size: 1.4rem;
     color: #3B8BFF;
     font-weight: 600;
     text-align: center;
-    white-space: nowrap; /* forces the whole sentence to stay on one line */
-    width: 100%; /* allows the text to use the full width so it won't wrap */
+    white-space: nowrap;
+    width: 100%;
 }
 
 /* ------------------------------
@@ -290,10 +290,10 @@ body {
 
 .band-kitchen-divider {
     border: none;
-    border-top: 2px solid #ccc; /* soft grey line */
+    border-top: 2px solid #ccc;
     margin: 0 auto;
-    margin-top: 0;              /* band image sits right on it */
-    margin-bottom: 40px;        /* space before kitchen section */
+    margin-top: 0;
+    margin-bottom: 40px;
     width: 90%;
     max-width: 900px;
 }
@@ -302,18 +302,18 @@ body {
    KITCHEN SECTION
 --------------------------------*/
 #kitchen {
-    margin-top: 50px; /* pushes entire section down to give the band image its own space */
+    margin-top: 50px;
 }
 
 .kitchen-layout {
     display: flex;
     align-items: flex-start;
     gap: 40px;
-    margin-top: 40px; /* adds breathing room inside the section */
+    margin-top: 40px;
 }
 
 .kitchen-badge {
-    max-width: 340px; /* was 300px → slightly larger */
+    max-width: 340px;
     width: 100%;
     height: auto;
 }
@@ -340,7 +340,7 @@ body {
 --------------------------------*/
 .range-layout {
     display: flex;
-    align-items: flex-start; /* moved logo back up */
+    align-items: flex-start;
     justify-content: center;
     gap: 40px;
     margin-top: 20px;
@@ -360,14 +360,14 @@ body {
 .range-text h2 {
     font-size: 3.2rem;
     font-weight: 800;
-    color: #e60000; /* force red */
+    color: #e60000;
 }
 
 .range-text h3 {
     font-size: 2.6rem;
     font-weight: 800;
     line-height: 1.2;
-    color: #e60000; /* force red */
+    color: #e60000;
 }
 
 /* ------------------------------
@@ -375,29 +375,30 @@ body {
 --------------------------------*/
 .range-button-link {
     display: inline-block;
-    margin-top: -98px; /* keep your perfect position */
+    margin-top: -98px;
     text-align: center;
     position: relative;
-    line-height: 0; /* removes extra vertical hitbox */
+    line-height: 0;
 }
 
 .range-button-img {
-    height: 440px; /* match Facebook button height */
+    height: 440px;
     width: auto;
     display: block;
     margin: 0 auto;
     transition: all 0.2s ease;
 }
 
-/* HOVER — EXACTLY LIKE FACEBOOK */
 .range-button-img:hover {
     transform: translateY(-3px);
     filter: brightness(1.1);
 }
 
-/* TEXT BLOCK */
+/* ------------------------------
+   RANGE DETAILS (CLEANED)
+--------------------------------*/
 .range-details {
-    margin-top: -224px; /* moved up 2 more lines */
+    margin-top: -224px;
     margin-bottom: 40px;
     padding: 20px;
 }
@@ -419,15 +420,6 @@ body {
 
 .fee-block li {
     margin-bottom: 6px;
-}
-
-/* ------------------------------
-   RANGE DETAILS BLOCK
---------------------------------*/
-.range-details {
-    margin-top: -160px; /* moved up ~6 lines of text */
-    margin-bottom: 40px;
-    padding: 20px;
 }
 
 .range-details-title {
@@ -504,7 +496,6 @@ body {
     margin-top: 20px;
 }
 
-/* Remove extra line under Contact */
 #contact {
     border-bottom: none;
 }
@@ -569,13 +560,13 @@ body {
 .private-events-layout {
     display: flex;
     justify-content: center;
-    align-items: center; /* keeps the PDF centered vertically */
+    align-items: center;
     gap: 40px;
     margin-top: 20px;
 }
 
 .private-events-text {
-    text-align: left; /* fixes the text alignment */
+    text-align: left;
     font-size: 1.4rem;
     line-height: 1.7;
     max-width: 380px;
@@ -605,15 +596,9 @@ body {
     object-fit: cover;
 }
 
-.login-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    max-width: 400px;
-    margin: 0 auto;
-}
-
-/* LOGIN PAGE — FRIENDLY MODERN LOOK */
+/* ------------------------------
+   LOGIN PAGE — FRIENDLY MODERN LOOK
+--------------------------------*/
 .login-page-wrapper {
     display: flex;
     justify-content: center;
@@ -632,14 +617,12 @@ body {
     box-shadow: 0 4px 18px rgba(0,0,0,0.12);
 }
 
-/* LABELS */
 .login-form label {
     font-size: 1.2rem;
     font-weight: 600;
     color: #333;
 }
 
-/* INPUTS */
 .login-form input {
     font-size: 1.2rem;
     padding: 14px 16px;
@@ -655,7 +638,6 @@ body {
     outline: none;
 }
 
-/* BUTTON */
 .login-btn {
     padding: 14px 20px;
     font-size: 1.2rem;
@@ -673,7 +655,6 @@ body {
     transform: translateY(-2px);
 }
 
-/* LINKS */
 .login-links {
     display: flex;
     flex-direction: column;
