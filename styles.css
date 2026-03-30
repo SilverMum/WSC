@@ -371,27 +371,32 @@ body {
 }
 
 /* NEW BUTTON STYLES */
+/* BUTTON */
 .range-button-link {
     display: inline-block;
-    margin-top: -148px; /* moved up 2 more lines */
+    margin-top: -98px; /* button moved DOWN 1 line */
     transition: transform 0.2s ease;
     width: fit-content;
     margin-left: auto;
     margin-right: auto;
     line-height: 0; /* removes vertical clickable padding */
-    padding: 0; /* ensures no extra top/bottom hitbox */
-}
-
-.range-button-link:hover {
-    transform: scale(1.05);
+    padding: 0;
 }
 
 .range-button-img {
     width: auto;
     height: auto;
     max-width: 100%;
-    display: block; /* prevents extra clickable space */
-    margin: 0 auto;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+/* TEXT BLOCK */
+.range-details {
+    margin-top: -224px; /* moved UP 2 more lines */
+    margin-bottom: 40px;
+    padding: 20px;
 }
 
 .fee-block {
