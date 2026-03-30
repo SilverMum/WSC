@@ -560,34 +560,17 @@ body {
 --------------------------------*/
 .private-events-layout {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: center;
+    align-items: center; /* keeps the PDF centered vertically */
     gap: 40px;
     margin-top: 20px;
 }
 
-.pdf-box {
-    display: block;
-    max-width: 500px;
-}
-
-.pdf-image {
-    width: 100%;
-    height: auto;
-    cursor: pointer;
-    transition: transform 0.2s ease;
-}
-
-.pdf-image:hover {
-    transform: scale(1.05);
-}
-
 .private-events-text {
-    text-align: center;
+    text-align: left; /* fixes the text alignment */
     font-size: 1.4rem;
     line-height: 1.7;
     max-width: 380px;
-    margin: 0 auto;
 }
 
 /* ------------------------------
