@@ -370,18 +370,18 @@ body {
     color: #e60000; /* force red */
 }
 
-/* BUTTON */
+/* BUTTON POSITION */
 .range-button-link {
     display: inline-block;
-    margin-top: -98px; /* button moved DOWN 1 line */
-    transition: transform 0.2s ease;
+    margin-top: -98px; /* perfect location */
     width: fit-content;
     margin-left: auto;
     margin-right: auto;
-    line-height: 0; /* removes vertical clickable padding */
+    line-height: 0; /* tight vertical hitbox */
     padding: 0;
 }
 
+/* BUTTON IMAGE + HOVER */
 .range-button-img {
     width: auto;
     height: auto;
@@ -389,6 +389,11 @@ body {
     display: block;
     margin: 0;
     padding: 0;
+    transition: transform 0.2s ease;
+}
+
+.range-button-img:hover {
+    transform: scale(1.05); /* hover restored */
 }
 
 /* TEXT BLOCK */
