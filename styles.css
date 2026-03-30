@@ -373,11 +373,12 @@ body {
 /* NEW BUTTON STYLES */
 .range-button-link {
     display: inline-block;
-    margin-top: -24px; /* moved up ~2 lines */
+    margin-top: -148px; /* moved up 2 more lines */
     transition: transform 0.2s ease;
-    width: fit-content; /* hover area matches button */
+    width: fit-content;
     margin-left: auto;
     margin-right: auto;
+    line-height: 0; /* removes top/bottom clickable padding */
 }
 
 .range-button-link:hover {
