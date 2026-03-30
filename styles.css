@@ -370,7 +370,6 @@ body {
     color: #e60000; /* force red */
 }
 
-/* NEW BUTTON STYLES */
 /* BUTTON */
 .range-button-link {
     display: inline-block;
@@ -394,7 +393,7 @@ body {
 
 /* TEXT BLOCK */
 .range-details {
-    margin-top: -224px; /* moved UP 2 more lines */
+    margin-top: -224px; /* moved up 2 more lines */
     margin-bottom: 40px;
     padding: 20px;
 }
