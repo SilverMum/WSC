@@ -289,15 +289,19 @@ body {
 /* ------------------------------
    KITCHEN SECTION
 --------------------------------*/
+#kitchen {
+    margin-top: 50px; /* pushes entire section down to give the band image its own space */
+}
+
 .kitchen-layout {
     display: flex;
     align-items: flex-start;
     gap: 40px;
-    margin-top: 30px;
+    margin-top: 40px; /* adds breathing room inside the section */
 }
 
 .kitchen-badge {
-    max-width: 300px;
+    max-width: 340px; /* was 300px → slightly larger */
     width: 100%;
     height: auto;
 }
