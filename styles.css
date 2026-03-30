@@ -608,3 +608,29 @@ body {
     max-width: 400px;
     margin: 0 auto;
 }
+
+/* LOGIN PAGE — SCALE EVERYTHING UP */
+.login-form {
+    transform: scale(1.8); /* makes the whole form ~2x bigger */
+    transform-origin: top center; /* keeps it centered and anchored */
+    margin-top: 40px; /* adds breathing room after scaling */
+}
+
+.login-form label {
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.login-form input {
+    font-size: 1.4rem;
+    padding: 12px 14px;
+}
+
+.login-btn {
+    font-size: 1.4rem;
+    padding: 14px 20px;
+}
+
+.login-links a {
+    font-size: 1.2rem;
+}
