@@ -346,14 +346,16 @@ body {
 }
 
 .range-text h2 {
-    font-size: 3.2rem; /* was ~2.5rem default → bumped up */
+    font-size: 3.2rem;
     font-weight: 800;
+    color: #e60000; /* force red */
 }
 
 .range-text h3 {
-    font-size: 2.6rem; /* was ~2rem default → bumped up */
+    font-size: 2.6rem;
     font-weight: 800;
     line-height: 1.2;
+    color: #e60000; /* force red */
 }
 
 /* ------------------------------
