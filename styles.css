@@ -371,32 +371,28 @@ body {
 }
 
 /* ------------------------------
-   RANGE BUTTON (CLONED FROM FACEBOOK BUTTON)
+   RANGE BUTTON — MATCH FACEBOOK BEHAVIOR
 --------------------------------*/
-.range-button {
-    text-align: center;
+.range-button-link {
+    display: inline-block;
     margin-top: -98px; /* keep your perfect position */
+    text-align: center;
     position: relative;
+    line-height: 0; /* removes extra vertical hitbox */
 }
 
-.range-button img {
-    height: auto;
-    width: 440px; /* match Facebook button width */
-    transition: all 0.2s ease;
+.range-button-img {
+    height: 440px; /* match Facebook button height */
+    width: auto;
     display: block;
     margin: 0 auto;
+    transition: all 0.2s ease;
 }
 
-.range-button img:hover {
+/* HOVER — EXACTLY LIKE FACEBOOK */
+.range-button-img:hover {
     transform: translateY(-3px);
     filter: brightness(1.1);
-}
-
-/* remove any leftover old styles */
-.range-button-link,
-.range-button-img {
-    line-height: 0;
-    padding: 0;
 }
 
 /* TEXT BLOCK */
