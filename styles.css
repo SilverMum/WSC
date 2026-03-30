@@ -227,6 +227,8 @@ body {
     color: #3B8BFF;
     font-weight: 600;
     text-align: center;
+    white-space: nowrap; /* forces the whole sentence to stay on one line */
+    width: 100%; /* allows the text to use the full width so it won't wrap */
 }
 
 /* ------------------------------
