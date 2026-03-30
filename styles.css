@@ -380,8 +380,9 @@ body {
     line-height: 0;
     padding: 0;
     height: auto;
-    align-self: flex-start;
-    margin-top: -120px; /* your chosen value */
+    overflow: visible;
+    align-self: center; /* prevents flexbox stretching */
+    margin-top: -120px;
 }
 
 .range-button-link img {
