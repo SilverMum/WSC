@@ -578,7 +578,7 @@ body {
     justify-content: center;
     gap: 40px;
     margin-top: 20px;
-    max-width: 1200px;
+    max-width: 1300px; /* more breathing room */
     margin-left: auto;
     margin-right: auto;
 }
@@ -586,7 +586,7 @@ body {
 /* LEFT SIDE — PDF IMAGE */
 .pdf-image {
     width: 100%;
-    max-width: 700px; /* ⭐ bigger like your screenshot */
+    max-width: 720px; /* ⭐ bigger like your flyer */
     height: auto;
     display: block;
 }
@@ -598,10 +598,10 @@ body {
     line-height: 1.6;
     color: #e60000;
     font-weight: 700;
-    max-width: 500px;
+    max-width: 520px;
 
-    /* ⭐ creates the flyer-style left drift */
-    margin-left: -120px;
+    /* ⭐ creates the left drift */
+    margin-left: -140px;
 }
 
 /* ------------------------------
