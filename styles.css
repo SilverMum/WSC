@@ -738,3 +738,24 @@ body {
     display: block;
     max-width: 600px; /* adjust if needed */
 }
+
+/* ------------------------------
+   RANGE OPEN BUTTON
+--------------------------------*/
+.range-open-button-wrapper {
+    text-align: center;      /* ⭐ centers the button */
+    margin: 40px 0;          /* spacing above/below */
+}
+
+.range-open-button-img {
+    width: 300px;            /* adjust to match your home page */
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.range-open-button-img:hover {
+    transform: translateY(-3px);
+    filter: brightness(1.1);
+}
+
