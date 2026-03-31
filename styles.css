@@ -575,10 +575,10 @@ body {
 .private-events-layout {
     display: flex;
     align-items: flex-start;
-    justify-content: center;
+    justify-content: flex-start; /* ⭐ moves PDF image left */
     gap: 40px;
     margin-top: 20px;
-    max-width: 1300px; /* more breathing room */
+    max-width: 1300px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -586,7 +586,7 @@ body {
 /* LEFT SIDE — PDF IMAGE */
 .pdf-image {
     width: 100%;
-    max-width: 720px; /* ⭐ bigger like your flyer */
+    max-width: 700px; /* keep your preferred size */
     height: auto;
     display: block;
 }
@@ -600,8 +600,8 @@ body {
     font-weight: 700;
     max-width: 520px;
 
-    /* ⭐ creates the left drift */
-    margin-left: -140px;
+    /* ⭐ now actually pulls left because layout isn't centered */
+    margin-left: -120px;
 }
 
 /* ------------------------------
