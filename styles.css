@@ -908,3 +908,10 @@ body {
     display: block;
     margin: 0 auto; /* keeps the image centered */
 }
+
+.range-revised-date {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+}
