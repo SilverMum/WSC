@@ -834,3 +834,28 @@ body {
     line-height: 1.6;
     font-weight: bold;
 }
+
+/* ------------------------------
+   RANGE INFO SECTION (Trap & Skeet Info)
+--------------------------------*/
+.range-info-section {
+    margin: 50px auto;
+    max-width: 900px;
+    padding: 0 20px;
+}
+
+.range-info-title {
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.range-info-text {
+    text-align: left;      /* left-aligned text */
+    margin: 0 auto;        /* centers the block */
+    max-width: 800px;      /* keeps it tidy and readable */
+    font-size: 18px;
+    line-height: 1.6;
+    font-weight: bold;
+}
