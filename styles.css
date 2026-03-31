@@ -577,9 +577,9 @@ body {
 }
 
 /* LEFT SIDE — PDF IMAGE */
-.private-events-layout img {
+.pdf-image {
     width: 100%;
-    max-width: 800px; /* 2× bigger */
+    max-width: 450px; /* 2× bigger */
     height: auto;
     display: block;
 }
