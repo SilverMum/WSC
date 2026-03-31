@@ -753,7 +753,7 @@ body {
 }
 
 .range-open-button-img {
-    width: 300px;   /* matches Home Page default */
+    width: 600px !important;   /* 2× larger than before */
     height: auto;
     cursor: pointer;
     transition: transform 0.2s ease, filter 0.2s ease;
@@ -799,7 +799,7 @@ body {
 }
 
 .range-facebook-img {
-    width: 260px;   /* matches Home Page default */
+    width: 520px !important;   /* 2× larger than before */
     height: auto;
     cursor: pointer;
     transition: transform 0.2s ease, filter 0.2s ease;
