@@ -884,3 +884,27 @@ body {
     line-height: 1.6;
     font-weight: bold;
 }
+
+/* ------------------------------
+   RANGE RESTRICTED FIREARM NOTICE
+--------------------------------*/
+.range-restricted-section {
+    margin: 50px auto;
+    max-width: 900px;
+    padding: 0 20px;
+    text-align: center; /* centers the title AND the image container */
+}
+
+.range-restricted-title {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.range-restricted-image img {
+    max-width: 600px;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto; /* keeps the image centered */
+}
