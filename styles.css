@@ -373,41 +373,30 @@ body {
 /* ------------------------------
    RANGE BUTTON — CLEANED + MERGED
 --------------------------------*/
-.range-button-link {
-    display: inline-block;
-    text-align: center;
+.range-button-wrapper {
     position: relative;
-    line-height: 0;
-    padding: 0;
-    height: auto;
-    overflow: visable;
-    align-self: center; /* prevents flexbox stretching */
+    display: inline-block;
     margin-top: -120px;
-}
-
-.range-button-link::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 80px;          /* clickable height */
-    cursor: pointer;
-}
-
-.range-button-link img {
-    display: block;
 }
 
 .range-button-img {
     height: 440px;
     width: auto;
     display: block;
-    margin: 0 auto;
     transition: all 0.2s ease;
 }
 
-.range-button-img:hover {
+.range-button-hitbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    cursor: pointer;
+    z-index: 5;
+}
+
+.range-button-wrapper:hover .range-button-img {
     transform: translateY(-3px);
     filter: brightness(1.1);
 }
