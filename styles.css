@@ -748,7 +748,7 @@ body {
 }
 
 .range-open-button-img {
-    width: 300px;         /* matches your home page button */
+    width: 900px;            /* 3x larger than 300px */
     height: auto;
     cursor: pointer;
     transition: transform 0.2s ease, filter 0.2s ease;
@@ -790,7 +790,7 @@ body {
 }
 
 .range-facebook-img {
-    width: 260px;   /* adjust if needed */
+    width: 780px;            /* 3x larger than 260px */
     height: auto;
     cursor: pointer;
     transition: transform 0.2s ease, filter 0.2s ease;
