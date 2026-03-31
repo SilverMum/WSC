@@ -714,3 +714,27 @@ body {
     max-height: 420px;      /* keeps it from being too tall */
     object-fit: cover;      /* crops nicely if needed */
 }
+
+/* ------------------------------
+   ⭐ RANGE STATUS SECTION
+--------------------------------*/
+.range-status-section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.range-status-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* ⭐ two equal columns */
+    align-items: center;
+    gap: 40px;
+}
+
+/* LEFT + RIGHT IMAGE STYLES */
+.range-status-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    max-width: 600px; /* adjust if needed */
+}
