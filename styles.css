@@ -859,3 +859,28 @@ body {
     line-height: 1.6;
     font-weight: bold;
 }
+
+/* ------------------------------
+   RANGE RULES SECTION
+--------------------------------*/
+.range-rules-section {
+    margin: 50px auto;
+    max-width: 900px;
+    padding: 0 20px;
+}
+
+.range-rules-title {
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.range-rules-text {
+    text-align: left;      /* left-aligned text */
+    margin: 0 auto;        /* centers the block */
+    max-width: 800px;      /* keeps it tidy and readable */
+    font-size: 18px;
+    line-height: 1.6;
+    font-weight: bold;
+}
