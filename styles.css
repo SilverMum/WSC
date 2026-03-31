@@ -758,3 +758,25 @@ body {
     transform: translateY(-3px);
     filter: brightness(1.1);
 }
+
+/* ------------------------------
+   RANGE NOTICE SECTION
+--------------------------------*/
+.range-notice-section {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.range-notice-title {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.range-notice-body {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.6;
+}
