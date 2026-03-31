@@ -819,7 +819,7 @@ body {
 .range-facebook-section {
     width: 100%;
     display: block;
-    margin: 40px 0;
+    margin: 25px 0;   /* tightened spacing */
     text-align: center;
 }
 
