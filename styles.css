@@ -602,6 +602,7 @@ body {
     max-width: 380px;
     color: #e60000;
     padding-right: 10px;
+    font-weight: 700; /* bold text */
 }
 
 /* ------------------------------
