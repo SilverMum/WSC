@@ -780,3 +780,23 @@ body {
     font-weight: bold;
     line-height: 1.6;
 }
+
+/* ------------------------------
+   RANGE FACEBOOK BUTTON SECTION
+--------------------------------*/
+.range-facebook-section {
+    margin: 40px 0;
+    text-align: center;
+}
+
+.range-facebook-img {
+    width: 260px;   /* adjust if needed */
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.range-facebook-img:hover {
+    transform: translateY(-3px);
+    filter: brightness(1.1);
+}
