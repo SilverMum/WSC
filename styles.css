@@ -607,17 +607,20 @@ body {
     display: block;
 }
 
-/* RIGHT SIDE — BIG RED TEXT WITH LEFT OVERFLOW */
+/* RIGHT SIDE — BIG RED TEXT WITH CLEAN SPACING */
 .private-events-text {
     text-align: center;
     font-size: 1.8rem;
-    line-height: 1.6;
     color: #e60000;
     font-weight: 700;
     max-width: 520px;
-
-    /* ⭐ now actually pulls left because layout isn't centered */
     margin-left: -120px;
+}
+
+/* Controls spacing for each paragraph */
+.private-events-text p {
+    margin: 6px 0;
+    line-height: 1.4;
 }
 
 /* ------------------------------
