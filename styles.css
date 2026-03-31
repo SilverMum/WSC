@@ -809,3 +809,28 @@ body {
     transform: translateY(-3px);
     filter: brightness(1.1);
 }
+
+/* ------------------------------
+   RANGE TRAPPER NOTICE SECTION
+--------------------------------*/
+.range-trapper-section {
+    margin: 40px auto;
+    max-width: 900px; /* keeps it centered under the title */
+    padding: 0 20px;
+}
+
+.range-trapper-title {
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.range-trapper-text {
+    text-align: left;       /* left-aligned text */
+    margin: 0 auto;         /* centers the block */
+    max-width: 800px;       /* keeps it tidy */
+    font-size: 18px;
+    line-height: 1.6;
+    font-weight: bold;
+}
