@@ -899,6 +899,7 @@ body {
     font-size: 22px;
     font-weight: bold;
     margin-bottom: 20px;
+    color: red; /* makes the title red */
 }
 
 .range-restricted-image img {
