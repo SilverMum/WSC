@@ -953,6 +953,7 @@ body {
 
 .archery-header-img {
     width: 100%;
-    height: auto;
+    height: 380px;      /* banner height */
+    object-fit: cover;  /* clean crop */
     display: block;
 }
