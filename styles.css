@@ -566,16 +566,20 @@ body {
    ⭐ PRIVATE EVENTS LAYOUT
 --------------------------------*/
 .private-events-layout {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* two equal columns */
     align-items: center;
     gap: 40px;
     margin-top: 20px;
+    max-width: 1000px; /* gives breathing room */
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* LEFT SIDE — PDF IMAGE */
 .private-events-layout img {
-    max-width: 300px;
+    width: 100%;
+    max-width: 600px; /* 2× bigger */
     height: auto;
     display: block;
 }
