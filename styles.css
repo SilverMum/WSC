@@ -740,15 +740,20 @@ body {
 }
 
 /* ------------------------------
-   RANGE OPEN BUTTON
+   RANGE OPEN BUTTON (full-width breakout)
 --------------------------------*/
+.range-open-button-section {
+    width: 100%;
+    display: block;
+    margin: 40px 0;
+}
+
 .range-open-button-wrapper {
-    text-align: center;   /* centers the button */
-    margin: 40px 0;       /* spacing above/below */
+    text-align: center;
 }
 
 .range-open-button-img {
-    width: 900px;            /* 3x larger than 300px */
+    width: 300px;   /* matches Home Page default */
     height: auto;
     cursor: pointer;
     transition: transform 0.2s ease, filter 0.2s ease;
@@ -758,6 +763,7 @@ body {
     transform: translateY(-3px);
     filter: brightness(1.1);
 }
+
 
 /* ------------------------------
    RANGE NOTICE SECTION
@@ -781,16 +787,19 @@ body {
     line-height: 1.6;
 }
 
+
 /* ------------------------------
-   RANGE FACEBOOK BUTTON SECTION
+   RANGE FACEBOOK BUTTON (full-width breakout)
 --------------------------------*/
 .range-facebook-section {
+    width: 100%;
+    display: block;
     margin: 40px 0;
     text-align: center;
 }
 
 .range-facebook-img {
-    width: 780px;            /* 3x larger than 260px */
+    width: 260px;   /* matches Home Page default */
     height: auto;
     cursor: pointer;
     transition: transform 0.2s ease, filter 0.2s ease;
