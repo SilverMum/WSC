@@ -726,8 +726,8 @@ body {
 
 .range-status-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* ⭐ two equal columns */
-    align-items: center;
+    grid-template-columns: 1fr 1fr; /* two equal columns */
+    align-items: center;            /* keeps your offset look */
     gap: 40px;
 }
 
@@ -736,19 +736,19 @@ body {
     width: 100%;
     height: auto;
     display: block;
-    max-width: 600px; /* adjust if needed */
+    max-width: 600px; /* perfect size for your layout */
 }
 
 /* ------------------------------
    RANGE OPEN BUTTON
 --------------------------------*/
 .range-open-button-wrapper {
-    text-align: center;      /* ⭐ centers the button */
-    margin: 40px 0;          /* spacing above/below */
+    text-align: center;   /* centers the button */
+    margin: 40px 0;       /* spacing above/below */
 }
 
 .range-open-button-img {
-    width: 300px;            /* adjust to match your home page */
+    width: 300px;         /* matches your home page button */
     height: auto;
     cursor: pointer;
     transition: transform 0.2s ease, filter 0.2s ease;
@@ -758,4 +758,3 @@ body {
     transform: translateY(-3px);
     filter: brightness(1.1);
 }
-
