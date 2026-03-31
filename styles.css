@@ -941,3 +941,18 @@ body {
     font-weight: bold;
     margin-top: 20px;
 }
+
+/* ------------------------------
+   ARCHERY HEADER IMAGE
+--------------------------------*/
+.archery-header {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.archery-header-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
