@@ -379,10 +379,20 @@ body {
     position: relative;
     line-height: 0;
     padding: 0;
-    height: 80px;
-    overflow: hidden;
+    height: auto;
+    overflow: visable;
     align-self: center; /* prevents flexbox stretching */
     margin-top: -120px;
+}
+
+.range-button-link::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;          /* clickable height */
+    cursor: pointer;
 }
 
 .range-button-link img {
