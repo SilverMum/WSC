@@ -531,6 +531,12 @@ body {
     border-bottom: none;
 }
 
+/* Tighten spacing above and below the Contact section */
+#contact {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
 /* ------------------------------
    PARTNERSHIP IMAGE
 --------------------------------*/
