@@ -957,3 +957,81 @@ body {
     object-fit: cover;  /* clean crop */
     display: block;
 }
+
+/* ------------------------------
+   ARCHERY INFO SECTION
+--------------------------------*/
+.archery-info {
+    text-align: center;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+    line-height: 1.6;
+}
+
+/* Title */
+.archery-title {
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+/* Season announcement */
+.archery-season {
+    font-size: 1.6rem;
+    margin-bottom: 25px;
+}
+
+/* Subtitle */
+.archery-subtitle {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+/* Times */
+.archery-times {
+    font-size: 1.4rem;
+    margin-bottom: 25px;
+}
+
+/* Simple instructions */
+.archery-simple {
+    font-size: 1.4rem;
+    margin-bottom: 25px;
+}
+
+/* Pricing */
+.archery-pricing {
+    font-size: 1.4rem;
+    margin-bottom: 25px;
+}
+
+/* Weather warning — RED TEXT */
+.archery-weather {
+    font-size: 1.4rem;
+    color: #e60000;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+/* Private events paragraph — 4 sizes bigger */
+.archery-private {
+    font-size: 1.8rem;
+    line-height: 1.5;
+    margin: 40px 0;
+    font-weight: 600;
+}
+
+/* ------------------------------
+   ARCHERY CANCELLATIONS SECTION
+--------------------------------*/
+.archery-cancellations {
+    text-align: center;
+    margin: 60px auto 20px auto;
+}
+
+.archery-cancel-title {
+    font-size: 3rem;   /* 6 sizes bigger than normal */
+    font-weight: 700;
+}
