@@ -501,14 +501,14 @@ body {
 }
 
 /* ------------------------------
-   TUESDAY NIGHT GAMES SECTION
+   TUESDAY NIGHT IMAGE SECTION
 --------------------------------*/
-.tuesday-games-section {
+.tuesday-night-section {
     margin: 50px auto;
     text-align: center;
 }
 
-.tuesday-games-img {
+.tuesday-night-img {
     max-width: 700px;
     width: 100%;
     height: auto;
