@@ -565,15 +565,15 @@ body {
 }
 
 /* ------------------------------
-   ⭐ PRIVATE EVENTS LAYOUT
+   ⭐ PRIVATE EVENTS LAYOUT — FLYER STYLE
 --------------------------------*/
 .private-events-layout {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* two equal columns */
-    align-items: center;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
     gap: 40px;
     margin-top: 20px;
-    max-width: 1000px; /* gives breathing room */
+    max-width: 1100px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -581,20 +581,20 @@ body {
 /* LEFT SIDE — PDF IMAGE */
 .pdf-image {
     width: 100%;
-    max-width: 450px; /* 2× bigger */
+    max-width: 500px; /* larger, closer to your screenshot */
     height: auto;
     display: block;
 }
 
-/* RIGHT SIDE — TEXT */
+/* RIGHT SIDE — BIG RED TEXT */
 .private-events-text {
-    text-align: left;
-    font-size: 1.2rem;
-    line-height: 1.7;
-    max-width: 380px;
-    color: #e60000;
-    padding-right: 10px;
-    font-weight: 700; /* bold text */
+    text-align: center;          /* matches your screenshot */
+    font-size: 1.8rem;           /* bigger, flyer-style */
+    line-height: 1.6;
+    color: #e60000;              /* same red as screenshot */
+    font-weight: 700;            /* bold */
+    max-width: 500px;            /* lets text breathe */
+    margin-left: -60px;          /* ⭐ allows text to overflow left */
 }
 
 /* ------------------------------
