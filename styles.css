@@ -703,3 +703,14 @@ body {
 .login-links a:hover {
     text-decoration: underline;
 }
+
+/* ------------------------------
+   RANGE PAGE HEADER IMAGE
+--------------------------------*/
+.range-header img {
+    width: 100%;
+    height: auto;
+    display: block;
+    max-height: 420px;      /* keeps it from being too tall */
+    object-fit: cover;      /* crops nicely if needed */
+}
