@@ -377,7 +377,7 @@ body {
     position: relative;
     display: inline-block;
     margin-top: -120px;
-    align-self: center; /* ⭐ restores correct vertical position */
+    align-self: center;
 }
 
 .range-button-img {
@@ -387,13 +387,14 @@ body {
     transition: all 0.2s ease;
 }
 
+/* ⭐ SUPER SMALL CLICKABLE AREA — ~1 inch × 1 inch */
 .range-button-hitbox {
     position: absolute;
-    top: 20px;          /* distance from top of the image */
+    top: 20px;              /* adjust up/down as needed */
     left: 50%;
     transform: translateX(-50%);
-    width: 200px;       /* about 2 inches on most screens */
-    height: 40px;       /* about 2 lines of text tall */
+    width: 96px;            /* ~1 inch on most screens */
+    height: 96px;           /* ~1 inch tall */
     cursor: pointer;
     z-index: 5;
 }
