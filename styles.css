@@ -1124,3 +1124,31 @@ body {
     font-weight: 600;       /* bold but not too heavy */
     line-height: 1.6;
 }
+
+/* ------------------------------
+   OFHA REASONS SECTION
+--------------------------------*/
+.ofha-reasons {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+    color: #1877F2;          /* Facebook blue */
+}
+
+.ofha-reasons h3 {
+    font-size: 1.6rem;       /* same size as membership text */
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.ofha-reasons ol {
+    font-size: 1.6rem;       /* same size as membership text */
+    line-height: 1.6;
+    padding-left: 20px;      /* clean indent */
+    text-align: left;
+}
+
+.ofha-reasons li {
+    margin-bottom: 12px;
+}
