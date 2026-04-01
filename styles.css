@@ -1091,8 +1091,10 @@ body {
 .ofha-intro-left {
     flex: 1;
     text-align: center;
-    font-size: 1.6rem;
+    font-size: 2rem;          /* 4 sizes bigger */
     line-height: 1.5;
+    color: #1877F2;           /* Facebook blue */
+    font-weight: 700;         /* BOLD */
 }
 
 .ofha-intro-right {
