@@ -1107,3 +1107,20 @@ body {
     height: auto;
     display: inline-block;
 }
+
+/* ------------------------------
+   OFHA MEMBERSHIP SECTION
+--------------------------------*/
+.ofha-membership {
+    text-align: center;
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.ofha-membership p {
+    font-size: 1.6rem;      /* 2 sizes smaller than previous text */
+    color: #1877F2;         /* Facebook blue */
+    font-weight: 600;       /* bold but not too heavy */
+    line-height: 1.6;
+}
