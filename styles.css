@@ -1024,6 +1024,30 @@ body {
 }
 
 /* ------------------------------
+   ARCHERY IMAGE PAIR
+--------------------------------*/
+.archery-image-pair {
+    margin: 50px auto;
+    text-align: center;
+}
+
+.archery-image-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;              /* space between images */
+    flex-wrap: wrap;        /* allows stacking on small screens */
+}
+
+.archery-img {
+    width: 45%;             /* keeps them side-by-side */
+    max-width: 400px;       /* prevents huge images */
+    height: auto;
+    border-radius: 10px;    /* optional, looks clean */
+    display: block;
+}
+
+/* ------------------------------
    ARCHERY CANCELLATIONS SECTION
 --------------------------------*/
 .archery-cancellations {
