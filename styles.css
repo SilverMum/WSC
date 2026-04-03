@@ -205,11 +205,11 @@ body {
 --------------------------------*/
 .facebook-button {
     text-align: center;
-    margin-top: -25px;
+    margin-top: 64px; /* ⭐ moved down ~4 lines of text */
     position: relative;
 }
 
-/* ⭐ Button now 25% of its previous size */
+/* Button stays 25% size */
 .facebook-button img {
     width: 25%;
     height: auto;
@@ -223,12 +223,12 @@ body {
     filter: brightness(1.1);
 }
 
-/* Facebook note text under the button */
+/* ⭐ Move the note down to match the new button size */
 .facebook-note {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    top: 340px;
+    top: 120px; /* ⭐ was 340px — now correct for smaller button */
     font-size: 1.4rem;
     color: #3B8BFF;
     font-weight: 600;
