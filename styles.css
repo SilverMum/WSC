@@ -799,8 +799,8 @@ body {
     font-weight: bold;
     line-height: 1.6;
 
-    /* ⭐ Add this to move it down 3 lines */
-    margin-top: 48px;
+    /* ⭐ Moves text down 4 lines */
+    margin-top: 64px;
 }
 
 /* ------------------------------
