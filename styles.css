@@ -610,6 +610,8 @@ body {
     max-width: 700px; /* keep your preferred size */
     height: auto;
     display: block;
+   .pdf-box {
+    margin-left: -40px;   /* adjust to taste */
 }
 
 /* RIGHT SIDE — BIG RED TEXT WITH CLEAN SPACING */
