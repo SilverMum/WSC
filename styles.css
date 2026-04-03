@@ -1147,3 +1147,15 @@ body {
 .ofha-reasons li {
     margin-bottom: 12px;
 }
+
+/* ------------------------------
+   KITCHEN PAGE TITLE — ONLY FOR kitchen.html
+--------------------------------*/
+#kitchen-page .section-title {
+    font-size: 4.4rem;              /* 2× bigger */
+    color: #e60000;                 /* red text */
+    text-decoration: underline;     
+    text-decoration-color: #e60000; /* red underline */
+    margin-top: -30px;              /* moves it up one line */
+    font-weight: 800;               /* strong bold */
+}
