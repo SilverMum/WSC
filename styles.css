@@ -380,6 +380,7 @@ body {
 .range-button-wrapper {
     text-align: center;
     margin-top: 20px;      /* adjust up/down to taste */
+    margin-top: -120px;
 }
 
 /* clickable area is wider than the image */
