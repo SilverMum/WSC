@@ -22,14 +22,16 @@ body {
    NAVIGATION
 --------------------------------*/
 .main-nav {
+    position: fixed;       /* stays visible always */
+    top: 0;
+    left: 0;
+    width: 100%;           /* full width */
+    z-index: 2000;         /* above everything */
     display: flex;
     align-items: center;
     padding: 20px 40px;
     background-color: #ffffff;
     border-bottom: 1px solid #ddd;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
 }
 
 .nav-spacer {
