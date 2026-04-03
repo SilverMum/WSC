@@ -386,16 +386,16 @@ body {
     margin-top: -120px;
 }
 
-/* clickable area is wider than the image */
+/* clickable area stays tight to the image */
 .range-button-link {
     display: inline-block;
-    padding: 0;       /* makes clickable area ~2x wider */
+    padding: 0;
 }
 
-/* image stays visually the same */
+/* ⭐ Image now 25% of its previous size */
 .range-button-img {
-    height: 440px;
-    width: auto;
+    width: 25%;
+    height: auto;
     display: block;
     transition: all 0.2s ease;
 }
