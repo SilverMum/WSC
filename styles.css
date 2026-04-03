@@ -585,50 +585,46 @@ body {
 }
 
 /* ------------------------------
-   ⭐ PRIVATE EVENTS LAYOUT — FLYER STYLE
+   ⭐ PRIVATE EVENTS LAYOUT — CLEAN FLYER STYLE
 --------------------------------*/
-.private-events-layout {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start; /* ⭐ moves PDF image left */
+.private-events-section {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.private-events-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* PDF left, text right */
+    align-items: center;
     gap: 40px;
-    margin-top: 20px;
-    max-width: 1300px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 /* LEFT SIDE — PDF IMAGE */
-.pdf-image {
-    width: 100%;
-    max-width: 700px;
+.private-events-pdf {
+    width: 260px;      /* perfect size */
     height: auto;
     display: block;
+    margin: 0 auto;    /* keeps it centered in its column */
 }
 
-/* Move PDF image/button left */
-.pdf-box {
-    margin-left: -120px;   /* ~1.5 inches left on most screens */
-}
-
-/* RIGHT SIDE — BIG RED TEXT WITH CLEAN SPACING */
+/* RIGHT SIDE — RED FLYER TEXT */
 .private-events-text {
-    text-align: center;
-    font-size: 1.4rem;   /* 2 sizes smaller */
-    color: #e60000;
+    font-size: 1.4rem;     /* smaller like you wanted */
     font-weight: 700;
+    color: #e60000;
+    line-height: 1.5;
+    text-align: left;      /* matches your flyer style */
     max-width: 520px;
-    margin-left: -120px; /* keeps your layout exactly the same */
 }
 
-/* Controls spacing for each paragraph */
+/* Optional: spacing between lines */
 .private-events-text p {
     margin: 6px 0;
-    line-height: 1.4;
 }
 
 /* ------------------------------
-   PRIVATE EVENTS GALLERY
+   ⭐ PRIVATE EVENTS GALLERY
 --------------------------------*/
 .private-events-gallery {
     max-width: 900px;
