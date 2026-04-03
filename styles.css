@@ -600,16 +600,16 @@ body {
 
 /* BIG RED HEADER-STYLE TEXT */
 .private-events-text {
-    font-size: 2.2rem;   /* ⭐ 6 sizes bigger */
+    font-size: 2.2rem;   /* large, bold, centered */
     font-weight: 700;
     color: #e60000;
     line-height: 1.5;
     margin-bottom: 30px; /* space before PDF button */
 }
 
-/* PDF BUTTON BELOW TEXT */
+/* ⭐ PDF BUTTON BELOW TEXT — now 2x the current size */
 .private-events-pdf {
-    width: 130px;   /* ⭐ half the previous size */
+    width: 260px;   /* doubled from 130px */
     height: auto;
     display: block;
     margin: 0 auto; /* centers the button */
