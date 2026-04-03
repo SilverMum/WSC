@@ -209,9 +209,12 @@ body {
     position: relative;
 }
 
+/* ⭐ Button now 25% of its previous size */
 .facebook-button img {
-    height: 440px;
-    width: auto;
+    width: 25%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
     transition: all 0.2s ease;
 }
 
@@ -220,6 +223,7 @@ body {
     filter: brightness(1.1);
 }
 
+/* Facebook note text under the button */
 .facebook-note {
     position: absolute;
     left: 50%;
