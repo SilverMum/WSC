@@ -375,17 +375,20 @@ body {
 }
 
 /* ------------------------------
-   RANGE BUTTON — CLEANED + MERGED
+   RANGE BUTTON — RESET & CLEAN
 --------------------------------*/
 .range-button-wrapper {
-    position: relative;
-    display: inline-block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: -40px;   /* moved DOWN so the button sits correctly */
-    z-index: 1;
+    text-align: center;
+    margin-top: 20px;      /* adjust up/down to taste */
 }
 
+/* clickable area is wider than the image */
+.range-button-link {
+    display: inline-block;
+    padding: 0 60px;       /* makes clickable area ~2x wider */
+}
+
+/* image stays visually the same */
 .range-button-img {
     height: 440px;
     width: auto;
@@ -393,21 +396,10 @@ body {
     transition: all 0.2s ease;
 }
 
-/* ⭐ FIXED CLICKABLE AREA */
-.range-button-hitbox {
-    position: absolute;
-    bottom: 40px;        /* moves hitbox DOWN onto the button */
-    left: 50%;
-    transform: translateX(-50%);
-    width: 200px;        /* 2× width */
-    height: 96px;        /* same height */
-    cursor: pointer;
-    z-index: 2;
-}
-
-.range-button-wrapper:hover .range-button-img {
+/* optional hover effect */
+.range-button-link:hover .range-button-img {
     transform: translateY(-3px);
-    filter: brightness(1.1);
+    filter: brightness(1.05);
 }
 
 /* ------------------------------
