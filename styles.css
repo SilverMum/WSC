@@ -1152,13 +1152,14 @@ body {
 }
 
 /* ------------------------------
-   KITCHEN PAGE TITLE — ONLY FOR kitchen.html
+   KITCHEN PAGE TITLE — FINAL VERSION
 --------------------------------*/
 #kitchen-page .section-title {
-    font-size: 4.4rem;              /* 2× bigger */
-    color: #e60000;                 /* red text */
-    text-decoration: underline;     
-    text-decoration-color: #e60000; /* red underline */
-    margin-top: -30px;              /* moves it up one line */
-    font-weight: 800;               /* strong bold */
+    font-size: 3.8rem;          /* 2 sizes bigger than your old 2.2rem */
+    color: #000000;             /* black text */
+    text-decoration: underline;
+    text-decoration-color: #000000; /* black underline */
+    margin-top: -40px;          /* moves it up ~2 lines */
+    font-weight: 800;           /* keeps it bold and strong */
 }
+
