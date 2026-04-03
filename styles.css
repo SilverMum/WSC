@@ -787,7 +787,6 @@ body {
     filter: brightness(1.1);
 }
 
-
 /* ------------------------------
    RANGE NOTICE SECTION
 --------------------------------*/
@@ -808,8 +807,10 @@ body {
     font-size: 18px;
     font-weight: bold;
     line-height: 1.6;
-}
 
+    /* ⭐ Add this to move it down 3 lines */
+    margin-top: 48px;
+}
 
 /* ------------------------------
    RANGE FACEBOOK BUTTON (full-width breakout)
