@@ -377,12 +377,11 @@ body {
 --------------------------------*/
 .range-button-wrapper {
     position: relative;
-    display: block;          /* prevents full-width line box */
-    width: fit-content;      /* wrapper shrinks to image size */
+    display: inline-block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: -120px;
-    z-index: 1;              /* creates a new stacking context */
+    margin-top: -40px;   /* moved DOWN so the button sits correctly */
+    z-index: 1;
 }
 
 .range-button-img {
@@ -392,16 +391,16 @@ body {
     transition: all 0.2s ease;
 }
 
-/* ⭐ SUPER SMALL CLICKABLE AREA — truly tiny now */
+/* ⭐ FIXED CLICKABLE AREA */
 .range-button-hitbox {
     position: absolute;
-    top: 20px;
+    bottom: 40px;        /* moves hitbox DOWN onto the button */
     left: 50%;
     transform: translateX(-50%);
-    width: 96px;
-    height: 96px;
+    width: 200px;        /* 2× width */
+    height: 96px;        /* same height */
     cursor: pointer;
-    z-index: 2;              /* only above the image, not the whole row */
+    z-index: 2;
 }
 
 .range-button-wrapper:hover .range-button-img {
