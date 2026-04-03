@@ -585,42 +585,37 @@ body {
 }
 
 /* ------------------------------
-   ⭐ PRIVATE EVENTS LAYOUT — CLEAN FLYER STYLE
+   ⭐ PRIVATE EVENTS — TEXT ABOVE, PDF BELOW
 --------------------------------*/
 .private-events-section {
-    max-width: 1200px;
+    max-width: 900px;
     margin: 40px auto;
     padding: 0 20px;
+    text-align: center; /* centers everything */
 }
 
-.private-events-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* PDF left, text right */
-    align-items: center;
-    gap: 40px;
-}
-
-/* LEFT SIDE — PDF IMAGE */
-.private-events-pdf {
-    width: 260px;      /* perfect size */
-    height: auto;
-    display: block;
-    margin: 0 auto;    /* keeps it centered in its column */
-}
-
-/* RIGHT SIDE — RED FLYER TEXT */
+/* BIG RED HEADER-STYLE TEXT */
 .private-events-text {
-    font-size: 1.4rem;     /* smaller like you wanted */
+    font-size: 2.2rem;   /* ⭐ 6 sizes bigger */
     font-weight: 700;
     color: #e60000;
     line-height: 1.5;
-    text-align: left;      /* matches your flyer style */
-    max-width: 520px;
+    margin-bottom: 30px; /* space before PDF button */
 }
 
-/* Optional: spacing between lines */
-.private-events-text p {
-    margin: 6px 0;
+/* PDF BUTTON BELOW TEXT */
+.private-events-pdf {
+    width: 130px;   /* ⭐ half the previous size */
+    height: auto;
+    display: block;
+    margin: 0 auto; /* centers the button */
+}
+
+/* Remove old grid/flex layout */
+.private-events-grid,
+.private-events-left,
+.private-events-right {
+    display: block;
 }
 
 /* ------------------------------
