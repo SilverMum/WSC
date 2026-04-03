@@ -385,7 +385,7 @@ body {
 /* clickable area is wider than the image */
 .range-button-link {
     display: inline-block;
-    padding: 0 60px;       /* makes clickable area ~2x wider */
+    padding: 0;       /* makes clickable area ~2x wider */
 }
 
 /* image stays visually the same */
