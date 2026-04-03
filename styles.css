@@ -606,9 +606,9 @@ body {
     display: block;
 }
 
-/* Move PDF image left */
+/* Move PDF image/button left */
 .pdf-box {
-    margin-left: -40px;
+    margin-left: -120px;   /* ~1.5 inches left on most screens */
 }
 
 /* RIGHT SIDE — BIG RED TEXT WITH CLEAN SPACING */
