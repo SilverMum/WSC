@@ -1017,27 +1017,49 @@ body {
 }
 
 /* ------------------------------
-   ARCHERY IMAGE PAIR
+   ARCHERY INFO + IMAGE SIDE-BY-SIDE
 --------------------------------*/
-.archery-image-pair {
-    margin: 50px auto;
-    text-align: center;
-}
+.archery-info {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
 
-.archery-image-wrapper {
-    display: flex;
+    display: flex;              /* ⭐ side-by-side layout */
     justify-content: center;
-    align-items: center;
-    gap: 30px;              /* space between images */
-    flex-wrap: wrap;        /* allows stacking on small screens */
+    align-items: flex-start;    /* ⭐ keeps text at the top */
+    gap: 40px;                  /* space between text + image */
 }
 
-.archery-img {
-    width: 45%;             /* keeps them side-by-side */
-    max-width: 400px;       /* prevents huge images */
+/* Text column */
+.archery-info-text {
+    flex: 1;
+    text-align: left;
+    line-height: 1.6;
+}
+
+/* Image column */
+.archery-info-img {
+    flex: 1;
+    max-width: 400px;
+    width: 100%;
     height: auto;
-    border-radius: 10px;    /* optional, looks clean */
-    display: block;
+    border-radius: 10px;
+}
+
+/* Mobile fallback */
+@media (max-width: 800px) {
+    .archery-info {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .archery-info-text {
+        text-align: center;
+    }
+
+    .archery-info-img {
+        margin-top: 20px;
+    }
 }
 
 /* ------------------------------
