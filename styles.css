@@ -352,12 +352,15 @@ body {
     margin-top: 20px;
 }
 
+/* Move logo slightly left to keep spacing consistent */
 .range-logo {
     max-width: 220px;
     width: 100%;
     height: auto;
+    margin-right: 40px;   /* ⭐ adjust this number if you want more/less shift */
 }
 
+/* Text block stays centered */
 .range-text {
     text-align: center;
     display: flex;
@@ -365,17 +368,21 @@ body {
     align-items: center;
 }
 
+/* Centered title */
 .range-text h2 {
     font-size: 3.2rem;
     font-weight: 800;
     color: #e60000;
+    text-align: center;
 }
 
+/* Centered subtitle */
 .range-text h3 {
     font-size: 2.6rem;
     font-weight: 800;
     line-height: 1.2;
     color: #e60000;
+    text-align: center;
 }
 
 /* ------------------------------
