@@ -768,8 +768,9 @@ body {
     text-align: center;
 }
 
+/* ⭐ Step 1 button downsized by 25% */
 .range-open-button-img {
-    width: 600px !important;   /* 2× larger than before */
+    width: 450px !important;   /* was 600px → 25% smaller */
     height: auto;
     cursor: pointer;
     transition: transform 0.2s ease, filter 0.2s ease;
@@ -796,13 +797,12 @@ body {
     margin-bottom: 25px;
 }
 
+/* ⭐ Move text down 1 line (approx 16px–20px) */
 .range-notice-body {
     font-size: 18px;
     font-weight: bold;
     line-height: 1.6;
-
-    /* ⭐ Moves text down 4 lines */
-    margin-top: 64px;
+    margin-top: 20px; /* was 64px — now 1 line */
 }
 
 /* ------------------------------
@@ -811,12 +811,13 @@ body {
 .range-facebook-section {
     width: 100%;
     display: block;
-    margin: 10px 0;   /* tightened spacing */
+    margin: 10px 0;
     text-align: center;
 }
 
+/* ⭐ Facebook button downsized by 25% */
 .range-facebook-img {
-    width: 520px !important;   /* 2× larger than before */
+    width: 390px !important;   /* was 520px → 25% smaller */
     height: auto;
     cursor: pointer;
     transition: transform 0.2s ease, filter 0.2s ease;
