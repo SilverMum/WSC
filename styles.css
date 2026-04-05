@@ -946,19 +946,29 @@ body {
 
 .archery-header-img {
     width: 100%;
-    height: 380px;      /* banner height */
-    object-fit: cover;  /* clean crop */
+    height: 380px;
+    object-fit: cover;
     display: block;
 }
 
 /* ------------------------------
-   ARCHERY INFO SECTION
+   ARCHERY INFO + IMAGE SIDE-BY-SIDE
 --------------------------------*/
 .archery-info {
-    text-align: center;
-    max-width: 800px;
+    max-width: 1000px;
     margin: 40px auto;
     padding: 0 20px;
+
+    display: flex;              
+    justify-content: center;
+    align-items: flex-start;    
+    gap: 40px;
+}
+
+/* Text column */
+.archery-info-text {
+    flex: 1;
+    text-align: left;
     line-height: 1.6;
 }
 
@@ -1000,7 +1010,7 @@ body {
     margin-bottom: 25px;
 }
 
-/* Weather warning — RED TEXT */
+/* Weather warning */
 .archery-weather {
     font-size: 1.4rem;
     color: #e60000;
@@ -1008,33 +1018,12 @@ body {
     margin-bottom: 30px;
 }
 
-/* Private events paragraph — 4 sizes bigger */
+/* Private events paragraph */
 .archery-private {
     font-size: 1.8rem;
     line-height: 1.5;
     margin: 40px 0;
     font-weight: 600;
-}
-
-/* ------------------------------
-   ARCHERY INFO + IMAGE SIDE-BY-SIDE
---------------------------------*/
-.archery-info {
-    max-width: 1000px;
-    margin: 40px auto;
-    padding: 0 20px;
-
-    display: flex;              /* ⭐ side-by-side layout */
-    justify-content: center;
-    align-items: flex-start;    /* ⭐ keeps text at the top */
-    gap: 40px;                  /* space between text + image */
-}
-
-/* Text column */
-.archery-info-text {
-    flex: 1;
-    text-align: left;
-    line-height: 1.6;
 }
 
 /* Image column */
@@ -1071,7 +1060,7 @@ body {
 }
 
 .archery-cancel-title {
-    font-size: 3rem;   /* 6 sizes bigger than normal */
+    font-size: 3rem;
     font-weight: 700;
 }
 
