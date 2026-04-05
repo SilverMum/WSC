@@ -383,19 +383,21 @@ body {
 --------------------------------*/
 .range-button-wrapper {
     text-align: center;
-    margin-top: 40px; /* ⭐ moved DOWN instead of up */
+    margin-top: 40px;
 }
 
+/* clickable area stays tight to the image */
 .range-button-link {
     display: inline-block;
     padding: 0;
 }
 
-/* ⭐ Button stays 25% size */
+/* ⭐ Increase button size by 2.5× */
 .range-button-img {
-    width: 25%;
+    width: 62.5%;   /* 25% × 2.5 = 62.5% */
     height: auto;
     display: block;
+    margin: 0 auto; /* ⭐ ensures perfect centering */
     transition: all 0.2s ease;
 }
 
