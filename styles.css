@@ -633,7 +633,7 @@ body {
 --------------------------------*/
 .private-events-header-carousel {
     width: 100%;
-    height: 380px; /* same height as archery header */
+    height: 380px; /* match your other header heights */
     overflow: hidden;
     margin-bottom: 40px;
 }
