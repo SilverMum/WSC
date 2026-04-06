@@ -342,24 +342,25 @@ body {
 }
 
 /* ------------------------------
-   RANGE REOPEN SECTION — FIXED
+   RANGE REOPEN SECTION — FINAL FIX
 --------------------------------*/
 .range-layout {
     display: flex;
-    align-items: center;        /* centers logo + text vertically */
-    justify-content: center;    /* centers the whole layout */
-    gap: 40px;                  /* reduced gap so invisible padding doesn't dominate */
+    align-items: center;
+    justify-content: center;
+    gap: 20px;                 /* small gap so logo doesn't push text */
     margin-top: 20px;
-    flex-wrap: wrap;            /* cleaner stacking on smaller screens */
+    flex-wrap: wrap;
 }
 
-/* Logo — corrected for invisible padding */
+/* Fix logo alignment despite invisible padding */
 .range-logo {
-    max-width: 180px;           /* slightly smaller to compensate for hidden space */
-    width: 100%;
-    height: auto;
+    width: 150px;              /* smaller so invisible padding stops dominating */
+    height: 150px;
+    object-fit: contain;       /* prevents transparent padding from affecting layout */
     display: block;
-    object-fit: contain;        /* prevents invisible padding from affecting layout */
+    padding: 0;                /* ensures no CSS padding */
+    margin: 0;                 /* ensures no CSS margin */
 }
 
 /* Text block centered */
@@ -368,6 +369,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 0;                 /* ensures no offset */
+    padding: 0;
 }
 
 /* Centered title */
@@ -386,17 +389,17 @@ body {
     line-height: 1.2;
     color: #e60000;
     text-align: center;
-    margin: 0;
+    margin: 0 0 20px 0;
 }
 
 /* ------------------------------
-   RANGE BUTTON — RESET & CLEAN
+   RANGE BUTTON — CLEAN
 --------------------------------*/
 .range-button-wrapper {
     width: 100%;
     display: flex;
-    justify-content: center;   /* centers inside the right column */
-    margin-top: 40px;
+    justify-content: center;
+    margin-top: 20px;
 }
 
 .range-button-link {
@@ -404,9 +407,8 @@ body {
     padding: 0;
 }
 
-/* Button size increased by 2.5× */
 .range-button-img {
-    width: 62.5%;   /* 25% × 2.5 */
+    width: 60%;
     height: auto;
     display: block;
     transition: all 0.2s ease;
