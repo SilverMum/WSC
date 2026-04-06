@@ -629,6 +629,35 @@ body {
 }
 
 /* ------------------------------
+   PRIVATE EVENTS HEADER CAROUSEL
+--------------------------------*/
+.private-events-header-carousel {
+    width: 100%;
+    height: 380px; /* same height as archery header */
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.carousel-slide.active {
+    opacity: 1;
+}
+
+/* ------------------------------
    ⭐ PRIVATE EVENTS GALLERY
 --------------------------------*/
 .private-events-gallery {
