@@ -346,21 +346,22 @@ body {
 --------------------------------*/
 .range-layout {
     display: flex;
+    flex-direction: row;        /* FORCE side-by-side layout */
     align-items: center;
-    justify-content: center;
-    gap: 20px;                 /* small gap so logo doesn't push text */
+    justify-content: center;    /* centers the whole block */
+    gap: 30px;                  /* space between logo + text */
     margin-top: 20px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;          /* prevents stacking */
 }
 
-/* Fix logo alignment despite invisible padding */
+/* Fix logo alignment + invisible padding */
 .range-logo {
-    width: 150px;              /* smaller so invisible padding stops dominating */
-    height: 150px;
-    object-fit: contain;       /* prevents transparent padding from affecting layout */
+    width: 130px;               /* smaller bounding box */
+    height: 130px;
+    object-fit: contain;        /* prevents transparent padding from affecting layout */
     display: block;
-    padding: 0;                /* ensures no CSS padding */
-    margin: 0;                 /* ensures no CSS margin */
+    margin: 0;
+    padding: 0;
 }
 
 /* Text block centered */
@@ -369,7 +370,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0;                 /* ensures no offset */
+    margin: 0;
     padding: 0;
 }
 
@@ -378,7 +379,6 @@ body {
     font-size: 3.2rem;
     font-weight: 800;
     color: #e60000;
-    text-align: center;
     margin: 0 0 10px 0;
 }
 
@@ -388,7 +388,6 @@ body {
     font-weight: 800;
     line-height: 1.2;
     color: #e60000;
-    text-align: center;
     margin: 0 0 20px 0;
 }
 
@@ -398,7 +397,7 @@ body {
 .range-button-wrapper {
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: center;   /* centers the button */
     margin-top: 20px;
 }
 
