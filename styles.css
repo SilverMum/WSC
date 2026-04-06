@@ -547,6 +547,12 @@ body {
     padding-bottom: 30px;
 }
 
+.contact-section p,
+.contact-section h2,
+.contact-section h3 {
+    margin-top: 40px;
+}
+
 /* ------------------------------
    PARTNERSHIP IMAGE
 --------------------------------*/
