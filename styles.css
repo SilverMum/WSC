@@ -707,6 +707,13 @@ body {
     margin: 0 auto;     /* centers the carousel */
 }
 
+/* Make Private Events carousel show full images */
+.private-events-carousel img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;   /* ⭐ shows the full image without cropping */
+}
+
 /* ------------------------------
    LOGIN PAGE — FRIENDLY MODERN LOOK
 --------------------------------*/
