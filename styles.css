@@ -1098,18 +1098,32 @@ body {
 }
 
 /* ------------------------------
-   ARCHERY IMAGE PAIR
+   ARCHERY IMAGE PAIR — FINAL FIX
 --------------------------------*/
 
-/* Left image stays full size */
-.archery-image-wrapper img:first-child {
-    width: auto;
-    max-width: 100%;
+/* Wrapper: keeps images centered as a group */
+.archery-image-wrapper {
+    display: flex;
+    justify-content: center;   /* centers the pair */
+    align-items: center;       /* aligns heights */
+    gap: 20px;                 /* space BETWEEN images */
+    margin: 40px auto;
 }
 
-/* Right image is smaller */
+/* Left image: larger */
+.archery-image-wrapper img:first-child {
+    height: 300px;             /* set height */
+    width: auto;               /* auto width keeps proportions */
+    object-fit: cover;
+}
+
+/* Right image: smaller */
 .archery-image-wrapper img:last-child {
-    width: 50%;
+    height: 300px;             /* SAME height as left image */
+    width: auto;
+    object-fit: cover;
+    transform: scale(0.75);    /* makes it visually smaller */
+    transform-origin: center;  /* keeps it centered */
 }
 
 /* ------------------------------
