@@ -7,6 +7,21 @@
     <link rel="stylesheet" href="styles.css?v=8">
 </head>
 
+    <script>
+document.addEventListener("DOMContentLoaded", function () {
+    const slides = document.querySelectorAll(".private-events-header-carousel .carousel-slide");
+    let index = 0;
+
+    function showNextSlide() {
+        slides[index].classList.remove("active");
+        index = (index + 1) % slides.length;
+        slides[index].classList.add("active");
+    }
+
+    setInterval(showNextSlide, 4000); // ⭐ same speed as homepage
+});
+</script>
+
 <body>
 
 <header>
