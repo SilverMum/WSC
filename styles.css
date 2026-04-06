@@ -348,19 +348,18 @@ body {
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    gap: 40px;
+    gap: 80px;   /* ⭐ increased gap pushes logo left */
     margin-top: 20px;
 }
 
-/* Move logo slightly left to keep spacing consistent */
+/* Logo stays same size, just shifts left because of larger gap */
 .range-logo {
     max-width: 220px;
     width: 100%;
     height: auto;
-    margin-right: 40px;   /* ⭐ adjust this number if you want more/less shift */
 }
 
-/* Text block stays centered */
+/* Text block centered */
 .range-text {
     text-align: center;
     display: flex;
