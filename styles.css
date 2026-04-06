@@ -342,21 +342,24 @@ body {
 }
 
 /* ------------------------------
-   RANGE REOPEN SECTION
+   RANGE REOPEN SECTION — FIXED
 --------------------------------*/
 .range-layout {
     display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    gap: 80px;   /* ⭐ increased gap pushes logo left */
+    align-items: center;        /* centers logo + text vertically */
+    justify-content: center;    /* centers the whole layout */
+    gap: 40px;                  /* reduced gap so invisible padding doesn't dominate */
     margin-top: 20px;
+    flex-wrap: wrap;            /* cleaner stacking on smaller screens */
 }
 
-/* Logo stays same size, just shifts left because of larger gap */
+/* Logo — corrected for invisible padding */
 .range-logo {
-    max-width: 220px;
+    max-width: 180px;           /* slightly smaller to compensate for hidden space */
     width: 100%;
     height: auto;
+    display: block;
+    object-fit: contain;        /* prevents invisible padding from affecting layout */
 }
 
 /* Text block centered */
@@ -373,6 +376,7 @@ body {
     font-weight: 800;
     color: #e60000;
     text-align: center;
+    margin: 0 0 10px 0;
 }
 
 /* Centered subtitle */
@@ -382,6 +386,7 @@ body {
     line-height: 1.2;
     color: #e60000;
     text-align: center;
+    margin: 0;
 }
 
 /* ------------------------------
@@ -390,7 +395,7 @@ body {
 .range-button-wrapper {
     width: 100%;
     display: flex;
-    justify-content: center;   /* ⭐ centers inside the right column */
+    justify-content: center;   /* centers inside the right column */
     margin-top: 40px;
 }
 
@@ -399,7 +404,7 @@ body {
     padding: 0;
 }
 
-/* ⭐ Increase button size by 2.5× */
+/* Button size increased by 2.5× */
 .range-button-img {
     width: 62.5%;   /* 25% × 2.5 */
     height: auto;
