@@ -628,24 +628,23 @@ body {
     max-width: 900px;
     margin: 40px auto;
     padding: 0 20px;
-    text-align: center; /* centers everything */
+    text-align: center;
 }
 
-/* BIG RED HEADER-STYLE TEXT */
 .private-events-text {
-    font-size: 2.2rem;   /* large, bold, centered */
+    font-size: 2.2rem;
     font-weight: 700;
     color: #e60000;
     line-height: 1.5;
-    margin-bottom: 30px; /* space before PDF button */
+    margin-bottom: 30px;
 }
 
-/* ⭐ PDF BUTTON BELOW TEXT — now 2x the current size */
+/* PDF button */
 .private-events-pdf {
-    width: 260px;   /* doubled from 130px */
+    width: 260px;
     height: auto;
     display: block;
-    margin: 0 auto; /* centers the button */
+    margin: 0 auto;
 }
 
 /* Remove old grid/flex layout */
@@ -660,7 +659,7 @@ body {
 --------------------------------*/
 .private-events-header-carousel {
     width: 100%;
-    height: 380px; /* match your other header heights */
+    height: 380px;
     overflow: hidden;
     margin-bottom: 40px;
 }
@@ -686,7 +685,7 @@ body {
 
 /* Move ONLY the text under the carousel upward */
 .private-events-carousel + * {
-    margin-top: -30px;   /* about 2 lines upward */
+    margin-top: -30px;
 }
 
 /* ------------------------------
@@ -694,7 +693,7 @@ body {
 --------------------------------*/
 .private-events-gallery {
     width: 100%;
-    max-width: none;      /* allow full screen width */
+    max-width: none;
     margin: 60px auto;
     padding: 0 20px;
 }
@@ -707,7 +706,7 @@ body {
 }
 
 .gallery-row img {
-    width: 50%;           /* each image takes half the row */
+    width: 50%;
     height: auto;
     border-radius: 10px;
     object-fit: cover;
@@ -718,14 +717,14 @@ body {
    ⭐ PRIVATE EVENTS CAROUSEL
 --------------------------------*/
 .private-events-carousel {
-    max-width: 900px;   /* same width as homepage */
-    margin: 0 auto;     /* center it */
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .private-events-carousel img {
     width: 100%;
     height: auto;
-    object-fit: contain;   /* show full image, no cropping */
+    object-fit: contain;
 }
 
 /* ------------------------------
