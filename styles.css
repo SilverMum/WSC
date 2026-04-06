@@ -701,17 +701,18 @@ body {
     object-fit: cover;
 }
 
-/* Make Private Events carousel match homepage size */
+/* ------------------------------
+   ⭐ PRIVATE EVENTS CAROUSEL
+--------------------------------*/
 .private-events-carousel {
-    max-width: 900px;   /* adjust this number if you want it smaller/larger */
-    margin: 0 auto;     /* centers the carousel */
+    max-width: 900px;   /* same width as homepage */
+    margin: 0 auto;     /* center it */
 }
 
-/* Make Private Events carousel show full images */
 .private-events-carousel img {
     width: 100%;
     height: auto;
-    object-fit: contain;   /* ⭐ shows the full image without cropping */
+    object-fit: contain;   /* show full image, no cropping */
 }
 
 /* ------------------------------
