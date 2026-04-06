@@ -995,11 +995,11 @@ body {
     max-width: 800px;
     margin: 40px auto;
     padding: 0 20px;
-    text-align: center;   /* ⭐ centers all text */
+    text-align: center;
 }
 
 .archery-info-text {
-    text-align: center;   /* ⭐ ensures inner text is centered */
+    text-align: center;
     line-height: 1.6;
 }
 
@@ -1059,10 +1059,10 @@ body {
 
 /* Remove old image column rules */
 .archery-info-img {
-    display: none;   /* ⭐ ensures the extra image is gone */
+    display: none;
 }
 
-/* Mobile fallback (still fine) */
+/* Mobile fallback */
 @media (max-width: 800px) {
     .archery-info {
         text-align: center;
@@ -1073,17 +1073,17 @@ body {
     }
 }
 
-.archery-image-wrapper img:last-child {
-    width: 50%;   /* ⭐ half size */
-}
+/* ------------------------------
+   ARCHERY IMAGE PAIR
+--------------------------------*/
 
-/* Force left image to stay full size */
+/* Left image stays full size */
 .archery-image-wrapper img:first-child {
     width: auto;
     max-width: 100%;
 }
 
-/* Force right image to be smaller */
+/* Right image is smaller */
 .archery-image-wrapper img:last-child {
     width: 50%;
 }
