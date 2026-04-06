@@ -1338,6 +1338,24 @@ body {
     justify-content: flex-end; /* pushes both items to the right */
 }
 
+.ofha-links-row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+}
+
+.ofha-links-row a {
+    flex: 1;
+}
+
+.ofha-links-row img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
 /* ------------------------------
    KITCHEN PAGE TITLE — FINAL VERSION
 --------------------------------*/
