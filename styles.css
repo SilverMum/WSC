@@ -342,39 +342,35 @@ body {
 }
 
 /* ------------------------------
-   RANGE REOPEN SECTION — FINAL FIX
+   RANGE REOPEN SECTION — CLEAN + FIXED
 --------------------------------*/
 .range-layout {
-    display: flex;
-    flex-direction: row;        /* FORCE side-by-side layout */
-    align-items: center;
-    justify-content: center;    /* centers the whole block */
-    gap: 30px;                  /* space between logo + text */
+    position: relative;
+    width: 100%;
     margin-top: 20px;
-    flex-wrap: nowrap;          /* prevents stacking */
-}
-
-/* Fix logo alignment + invisible padding */
-.range-logo {
-    width: 130px;               /* smaller bounding box */
-    height: 130px;
-    object-fit: contain;        /* prevents transparent padding from affecting layout */
-    display: block;
-    margin: 0;
-    padding: 0;
-}
-
-/* Text block centered */
-.range-text {
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+}
+
+/* Logo stays left but does NOT affect centering */
+.range-logo {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 130px;
+    height: 130px;
+    object-fit: contain;
     margin: 0;
     padding: 0;
 }
 
-/* Centered title */
+/* Centered text block */
+.range-text {
+    margin: 0 auto;
+    width: fit-content;
+    text-align: center;
+}
+
 .range-text h2 {
     font-size: 3.2rem;
     font-weight: 800;
@@ -382,7 +378,6 @@ body {
     margin: 0 0 10px 0;
 }
 
-/* Centered subtitle */
 .range-text h3 {
     font-size: 2.6rem;
     font-weight: 800;
@@ -391,13 +386,11 @@ body {
     margin: 0 0 20px 0;
 }
 
-/* ------------------------------
-   RANGE BUTTON — CLEAN
---------------------------------*/
+/* Centered button */
 .range-button-wrapper {
     width: 100%;
     display: flex;
-    justify-content: center;   /* centers the button */
+    justify-content: center;
     margin-top: 20px;
 }
 
