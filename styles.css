@@ -676,6 +676,11 @@ body {
     opacity: 1;
 }
 
+/* Move ONLY the text under the carousel upward */
+.private-events-carousel + * {
+    margin-top: -30px;   /* about 2 lines upward */
+}
+
 /* ------------------------------
    ⭐ PRIVATE EVENTS GALLERY
 --------------------------------*/
