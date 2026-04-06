@@ -1213,9 +1213,9 @@ body {
 }
 
 .ofha-membership p {
-    font-size: 1.6rem;      /* 2 sizes smaller than previous text */
-    color: #1877F2;         /* Facebook blue */
-    font-weight: 600;       /* bold but not too heavy */
+    font-size: 1.6rem;
+    color: #1877F2;
+    font-weight: 600;
     line-height: 1.6;
 }
 
@@ -1226,20 +1226,20 @@ body {
     max-width: 900px;
     margin: 40px auto;
     padding: 0 20px;
-    color: #1877F2;          /* Facebook blue */
+    color: #1877F2;
 }
 
 .ofha-reasons h3 {
-    font-size: 1.6rem;       /* same size as membership text */
+    font-size: 1.6rem;
     font-weight: 700;
     margin-bottom: 20px;
     text-align: left;
 }
 
 .ofha-reasons ol {
-    font-size: 1.6rem;       /* same size as membership text */
+    font-size: 1.6rem;
     line-height: 1.6;
-    padding-left: 20px;      /* clean indent */
+    padding-left: 20px;
     text-align: left;
 }
 
@@ -1247,16 +1247,19 @@ body {
     margin-bottom: 12px;
 }
 
+/* ------------------------------
+   OFAH ADVOCACY SECTION
+--------------------------------*/
 .ofah-advocacy {
     text-align: center;
-    color: #005bbb; /* OFAH blue */
+    color: #005bbb;
     max-width: 900px;
     margin: 60px auto;
     padding: 0 20px;
 }
 
 .ofah-advocacy h2 {
-    font-size: 2.8rem; /* title 2 sizes bigger */
+    font-size: 2.8rem;
     font-weight: 800;
     margin-bottom: 10px;
     color: #005bbb;
@@ -1276,9 +1279,12 @@ body {
     color: #005bbb;
 }
 
+/* ------------------------------
+   OFAH CONSERVATION SECTION
+--------------------------------*/
 .ofah-conservation {
     text-align: center;
-    color: #005bbb; /* OFAH blue */
+    color: #005bbb;
     max-width: 900px;
     margin: 60px auto;
     padding: 0 20px;
@@ -1305,7 +1311,9 @@ body {
     color: #005bbb;
 }
 
-/* Divider already used on your site */
+/* ------------------------------
+   DIVIDER
+--------------------------------*/
 .club-events-divider {
     width: 80%;
     margin: 40px auto;
@@ -1314,11 +1322,14 @@ body {
     opacity: 0.7;
 }
 
+/* ------------------------------
+   QUICK LINKS TITLE
+--------------------------------*/
 .quick-links-title {
     text-align: center;
     font-size: 2.4rem;
     font-weight: 900;
-    color: #e60000; /* bold red */
+    color: #e60000;
     letter-spacing: 1px;
     margin: 40px 0 20px 0;
 }
