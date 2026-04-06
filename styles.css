@@ -699,6 +699,12 @@ body {
     object-fit: cover;
 }
 
+/* Make Private Events carousel match homepage size */
+.private-events-carousel {
+    max-width: 900px;   /* adjust this number if you want it smaller/larger */
+    margin: 0 auto;     /* centers the carousel */
+}
+
 /* ------------------------------
    LOGIN PAGE — FRIENDLY MODERN LOOK
 --------------------------------*/
