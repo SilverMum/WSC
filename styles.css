@@ -1077,6 +1077,17 @@ body {
     width: 50%;   /* ⭐ half size */
 }
 
+/* Force left image to stay full size */
+.archery-image-wrapper img:first-child {
+    width: auto;
+    max-width: 100%;
+}
+
+/* Force right image to be smaller */
+.archery-image-wrapper img:last-child {
+    width: 50%;
+}
+
 /* ------------------------------
    ARCHERY CANCELLATIONS SECTION
 --------------------------------*/
