@@ -1314,6 +1314,15 @@ body {
     opacity: 0.7;
 }
 
+.quick-links-title {
+    text-align: center;
+    font-size: 2.4rem;
+    font-weight: 900;
+    color: #e60000; /* bold red */
+    letter-spacing: 1px;
+    margin: 40px 0 20px 0;
+}
+
 /* ------------------------------
    KITCHEN PAGE TITLE — FINAL VERSION
 --------------------------------*/
