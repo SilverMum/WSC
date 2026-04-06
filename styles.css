@@ -1334,6 +1334,10 @@ body {
     margin: 40px 0 20px 0;
 }
 
+.ofha-intro {
+    justify-content: flex-end; /* pushes both items to the right */
+}
+
 /* ------------------------------
    KITCHEN PAGE TITLE — FINAL VERSION
 --------------------------------*/
