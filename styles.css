@@ -682,10 +682,11 @@ body {
 }
 
 /* ------------------------------
-   ⭐ PRIVATE EVENTS GALLERY
+   ⭐ PRIVATE EVENTS GALLERY — FULL WIDTH
 --------------------------------*/
 .private-events-gallery {
-    max-width: 900px;
+    width: 100%;
+    max-width: none;      /* allow full screen width */
     margin: 60px auto;
     padding: 0 20px;
 }
@@ -698,11 +699,11 @@ body {
 }
 
 .gallery-row img {
-    width: 100%;
-    max-width: 48%;
+    width: 50%;           /* each image takes half the row */
+    height: auto;
     border-radius: 10px;
-    display: block;
     object-fit: cover;
+    display: block;
 }
 
 /* ------------------------------
