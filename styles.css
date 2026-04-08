@@ -285,27 +285,6 @@ body {
 }
 
 /* ------------------------------
-   BAND SECTION
---------------------------------*/
-#band-image {
-    display: block;
-    margin: 40px auto 0 auto;
-    max-width: 900px;
-    width: 100%;
-    height: auto;
-}
-
-.band-kitchen-divider {
-    border: none;
-    border-top: 2px solid #ccc;
-    margin: 0 auto;
-    margin-top: 0;
-    margin-bottom: 40px;
-    width: 90%;
-    max-width: 900px;
-}
-
-/* ------------------------------
    KITCHEN SECTION
 --------------------------------*/
 #kitchen {
@@ -340,6 +319,27 @@ body {
 #kitchen-page .kitchen-badge {
     transform: scale(1.2);
     transform-origin: top left;
+}
+
+/* ------------------------------
+   BAND SECTION
+--------------------------------*/
+#band-image {
+    display: block;
+    margin: 40px auto 0 auto;
+    max-width: 900px;
+    width: 100%;
+    height: auto;
+}
+
+.band-kitchen-divider {
+    border: none;
+    border-top: 2px solid #ccc;
+    margin: 0 auto;
+    margin-top: 0;
+    margin-bottom: 40px;
+    width: 90%;
+    max-width: 900px;
 }
 
 /* ------------------------------
