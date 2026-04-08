@@ -355,13 +355,11 @@ body {
 .range-logo {
     position: absolute;
     left: 0;
-    top: 50%;
+    top: 40%;   /* ⭐ move logo upward */
     transform: translateY(-50%);
     width: 130px;
     height: 130px;
     object-fit: contain;
-    margin: 0;
-    padding: 0;
 }
 
 /* Centered text block */
