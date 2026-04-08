@@ -391,11 +391,12 @@ body {
     text-align: center;
 }
 
-/* Centered button — perfectly aligned with title */
+/* Centered button — nudged slightly right for visual alignment */
 .range-button-wrapper {
     margin: 20px auto 0 auto;
     width: fit-content;
     text-align: center;
+    transform: translateX(10px); /* ⭐ Option A: nudge button right */
 }
 
 .range-button-link {
