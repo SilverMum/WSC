@@ -411,6 +411,12 @@ body {
     filter: brightness(1.05);
 }
 
+.range-button-wrapper {
+    margin: 20px auto 0 auto;  /* centers the wrapper itself */
+    width: fit-content;        /* ⭐ matches the width of the text block */
+    text-align: center;        /* centers the button inside */
+}
+
 /* ------------------------------
    RANGE DETAILS
 --------------------------------*/
