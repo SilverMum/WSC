@@ -1349,10 +1349,16 @@ body {
     margin: 40px 0 20px 0;
 }
 
+/* ------------------------------
+   OFHA INTRO ADJUSTMENT
+--------------------------------*/
 .ofha-intro {
-    justify-content: flex-end; /* pushes both items to the right */
+    justify-content: flex-end; /* pushes text + logo to the right */
 }
 
+/* ------------------------------
+   QUICK LINKS IMAGE ROW
+--------------------------------*/
 .ofha-links-row {
     width: 100%;
     display: flex;
