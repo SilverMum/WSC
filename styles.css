@@ -1379,6 +1379,10 @@ body {
     display: block;
 }
 
+.range-button-img {
+    outline: 10px solid hotpink !important;
+}
+
 /* ------------------------------
    KITCHEN PAGE TITLE — FINAL VERSION
 --------------------------------*/
