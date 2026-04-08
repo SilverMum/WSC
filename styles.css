@@ -400,9 +400,9 @@ body {
 }
 
 /* Move the link (the real positioned element) */
-.range-button-link {
+.range-button-wrapper .range-button-link {
     display: inline-block;
-    transform: translateX(40px); /* ⭐ Now this will finally work */
+    transform: translateX(40px) !important;
     padding: 0;
 }
 
