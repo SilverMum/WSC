@@ -1159,8 +1159,8 @@ body {
 
 .ofha-header-img {
     width: 100%;
-    height: 380px;      /* banner height */
-    object-fit: cover;  /* clean crop */
+    height: 380px;
+    object-fit: cover;
     display: block;
 }
 
@@ -1179,10 +1179,10 @@ body {
 .ofha-intro-left {
     flex: 1;
     text-align: center;
-    font-size: 2rem;          /* 4 sizes bigger */
+    font-size: 2rem;
     line-height: 1.5;
-    color: #1877F2;           /* Facebook blue */
-    font-weight: 700;         /* BOLD */
+    color: #005BBB;
+    font-weight: 700;
 }
 
 .ofha-intro-right {
@@ -1202,7 +1202,7 @@ body {
     text-align: center;
     font-size: 1.4rem;
     font-weight: 700;
-    color: #1877F2;   /* same blue as your intro text */
+    color: #005BBB;
     text-decoration: none;
 }
 
@@ -1222,9 +1222,10 @@ body {
 
 .ofha-membership p {
     font-size: 1.6rem;
-    color: #1877F2;
+    color: #005BBB;
     font-weight: 600;
     line-height: 1.6;
+    margin-bottom: 25px;
 }
 
 /* ------------------------------
@@ -1234,11 +1235,11 @@ body {
     max-width: 900px;
     margin: 40px auto;
     padding: 0 20px;
-    color: #1877F2;
+    color: #005BBB;
 }
 
 .ofha-reasons h3 {
-    font-size: 1.6rem;
+    font-size: 2rem;
     font-weight: 700;
     margin-bottom: 20px;
     text-align: left;
@@ -1260,7 +1261,7 @@ body {
 --------------------------------*/
 .ofah-advocacy {
     text-align: center;
-    color: #005bbb;
+    color: #005BBB;
     max-width: 900px;
     margin: 60px auto;
     padding: 0 20px;
@@ -1270,21 +1271,21 @@ body {
     font-size: 2.8rem;
     font-weight: 800;
     margin-bottom: 10px;
-    color: #005bbb;
+    color: #005BBB;
 }
 
 .ofah-advocacy h3 {
     font-size: 2rem;
     font-weight: 700;
     margin-bottom: 20px;
-    color: #005bbb;
+    color: #005BBB;
 }
 
 .ofah-advocacy p {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     line-height: 1.6;
     margin-bottom: 25px;
-    color: #005bbb;
+    color: #005BBB;
 }
 
 /* ------------------------------
@@ -1292,7 +1293,7 @@ body {
 --------------------------------*/
 .ofah-conservation {
     text-align: center;
-    color: #005bbb;
+    color: #005BBB;
     max-width: 900px;
     margin: 60px auto;
     padding: 0 20px;
@@ -1302,21 +1303,21 @@ body {
     font-size: 2.8rem;
     font-weight: 800;
     margin-bottom: 20px;
-    color: #005bbb;
+    color: #005BBB;
 }
 
 .ofah-conservation h3 {
     font-size: 2rem;
     font-weight: 700;
     margin: 30px 0 15px 0;
-    color: #005bbb;
+    color: #005BBB;
 }
 
 .ofah-conservation p {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     line-height: 1.6;
     margin-bottom: 25px;
-    color: #005bbb;
+    color: #005BBB;
 }
 
 /* ------------------------------
@@ -1340,13 +1341,6 @@ body {
     color: #e60000;
     letter-spacing: 1px;
     margin: 40px 0 20px 0;
-}
-
-/* ------------------------------
-   OFHA INTRO ADJUSTMENT
---------------------------------*/
-.ofha-intro {
-    justify-content: flex-end; /* pushes text + logo to the right */
 }
 
 /* ------------------------------
