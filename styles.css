@@ -237,6 +237,11 @@ body {
     width: 100%;
 }
 
+.facebook-divider-wrapper {
+    position: relative;
+    margin-top: 160px; /* moves divider BELOW the floating text */
+}
+
 /* ------------------------------
    CONTENT SECTIONS
 --------------------------------*/
