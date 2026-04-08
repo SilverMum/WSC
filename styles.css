@@ -18,7 +18,6 @@ body {
     background-color: #f0f0f0;
 }
 
-
 /* ------------------------------
    NAVIGATION
 --------------------------------*/
@@ -351,6 +350,26 @@ body {
     font-weight: 600;
     color: #e60000;        /* red */
     margin-top: 0;
+}
+
+/* ------------------------------
+   SIMPLE RANGE BUTTON
+--------------------------------*/
+.range-button-simple {
+    text-align: center;
+    margin: 20px auto 40px auto;
+}
+
+.range-button-simple-img {
+    width: 350px;          /* adjust size if needed */
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.range-button-simple-img:hover {
+    transform: translateY(-3px);
+    filter: brightness(1.1);
 }
 
 /* ------------------------------
