@@ -322,6 +322,38 @@ body {
 }
 
 /* ------------------------------
+   SIMPLE RANGE NOTICE SECTION
+--------------------------------*/
+.range-simple-section {
+    text-align: center;
+    margin: 40px auto;
+    padding: 20px 0;
+}
+
+.range-simple-divider {
+    width: 80%;
+    max-width: 900px;
+    margin: 20px auto;
+    border: none;
+    border-top: 3px solid #e60000;
+    opacity: 0.8;
+}
+
+.range-simple-title {
+    font-size: 2.8rem;     /* bigger title */
+    font-weight: 800;
+    color: #e60000;        /* red */
+    margin-bottom: 10px;
+}
+
+.range-simple-subtitle {
+    font-size: 1.8rem;     /* slightly smaller */
+    font-weight: 600;
+    color: #e60000;        /* red */
+    margin-top: 0;
+}
+
+/* ------------------------------
    BAND SECTION
 --------------------------------*/
 #band-image {
