@@ -385,95 +385,33 @@ body {
     margin: 0 0 20px 0;
 }
 
-/* NEW: wrapper that aligns text + button together */
+/* Wrapper that aligns text + button together */
 .range-center-block {
     width: fit-content;
     margin: 0 auto;
     text-align: center; /* only affects text */
 }
 
-/* Button wrapper — REMOVE centering so transform works */
+/* Button wrapper */
 .range-button-wrapper {
     margin: 20px auto 0 auto;
     width: fit-content;
-    text-align: left; /* ⭐ FIX: stop forcing the button to center */
+    text-align: left; /* stops forced centering */
 }
 
-/* Move the link (the real positioned element) */
-.range-button-img {
-    transform: translateX(40px);
-}
-
-/* Image follows the link */
+/* ⭐ NORMAL POSITION — move the actual image */
 .range-button-img {
     width: 60%;
     height: auto;
     display: block;
     transition: all 0.2s ease;
+    transform: translateX(40px); /* ⭐ THIS is the fix */
 }
 
-/* Hover must include BOTH transforms */
+/* ⭐ HOVER — keep both transforms */
 .range-button-link:hover .range-button-img {
     transform: translateX(40px) translateY(-3px);
     filter: brightness(1.05);
-}
-
-/* ------------------------------
-   RANGE DETAILS
---------------------------------*/
-.range-details {
-    margin-top: 40px; /* ⭐ no more negative pull-up */
-    margin-bottom: 40px;
-    padding: 20px;
-}
-
-.fee-block {
-    text-align: left;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-.fee-block p {
-    margin-bottom: 10px;
-}
-
-.fee-block ul {
-    padding-left: 25px;
-    margin-bottom: 20px;
-}
-
-.fee-block li {
-    margin-bottom: 6px;
-}
-
-.range-details-title {
-    text-align: center;
-    font-size: 2rem;
-    font-weight: 700;
-    color: #e60000;
-    margin-bottom: 25px;
-}
-
-.range-details-body {
-    max-width: 800px;
-    margin: 0 auto;
-    font-size: 1.2rem;
-    line-height: 1.7;
-    color: #000;
-}
-
-.range-details-body p {
-    text-align: left;
-    margin-bottom: 10px;
-}
-
-.improvements-list {
-    text-align: left !important;
-    padding-left: 25px;
-}
-
-.improvements-list li {
-    margin-bottom: 8px;
 }
 
 /* ------------------------------
