@@ -349,7 +349,7 @@ body {
     position: relative;
     width: 100%;
     margin-top: 20px;
-    text-align: center; /* keeps the text centered */
+    text-align: center;
 }
 
 /* Logo stays left but does NOT affect centering */
@@ -389,14 +389,14 @@ body {
 .range-center-block {
     width: fit-content;
     margin: 0 auto;
-    text-align: center; /* only affects text */
+    text-align: center;
 }
 
 /* Button wrapper */
 .range-button-wrapper {
     margin: 20px auto 0 auto;
     width: fit-content;
-    text-align: left; /* stops forced centering */
+    text-align: left;
 }
 
 /* ⭐ NORMAL POSITION — move the actual image */
@@ -405,7 +405,7 @@ body {
     height: auto;
     display: block;
     transition: all 0.2s ease;
-    transform: translateX(40px); /* ⭐ THIS is the fix */
+    transform: translateX(40px);
 }
 
 /* ⭐ HOVER — keep both transforms */
