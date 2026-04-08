@@ -394,6 +394,7 @@ body {
 
 /* Centered button — nudged slightly right for visual alignment */
 .range-button-wrapper {
+    background: red !important;
     margin: 20px auto 0 auto;
     width: fit-content;
     text-align: center;
