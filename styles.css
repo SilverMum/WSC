@@ -402,6 +402,7 @@ body {
 
 .range-button-link {
     display: inline-block;
+    transform: translateX(40px) !important;
     padding: 0;
 }
 
