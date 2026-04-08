@@ -355,7 +355,7 @@ body {
 .range-logo {
     position: absolute;
     left: 0;
-    top: 40%;                 /* keeps your preferred vertical position */
+    top: 40%;
     transform: translateY(-50%);
     width: 130px;
     height: 130px;
@@ -365,7 +365,7 @@ body {
 /* Centered text block */
 .range-text {
     margin: 0 auto;
-    width: fit-content;       /* defines the true center line */
+    width: fit-content;
     text-align: center;
 }
 
@@ -384,11 +384,18 @@ body {
     margin: 0 0 20px 0;
 }
 
+/* NEW: wrapper that aligns text + button together */
+.range-center-block {
+    width: fit-content;
+    margin: 0 auto;
+    text-align: center;
+}
+
 /* Centered button — perfectly aligned with title */
 .range-button-wrapper {
-    margin: 20px auto 0 auto; /* centers the wrapper itself */
-    width: fit-content;       /* matches the width of the text block */
-    text-align: center;       /* centers the button inside */
+    margin: 20px auto 0 auto;
+    width: fit-content;
+    text-align: center;
 }
 
 .range-button-link {
