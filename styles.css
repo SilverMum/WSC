@@ -400,10 +400,8 @@ body {
 }
 
 /* Move the link (the real positioned element) */
-.range-button-wrapper .range-button-link {
-    display: inline-block;
-    transform: translateX(40px) !important;
-    padding: 0;
+.range-button-img {
+    transform: translateX(40px);
 }
 
 /* Image follows the link */
@@ -1377,10 +1375,6 @@ body {
     object-fit: cover;    /* crops bottoms evenly */
     background: white;    /* fills any gaps */
     display: block;
-}
-
-.range-button-img {
-    outline: 10px solid hotpink !important;
 }
 
 /* ------------------------------
