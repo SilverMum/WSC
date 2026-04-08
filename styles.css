@@ -397,7 +397,7 @@ body {
     margin: 20px auto 0 auto;
     width: fit-content;
     text-align: center;
-    transform: translateX(10px); /* ⭐ Option A: nudge button right */
+    transform: translateX(20px); /* ⭐ Option A: nudge button right */
 }
 
 .range-button-link {
