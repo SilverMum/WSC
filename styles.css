@@ -1117,32 +1117,29 @@ body {
 }
 
 /* ------------------------------
-   ARCHERY IMAGE PAIR — FINAL FIX
+   ARCHERY IMAGE TRIO — FINAL FIX
 --------------------------------*/
 
-/* Wrapper: keeps images centered as a group */
+/* Wrapper: keeps all images centered as a group */
 .archery-image-wrapper {
     display: flex;
-    justify-content: center;   /* centers the pair */
+    justify-content: center;   /* centers the group */
     align-items: center;       /* aligns heights */
     gap: 20px;                 /* space BETWEEN images */
     margin: 40px auto;
 }
 
-/* Left image: larger */
-.archery-image-wrapper img:first-child {
-    height: 300px;             /* set height */
-    width: auto;               /* auto width keeps proportions */
+/* All images share the same base height */
+.archery-image-wrapper img {
+    height: 300px;
+    width: auto;
     object-fit: cover;
 }
 
-/* Right image: smaller */
+/* OPTIONAL: If you still want the last image smaller */
 .archery-image-wrapper img:last-child {
-    height: 300px;             /* SAME height as left image */
-    width: auto;
-    object-fit: cover;
-    transform: scale(0.75);    /* makes it visually smaller */
-    transform-origin: center;  /* keeps it centered */
+    transform: scale(0.85);      /* adjust size as needed */
+    transform-origin: center;
 }
 
 /* ------------------------------
