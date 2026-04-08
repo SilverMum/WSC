@@ -390,33 +390,33 @@ body {
     width: fit-content;
     margin: 0 auto;
     text-align: center;
-    transform: translateX(40px) !important;
 }
 
-/* Centered button — nudged slightly right for visual alignment */
+/* Button wrapper (not used for movement anymore) */
 .range-button-wrapper {
     margin: 20px auto 0 auto;
     width: fit-content;
     text-align: center;
-    transform: translateX(40px); /* ⭐ Option A: nudge button right */
 }
 
+/* The LINK is the real positioned element */
 .range-button-link {
     display: inline-block;
-    transform: translateX(40px) !important;
+    transform: translateX(40px); /* ⭐ Actual movement happens here */
     padding: 0;
 }
 
+/* The IMAGE follows the link */
 .range-button-img {
     width: 60%;
     height: auto;
-    transform: translateX(40px) !important;
     display: block;
     transition: all 0.2s ease;
 }
 
+/* Hover must include BOTH transforms or it cancels the X shift */
 .range-button-link:hover .range-button-img {
-    transform: translateY(-3px);
+    transform: translateX(40px) translateY(-3px);
     filter: brightness(1.05);
 }
 
