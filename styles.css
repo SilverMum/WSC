@@ -355,7 +355,7 @@ body {
 .range-logo {
     position: absolute;
     left: 0;
-    top: 40%;   /* ⭐ move logo upward */
+    top: 40%;                 /* keeps your preferred vertical position */
     transform: translateY(-50%);
     width: 130px;
     height: 130px;
@@ -365,7 +365,7 @@ body {
 /* Centered text block */
 .range-text {
     margin: 0 auto;
-    width: fit-content;
+    width: fit-content;       /* defines the true center line */
     text-align: center;
 }
 
@@ -384,12 +384,11 @@ body {
     margin: 0 0 20px 0;
 }
 
-/* Centered button */
+/* Centered button — perfectly aligned with title */
 .range-button-wrapper {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
+    margin: 20px auto 0 auto; /* centers the wrapper itself */
+    width: fit-content;       /* matches the width of the text block */
+    text-align: center;       /* centers the button inside */
 }
 
 .range-button-link {
@@ -407,12 +406,6 @@ body {
 .range-button-link:hover .range-button-img {
     transform: translateY(-3px);
     filter: brightness(1.05);
-}
-
-.range-button-wrapper {
-    margin: 20px auto 0 auto;  /* centers the wrapper itself */
-    width: fit-content;        /* ⭐ matches the width of the text block */
-    text-align: center;        /* centers the button inside */
 }
 
 /* ------------------------------
