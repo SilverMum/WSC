@@ -352,6 +352,12 @@ body {
     text-align: center;
 }
 
+/* make all text in the range section black */
+.range-layout,
+.range-layout * {
+    color: #000;
+}
+
 /* Logo stays left but does NOT affect centering */
 .range-logo {
     position: absolute;
@@ -370,19 +376,9 @@ body {
     text-align: center;
 }
 
-.range-text h2 {
-    font-size: 3.2rem;
-    font-weight: 800;
-    color: #e60000;
-    margin: 0 0 10px 0;
-}
-
+.range-text h2,
 .range-text h3 {
-    font-size: 2.6rem;
-    font-weight: 800;
-    line-height: 1.2;
     color: #e60000;
-    margin: 0 0 20px 0;
 }
 
 /* Wrapper that aligns text + button together */
@@ -399,7 +395,13 @@ body {
     text-align: left;
 }
 
-/* ⭐ NORMAL POSITION — move the actual image */
+/* make the link only as wide as the image */
+.range-button-link {
+    display: inline-block;
+    width: auto;
+}
+
+/* normal position – move the image */
 .range-button-img {
     width: 60%;
     height: auto;
@@ -408,7 +410,7 @@ body {
     transform: translateX(40px);
 }
 
-/* ⭐ HOVER — keep both transforms */
+/* hover – keep both transforms */
 .range-button-link:hover .range-button-img {
     transform: translateX(40px) translateY(-3px);
     filter: brightness(1.05);
