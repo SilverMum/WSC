@@ -394,12 +394,10 @@ body {
 
 /* Centered button — nudged slightly right for visual alignment */
 .range-button-wrapper {
-    background: red !important;
-    border: 5px solid blue !important;
     margin: 20px auto 0 auto;
     width: fit-content;
     text-align: center;
-    transform: translateX(40px); /* ⭐ Option A: nudge button right */
+    transform: translateX(10px); /* ⭐ Option A: nudge button right */
 }
 
 .range-button-link {
@@ -410,6 +408,7 @@ body {
 .range-button-img {
     width: 60%;
     height: auto;
+    transform: translateX(40px) !important;
     display: block;
     transition: all 0.2s ease;
 }
