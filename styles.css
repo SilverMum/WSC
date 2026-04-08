@@ -349,7 +349,7 @@ body {
     position: relative;
     width: 100%;
     margin-top: 20px;
-    text-align: center;
+    text-align: center; /* keeps the text centered */
 }
 
 /* Logo stays left but does NOT affect centering */
@@ -389,24 +389,24 @@ body {
 .range-center-block {
     width: fit-content;
     margin: 0 auto;
-    text-align: center;
+    text-align: center; /* only affects text */
 }
 
-/* Button wrapper (not used for movement anymore) */
+/* Button wrapper — REMOVE centering so transform works */
 .range-button-wrapper {
     margin: 20px auto 0 auto;
     width: fit-content;
-    text-align: center;
+    text-align: left; /* ⭐ FIX: stop forcing the button to center */
 }
 
-/* The LINK is the real positioned element */
+/* Move the link (the real positioned element) */
 .range-button-link {
     display: inline-block;
-    transform: translateX(40px); /* ⭐ Actual movement happens here */
+    transform: translateX(40px); /* ⭐ Now this will finally work */
     padding: 0;
 }
 
-/* The IMAGE follows the link */
+/* Image follows the link */
 .range-button-img {
     width: 60%;
     height: auto;
@@ -414,7 +414,7 @@ body {
     transition: all 0.2s ease;
 }
 
-/* Hover must include BOTH transforms or it cancels the X shift */
+/* Hover must include BOTH transforms */
 .range-button-link:hover .range-button-img {
     transform: translateX(40px) translateY(-3px);
     filter: brightness(1.05);
