@@ -194,23 +194,25 @@ main {
 .pledge-title-gold,
 .pledge-title-green {
     display: block;
-    font-size: 2.2rem;      /* was 1.8rem — now 2 text sizes bigger */
+    font-size: 2.2rem;
     font-weight: 700;
     width: 100%;
 }
 
-/* gold behind green using text-shadow-like effect */
+/* gold behind green using subtle offset */
 .pledge-title-gold {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 0.5px;      /* ⭐ shifted down */
+    left: 0.5px;     /* ⭐ shifted right */
     color: #d4a017;
     pointer-events: none;
+    z-index: 1;
 }
 
 .pledge-title-green {
     position: relative;
     color: #e60000;
+    z-index: 2;
 }
 
 /* Wrapper now expands to fit larger text */
@@ -219,31 +221,33 @@ main {
     max-width: 800px;
     margin: 20px auto 0;
     text-align: center;
-    padding-bottom: 1.4em;   /* ⭐ prevents overlap when text grows */
+    padding-bottom: 1.4em;
 }
 
 /* Increased paragraph size */
 .pledge-paragraph-gold,
 .pledge-paragraph-green {
-    font-size: 1.3rem;       /* was 1.1rem — now 2 sizes bigger */
+    font-size: 1.3rem;
     font-weight: 700;
     line-height: 1.7;
 }
 
-/* gold layer */
+/* gold layer with subtle offset */
 .pledge-paragraph-gold {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 0.5px;      /* ⭐ shifted down */
+    left: 0.5px;     /* ⭐ shifted right */
     color: #d4a017;
     width: 100%;
     pointer-events: none;
+    z-index: 1;
 }
 
 /* green layer */
 .pledge-paragraph-green {
     position: relative;
     color: #32a852;
+    z-index: 2;
 }
 
 /* ------------------------------
