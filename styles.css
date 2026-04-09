@@ -419,6 +419,36 @@ main {
 }
 
 /* ------------------------------
+   CONTACT SECTION
+--------------------------------*/
+.contact-section {
+    text-align: center;
+    color: #000;
+    font-size: 1.6rem; /* matches universal body size */
+    font-weight: 700;
+    line-height: 1.6;
+    margin: 40px auto;
+    padding: 0 20px;
+    max-width: 900px;
+}
+
+.contact-line {
+    margin-bottom: 18px;
+}
+
+.contact-spacer {
+    height: 20px;
+}
+
+/* Grey divider line */
+.universal-divider {
+    width: 100%;
+    height: 2px;
+    background: #ccc;
+    margin: 40px 0;
+}
+
+/* ------------------------------
    PARTNERSHIP IMAGE
 --------------------------------*/
 #partnership {
