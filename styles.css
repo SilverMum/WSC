@@ -455,6 +455,13 @@ main {
     margin: 0;
 }
 
+/* HOMEPAGE ONLY — allow full-width layout */
+body.home main {
+    max-width: none;
+    padding-left: 0;
+    padding-right: 0;
+}
+
 /* =========================================================
    OTHER PAGES (RANGE, ARCHERY, OFHA, PRIVATE EVENTS, LOGIN)
    — CLEANED BUT VISUALS PRESERVED
