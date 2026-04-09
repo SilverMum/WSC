@@ -190,10 +190,11 @@ main {
     margin-top: 10px;
 }
 
+/* Increased title size */
 .pledge-title-gold,
 .pledge-title-green {
     display: block;
-    font-size: 1.8rem;
+    font-size: 2.2rem;      /* was 1.8rem — now 2 text sizes bigger */
     font-weight: 700;
     width: 100%;
 }
@@ -212,21 +213,24 @@ main {
     color: #e60000;
 }
 
+/* Wrapper now expands to fit larger text */
 .pledge-paragraph-wrapper {
     position: relative;
     max-width: 800px;
     margin: 20px auto 0;
     text-align: center;
+    padding-bottom: 1.4em;   /* ⭐ prevents overlap when text grows */
 }
 
-/* layered pledge text */
+/* Increased paragraph size */
 .pledge-paragraph-gold,
 .pledge-paragraph-green {
-    font-size: 1.1rem;
+    font-size: 1.3rem;       /* was 1.1rem — now 2 sizes bigger */
     font-weight: 700;
     line-height: 1.7;
 }
 
+/* gold layer */
 .pledge-paragraph-gold {
     position: absolute;
     top: 0;
@@ -236,6 +240,7 @@ main {
     pointer-events: none;
 }
 
+/* green layer */
 .pledge-paragraph-green {
     position: relative;
     color: #32a852;
