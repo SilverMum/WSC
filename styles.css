@@ -176,6 +176,11 @@ main {
     white-space: normal !important;   /* ⭐ THIS FIXES THE WRAP */
 }
 
+/* Move homepage title upward without affecting anything else */
+.home-hero-title {
+    margin-top: -20px;   /* adjust this number until it looks perfect */
+}
+
 /* ------------------------------
    PLEDGE TEXT
 --------------------------------*/
