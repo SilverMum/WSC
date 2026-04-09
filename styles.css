@@ -154,6 +154,12 @@ main {
     margin: 0 auto;
 }
 
+/* Home page title bigger */
+.home-hero-title {
+    font-size: 4rem;   /* adjust bigger or smaller */
+    font-weight: 800;
+}
+
 /* ------------------------------
    PLEDGE TEXT
 --------------------------------*/
