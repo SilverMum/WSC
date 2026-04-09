@@ -2,28 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- Correct viewport tag -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Private Events – Windsor Sportsmen’s Club</title>
+
+    <!-- Your stylesheet -->
     <link rel="stylesheet" href="styles.css?v=8">
 </head>
 
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-    const slides = document.querySelectorAll(".private-events-header-carousel .carousel-slide");
-    let index = 0;
-
-    function showNextSlide() {
-        slides[index].classList.remove("active");
-        index = (index + 1) % slides.length;
-        slides[index].classList.add("active");
-    }
-
-    setInterval(showNextSlide, 4000); // ⭐ same speed as homepage
-});
-</script>
-
 <body>
 
+<!-- ⭐ FULL NAV BAR -->
 <header>
     <nav class="main-nav">
         <div class="logo">
@@ -78,10 +68,10 @@ document.addEventListener("DOMContentLoaded", function () {
 <!-- ⭐ PRIVATE EVENTS HEADER CAROUSEL -->
 <section class="private-events-header-carousel">
     <div class="carousel-container private-events-carousel">
-        <img src="images/Sportsmen's-Header.png" class="carousel-slide active">
-        <img src="images/slide1.jpg" class="carousel-slide">
-        <img src="images/slide3.jpg" class="carousel-slide">
-        <img src="images/slide4.jpg" class="carousel-slide">
+        <img src="images/Sportsmen's-Header.png" alt="Private Events Header" class="carousel-slide active">
+        <img src="images/slide1.jpg" alt="Event Slide 1" class="carousel-slide">
+        <img src="images/slide3.jpg" alt="Event Slide 2" class="carousel-slide">
+        <img src="images/slide4.jpg" alt="Event Slide 3" class="carousel-slide">
     </div>
 </section>
 
@@ -134,6 +124,21 @@ document.addEventListener("DOMContentLoaded", function () {
     <p>©2024 Windsor Sportsmen's Club. All Rights Reserved.</p>
 </footer>
 
+<!-- ⭐ CAROUSEL SCRIPT (moved to bottom for best practice) -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const slides = document.querySelectorAll(".private-events-header-carousel .carousel-slide");
+    let index = 0;
+
+    function showNextSlide() {
+        slides[index].classList.remove("active");
+        index = (index + 1) % slides.length;
+        slides[index].classList.add("active");
+    }
+
+    setInterval(showNextSlide, 4000);
+});
+</script>
+
 </body>
 </html>
-
