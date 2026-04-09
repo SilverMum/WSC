@@ -148,6 +148,13 @@ main {
     }
 }
 
+/* ⭐ OPTION B — allow wrapping on medium screens too */
+@media (max-width: 1400px) {
+    .hero-title {
+        white-space: normal;   /* allow wrap on laptops + smaller desktops */
+    }
+}
+
 .header-underline {
     text-align: center;
     margin-top: 10px;
@@ -164,7 +171,7 @@ main {
 
 /* Home page title bigger */
 .home-hero-title {
-    font-size: clamp(2.6rem, 5vw, 4rem);   /* ⭐ UPDATED RESPONSIVE SIZE */
+    font-size: clamp(2.2rem, 4vw, 3.2rem);
     font-weight: 800;
 }
 
