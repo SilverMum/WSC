@@ -128,16 +128,17 @@ main {
 --------------------------------*/
 .hero {
     text-align: center;
-    padding: 40px 16px 16px;
+    padding: 40px 0 16px; /* removed left/right padding */
     background-color: #f0f0f0;
     color: white;
-    margin-top: 140px; /* space under fixed nav */
+    margin-top: 60px; /* reduced from 140px to remove empty space */
 }
 
 .hero-title {
     font-size: 2.6rem;
     margin-bottom: 24px;
     text-shadow: 0 2px 6px rgba(0,0,0,0.4);
+    white-space: nowrap; /* keeps title on one line */
 }
 
 .header-underline {
