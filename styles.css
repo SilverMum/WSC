@@ -173,6 +173,7 @@ main {
 .home-hero-title {
     font-size: clamp(2.2rem, 4vw, 3.2rem);
     font-weight: 800;
+    white-space: normal !important;   /* ⭐ THIS FIXES THE WRAP */
 }
 
 /* ------------------------------
