@@ -334,6 +334,7 @@ main {
 --------------------------------*/
 #kitchen {
     margin-top: 20px;
+    margin-bottom: 20px;   /* ⭐ NEW: reduces space before grey divider */
 }
 
 #kitchen .section-title {
