@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styles.css?v=10">
 </head>
 
-<body class="home">   <!-- ⭐ ADD CLASS HERE -->
+<body class="home">
 
 <header>
     <nav class="main-nav">
@@ -18,43 +18,34 @@
 
         <div class="nav-spacer"></div>
 
-       <ul class="nav-links">
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
 
-    <!-- HOME -->
-    <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="#">Events ▾</a>
+                <ul class="dropdown-menu">
+                    <li><a href="index.html#club-events-divider">Club Events</a></li>
+                    <li><a href="private-events.html">Private Events</a></li>
+                </ul>
+            </li>
 
-    <!-- ⭐ NEW EVENTS DROPDOWN -->
-    <li class="dropdown">
-        <a href="#">Events ▾</a>
-        <ul class="dropdown-menu">
-            <li><a href="index.html#club-events-divider">Club Events</a></li>
-            <li><a href="private-events.html">Private Events</a></li>
+            <li><a href="kitchen.html">Kitchen</a></li>
+
+            <li class="dropdown">
+                <a href="#">Groups ▾</a>
+                <ul class="dropdown-menu">
+                    <li><a href="range.html">Range</a></li>
+                    <li><a href="archery.html">Archery</a></li>
+                    <li><a href="ofha.html">OFHA</a></li>
+                    <li><a href="cheese-cracker.html">Cheese & Cracker Club</a></li>
+                    <li><a href="air-rifle.html">Air Rifle</a></li>
+                    <li><a href="members.html">Members</a></li>
+                </ul>
+            </li>
+
+            <li><a href="index.html#contact">Contact</a></li>
+            <li><a href="login.html">Login</a></li>
         </ul>
-    </li>
-
-    <!-- KITCHEN -->
-    <li><a href="kitchen.html">Kitchen</a></li>
-
-    <!-- ⭐ GROUPS MOVED DOWN -->
-    <li class="dropdown">
-        <a href="#">Groups ▾</a>
-        <ul class="dropdown-menu">
-            <li><a href="range.html">Range</a></li>
-            <li><a href="archery.html">Archery</a></li>
-            <li><a href="ofha.html">OFHA</a></li>
-            <li><a href="cheese-cracker.html">Cheese & Cracker Club</a></li>
-            <li><a href="air-rifle.html">Air Rifle</a></li>
-            <li><a href="members.html">Members</a></li>
-        </ul>
-    </li>
-
-    <!-- CONTACT (UPDATED TO ALWAYS GO TO HOMEPAGE CONTACT SECTION) -->
-    <li><a href="index.html#contact">Contact</a></li>
-
-    <!-- LOGIN -->
-    <li><a href="login.html">Login</a></li>
-
-</ul>
     </nav>
 </header>
 
@@ -64,12 +55,10 @@
 
 <section class="hero" id="hero">
 
-    <!-- ⭐ UPDATED TITLE WITH BIGGER CLASS -->
     <h1 class="hero-title home-hero-title">Welcome to the Windsor Sportsmen’s Club</h1>
 
-    <div class="header-underline">
-        <img src="images/Sportsmen's-Header.png" alt="Header underline image">
-    </div>
+    <!-- ⭐ REPLACED old underline image with clean divider -->
+    <div class="section-divider"></div>
 
     <!-- PLEDGE TITLE -->
     <div class="pledge-title-wrapper">
@@ -102,6 +91,7 @@
         Follow us on Facebook for Up Coming Events and Restaurant Menu
     </p>
 
+    <!-- ⭐ KEEPING THIS DIVIDER (it’s your red range-style one) -->
     <div class="facebook-divider-wrapper">
         <hr class="range-simple-divider">
     </div>
@@ -141,7 +131,6 @@
 
 <!-- RANGE SECTION -->
 <div class="range-simple-section">
-
     <h2 class="range-simple-title">Range</h2>
     <p class="range-simple-subtitle">
         Range opening soon, check back for details here or on Facebook!
@@ -154,20 +143,14 @@
     </a>
 </div>
 
-    <div class="section-divider"></div>
+<!-- ⭐ MATCHING DIVIDER BELOW RANGE -->
+<div class="section-divider"></div>
 
-<!-- IMAGE UNDER SLIDESHOW -->
-<img 
-    src="images/519 BAND.png" 
-    alt="519 Band" 
-    id="band-image"
->
+<!-- BAND IMAGE -->
+<img src="images/519 BAND.png" alt="519 Band" id="band-image">
 
-<!-- DIVIDER UNDER BAND IMAGE -->
-<div class="header-underline"></div>
-
-    <!-- ⭐ GREY DIVIDER ABOVE CONTACT -->
-<div class="universal-divider"></div>
+<!-- ⭐ REPLACED full-width underline with matching divider -->
+<div class="section-divider"></div>
 
 <!-- ⭐ CONTACT SECTION -->
 <section id="contact" class="contact-section">
@@ -192,24 +175,19 @@
 
 </section>
 
-<!-- ⭐ GREY DIVIDER BELOW CONTACT -->
-<div class="universal-divider"></div>
+<!-- ⭐ MATCHING DIVIDER BELOW CONTACT -->
+<div class="section-divider"></div>
 
 <!-- PARTNERSHIP IMAGE -->
 <section class="content-section" id="partnership">
-    <img 
-        src="images/Partnership.png" 
-        alt="Partnership Announcement"
-        class="partnership-img"
-    >
+    <img src="images/Partnership.png" alt="Partnership Announcement" class="partnership-img">
 </section>
 
-<!-- DIVIDER UNDER PARTNERSHIP IMAGE -->
-<div class="header-underline"></div>
+<!-- ⭐ REPLACED underline with matching divider -->
+<div class="section-divider"></div>
 
 <!-- ACTIVITIES -->
 <section class="activities-section">
-    
     <h2 class="activities-title">ACTIVITIES</h2>
 
     <p class="activities-text">
@@ -223,7 +201,6 @@
 
 </main>
 
-<!-- ⭐ FOOTER (correctly placed OUTSIDE all wrappers) -->
 <footer class="site-footer">
     <p>©2024 Windsor Sportsmen's Club. All Rights Reserved.</p>
 </footer>
