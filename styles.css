@@ -128,23 +128,23 @@ main {
 --------------------------------*/
 .hero {
     text-align: center;
-    padding: 40px 0 16px; /* removed left/right padding */
+    padding: 40px 0 16px;
     background-color: #f0f0f0;
     color: white;
-    margin-top: 60px; /* reduced from 140px to remove empty space */
+    margin-top: 60px;
 }
 
 .hero-title {
     font-size: 2.2rem;
     margin-bottom: 24px;
     text-shadow: 0 2px 6px rgba(0,0,0,0.4);
-    white-space: nowrap;   /* ⭐ desktop stays on one line */
+    white-space: nowrap;   /* desktop stays on one line */
 }
 
 @media (max-width: 900px) {
     .hero-title {
-        white-space: normal;  /* ⭐ mobile wraps naturally */
-        font-size: 2rem;      /* ⭐ slightly smaller for phones */
+        white-space: normal;
+        font-size: 2rem;
     }
 }
 
@@ -164,7 +164,7 @@ main {
 
 /* Home page title bigger */
 .home-hero-title {
-    font-size: 4rem;   /* adjust bigger or smaller */
+    font-size: clamp(2.6rem, 5vw, 4rem);   /* ⭐ UPDATED RESPONSIVE SIZE */
     font-weight: 800;
 }
 
