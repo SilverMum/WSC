@@ -264,7 +264,7 @@ main {
     max-width: 900px;
     margin: 0 auto;
     background-color: transparent;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #ddd; /* grey divider */
 }
 
 .section-title {
@@ -345,14 +345,7 @@ main {
     padding: 10px 0;
 }
 
-.range-simple-divider {
-    width: 80%;
-    max-width: 900px;
-    margin: 20px auto;
-    border: none;
-    border-top: 3px solid #e60000;
-    opacity: 0.8;
-}
+/* (red .range-simple-divider removed) */
 
 .range-simple-title {
     font-size: 2.2rem;
@@ -400,13 +393,7 @@ main {
     height: auto;
 }
 
-.band-kitchen-divider {
-    border: none;
-    border-top: 2px solid #ccc;
-    margin: 20px auto 40px;
-    width: 90%;
-    max-width: 900px;
-}
+/* .band-kitchen-divider removed */
 
 /* ------------------------------
    PARTNERSHIP IMAGE
@@ -1095,13 +1082,7 @@ main {
 }
 
 /* DIVIDER (CLUB EVENTS, ETC.) */
-.club-events-divider {
-    width: 80%;
-    margin: 40px auto;
-    border: none;
-    border-top: 3px solid #b30000;
-    opacity: 0.7;
-}
+/* .club-events-divider removed */
 
 /* QUICK LINKS TITLE */
 .quick-links-title {
