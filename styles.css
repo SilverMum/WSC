@@ -454,6 +454,10 @@ main {
     margin: 0 auto;
 }
 
+.activities-section {
+    margin-bottom: 10px;
+}
+
 /* ------------------------------
    FOOTER
 --------------------------------*/
