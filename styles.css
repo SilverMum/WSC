@@ -601,8 +601,8 @@ body.home main {
     padding-right: 0;
 }
 
-html {
-    scroll-padding-top: 20px;
+#club-events {
+    scroll-margin-top: 80px;
 }
 
 /* =========================================================
