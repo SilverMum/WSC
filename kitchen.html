@@ -2,12 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <!-- Correct viewport tag -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Kitchen – Windsor Sportsmen’s Club</title>
 
-    <!-- Your stylesheet -->
     <link rel="stylesheet" href="styles.css?v=10">
 </head>
 
@@ -23,11 +21,8 @@
         <div class="nav-spacer"></div>
 
         <ul class="nav-links">
-
-            <!-- HOME -->
             <li><a href="index.html">Home</a></li>
 
-            <!-- ⭐ NEW EVENTS DROPDOWN -->
             <li class="dropdown">
                 <a href="#">Events ▾</a>
                 <ul class="dropdown-menu">
@@ -36,10 +31,8 @@
                 </ul>
             </li>
 
-            <!-- KITCHEN -->
             <li><a href="kitchen.html">Kitchen</a></li>
 
-            <!-- ⭐ GROUPS MOVED DOWN -->
             <li class="dropdown">
                 <a href="#">Groups ▾</a>
                 <ul class="dropdown-menu">
@@ -52,39 +45,30 @@
                 </ul>
             </li>
 
-            <!-- CONTACT (ALWAYS GOES TO HOMEPAGE CONTACT SECTION) -->
             <li><a href="index.html#contact">Contact</a></li>
-
-            <!-- LOGIN -->
             <li><a href="login.html">Login</a></li>
-
         </ul>
     </nav>
 </header>
 
-    
 <!-- Spacer under fixed nav -->
 <section style="height: 90px;"></section>
 
 <main>
+    <section class="content-section" id="kitchen-page" style="text-align:center;">
+        
+        <!-- ⭐ New Kitchen Title Image -->
+        <img src="images/kitchentitle.png" alt="Kitchen Title" style="max-width:70%; margin-bottom:40px;">
 
-    <!-- ⭐ REMOVED EMPTY HERO SECTION (this was causing the huge space) -->
-
-    <!-- ⭐ KITCHEN CONTENT -->
-    <section class="content-section" id="kitchen-page">
-
-        <h2 class="section-title">
-            Kitchen
-        </h2>
-
-        <div class="kitchen-layout">
+        <div class="kitchen-layout" style="display:flex; justify-content:center; align-items:flex-start; gap:40px; flex-wrap:wrap;">
             <img 
                 src="images/kitchen-badge.png" 
                 alt="Rob n Sons Kitchen badge" 
                 class="kitchen-badge"
+                style="max-width:40%; height:auto;"
             >
 
-            <div class="kitchen-description">
+            <div class="kitchen-description" style="margin-top:20px; color:black; font-weight:bold;">
                 <p>
                     Rob n Sons Kitchen is proud to introduce ourselves!
                     I am Rob Coyle, my sons Wyatt, Cooper, and aunt Joan.
@@ -100,10 +84,8 @@
         </div>
 
     </section>
-
 </main>
 
-<!-- ⭐ FOOTER -->
 <footer class="site-footer">
     <p>©2024 Windsor Sportsmen's Club. All Rights Reserved.</p>
 </footer>
