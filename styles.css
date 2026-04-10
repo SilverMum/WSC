@@ -625,6 +625,18 @@ body.home main {
 }
 
 /* ------------------------------
+   PRIVATE EVENTS — PARTY IMAGE
+--------------------------------*/
+.private-events-header-image img {
+    display: block;
+    margin: 20px auto 40px;
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* ------------------------------
    PRIVATE EVENTS — 2x2 IMAGE GRID
 --------------------------------*/
 .private-events-gallery {
