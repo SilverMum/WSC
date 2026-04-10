@@ -445,13 +445,19 @@ html {
     height: 20px;
 }
 
-/* Grey divider line */
+/* Arrow divider line */
 .section-divider {
-    width: 120px;
-    height: 3px;
-    background: #999; /* 2× darker than #f0f0f0 */
+    width: 100%;
     margin: 40px auto;
-    border-radius: 2px;
+    text-align: center;
+}
+
+.section-divider img {
+    width: 100%;
+    max-width: 600px; /* adjust to your preferred length */
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
 
 #contact-title {
