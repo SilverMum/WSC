@@ -1270,7 +1270,7 @@ body.home main {
 
 /* Reduce top spacing on the Kitchen PAGE only */
 #kitchen-page .content-section {
-    padding-top: 20px; /* was 50px */
+    padding-top: 40px; /* was 50px */
 }
 
 /* =========================================================
