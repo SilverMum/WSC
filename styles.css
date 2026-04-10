@@ -573,6 +573,11 @@ body.home main {
     margin: 0 auto;
 }
 
+/* FORCE top spacing change for Private Events page */
+.private-events-section {
+    margin-top: 30px !important;   /* was 40px */
+}
+
 /* ------------------------------
    PRIVATE EVENTS — TEXT + PDF BLOCK (NEW)
 --------------------------------*/
@@ -1271,6 +1276,11 @@ body.home main {
 /* Reduce top spacing on the Kitchen PAGE only */
 #kitchen-page .content-section {
     padding-top: 40px; /* was 50px */
+}
+
+/* FORCE top spacing change for Kitchen PAGE (not homepage) */
+#kitchen-page {
+    padding-top: 60px !important;   /* was 50px */
 }
 
 /* =========================================================
