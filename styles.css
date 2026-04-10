@@ -1242,6 +1242,11 @@ body.home main {
     font-weight: 800;
 }
 
+/* Reduce top spacing on the Kitchen PAGE only */
+#kitchen-page .content-section {
+    padding-top: 20px; /* was 50px */
+}
+
 /* =========================================================
    RESPONSIVE ADJUSTMENTS
    ========================================================= */
