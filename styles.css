@@ -602,8 +602,9 @@ body.home main {
 }
 
 #club-events {
-    scroll-margin-top: 80px;
+    scroll-margin-top: 92px; /* was 80px */
 }
+
 
 /* =========================================================
    OTHER PAGES (RANGE, ARCHERY, OFHA, PRIVATE EVENTS, LOGIN)
