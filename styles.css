@@ -450,6 +450,14 @@ html {
     height: auto;
 }
 
+.max-band img {
+    display: block;
+    margin: 25px auto;
+    max-width: 900px;
+    width: 100%;
+    height: auto;
+}
+
 /* ------------------------------
    CONTACT SECTION
 --------------------------------*/
