@@ -693,7 +693,7 @@ body.home main {
 .login-page-wrapper {
     display: flex;
     justify-content: center;
-    padding-top: 120px;
+    padding-top: 60px;   /* was 120px — reduced by half */
     padding-bottom: 40px;
 }
 
