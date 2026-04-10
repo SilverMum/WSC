@@ -295,7 +295,7 @@ html {
     max-width: 900px;
     margin: 0 auto;
     background-color: transparent;
-    border-bottom: 1px solid #ddd; /* grey divider */
+    border-bottom: none; /* FIXED — removed old grey divider */
 }
 
 .section-title {
