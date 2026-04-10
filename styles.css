@@ -446,11 +446,12 @@ html {
 }
 
 /* Grey divider line */
-.universal-divider {
-    width: 100%;
-    height: 2px;
-    background: #ccc;
-    margin: 40px 0;
+.section-divider {
+    width: 120px;
+    height: 3px;
+    background: #999; /* 2× darker than #f0f0f0 */
+    margin: 40px auto;
+    border-radius: 2px;
 }
 
 #contact-title {
