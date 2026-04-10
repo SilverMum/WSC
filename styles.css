@@ -601,6 +601,10 @@ body.home main {
     padding-right: 0;
 }
 
+html {
+    scroll-padding-top: 20px;
+}
+
 /* =========================================================
    OTHER PAGES (RANGE, ARCHERY, OFHA, PRIVATE EVENTS, LOGIN)
    — CLEANED BUT VISUALS PRESERVED
