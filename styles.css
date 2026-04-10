@@ -1325,6 +1325,48 @@ body.home main {
 }
 
 /* ------------------------------
+   MEMBERS PAGE
+--------------------------------*/
+.members-page {
+    text-align: center;
+}
+
+.members-grid {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 60px;
+    margin-top: 30px;
+}
+
+.members-column {
+    max-width: 380px;
+    color: black;
+    font-weight: bold;
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+.members-title {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+    text-decoration: underline;
+}
+
+.members-subtitle {
+    margin: 10px 0 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.members-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px;
+}
+
+/* ------------------------------
    KITCHEN PAGE TITLE (SEPARATE PAGE)
 --------------------------------*/
 #kitchen-page .section-title {
