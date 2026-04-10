@@ -453,6 +453,10 @@ html {
     margin: 40px 0;
 }
 
+#contact-title {
+    scroll-margin-top: 140px;
+}
+
 /* ------------------------------
    PARTNERSHIP IMAGE
 --------------------------------*/
