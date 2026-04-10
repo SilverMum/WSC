@@ -394,7 +394,8 @@ html {
 .range-simple-subtitle {
     font-size: 1.3rem;
     font-weight: 600;
-    color: #e60000;
+    color: #000;      /* changed from red */
+    font-style: italic; /* new */
     margin-top: 0;
 }
 
