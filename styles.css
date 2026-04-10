@@ -335,11 +335,13 @@ html {
 }
 
 /* ------------------------------
-   KITCHEN SECTION
+   KITCHEN SECTION (HOMEPAGE)
 --------------------------------*/
 #kitchen {
-    margin-top: 20px;
-    margin-bottom: 20px;   /* ⭐ NEW: reduces space before grey divider */
+    margin-top: 10px;        /* was 20px — tighter above */
+    margin-bottom: 10px;     /* was 20px — tighter below */
+    padding-top: 25px;       /* reduce default 50px padding */
+    padding-bottom: 25px;    /* reduce default 50px padding */
 }
 
 #kitchen .section-title {
@@ -350,7 +352,7 @@ html {
     display: flex;
     align-items: flex-start;
     gap: 32px;
-    margin-top: 30px;
+    margin-top: 20px;        /* was 30px — slightly tighter */
     flex-wrap: wrap;
 }
 
@@ -366,6 +368,11 @@ html {
     line-height: 1.6;
     text-align: left;
     color: #000;
+}
+
+/* Reduce space between Kitchen and the divider BELOW it */
+#kitchen + .section-divider {
+    margin-top: 25px;        /* was 40px */
 }
 
 /* ------------------------------
