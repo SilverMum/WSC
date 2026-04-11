@@ -1591,6 +1591,39 @@ body.home main {
     margin-bottom: 40px;
 }
 
+/* TV Page Image Grid */
+.tv-grid {
+    margin-top: 40px;
+}
+
+.tv-grid-top {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    justify-items: center;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.tv-grid-bottom {
+    display: flex;
+    justify-content: center;
+}
+
+.tv-grid-img {
+    width: 90%;
+    max-width: 450px;   /* slightly larger than before */
+    height: auto;
+    border-radius: 8px;
+}
+
+.tv-grid-img-wide {
+    width: 95%;
+    max-width: 900px;   /* spans under both top images */
+    height: auto;
+    border-radius: 8px;
+}
+
 /* =========================================================
    RESPONSIVE ADJUSTMENTS
    ========================================================= */
