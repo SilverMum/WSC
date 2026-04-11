@@ -1624,6 +1624,19 @@ body.home main {
     border-radius: 8px;
 }
 
+.tv-info-block {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.tv-info-line {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: black;
+    margin-bottom: 12px;
+}
+
 /* =========================================================
    RESPONSIVE ADJUSTMENTS
    ========================================================= */
