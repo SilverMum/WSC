@@ -42,22 +42,22 @@ main {
     border-bottom: 1px solid #ddd;
 }
 
-.logo img {
-    height: 90px;
-    width: auto;
-    display: block;
+.nav-spacer {
+    flex: 1;
 }
 
-.nav-spacer {
-    display: none;
+.logo img {
+    height: 110px;
+    width: auto;
+    display: block;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 24px;
+    gap: 30px;
     align-items: center;
-    padding-right: 16px;
+    padding-right: 20px;
 }
 
 .nav-links li {
@@ -68,7 +68,7 @@ main {
     text-decoration: underline;
     color: #222;
     font-weight: 600;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     padding: 6px 10px;
     border-radius: 4px;
     transition: all 0.2s ease;
