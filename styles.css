@@ -234,7 +234,7 @@ html {
 
 /* Move homepage title upward without affecting anything else */
 .home-hero-title {
-    margin-top: -40px;   /* adjust this number until it looks perfect */
+    margin-top: -60px;   /* adjust this number until it looks perfect */
 }
 
 /* ------------------------------
