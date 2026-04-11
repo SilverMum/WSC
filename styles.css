@@ -1379,19 +1379,45 @@ body.home main {
     font-size: 3.2rem;
     color: #000000;
     text-decoration: underline;
-    text-decoration-color: #000000;
     margin-top: 0;
     font-weight: 800;
 }
 
 /* Reduce top spacing on the Kitchen PAGE only */
 #kitchen-page .content-section {
-    padding-top: 40px; /* was 50px */
+    padding-top: 40px;
 }
 
 /* FORCE top spacing change for Kitchen PAGE (not homepage) */
 #kitchen-page {
-    padding-top: 60px !important;   /* was 50px */
+    padding-top: 60px !important;
+}
+
+/* ⭐ FIXED: Image left, text right, never stacks */
+.kitchen-layout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: nowrap;      /* prevents stacking */
+    margin-top: 20px;
+}
+
+/* Image sizing */
+.kitchen-badge {
+    max-width: 350px;
+    width: 100%;
+    height: auto;
+}
+
+/* Text block */
+.kitchen-description {
+    flex: 1;
+    min-width: 260px;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: black;
+    font-weight: bold;
 }
 
 /* ------------------------------
