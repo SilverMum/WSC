@@ -132,12 +132,7 @@ html {
    RIGHT-SIDE SUBMENU (Members)
 --------------------------------*/
 
-/* Restore original nav behavior for top-level items */
-.nav-links > li {
-    position: static;
-}
-
-/* Only the Members item becomes a submenu parent */
+/* Only affect the Members submenu — do NOT touch top-level nav items */
 .nav-links li.dropdown-sub {
     position: relative;
 }
