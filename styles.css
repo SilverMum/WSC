@@ -1580,6 +1580,17 @@ body.home main {
     border-radius: 8px; /* optional, looks clean */
 }
 
+.tv-info {
+    font-family: monospace;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: black;
+    text-align: center;
+    white-space: pre-wrap;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
 /* =========================================================
    RESPONSIVE ADJUSTMENTS
    ========================================================= */
