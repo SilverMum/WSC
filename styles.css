@@ -48,7 +48,7 @@ main {
 }
 
 .nav-spacer {
-    flex: 1;
+    display: none;
 }
 
 .nav-links {
