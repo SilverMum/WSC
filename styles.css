@@ -1554,16 +1554,21 @@ body.home main {
     text-align: center;
 }
 
-.tv-link a {
-    font-size: 1.4rem;
-    color: black;
-    font-weight: 600;
-    text-decoration: underline;
-}
-
 .tv-link {
     text-align: center;
     margin-bottom: 25px;
+}
+
+.tv-link a {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #1877F2;              /* Facebook blue */
+    text-decoration: underline;
+    transition: color 0.2s ease;
+}
+
+.tv-link a:hover {
+    color: #0d5fcc;              /* slightly darker hover */
 }
 
 /* =========================================================
