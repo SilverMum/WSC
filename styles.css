@@ -1487,40 +1487,42 @@ body.home main {
     max-width: 900px;
     margin: 0 auto;
     padding: 20px 20px 60px;
-    text-align: left;
+    text-align: center; /* center EVERYTHING */
 }
 
+/* Main white title */
 .airrifle-title {
     font-size: 3.8rem;
     font-weight: 800;
     color: white;
-    text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     text-shadow: 0 2px 6px rgba(0,0,0,0.4);
 }
 
+/* Optional subtitle under main title */
 .airrifle-subtitle {
     font-size: 1.8rem;
     font-weight: 700;
     color: white;
-    text-align: center;
     margin-bottom: 30px;
     text-shadow: 0 2px 6px rgba(0,0,0,0.4);
 }
 
+/* Section headers (black) */
 .airrifle-subheader {
-    font-size: 2rem;
+    font-size: 2.2rem;
     font-weight: 700;
     margin-top: 40px;
-    margin-bottom: 10px;
+    margin-bottom: 15px; /* space under each title */
     color: black;
 }
 
+/* Body text (black) */
 .airrifle-text {
     font-size: 1.3rem;
     line-height: 1.6;
     color: black;
-    margin-bottom: 18px;
+    margin-bottom: 20px;
 }
 
 /* =========================================================
