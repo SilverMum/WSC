@@ -338,41 +338,47 @@ html {
    KITCHEN SECTION (HOMEPAGE)
 --------------------------------*/
 #kitchen {
-    margin-top: 10px;        /* was 20px — tighter above */
-    margin-bottom: 10px;     /* was 20px — tighter below */
-    padding-top: 25px;       /* reduce default 50px padding */
-    padding-bottom: 25px;    /* reduce default 50px padding */
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 25px;
+    padding-bottom: 25px;
 }
 
 #kitchen .section-title {
     color: black;
 }
 
+/* ⭐ FIXED: Image left, text right, never stacks */
 .kitchen-layout {
     display: flex;
-    align-items: flex-start;
+    align-items: center;      /* centers image + text vertically */
+    justify-content: center;  /* keeps layout balanced */
     gap: 32px;
-    margin-top: 20px;        /* was 30px — slightly tighter */
-    flex-wrap: wrap;
+    margin-top: 20px;
+    flex-wrap: nowrap;        /* prevents stacking */
 }
 
+/* Image stays a reasonable size */
 .kitchen-badge {
     max-width: 320px;
     width: 100%;
     height: auto;
 }
 
+/* Text stays beside the image even when bold */
 .kitchen-description {
-    font-size: 1.05rem;
-    max-width: 500px;
+    flex: 1;                  /* allows text to shrink instead of dropping */
+    min-width: 260px;         /* prevents collapse */
+    font-size: 1.2rem;        /* matches your bold look */
     line-height: 1.6;
     text-align: left;
     color: #000;
+    font-weight: bold;
 }
 
 /* Reduce space between Kitchen and the divider BELOW it */
 #kitchen + .section-divider {
-    margin-top: 25px;        /* was 40px */
+    margin-top: 25px;
 }
 
 /* ------------------------------
