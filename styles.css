@@ -1662,6 +1662,16 @@ body.home main {
     text-decoration: none;
 }
 
+/* Match map and function image heights */
+.tv-grid-img,
+.tv-grid-img-wide {
+    height: 600px;        /* adjust this number until both match perfectly */
+    object-fit: contain;  /* keeps proportions without cropping */
+    width: auto;          /* allows width to vary naturally */
+    display: block;
+    margin: 0 auto;
+}
+
 /* =========================================================
    RESPONSIVE ADJUSTMENTS
    ========================================================= */
