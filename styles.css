@@ -1474,13 +1474,6 @@ body.home main {
 /* ------------------------------
    AIR RIFLE (SEPARATE PAGE)
 --------------------------------*/
-.air-rifle-image img {
-    display: block;
-    margin: 30px auto;
-    max-width: 900px;
-    width: 100%;
-    height: auto;
-}
 
 /* Air Rifle Page Styling */
 .airrifle-wrapper {
