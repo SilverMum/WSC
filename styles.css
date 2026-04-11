@@ -1656,6 +1656,12 @@ body.home main {
     border-radius: 8px;
 }
 
+.tv-wrapper h2.tv-title:last-of-type,
+.tv-wrapper h2.tv-title:nth-last-of-type(2),
+.tv-wrapper h2.tv-title:nth-last-of-type(3) {
+    text-decoration: none;
+}
+
 /* =========================================================
    RESPONSIVE ADJUSTMENTS
    ========================================================= */
