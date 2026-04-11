@@ -68,7 +68,7 @@ main {
     text-decoration: underline;
     color: #222;
     font-weight: 600;
-    font-size: 1.8rem;
+    font-size: 1.7rem;
     padding: 6px 10px;
     border-radius: 4px;
     transition: all 0.2s ease;
@@ -118,7 +118,7 @@ html {
     text-decoration: underline;
     color: #222;
     font-weight: 600;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     transition: all 0.2s ease;
     white-space: normal;
 }
@@ -169,7 +169,7 @@ html {
     text-decoration: underline;
     color: #222;
     font-weight: 600;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     white-space: nowrap;
 }
 
