@@ -1571,6 +1571,15 @@ body.home main {
     color: #0d5fcc;              /* slightly darker hover */
 }
 
+.tv-map {
+    display: block;
+    margin: 30px auto;
+    max-width: 600px;   /* keeps it from being huge */
+    width: 90%;         /* responsive on smaller screens */
+    height: auto;
+    border-radius: 8px; /* optional, looks clean */
+}
+
 /* =========================================================
    RESPONSIVE ADJUSTMENTS
    ========================================================= */
