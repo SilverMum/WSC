@@ -36,6 +36,7 @@ main {
     z-index: 2000;
     display: flex;
     align-items: center;
+    justify-content: space-between; /* FIX */
     padding: 12px 24px;
     background-color: #ffffff;
     border-bottom: 1px solid #ddd;
