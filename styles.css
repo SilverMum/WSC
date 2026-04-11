@@ -1482,6 +1482,47 @@ body.home main {
     height: auto;
 }
 
+/* Air Rifle Page Styling */
+.airrifle-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px 20px 60px;
+    text-align: left;
+}
+
+.airrifle-title {
+    font-size: 3.8rem;
+    font-weight: 800;
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.4);
+}
+
+.airrifle-subtitle {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+    margin-bottom: 30px;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.4);
+}
+
+.airrifle-subheader {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    color: black;
+}
+
+.airrifle-text {
+    font-size: 1.3rem;
+    line-height: 1.6;
+    color: black;
+    margin-bottom: 18px;
+}
+
 /* =========================================================
    RESPONSIVE ADJUSTMENTS
    ========================================================= */
