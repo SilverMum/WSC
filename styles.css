@@ -555,7 +555,7 @@ html {
 .activities-image {
     text-align: center;
     margin: 40px 0; /* optional spacing */
-    padding: 0 40px;   /* adds left/right spacing */
+    padding: 0 60px;   /* adds left/right spacing */
 }
 
 .activities-image img {
