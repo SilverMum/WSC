@@ -521,6 +521,11 @@ html {
     max-width: 1200px;
 }
 
+.maxband-left {
+    display: flex;          /* allows the image to stretch */
+    align-items: stretch;
+}
+
 .maxband-left img {
     height: 100%;           /* match text height */
     width: auto;
