@@ -1649,6 +1649,10 @@ body.home main {
     max-width: none;
 }
 
+.tv-grid {
+    margin-left: -50px;   /* shifts BOTH images left together */
+}
+
 /* Antenna Box Section */
 .tv-subtitle {
     font-size: 1.8rem;
