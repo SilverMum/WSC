@@ -1610,16 +1610,17 @@ body.home main {
     justify-content: center;
 }
 
+/* ORIGINAL RULES — kept exactly as you had them */
 .tv-grid-img {
     width: 90%;
-    max-width: 450px;   /* slightly larger than before */
+    max-width: 450px;
     height: auto;
     border-radius: 8px;
 }
 
 .tv-grid-img-wide {
     width: 95%;
-    max-width: 900px;   /* spans under both top images */
+    max-width: 900px;
     height: auto;
     border-radius: 8px;
 }
@@ -1636,6 +1637,18 @@ body.home main {
     color: black;
     margin-bottom: 12px;
 }
+
+/* FIXED SECTION — ONLY THIS PART CHANGED */
+.tv-grid-img,
+.tv-grid-img-wide {
+    height: 600px;        /* shared height for both images */
+    width: auto;          /* width adjusts naturally */
+    object-fit: contain;  /* prevents distortion */
+    display: block;
+    margin: 0 auto;
+    max-width: none;      /* IMPORTANT: removes width limits so height can match */
+}
+
 
 /* Antenna Box Section */
 .tv-subtitle {
@@ -1660,16 +1673,6 @@ body.home main {
 .tv-wrapper h2.tv-title:nth-last-of-type(2),
 .tv-wrapper h2.tv-title:nth-last-of-type(3) {
     text-decoration: none;
-}
-
-/* Match map and function image heights */
-.tv-grid-img,
-.tv-grid-img-wide {
-    height: 600px;        /* adjust this number until both match perfectly */
-    object-fit: contain;  /* keeps proportions without cropping */
-    width: auto;          /* allows width to vary naturally */
-    display: block;
-    margin: 0 auto;
 }
 
 /* =========================================================
