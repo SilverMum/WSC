@@ -1641,7 +1641,7 @@ body.home main {
 /* FIXED SECTION — ONLY THIS PART CHANGED */
 .tv-grid-img,
 .tv-grid-img-wide {
-    height: 570px;       /* was 600px */
+    height: 540px;       /* was 600px */
     width: auto;
     object-fit: contain;
     display: block;
