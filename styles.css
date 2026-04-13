@@ -514,25 +514,23 @@ html {
 /* Wrapper: image left, text right */
 .maxband-wrapper {
     display: flex;
-    align-items: center; /* vertically centers text */
+    align-items: stretch;   /* allows both sides to match height */
     justify-content: center;
     gap: 40px;
     margin: 40px auto;
     max-width: 1200px;
 }
 
-/* Image 1/3 smaller */
 .maxband-left img {
-    max-width: 600px; /* smaller than your usual 900px */
-    width: 100%;
-    height: auto;
-    display: block;
+    height: 100%;           /* match text height */
+    width: auto;
+    object-fit: cover;      /* fills the height without distortion */
+    border-radius: 10px;
 }
 
-/* Text block */
 .maxband-right {
     max-width: 500px;
-    text-align: center; /* centers text horizontally */
+    text-align: center;
     line-height: 1.5;
     font-size: 18px;
     color: black;
