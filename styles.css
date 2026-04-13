@@ -1641,14 +1641,13 @@ body.home main {
 /* FIXED SECTION — ONLY THIS PART CHANGED */
 .tv-grid-img,
 .tv-grid-img-wide {
-    height: 600px;        /* shared height for both images */
-    width: auto;          /* width adjusts naturally */
-    object-fit: contain;  /* prevents distortion */
+    height: 570px;       /* was 600px */
+    width: auto;
+    object-fit: contain;
     display: block;
     margin: 0 auto;
-    max-width: none;      /* IMPORTANT: removes width limits so height can match */
+    max-width: none;
 }
-
 
 /* Antenna Box Section */
 .tv-subtitle {
