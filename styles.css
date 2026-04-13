@@ -550,6 +550,20 @@ html {
 }
 
 /* ------------------------------
+   CORN HOLE AND EUCHRE
+--------------------------------*/
+.activities-image {
+    text-align: center;
+    margin: 40px 0; /* optional spacing */
+}
+
+.activities-image img {
+    max-width: 100%;
+    height: auto;
+    display: inline-block;
+}
+
+/* ------------------------------
    CONTACT SECTION
 --------------------------------*/
 .contact-section {
