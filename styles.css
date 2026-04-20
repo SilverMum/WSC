@@ -25,24 +25,31 @@ main {
     padding: 0 16px 40px;
 }
 
-/* Content card overlay for homepage */
-.home main {
-    background: rgba(255, 255, 255, 0.60); /* soft white card */
-    padding: 40px;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-    margin-top: -50px;
+/* Homepage container */
+.home {
+    position: relative;
+    z-index: 0;
 }
 
-/* Homepage background */
-.home {
+/* Full-page fixed background + overlay */
+.home::before {
+    content: "";
+    position: fixed; /* background stays still */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
     background-image:
-        linear-gradient(rgba(255, 255, 255, 0.50), rgba(255, 255, 255, 0.50)),
+        linear-gradient(rgba(255, 255, 255, 0.30), rgba(255, 255, 255, 0.30)),
         url("images/tree line bg.png");
+
     background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+    background-position: bottom center;
     background-repeat: no-repeat;
+
+    pointer-events: none;
+    z-index: -1;
 }
 
 /* ------------------------------
@@ -2665,11 +2672,11 @@ body.home main {
 }
 
 #wsc-calendar {
-    padding: 0; /* remove card padding */
+    padding: 0;
     margin: 0 auto 40px auto;
     max-width: 900px;
     border: none;
-    background: none; /* removes the red card completely */
+    background: none;
 }
 
 /* Inner container: padding only, no border */
@@ -2710,9 +2717,9 @@ body.home main {
     content: "";
     position: fixed;
     inset: 0;
-    background: rgba(255, 255, 255, 0.20); /* 10% opacity */
-    pointer-events: none; /* don't block clicks */
-    z-index: -1; /* sits behind all content */
+    background: rgba(255, 255, 255, 0.20);
+    pointer-events: none;
+    z-index: -1;
 }
 
 /* =========================================================
@@ -2721,7 +2728,11 @@ body.home main {
 
 @media (max-width: 768px) {
 
-    /* Red card: show a little red on sides */
+    /* NEW: Move header image down so nav doesn't cover it */
+    .calendar-header-img {
+        margin-top: 60px; /* about 1 inch on most phones */
+    }
+
     #wsc-calendar {
         padding-left: 6% !important;
         padding-right: 6% !important;
@@ -2730,13 +2741,11 @@ body.home main {
         max-width: 100% !important;
     }
 
-    /* Remove inner padding so calendar gets full width */
     #wsc-calendar .calendar-container {
         padding-left: 0 !important;
         padding-right: 0 !important;
     }
 
-    /* Wrapper flush inside container */
     .calendar-wrapper {
         margin-left: 0 !important;
         margin-right: 0 !important;
@@ -2747,7 +2756,6 @@ body.home main {
         overflow-x: hidden !important;
     }
 
-    /* Iframe obeys container width */
     .calendar-wrapper iframe {
         width: 100% !important;
         max-width: 100% !important;
