@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+
+    <title>Windsor Sportsmen’s Club</title>
+
+    <link rel="stylesheet" href="styles.css?v=7">
+</head>
+
+<body class="calendar-bg">
+
+<!-- ⭐ FULL NAV BAR -->
+<header>
+    <nav class="main-nav">
+
+        <div class="logo">
+            <img src="images/WINDSOR SPORTSMANS REMAKE.png" alt="Windsor Sportsmen’s Club Logo">
+        </div>
+
+        <div class="nav-spacer"></div>
+
+        <ul class="nav-links">
+
+            <!-- HOME -->
+            <li><a href="index.html">Home</a></li>
+
+            <!-- EVENTS -->
+            <li class="dropdown">
+                <a href="#">Events ▾</a>
+                <ul class="dropdown-menu">
+
+                    <!-- NEW: Calendar -->
+                    <li><a href="calendar.html">Calendar</a></li>
+                    <li><a href="index.html#club-events">Club Events</a></li>
+                    <li><a href="private-events.html">Private Events</a></li>
+                </ul>
+            </li>
+
+            <!-- KITCHEN -->
+            <li><a href="kitchen.html">Kitchen</a></li>
+
+            <!-- GROUPS -->
+            <li class="dropdown">
+                <a href="#">Groups ▾</a>
+                <ul class="dropdown-menu">
+                    <li><a href="range.html">Range</a></li>
+                    <li><a href="archery.html">Archery</a></li>
+                    <li><a href="ofha.html">OFHA</a></li>
+                    <li><a href="cheese-cracker.html">Cheese & Cracker Club</a></li>
+                    <li><a href="air-rifle.html">Air Rifle</a></li>
+
+                    <!-- MEMBERS with right-side submenu -->
+                    <li class="dropdown-sub">
+                        <a href="members.html" class="submenu-link">Members</a>
+                        <span class="submenu-toggle">▸</span>
+
+                        <ul class="submenu-right">
+                            <li><a href="staff-tv-info.html">Staff TV Info</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- CONTACT -->
+            <li><a href="index.html#contact-title">Contact</a></li>
+
+            <!-- LOGIN -->
+            <li><a href="login.html">Login</a></li>
+
+        </ul>
+    </nav>
+</header>
+    
+<!-- Spacer under fixed nav -->
+<section style="height: 180px;"></section>
+
+</main>
+
+<!-- ⭐ HEADER IMAGE ABOVE THE CARD, MATCHING CARD WIDTH -->
+<div class="calendar-header-wrapper">
+    <img src="images/Sportsmen's-Header.png" alt="WSC Header" class="calendar-header-img">
+</div>
+
+<!-- ⭐ RED CARD CALENDAR SECTION -->
+<section id="wsc-calendar" class="calendar-page">
+
+    <h1 class="calendar-title">WSC Calendar 2026</h1>
+
+    <div class="calendar-container">
+
+        <!-- ⭐ RESPONSIVE WRAPPER (Option 1) -->
+        <div class="calendar-wrapper">
+            <iframe 
+                src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FToronto&showPrint=0&title&showTz=0&showTitle=0&src=ZGQ4ODJmMWJhODBlNTgzYTQwMGI0MzFlNTgxOTY0NjVmZmNlMDViMzJhZDIxOTI2NTg2YjIxMTAzNDBkMmEwMkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23d81b60"
+                style="border-width:0"
+                width="100%"
+                height="600"
+                frameborder="0"
+                scrolling="no">
+            </iframe>
+        </div>
+        <!-- ⭐ END WRAPPER -->
+
+    </div>
+
+</section>
+
+<!-- ⭐ FOOTER -->
+<footer class="site-footer">
+    <p>©2024 Windsor Sportsmen's Club. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
