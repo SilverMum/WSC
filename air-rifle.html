@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
 
     <title>Windsor Sportsmen’s Club</title>
 
@@ -24,49 +24,53 @@
 
         <ul class="nav-links">
 
-            <!-- HOME -->
-            <li><a href="index.html">Home</a></li>
+    <!-- HOME -->
+    <li><a href="index.html">Home</a></li>
 
-            <!-- EVENTS -->
-            <li class="dropdown">
-                <a href="#">Events ▾</a>
-                <ul class="dropdown-menu">
-                    <li><a href="index.html#club-events">Club Events</a></li>
-                    <li><a href="private-events.html">Private Events</a></li>
-                </ul>
-            </li>
+    <!-- EVENTS -->
+    <li class="dropdown">
+        <a href="#">Events ▾</a>
+        <ul class="dropdown-menu">
 
-            <!-- KITCHEN -->
-            <li><a href="kitchen.html">Kitchen</a></li>
-
-            <!-- GROUPS -->
-            <li class="dropdown">
-                <a href="#">Groups ▾</a>
-                <ul class="dropdown-menu">
-                    <li><a href="range.html">Range</a></li>
-                    <li><a href="archery.html">Archery</a></li>
-                    <li><a href="ofha.html">OFHA</a></li>
-                    <li><a href="cheese-cracker.html">Cheese & Cracker Club</a></li>
-                    <li><a href="air-rifle.html">Air Rifle</a></li>
-
-                    <!-- MEMBERS with right-side submenu -->
-                    <li class="dropdown-sub">
-                        <a href="members.html">Members ▸</a>
-
-                        <ul class="submenu-right">
-                            <li><a href="staff-tv-info.html">Staff TV Info</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-
-            <!-- CONTACT -->
-            <li><a href="index.html#contact-title">Contact</a></li>
-
-            <!-- LOGIN -->
-            <li><a href="login.html">Login</a></li>
-
+            <!-- NEW: Calendar -->
+            <li><a href="calendar.html">Calendar</a></li>
+            <li><a href="index.html#club-events">Club Events</a></li>
+            <li><a href="private-events.html">Private Events</a></li>
         </ul>
+    </li>
+
+    <!-- KITCHEN -->
+    <li><a href="kitchen.html">Kitchen</a></li>
+
+    <!-- GROUPS -->
+    <li class="dropdown">
+        <a href="#">Groups ▾</a>
+        <ul class="dropdown-menu">
+            <li><a href="range.html">Range</a></li>
+            <li><a href="archery.html">Archery</a></li>
+            <li><a href="ofha.html">OFHA</a></li>
+            <li><a href="cheese-cracker.html">Cheese & Cracker Club</a></li>
+            <li><a href="air-rifle.html">Air Rifle</a></li>
+
+            <!-- MEMBERS with right-side submenu -->
+            <li class="dropdown-sub">
+                <a href="members.html" class="submenu-link">Members</a>
+                <span class="submenu-toggle">▸</span>
+
+                <ul class="submenu-right">
+                    <li><a href="staff-tv-info.html">Staff TV Info</a></li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+
+    <!-- CONTACT -->
+    <li><a href="index.html#contact-title">Contact</a></li>
+
+    <!-- LOGIN -->
+    <li><a href="login.html">Login</a></li>
+
+</ul>
     </nav>
 </header>
 
@@ -130,6 +134,75 @@
 
 </section>
 
+  <!-- AIR RIFLE CALENDAR -->
+<section id="airrifle-calendar">
+    <h2 class="airrifle-calendar-title">Air Rifle Calendar 2026</h2>
+
+    <div class="calendar-container">
+
+        <!-- ⭐ RESPONSIVE WRAPPER (matches red calendar fix) -->
+        <div class="calendar-wrapper">
+            <iframe 
+                src="https://calendar.google.com/calendar/embed?src=f3b6f6b1111372d609000aec2b6287dc6f1d0ae44ccdaae4ce23d8dfacf1cb26%40group.calendar.google.com&ctz=America%2FToronto&showPrint=0&showTabs=0&showCalendars=0&showTz=0"
+                style="border:0"
+                frameborder="0"
+                scrolling="no">
+            </iframe>
+        </div>
+        <!-- ⭐ END WRAPPER -->
+
+    </div>
+</section>
+
+    <!-- AIR-RIFLE CANCELLATIONS -->
+<!-- CONTACT AIR-RIFLE -->
+<section class="airrifle-cancellations">
+    <h2 class="airrifle-cancel-title">Contact Air Rifle</h2>
+</section>
+
+<section class="airrifle-cancel">
+  <h2>Contact Air Rifle</h2>
+  <p class="airrifle-cancel-intro">
+    Have a question about Air Rifle? Send us a message below and it will be delivered directly to the coordinator.
+  </p>
+
+  <form class="airrifle-cancel-form" action="https://formsubmit.co/WSC-Air-Rifle@outlook.com" method="POST">
+    <div class="field-row">
+      <label for="ar-name">Name</label>
+      <input type="text" id="ar-name" name="name" placeholder="Your Name" required>
+    </div>
+
+    <div class="field-row">
+      <label for="ar-email">Email</label>
+      <input type="email" id="ar-email" name="email" placeholder="Your Email" required>
+    </div>
+
+    <div class="field-row">
+      <label for="ar-subject">Subject</label>
+      <input type="text" id="ar-subject" name="subject" placeholder="e.g. Question about Air Rifle" required>
+    </div>
+
+    <div class="field-row">
+      <label for="ar-message">Message</label>
+      <textarea id="ar-message" name="message" rows="4" placeholder="Type your message here..." required></textarea>
+    </div>
+
+    <div class="field-row field-inline">
+      <label for="ar-captcha">3 + 4 = ?</label>
+      <input type="text" id="ar-captcha" name="captcha" placeholder="Your answer" required>
+    </div>
+
+    <div class="field-row field-checkbox">
+      <label>
+        <input type="checkbox" name="consent" required>
+        I agree that my information may be used to process this inquiry.
+      </label>
+    </div>
+
+    <button type="submit" class="ac-submit">Send Message</button>
+  </form>
+</section>
+
 </main>
 
 <!-- ⭐ FOOTER -->
@@ -139,5 +212,3 @@
 
 </body>
 </html>
-
-
