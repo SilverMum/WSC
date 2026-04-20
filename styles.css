@@ -15,7 +15,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
     color: #222;
-    background-color: #f0f0f0;
+    background-color: transparent;
 }
 
 /* A simple layout container for main content */
@@ -23,6 +23,26 @@ main {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 16px 40px;
+}
+
+/* Content card overlay for homepage */
+.home main {
+    background: rgba(255, 255, 255, 0.60); /* soft white card */
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    margin-top: -50px;
+}
+
+/* Homepage background */
+.home {
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.50), rgba(255, 255, 255, 0.50)),
+        url("images/tree line bg.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
 }
 
 /* ------------------------------
@@ -37,8 +57,8 @@ main {
     display: flex;
     align-items: center;
     justify-content: space-between; /* FIX */
-    padding: 12px 24px;
-    background-color: #ffffff;
+    padding: 5px 24px;
+    background-color: #f2f2f2;
     border-bottom: 1px solid #ddd;
 }
 
@@ -185,7 +205,7 @@ html {
 .hero {
     text-align: center;
     padding: 40px 0 16px;
-    background-color: #f0f0f0;
+    background-color: transparent;
     color: white;
     margin-top: 20px;
 }
@@ -311,7 +331,7 @@ html {
 --------------------------------*/
 .facebook-button {
     text-align: center;
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 .facebook-button img {
@@ -336,6 +356,14 @@ html {
     font-weight: 600;
     text-align: center;
     white-space: normal;
+}
+
+.wsc-facebook-label {
+    color: #1877F2; /* Facebook blue */
+    text-decoration: underline;
+    margin: 0 0 4px 0; /* small bottom gap to pull it closer to the button */
+    padding: 0;
+    font-weight: bold; /* now it's bold */
 }
 
 /* ------------------------------
@@ -391,8 +419,8 @@ html {
 #kitchen {
     margin-top: 10px;
     margin-bottom: 10px;
-    padding-top: 25px;
-    padding-bottom: 25px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 #kitchen .section-title {
@@ -555,13 +583,22 @@ html {
 .activities-image {
     text-align: center;
     margin: 40px 0; /* optional spacing */
-    padding: 0 210px;   /* adds left/right spacing */
+    padding: 0 180px;   /* adds left/right spacing */
 }
 
 .activities-image img {
     max-width: 100%;
     height: auto;
     display: inline-block;
+}
+
+@media (max-width: 600px) {
+    .ribchicken-img {
+        max-width: 90% !important; /* 10% smaller on mobile */
+        height: auto !important;
+        display: block !important;
+        margin: 0 auto !important; /* keeps it centered */
+    }
 }
 
 /* ------------------------------
@@ -612,9 +649,23 @@ html {
     border-bottom: none;
 }
 
+/* Partnership title spacing */
+#contact-title h2,
+#partnership h2 {
+    margin-top: 20px;   /* half the space above the title */
+    margin-bottom: 10px; /* tighter space under the title */
+}
+
+/* Tighten space BELOW the first divider */
+.section-divider img {
+    display: block;
+    margin: 10px auto; /* reduced space */
+}
+
+/* Tighten space ABOVE and BELOW the Partnership image */
 .partnership-img {
     display: block;
-    margin: 0 auto 20px;
+    margin: 10px auto; /* this controls BOTH spaces */
     width: 100%;
     max-width: 900px;
     height: auto;
@@ -632,14 +683,14 @@ html {
 }
 
 .activities-title {
-    font-size: 2.2rem;
+    font-size: 2rem;
     font-weight: 700;
     margin-bottom: 20px;
     color: #000;
 }
 
 .activities-text {
-    font-size: 1.6rem;
+    font-size: 1.3rem;
     line-height: 1.8;
     color: #000;
     max-width: 800px;
@@ -1199,6 +1250,147 @@ body.home main {
     font-weight: 700;
 }
 
+.archery-cancel {
+  max-width: 520px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #111;
+  border-radius: 10px;
+  box-shadow: 0 0 25px rgba(0,0,0,0.6);
+  color: #f5f5f5;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+/* wider on larger screens, still vertical */
+@media (min-width: 900px) {
+  .archery-cancel {
+    max-width: 700px;
+  }
+}
+
+.archery-cancel h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.8rem;
+  letter-spacing: 0.04em;
+  color: #4cc26b; /* green heading */
+  text-transform: uppercase;
+}
+
+.archery-cancel-intro {
+  margin: 0 0 1.5rem;
+  font-size: 0.95rem;
+  color: #cccccc;
+}
+
+.archery-dates {
+    font-size: 1.6rem; /* 2 sizes bigger than before */
+    font-weight: bold; /* make the dates bold */
+    text-align: center;
+    margin-bottom: 40px; /* 2 finger widths */
+    color: #000; /* adjust if needed */
+}
+
+.archery-cancel-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.field-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.field-row label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #bbbbbb;
+}
+
+.field-row input,
+.field-row textarea {
+  background: #000;
+  border: 1px solid #b3261e; /* red outline */
+  border-radius: 4px;
+  padding: 0.6rem 0.75rem;
+  color: #f5f5f5;
+  font-size: 0.95rem;
+}
+
+.field-row input::placeholder,
+.field-row textarea::placeholder {
+  color: #777777;
+}
+
+.field-row input:focus,
+.field-row textarea:focus {
+  outline: none;
+  border-color: #ff4b3a;
+  box-shadow: 0 0 0 1px #ff4b3a33;
+}
+
+.field-inline {
+  flex-direction: row;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.field-inline label {
+  margin: 0;
+  white-space: nowrap;
+}
+
+.field-inline input {
+  flex: 1;
+}
+
+.field-checkbox {
+  font-size: 0.8rem;
+  color: #bbbbbb;
+}
+
+.field-checkbox input {
+  margin-right: 0.4rem;
+  accent-color: #b3261e;
+}
+
+.ac-submit {
+  margin-top: 0.5rem;
+  align-self: flex-start;
+  background: #b3261e;
+  color: #ffffff;
+  border: none;
+  border-radius: 999px;
+  padding: 0.7rem 1.8rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.5);
+}
+
+.ac-submit:hover {
+  background: #e53930;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.6);
+}
+
+.ac-submit:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+/* small-screen padding tweak */
+@media (max-width: 600px) {
+  .archery-cancel {
+    margin: 1.5rem 1rem;
+    padding: 1.5rem;
+  }
+}
+
 /* ------------------------------
    OFHA HEADER IMAGE
 --------------------------------*/
@@ -1442,6 +1634,40 @@ body.home main {
 }
 
 /* ------------------------------
+   CHEESE & CRACKER
+--------------------------------*/
+/* ⭐ CHEESE & CRACKER — DESKTOP SIDE-BY-SIDE */
+.cheesecracker-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    flex-wrap: nowrap;
+}
+
+.cheesecracker-img {
+    height: 450px;
+    width: auto;
+    max-width: 45vw;
+}
+
+/* ⭐ CHEESE & CRACKER — MOBILE STACKED */
+@media (max-width: 600px) {
+    .cheesecracker-wrapper {
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .cheesecracker-img {
+        height: auto;
+        width: 90%;
+        max-width: 350px;
+        margin: 0 auto;
+    }
+}
+
+/* ------------------------------
    KITCHEN PAGE TITLE (SEPARATE PAGE)
 --------------------------------*/
 #kitchen-page .section-title {
@@ -1489,6 +1715,21 @@ body.home main {
     font-weight: bold;
 }
 
+.fb-page-container {
+    width: calc(100% - 20px); /* full width minus 10px padding each side */
+    margin: 0 auto;
+    padding: 10px;
+    border: 3px solid red; /* red border */
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.fb-page {
+    width: 100% !important;
+    height: 800px !important; /* adjust height if needed */
+    overflow-y: scroll;
+}
+
 /* ------------------------------
    AIR RIFLE (SEPARATE PAGE)
 --------------------------------*/
@@ -1534,6 +1775,90 @@ body.home main {
     line-height: 1.6;
     color: black;
     margin-bottom: 20px;
+}
+
+/* AIR-RIFLE CANCELLATION TITLE */
+.airrifle-cancel-title {
+    text-align: center;
+    font-size: 32px;      /* Same size as Archery */
+    font-weight: bold;    /* Makes it bold */
+    margin-top: 40px;
+    margin-bottom: 10px;
+    color: black;         /* White title for blue background */
+}
+
+/* AIR-RIFLE CANCELLATION FORM — BLUE THEME */
+.airrifle-cancel {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #003366; /* Deep blue background */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    color: white; /* Makes all text inside white */
+}
+
+.airrifle-cancel h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    color: white; /* Title white */
+}
+
+.airrifle-cancel-intro {
+    text-align: center;
+    margin-bottom: 20px;
+    color: white; /* Intro text white */
+}
+
+.airrifle-cancel-form .field-row {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.airrifle-cancel-form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: white; /* Label text white */
+}
+
+.airrifle-cancel-form input,
+.airrifle-cancel-form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    background: white; /* White input boxes */
+    color: black; /* Black text inside inputs */
+}
+
+.airrifle-cancel-form .field-inline {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.airrifle-cancel-form .field-checkbox {
+    display: flex;
+    align-items: center;
+    color: white; /* Checkbox label white */
+}
+
+/* Submit button (same as Archery) */
+.ac-submit {
+    width: 100%;
+    padding: 12px;
+    background: #b30000;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.ac-submit:hover {
+    background: #8a0000;
 }
 
 /* ------------------------------
@@ -1797,5 +2122,637 @@ body.home main {
     .ofah-advocacy p,
     .ofah-conservation p {
         font-size: 1.3rem;
+    }
+}
+
+/* =========================================================
+   UNIVERSAL MOBILE LAYOUT — STACK EVERYTHING + TIGHT PADDING
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    /* Tight global padding */
+    body, main, .content-section, .contact-section,
+    .range-info-section, .range-rules-section,
+    .range-notice-section, .range-trapper-section,
+    .range-simple-section, .activities-section,
+    .private-events-section, .ofha-membership,
+    .ofha-reasons, .ofah-advocacy, .ofah-conservation,
+    .airrifle-wrapper, .tv-wrapper {
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+    }
+
+    /* Navigation */
+    .main-nav {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px 16px;
+    }
+
+    .logo img {
+        height: 70px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+        padding-right: 0;
+    }
+
+    /* Hero */
+    .hero {
+        margin-top: 130px;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+        white-space: normal;
+    }
+
+    /* Kitchen section */
+    .kitchen-layout {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .kitchen-description {
+        text-align: center;
+        max-width: 100%;
+    }
+
+    /* Max Band */
+    .maxband-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .maxband-left img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Activities divider images */
+    .activities-image {
+        padding: 0 16px;
+        margin: 30px 0;
+    }
+
+    /* Private Events */
+    .private-events-info {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    /* OFHA intro */
+    .ofha-intro {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* Range status grid */
+    .range-status-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    /* TV page grid */
+    .tv-grid {
+        margin-left: 0;
+    }
+
+    .tv-grid-top {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .tv-grid-img,
+    .tv-grid-img-wide {
+        height: auto;
+        max-width: 100%;
+    }
+
+    /* Archery images */
+    .archery-image-wrapper img {
+        height: auto;
+        max-width: 100%;
+    }
+
+    /* Footer */
+    .site-footer {
+        padding: 20px 10px;
+    }
+}
+
+/* Even tighter adjustments for very small screens */
+@media (max-width: 480px) {
+
+    .hero-title {
+        font-size: 1.7rem;
+    }
+
+    .activities-text,
+    .range-notice-body,
+    .range-info-text,
+    .range-rules-text,
+    .archery-info-text,
+    .tv-info-line {
+        font-size: 1.05rem;
+    }
+
+    .facebook-button img {
+        width: 70%;
+    }
+
+    .tv-map {
+        width: 100%;
+    }
+}
+
+/* =========================================================
+   MOBILE NAV — WRAPPED + TAP-TO-OPEN DROPDOWNS
+   ========================================================= */
+@media (max-width: 900px) {
+
+    /* Mobile nav container */
+    .main-nav {
+        justify-content: center !important;
+        padding: 12px 0 !important;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .logo {
+        order: 1;
+        text-align: center;
+        width: 100%;
+    }
+
+    .logo img {
+        height: 90px;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .nav-spacer {
+        display: none;
+    }
+
+    /* WRAPPED NAV — 3 OVER 3 */
+    .nav-links {
+        order: 2;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 6px 6px;
+        width: 100%;
+        padding: 0;
+        margin-top: 0;
+    }
+
+    .nav-links li {
+        flex: 0 0 calc(33.33% - 6px);
+        text-align: center;
+    }
+
+    .nav-links a {
+        font-size: 1.3rem;
+        padding: 4px 2px;
+        white-space: nowrap;
+    }
+
+    /* ⭐ HOMEPAGE-ONLY TIGHTER NAV SPACING */
+    .home .nav-links {
+        gap: 4px 6px !important;
+    }
+
+    .home .nav-links li {
+        flex: 0 0 calc(33.33% - 4px) !important;
+    }
+
+    /* ⭐ HOMEPAGE NAV LINK FONT SIZE — MATCH OTHER PAGES */
+    .home .nav-links a {
+        font-size: 1.3rem !important;
+        padding: 2px 0 !important;
+        font-weight: bold;
+    }
+
+    /* ⭐ HOMEPAGE — AUTO-WIDTH NAV */
+    .home .main-nav {
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+        width: 100% !important;
+        max-width: none !important;
+        margin: 0 auto !important;
+    }
+
+    /* ⭐ MOBILE DROPDOWN — OVERLAY */
+    .dropdown-menu,
+    .submenu-right {
+        display: none;
+        position: absolute !important;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90% !important;
+        margin-top: 6px;
+        padding: 10px 0;
+        border: 1px solid #ddd;
+        background: white;
+        z-index: 9999;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    /* ⭐ FIX #1 — MATCH DROPDOWN TEXT SIZE ON HOMEPAGE */
+    .home .dropdown-menu a,
+    .home .submenu-right a {
+        font-size: 1.3rem !important;
+    }
+
+    /* ⭐ FIX #2 — MATCH DROPDOWN WIDTH TO KITCHEN */
+    .home .dropdown-menu,
+    .home .submenu-right {
+        max-width: 360px !important;
+    }
+
+    /* ⭐ MOBILE — MEMBERS SUBMENU OPENS TO THE RIGHT */
+    .dropdown-sub {
+        position: relative;
+    }
+
+    /* ⭐ ARROW FIX — KEEP BESIDE MEMBERS */
+    .submenu-toggle {
+        display: inline-block !important;
+        vertical-align: middle !important;
+        margin-left: 6px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    /* ⭐ TOP‑ALIGNED RIGHT‑OPENING SUBMENU (MOBILE) */
+    .dropdown-sub .submenu-right {
+        top: 0 !important;
+        left: 100% !important;
+        transform: none !important;
+        width: auto !important;
+        max-width: 240px !important;
+    }
+
+    .dropdown-sub.open > .submenu-right {
+        display: block;
+    }
+
+    .dropdown.open > .dropdown-menu {
+        display: block;
+    }
+
+    /* ⭐ HOMEPAGE FIX — KEEP MEMBERS + ARROW ON SAME LINE (MOBILE) */
+    .home .dropdown-sub {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        white-space: nowrap !important;
+    }
+
+    .home .submenu-link {
+        display: inline-block !important;
+    }
+
+    .home .submenu-toggle {
+        display: inline-block !important;
+        vertical-align: middle !important;
+        margin-left: 6px !important;
+    }
+}
+
+/* =========================================================
+   DESKTOP DROPDOWNS — DEFAULT HOVER BEHAVIOR
+   ========================================================= */
+@media (min-width: 901px) {
+
+    .dropdown-menu,
+    .submenu-right {
+        display: none;
+        position: absolute;
+        background: white;
+        border: 1px solid #ddd;
+        padding: 10px 0;
+        z-index: 999;
+    }
+
+    /* ⭐ DESKTOP — MEMBERS SUBMENU OPENS TO THE RIGHT */
+    .dropdown-sub {
+        position: relative;
+    }
+
+    /* ⭐ ARROW FIX — KEEP BESIDE MEMBERS */
+    .submenu-toggle {
+        display: inline-block !important;
+        vertical-align: middle !important;
+        margin-left: 6px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    /* ⭐ TOP‑ALIGNED RIGHT‑OPENING SUBMENU (DESKTOP) */
+    .dropdown-sub .submenu-right {
+        top: 0;
+        left: 100%;
+        transform: none;
+        min-width: 180px;
+    }
+
+    /* ⭐ HOMEPAGE DESKTOP FIX — KEEP MEMBERS + ARROW ON ONE LINE */
+    .home .dropdown-sub {
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        white-space: nowrap !important;
+    }
+
+    .home .submenu-link {
+        display: inline-block !important;
+    }
+
+    .home .submenu-toggle {
+        display: inline-block !important;
+        margin-left: 6px !important;
+        vertical-align: middle !important;
+    }
+
+    .dropdown:hover > .dropdown-menu,
+    .dropdown-sub:hover > .submenu-right {
+        display: block;
+    }
+}
+
+/* =========================================================
+   ----------ARCHERY------CALENDAR-------------
+   ========================================================= */
+
+.calendar-container {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.calendar-container iframe {
+    width: 100%;
+    height: 600px;
+    border: 0;
+}
+
+.archery-calendar-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    text-decoration: underline;
+    text-decoration-color: black;
+    text-underline-offset: 6px;
+}
+
+/* Inner container: padding only, no border */
+#archery-calendar .calendar-container {
+    padding: 15px;
+    border-radius: 6px;
+}
+
+/* Full green card */
+#archery-calendar {
+    background-color: rgba(76, 194, 107, 0.12); /* soft translucent green */
+    padding: 25px 35px; /* desktop padding */
+    border-radius: 10px;
+    margin: 0 auto 40px auto;
+    max-width: 900px;
+    border: 3px solid #4cc26b;
+}
+
+/* =========================================================
+   ----------AIR-RIFLE-CALENDAR-------------
+   ========================================================= */
+
+.airrifle-calendar-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    text-decoration: underline;
+    text-decoration-color: black;
+    text-underline-offset: 6px;
+}
+
+.calendar-container {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.calendar-container iframe {
+    width: 100%;
+    height: 600px;
+    border: 0;
+}
+
+/* Inner container: padding only, no border */
+#airrifle-calendar .calendar-container {
+    padding: 15px;
+    border-radius: 6px;
+}
+
+/* Full blue card */
+#airrifle-calendar {
+    background-color: rgba(0, 51, 102, 0.12); /* soft translucent deep blue */
+    padding: 25px 35px; /* desktop padding */
+    border-radius: 10px;
+    margin: 0 auto 40px auto;
+    max-width: 900px;
+    border: 3px solid #003366;
+}
+
+/* =========================================================
+   MOBILE FIX FOR BOTH ARCHERY + AIR RIFLE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    /* ARCHERY — show green on sides, remove squeeze */
+    #archery-calendar {
+        padding-left: 6% !important;
+        padding-right: 6% !important;
+        border-left-width: 0;
+        border-right-width: 0;
+        max-width: 100% !important;
+    }
+
+    #archery-calendar .calendar-container {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    /* AIR RIFLE — show blue on sides, remove squeeze */
+    #airrifle-calendar {
+        padding-left: 6% !important;
+        padding-right: 6% !important;
+        border-left-width: 0;
+        border-right-width: 0;
+        max-width: 100% !important;
+    }
+
+    #airrifle-calendar .calendar-container {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    /* Shared wrapper behavior */
+    .calendar-wrapper {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+    }
+
+    .calendar-wrapper iframe {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        display: block;
+        border: 0;
+    }
+}
+
+/* =========================================================
+   ----------- CALENDAR PAGE -------------
+   ========================================================= */
+
+/* Header image inside wrapper */
+.calendar-header-img {
+    display: block;
+    margin: 0 auto 20px auto;
+    height: auto;
+}
+
+/* Wrapper that matches the red card width */
+.calendar-header-wrapper {
+    max-width: 900px;
+    margin: 0 auto 20px auto;
+    text-align: center;
+}
+
+/* FORCE image to match wrapper width */
+.calendar-header-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Title styling */
+.calendar-title {
+    text-align: center;
+    font-size: 2.6rem;
+    font-weight: bold;
+    color: black;
+    display: inline-block;
+    border-bottom: none;
+    padding-bottom: 6px;
+    margin: 70px auto 30px auto;
+}
+
+#wsc-calendar {
+    padding: 0; /* remove card padding */
+    margin: 0 auto 40px auto;
+    max-width: 900px;
+    border: none;
+    background: none; /* removes the red card completely */
+}
+
+/* Inner container: padding only, no border */
+#wsc-calendar .calendar-container {
+    padding: 15px;
+    border-radius: 6px;
+}
+
+/* Calendar container sizing */
+.calendar-container {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Calendar iframe */
+.calendar-container iframe {
+    width: 100%;
+    height: 600px;
+    border: 0;
+}
+
+/* Page wrapper */
+.calendar-page {
+    text-align: center;
+    padding: 20px;
+}
+
+.calendar-bg {
+    background-image: url("images/calendar-page-background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* White overlay over the entire background */
+.calendar-bg::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.20); /* 10% opacity */
+    pointer-events: none; /* don't block clicks */
+    z-index: -1; /* sits behind all content */
+}
+
+/* =========================================================
+   RESPONSIVE GOOGLE CALENDAR FIX (MOBILE)
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    /* Red card: show a little red on sides */
+    #wsc-calendar {
+        padding-left: 6% !important;
+        padding-right: 6% !important;
+        border-left-width: 0;
+        border-right-width: 0;
+        max-width: 100% !important;
+    }
+
+    /* Remove inner padding so calendar gets full width */
+    #wsc-calendar .calendar-container {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    /* Wrapper flush inside container */
+    .calendar-wrapper {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+    }
+
+    /* Iframe obeys container width */
+    .calendar-wrapper iframe {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        display: block;
+        border: 0;
     }
 }
