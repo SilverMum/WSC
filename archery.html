@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <!-- Correct viewport tag -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
 
     <title>Windsor Sportsmen’s Club</title>
 
@@ -13,7 +13,6 @@
 
 <body>
 
-    
 <!-- ⭐ FULL NAV BAR -->
 <header>
     <nav class="main-nav">
@@ -24,51 +23,55 @@
 
         <div class="nav-spacer"></div>
 
-        <ul class="nav-links">
+         <ul class="nav-links">
 
-            <!-- HOME -->
-            <li><a href="index.html">Home</a></li>
+    <!-- HOME -->
+    <li><a href="index.html">Home</a></li>
 
-            <!-- EVENTS -->
-            <li class="dropdown">
-                <a href="#">Events ▾</a>
-                <ul class="dropdown-menu">
-                    <li><a href="index.html#club-events">Club Events</a></li>
-                    <li><a href="private-events.html">Private Events</a></li>
-                </ul>
-            </li>
+    <!-- EVENTS -->
+    <li class="dropdown">
+        <a href="#">Events ▾</a>
+        <ul class="dropdown-menu">
 
-            <!-- KITCHEN -->
-            <li><a href="kitchen.html">Kitchen</a></li>
-
-            <!-- GROUPS -->
-            <li class="dropdown">
-                <a href="#">Groups ▾</a>
-                <ul class="dropdown-menu">
-                    <li><a href="range.html">Range</a></li>
-                    <li><a href="archery.html">Archery</a></li>
-                    <li><a href="ofha.html">OFHA</a></li>
-                    <li><a href="cheese-cracker.html">Cheese & Cracker Club</a></li>
-                    <li><a href="air-rifle.html">Air Rifle</a></li>
-
-                    <!-- MEMBERS with right-side submenu -->
-                    <li class="dropdown-sub">
-                        <a href="members.html">Members ▸</a>
-
-                        <ul class="submenu-right">
-                            <li><a href="staff-tv-info.html">Staff TV Info</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-
-            <!-- CONTACT -->
-            <li><a href="index.html#contact-title">Contact</a></li>
-
-            <!-- LOGIN -->
-            <li><a href="login.html">Login</a></li>
-
+            <!-- NEW: Calendar -->
+            <li><a href="calendar.html">Calendar</a></li>
+            <li><a href="index.html#club-events">Club Events</a></li>
+            <li><a href="private-events.html">Private Events</a></li>
         </ul>
+    </li>
+
+    <!-- KITCHEN -->
+    <li><a href="kitchen.html">Kitchen</a></li>
+
+    <!-- GROUPS -->
+    <li class="dropdown">
+        <a href="#">Groups ▾</a>
+        <ul class="dropdown-menu">
+            <li><a href="range.html">Range</a></li>
+            <li><a href="archery.html">Archery</a></li>
+            <li><a href="ofha.html">OFHA</a></li>
+            <li><a href="cheese-cracker.html">Cheese & Cracker Club</a></li>
+            <li><a href="air-rifle.html">Air Rifle</a></li>
+
+            <!-- MEMBERS with right-side submenu -->
+            <li class="dropdown-sub">
+                <a href="members.html" class="submenu-link">Members</a>
+                <span class="submenu-toggle">▸</span>
+
+                <ul class="submenu-right">
+                    <li><a href="staff-tv-info.html">Staff TV Info</a></li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+
+    <!-- CONTACT -->
+    <li><a href="index.html#contact-title">Contact</a></li>
+
+    <!-- LOGIN -->
+    <li><a href="login.html">Login</a></li>
+
+</ul>
     </nav>
 </header>
 
@@ -125,9 +128,6 @@
         </p>
     </div>
 
-    <!-- RIGHT SIDE IMAGE (hidden on mobile by CSS) -->
-    <img src="images/Archeryimage.png" alt="Archery Image" class="archery-info-img">
-
 </section>
 
 <!-- ARCHERY IMAGE TRIO -->
@@ -138,10 +138,78 @@
         <img src="images/ArcherySet-Up.png" alt="Archery Set Up">
     </div>
 </section>
+    
+<!-- ARCHERY CALENDAR -->
+<section id="archery-calendar">
+    <h2 class="archery-calendar-title">Archery Calendar 2026</h2>
+
+    <div class="calendar-container">
+
+        <!-- ⭐ RESPONSIVE WRAPPER (matches red + air rifle fix) -->
+        <div class="calendar-wrapper">
+            <iframe 
+                src="https://calendar.google.com/calendar/embed?src=4ce53730cd1fa998a93d1d41cbc800535bea0e3bdc8a513fe752bfe8b943680c%40group.calendar.google.com&ctz=America%2FToronto&showPrint=0&showTabs=0&showCalendars=0&showTz=0"
+                style="border:0"
+                frameborder="0"
+                scrolling="no">
+            </iframe>
+        </div>
+        <!-- ⭐ END WRAPPER -->
+
+    </div>
+</section>
 
 <!-- ARCHERY CANCELLATIONS -->
 <section class="archery-cancellations">
     <h2 class="archery-cancel-title">Archery Cancellations</h2>
+
+    <div class="archery-dates">
+        May 14th 2026<br>
+        June 4th 2026
+    </div>
+</section>
+
+<section class="archery-cancel">
+  <h2>Contact Archery</h2>
+  <p class="archery-cancel-intro">
+    Have a question about Archery? Send us a message below and it will be delivered directly to the coordinator.
+  </p>
+
+  <form class="archery-cancel-form" action="https://formsubmit.co/adamveldhuis@hotmail.ca" method="POST">
+    <div class="field-row">
+      <label for="ac-name">Name</label>
+      <input type="text" id="ac-name" name="name" placeholder="Your Name" required>
+    </div>
+
+    <div class="field-row">
+      <label for="ac-email">Email</label>
+      <input type="email" id="ac-email" name="email" placeholder="Your Email" required>
+    </div>
+
+    <div class="field-row">
+      <label for="ac-subject">Subject</label>
+      <input type="text" id="ac-subject" name="subject" placeholder="e.g. Archery Inquiry" required>
+    </div>
+
+    <div class="field-row">
+      <label for="ac-message">Message</label>
+      <textarea id="ac-message" name="message" rows="4" placeholder="Write your message here..." required></textarea>
+    </div>
+
+    <div class="field-row field-inline">
+      <label for="ac-captcha">3 + 4 = ?</label>
+      <input type="text" id="ac-captcha" name="captcha" placeholder="Your answer" required>
+    </div>
+
+    <div class="field-row field-checkbox">
+      <label>
+        <input type="checkbox" name="consent" required>
+        I agree that my information may be used to process this inquiry.
+      </label>
+    </div>
+
+    <button type="submit" class="ac-submit">Send Message</button>
+  </form>
 </section>
 
 <!-- ⭐ FOOTER -->
