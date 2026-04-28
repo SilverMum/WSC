@@ -2,130 +2,83 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <!-- Correct viewport tag -->
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
-
     <title>Windsor Sportsmen’s Club — Range</title>
-
-    <!-- Your stylesheet -->
     <link rel="stylesheet" href="styles.css?v=9">
 </head>
 
-<body>
+<body class="range-bg">
 
 <!-- ⭐ FULL NAV BAR -->
 <header>
     <nav class="main-nav">
-
         <div class="logo">
             <img src="images/WINDSOR SPORTSMANS REMAKE.png" alt="Windsor Sportsmen’s Club Logo">
         </div>
 
         <div class="nav-spacer"></div>
 
-         <ul class="nav-links">
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
 
-    <!-- HOME -->
-    <li><a href="index.html">Home</a></li>
-
-    <!-- EVENTS -->
-    <li class="dropdown">
-        <a href="#">Events ▾</a>
-        <ul class="dropdown-menu">
-
-            <!-- NEW: Calendar -->
-            <li><a href="calendar.html">Calendar</a></li>
-            <li><a href="index.html#club-events">Club Events</a></li>
-            <li><a href="private-events.html">Private Events</a></li>
-        </ul>
-    </li>
-
-    <!-- KITCHEN -->
-    <li><a href="kitchen.html">Kitchen</a></li>
-
-    <!-- GROUPS -->
-    <li class="dropdown">
-        <a href="#">Groups ▾</a>
-        <ul class="dropdown-menu">
-            <li><a href="range.html">Range</a></li>
-            <li><a href="archery.html">Archery</a></li>
-            <li><a href="ofha.html">OFHA</a></li>
-            <li><a href="cheese-cracker.html">Cheese & Cracker Club</a></li>
-            <li><a href="air-rifle.html">Air Rifle</a></li>
-
-            <!-- MEMBERS with right-side submenu -->
-            <li class="dropdown-sub">
-                <a href="members.html" class="submenu-link">Members</a>
-                <span class="submenu-toggle">▸</span>
-
-                <ul class="submenu-right">
-                    <li><a href="staff-tv-info.html">Staff TV Info</a></li>
+            <li class="dropdown">
+                <a href="#">Events ▾</a>
+                <ul class="dropdown-menu">
+                    <li><a href="calendar.html">Calendar</a></li>
+                    <li><a href="index.html#club-events">Club Events</a></li>
+                    <li><a href="private-events.html">Private Events</a></li>
                 </ul>
             </li>
+
+            <li><a href="kitchen.html">Kitchen</a></li>
+
+            <li class="dropdown">
+                <a href="#">Groups ▾</a>
+                <ul class="dropdown-menu">
+                    <li><a href="range.html">Range</a></li>
+                    <li><a href="archery.html">Archery</a></li>
+                    <li><a href="ofha.html">OFHA</a></li>
+                    <li><a href="cheese-cracker.html">Cheese & Cracker Club</a></li>
+                    <li><a href="air-rifle.html">Air Rifle</a></li>
+
+                    <li class="dropdown-sub">
+                        <a href="members.html" class="submenu-link">Members</a>
+                        <span class="submenu-toggle">▸</span>
+                        <ul class="submenu-right">
+                            <li><a href="staff-tv-info.html">Staff TV Info</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <li><a href="index.html#contact-title">Contact</a></li>
+            <li><a href="login.html">Login</a></li>
         </ul>
-    </li>
-
-    <!-- CONTACT -->
-    <li><a href="index.html#contact-title">Contact</a></li>
-
-    <!-- LOGIN -->
-    <li><a href="login.html">Login</a></li>
-
-</ul>
     </nav>
 </header>
 
 <!-- Spacer under fixed nav -->
-<section style="height: 160px;"></section>
+<section style="height: 125px;"></section>
+
+    <!-- ⭐ RANGE PAGE HEADER IMAGE -->
+<section class="range-header">
+    <img src="images/Range-Header.png" alt="Range Header" class="range-header-img">
+</section>
 
 <!-- ⭐ RANGE HEADER IMAGE -->
-<div class="range-header">
-    <img src="images/slide2.jpg" alt="Range Header Image">
-</div>
-
-<!-- ⭐ RANGE STATUS SECTION -->
 <section class="range-status-section">
     <div class="range-status-grid">
-
         <div class="range-status-left">
-            <img src="images/Range-Closed.png" alt="Range Closed Notice" class="range-status-img">
-        </div>
-
-        <div class="range-status-right">
             <img src="images/Skeet-Cartoon.png" alt="Skeet Shooting Cartoon" class="range-status-img">
         </div>
 
+        <div class="range-status-right">
+            <img src="images/range-opening.png" alt="Range Opening Notice" class="range-status-img">
+        </div>
     </div>
 </section>
 
-<!-- ⭐ RANGE OPEN BUTTON SECTION -->
-<section class="range-open-button-section" style="margin-top: -40px;">
-    <div class="range-open-button-wrapper">
-        <a 
-            href="https://teamup.com/ksmhmp1jc5r9ceo99x?view=mw&tz=Calendar%20default&showLogo=0&showProfileAndInfo=0&disableSidepanel=1&showMenu=0&showViewHeader=1&showAgendaDetails=0&showDateControls=1&showDateRange=1"
-            target="_blank"
-        >
-            <img src="images/Range-Open.png" alt="Range Open Button" class="range-open-button-img">
-        </a>
-    </div>
-</section>
-
-<!-- ⭐ RANGE NOTICE SECTION -->
-<section class="range-notice-section">
-    <h2 class="range-notice-title">Hi all RSOs and Trappers,</h2>
-
-    <p class="range-notice-body">
-        I hate saying this, but, it's time to close.<br><br>
-        The temps are forecasted to drop below freezing soon.<br><br>
-        We had some great fall weather this year, with many nice days to enjoy our sport.<br><br>
-        Let's look forward to the spring, or maybe even before then if the berm gets completed and approved by the CFO.<br><br>
-        I'll sign off for now.<br><br>
-        All the best to everyone, be safe, and have a great holiday.<br><br>
-        Phil
-    </p>
-</section>
-
-<!-- ⭐ RANGE FACEBOOK BUTTON SECTION -->
+<!-- ⭐ FACEBOOK BUTTON -->
 <section class="range-facebook-section">
     <div class="range-facebook-wrapper">
         <a href="https://www.facebook.com/profile.php?id=61575199292154" target="_blank">
@@ -134,136 +87,394 @@
     </div>
 </section>
 
-<!-- ⭐ TRAPPER SECTION -->
-<section class="range-trapper-section">
-    <h2 class="range-trapper-title">TRAP AND SKEET</h2>
+<!-- General Information -->
+<section>
+<div class="outer-card">
+    <div class="inner-card">
 
-    <div class="range-trapper-text">
-        <p>
-            Trappers Required For The Ranges<br><br>
-            The trap and skeet ranges require trappers to attend on Saturdays and Sundays. 
-            Typically we work with teenagers who are not afraid to do some heavy lifting. 
-            We will train and supervise their activity. For their efforts, they receive a 
-            daily stipend and their work hours qualify for their community volunteer hours 
-            which are required for graduation from high school. The Trappers fill machines 
-            with clay targets, general cleanup, act as a trapper on the trap range to pull 
-            targets and keep score, raise and lower the shot curtains, etc. If you know of 
-            a teenager who might be interested in a summer job, please contact me at 
-            daveroberts2943@outlook.com<br><br>
-            Thank you. Dave Roberts, Chief Range Officer
+        <h2>Trap & Skeet – General Information</h2>
+
+        <p style="text-align: left; font-weight: 700;">
+            Shooters wishing to shoot at WSC must complete the following (Non‑members welcome):
         </p>
+
+        <ol style="text-align: left;">
+            <li>Familiarize themselves with the WSC Range Safety Rules.</li>
+            <li>Review & sign the WSC Range Waiver Form annually.</li>
+            <li>Register and sign‑in at the range shack prior to shooting.</li>
+            <li>New members must attend a WSC Range Orientation and Safety Course at the earliest opportunity (a nominal one‑time fee applies).</li>
+            <li>Beginner & novice shooters welcome — instruction available by appointment</li>
+            <li>Range reservations available for private functions, stags, hunting clubs, meet & greets, etc.</li>
+        </ol>
+
     </div>
+</div>
 </section>
 
-<!-- ⭐ RANGE INFO SECTION -->
-<section class="range-info-section">
-    <h2 class="range-info-title">Trap & Skeet Information.</h2>
+<br><br>
 
-    <div class="range-info-text">
-        <p>
-            Updated Oct 2025<br><br>
+<!-- Hours of Operation -->
+<section>
+<div class="outer-card">
+    <div class="inner-card">
 
-            RANGE FACILITIES: One Trap Field, One Skeet Field,<br>
-            One Pattern Board<br><br>
+        <h2>Hours of Operation</h2>
 
-            HOURS OF OPERATION:<br>
-            Saturday: Skeet and Trap from 9am to 3pm<br>
-            Sunday: Skeet and Trap from 9am to 1pm<br>
-            Ranges closed on the last Sunday of each month<br>
-            Ranges will close for the season approx. end of October.<br><br>
+        <p>For up‑to‑date information check the “Range Schedule”</p>
 
-            FEES: (per round of 25 clay targets)<br>
-            WSC Members with a trap & Skeet Associate Membership $8.00.<br>
-            Trap & Skeet Associate membership $75.00 annually. (Available at Skeet Range)<br>
-            Non-members $10.00 and a $10.00 day Fee.<br>
-            Teenagers $5.00. (Day fee not applicable)<br><br>
+        <div class="range-open-button-wrapper">
+            <a href="https://teamup.com/ksqefxnfm1tv8mriaq" target="_blank">
+                <img src="images/Range-Open.png" alt="Range Open Button" class="range-open-button-img">
+            </a>
+        </div>
 
-            Shooters Cards Available — Buy ten rounds and get one free bonus round.<br>
-            Ear and eye protection mandatory. We have loaner pairs to use.<br>
-            We do not sell shotgun shells. We do not rent firearms.<br>
-            Trap shooting use #7 1/2 or #8 size shot only.<br>
-            Skeet shooting use #9 size shot only.<br>
-            Range reservations available for special events such as stags, hunting clubs, etc.
+        <p><strong>Note:</strong> All scheduled hours are weather permitting.</p>
+
+        <br>
+
+        <h3>Summer Hours (April to October)</h3>
+
+        <ul class="range-indent">
+            <li><strong>Saturday: 9am–2pm — Skeet & Trap Open (Last Squad 1:30pm)</strong></li>
+            <li><strong>Sunday: 9am–2pm — Skeet & Trap Open (Last Squad 1:30pm)</strong></li>
+            <li><strong>Thursday: Cancelled temporarily (Reopening when berm is completed)</strong></li>
+            <li><strong>Holidays: 9am–2pm — Skeet & Trap Open (Last Squad 1:30pm)</strong></li>
+            <li>Last Sunday of the month — <strong>Range Closed</strong></li>
+        </ul>
+
+        <br>
+
+        <h3>Winter Hours (November to March)</h3>
+
+        <ul class="range-indent">
+            <li><strong>Saturday: 10:30am–2:30pm — Skeet & Trap Open (Last Squad 2:00pm)</strong></li>
+            <li>Sunday: Not scheduled at this time</li>
+            <li>Thursday: Cancelled temporarily (Reopening when berm is completed)</li>
+            <li>Last Sunday of the month — <strong>Range Closed</strong></li>
+        </ul>
+
+        <br>
+
+        <p class="range-indent"><strong>Please arrive 30 minutes prior to Last Squad time to check available space.</strong></p>
+        <p class="range-indent">The range closes after the last squad finishes shooting.</p>
+        <p class="range-indent"><strong>Extended hours available for groups, events, and private parties. Use the contact section on the WSC Range page (scroll to bottom).</strong></p>
+
+        <br>
+
+        <!-- ⭐ Shooting Season lines added WITHOUT title -->
+        <p style="text-align: left;">Summer: May to end of October (approx.)</p>
+        <p style="text-align: left;">Summer season may extend if temperatures stay above freezing</p>
+        <p style="text-align: left;">Winter: Still in planning phase</p>
+
+    </div>
+</div>
+</section>
+
+<br><br>
+
+<!-- Fees & Memberships -->
+<section>
+<div class="outer-card">
+    <div class="inner-card">
+
+        <h2>Fees & Memberships</h2>
+
+        <p>(Per round of 25 clay targets)</p>
+
+        <ul style="text-align: left;">
+            <li><strong>WSC Members:</strong> $8.00 per round with a Trap & Skeet Associate Membership</li>
+            <li><strong>Trap & Skeet Associate Membership:</strong> $100.00 annually (Available at Range Shack)</li>
+            <li><strong>Non‑members:</strong> $10.00 per round + $10.00 Day Fee (Valid PAL required)</li>
+            <li style="font-weight: 700;">
+                Non‑member rates also apply to WSC Members without an Associate Membership
+            </li>
+            <li><strong>WSC General Membership</strong> available at the Range Shack</li>
+            <li><strong>Bulk shooting packages</strong> available (Buy 10 rounds, get 1 free)</li>
+            <li><strong>Youth/Student (18 or younger):</strong> $5.00 per round (Day fee not applicable)</li>
+        </ul>
+
+    </div>
+</div>
+</section>
+
+<br><br>
+
+<!-- 2026 Season Opening Notice -->
+<section>
+<div class="outer-card">
+    <div class="inner-card">
+
+        <h2>2026 Trap & Skeet Season Begins</h2>
+
+        <!-- Smaller centered subtitle -->
+        <h3 style="text-align: center; font-size: 1.6rem; font-weight: 600;">
+            Repairs are complete
+        </h3>
+
+        <!-- Large important centered title -->
+        <h2 style="text-align: center; font-size: 2rem; margin-top: 10px;">
+            the club reopens Saturday, May 2nd
+        </h2>
+
+        <br>
+
+        <!-- Left aligned content -->
+        <p style="text-align: left;"><strong>Important Notes:</strong></p>
+
+        <ul style="text-align: left;">
+            <li>Memberships can be paid in the skeet shack — expect a busy morning</li>
+            <li>Trap & Skeet Associate Membership is now <strong>$100 annually</strong></li>
+            <li>New Target Tag system now active</li>
+            <li>Standard single‑round and 10+1 cards still available</li>
+        </ul>
+
+        <br>
+
+        <p style="text-align: left;">Please check the live calendar for range status.</p>
+
+        <p style="text-align: left;"><strong>
+             See you all this weekend! Thank you for your continued support!
+        </strong></p>
+
+    </div>
+</div>
+</section>
+
+<br><br>
+
+<!-- 2026 Member Pre‑Shot Packages -->
+<section class="packages-card">
+<div class="outer-card">
+    <div class="inner-card">
+
+        <h2>2026 Member Pre‑Shot Packages</h2>
+
+        <p>Maximize your season. Support the club. Shoot more for less.</p>
+        <p><strong>(Must be a member with a Trap & Skeet Associate Membership)</strong></p>
+
+        <h3>Bronze — $80</h3>
+        <p>11 Rounds — Buy 10, get 1 free</p>
+
+        <h3>Silver — $150</h3>
+        <p>22 Rounds — Nearly 4 rounds free</p>
+
+        <h3>Gold — $250</h3>
+        <p>38 Rounds — 7 free rounds (Approx. $6.57 per round)</p>
+
+        <h3>Platinum — $500</h3>
+        <p>80 Rounds — 18 free rounds (25% discount)</p>
+
+        <h3>Diamond — $1,000</h3>
+        <p>165 Rounds — 40 free rounds (Approx. $6.06 per round)</p>
+
+    </div>
+</div>
+</section>
+
+<br><br>
+
+<!-- Shooter Requirements -->
+<section>
+<div class="outer-card">
+    <div class="inner-card">
+
+        <h2>Shooter Requirements</h2>
+
+        <p>All shooters must show proof of a <strong>Valid PAL</strong></p>
+        <p>Non‑PAL holders must be accompanied & supervised by a Valid PAL holder</p>
+        <p>Ear & eye protection is <strong>mandatory</strong> (Limited loaners available)</p>
+
+    </div>
+</div>
+</section>
+
+<br><br>
+
+<!-- Ammunition Types -->
+<section>
+<div class="outer-card">
+    <div class="inner-card">
+
+        <h2>Ammunition Types</h2>
+
+        <p style="text-align: center; font-weight: 700;">
+            Skeet Range: #9 shot (Target Loads)
         </p>
-    </div>
-</section>
 
-<!-- ⭐ RANGE RULES SECTION -->
-<section class="range-rules-section">
-    <h2 class="range-rules-title">Range Rules</h2>
-
-    <div class="range-rules-text">
-        <p>
-            1. Safety glasses and hearing protection must be worn on the firing line and in the general vicinity of the ranges.<br><br>
-
-            2. All shooters MUST be in possession of a valid Firearms License (PAL), or be accompanied by a person with a valid Firearms License (PAL).<br><br>
-
-            3. Drugs or alcohol are not allowed in the vicinity of the ranges. The use of alcohol or recreational drugs prior to, or during shooting is strictly prohibited.<br><br>
-
-            4. Skeet Range: Maximum 12-gauge shotgun. Minimum barrel length 26"<br>
-            • Only 2¾” shells allowed, #9 shot only. Two shells may be loaded on Station 1 through Station 7.
-            Only one shell may be loaded on Station 8. Shells are not allowed in the chamber or magazine 
-            until it is your turn to shoot. All actions must remain open until you are in position on the 
-            shooting station.<br>
-            • (Note: Barrels shorter than 26" may be allowed if the gun was designed for Skeet shooting).<br>
-            Tactical style shotguns are not permitted.<br><br>
-
-            5. Trap Range: Maximum 12-gauge shotgun. Minimum barrel length 26"<br>
-            • Only 2¾” shells allowed, #7 ½ shot size or smaller is allowed. Only one shell is allowed to 
-            be loaded in the chamber or magazine when shooting singles. Shells are not allowed in the 
-            chamber or magazine until it is your turn to shoot. All actions must remain open until you 
-            are in position on the shooting station.<br>
-            Tactical style shotguns are not permitted.<br><br>
-
-            6. Safe muzzle direction and firearm control must be maintained at all times.<br><br>
-
-            7. After a misfire or hang-fire, the action must remain closed for 60 seconds with the muzzle
-            pointed in a safe direction. Open action, remove the shell and visually inspect the barrel 
-            for any obstruction. Do not dispose of any unfired shells (duds) in the garbage or on club 
-            property.<br><br>
-
-            8. Transporting shotgun from or to your personal vehicle, and to or from the firing line, 
-            the following safety procedure must be followed:<br>
-            • Firearm is PROVED Safe, action open on all shotguns. Pumps and Semi-autos must be carried 
-            barrel up. Firearms are placed directly into the gun rack at the range. Pumps and Semi-autos 
-            must have actions open while in gun rack.<br>
-            • Moving to and from the firing line; Prove Safe, actions open, barrel up until you are in 
-            position to shoot (Para 6 now applies).<br><br>
-
-            9. Obey and support all Range Safety Officer commands.<br><br>
-
-            10. All firearms are to be carried to and from the firing line and between stations unloaded 
-            with the action open and the muzzle pointed straight up or down. Control your Firearm and 
-            muzzle direction at all times.<br><br>
-
-            11. At the end of the round, return your firearm to the gun rack then pick up your spent hulls.
-            Do not pick up hulls during the round or when moving to the next station. Pick up hulls only 
-            at the end of the round after your firearm is in the gun rack. Do not walk onto the field to 
-            retrieve spent hulls while others are preparing to shoot.<br><br>
-
-            12. Slings, shotshell holders and any other firearm accessories must be removed prior to 
-            attending the firing lines.<br><br>
-
-            SAFETY AND COMMON SENSE ARE IMPORTANT…!!!<br>
-            When in doubt, ask questions and check it out…!!!
+        <p style="text-align: center; font-weight: 700;">
+            Trap Range: #7½ or #8 shot (Target Loads)
         </p>
+
     </div>
+</div>
 </section>
 
-<!-- ⭐ RESTRICTED FIREARMS SECTION -->
-<section class="range-restricted-section">
-    <h2 class="range-restricted-title">
-        Firearms similar to the shotgun shown below are not permitted on the range:
-    </h2>
+<br><br>
 
-    <div class="range-restricted-image">
-        <img src="images/Shotguns.png" alt="Restricted Shotgun Example">
+<!-- Range Rules -->
+<section>
+<div class="outer-card">
+    <div class="inner-card">
+
+        <h2>Range Rules</h2>
+
+        <ol style="text-align: left;">
+
+            <li>Safety glasses & hearing protection required.</li>
+            <li>All shooters must have a valid PAL or be supervised by a PAL holder.</li>
+            <li>No drugs or alcohol in the vicinity of the ranges.</li>
+
+            <!-- ⭐ RULE 4 — UPDATED -->
+            <li><strong>Skeet Range:</strong>
+                <ul style="list-style: none; padding-left: 25px;">
+                    <li>- Max 12‑gauge, min barrel 26"</li>
+                    <li>- Only 2¾" shells, #9 shot</li>
+                    <li>- Two shells allowed on Stations 1–7; one on Station 8</li>
+                    <li>- Actions open until in position</li>
+                    <li>- Tactical shotguns not permitted</li>
+                </ul>
+            </li>
+
+            <!-- ⭐ RULE 5 — UPDATED -->
+            <li><strong>Trap Range:</strong>
+                <ul style="list-style: none; padding-left: 25px;">
+                    <li>- Max 12‑gauge, min barrel 26"</li>
+                    <li>- Only 2¾" shells, #7½ shot or smaller</li>
+                    <li>- One shell loaded for singles</li>
+                    <li>- Tactical shotguns not permitted</li>
+                </ul>
+            </li>
+
+            <li>Maintain safe muzzle direction at all times.</li>
+            <li>Misfire/hang‑fire: keep action closed 60 seconds, then inspect barrel.</li>
+            <li>Transporting firearms: PROVED safe, action open, barrel up.</li>
+            <li>Obey all RSO commands.</li>
+            <li>Firearms unloaded with actions open when moving between stations.</li>
+            <li>Pick up spent hulls only after firearm is in the rack.</li>
+            <li>Remove slings & accessories before attending firing lines.</li>
+
+        </ol>
+
+        <p style="text-align: center; font-weight: 700; margin-top: 20px;">
+            SAFETY AND COMMON SENSE ARE IMPORTANT
+        </p>
+
+        <p style="text-align: center; font-weight: 700;">
+            When in doubt, ask questions and check it out.
+        </p>
+
+        <div class="restricted-firearms-wrapper">
+            <h3>Firearms similar to the shotgun shown below are not permitted on the range:</h3>
+
+            <div class="range-restricted-image">
+                <img src="images/Shotguns.png" alt="Restricted Shotgun Example">
+            </div>
+
+            <p class="range-revised-date">
+                Revised and in effect as of – May 2026
+            </p>
+        </div>
+
     </div>
+</div>
 </section>
 
-<p class="range-revised-date">
-    Revised and in effect as of - October 15, 2025
-</p>
+<br><br>
+
+<br><br>
+
+<!-- Range Facilities -->
+<section>
+<div class="outer-card">
+    <div class="inner-card">
+
+        <h2>Range Facilities</h2>
+
+        <p style="font-weight: 700;">1 × Trap Field</p>
+        <p style="font-weight: 700;">1 × Skeet Field</p>
+        <p style="font-weight: 700;">1 × Pattern Board</p>
+
+        <br>
+
+        <p style="font-weight: 700;">We do not sell shotgun shells</p>
+        <p style="font-weight: 700;">We do not rent firearms</p>
+
+    </div>
+</div>
+</section>
+
+<br><br>
+
+<br><br>
+
+<!-- Club House -->
+<section>
+<div class="outer-card">
+    <div class="inner-card">
+
+        <h2 style="font-size: 2.4rem; font-weight: 700;">Club House</h2>
+
+        <p style="text-align: center; font-weight: 700; font-size: 1.6rem;">
+            Restaurant & bar (Hours vary)
+        </p>
+
+        <p style="text-align: center; font-weight: 700; font-size: 1.6rem;">
+            Check WSC website or call for current hours
+        </p>
+
+        <p style="text-align: center; font-weight: 700; font-size: 1.6rem;">
+            Phone: 519.966.1600
+        </p>
+
+    </div>
+</div>
+</section>
+
+<!-- ⭐ CONTACT FORM -->
+<section class="trap-skeet-contact">
+    <h2>Contact Trap & Skeet</h2>
+    <p class="trap-skeet-intro">
+        Have a question about Trap & Skeet? Send us a message below and it will be delivered directly to the coordinator.
+    </p>
+
+    <form class="trap-skeet-form" action="https://formsubmit.co/jcanzoneri@gmail.com" method="POST">
+
+        <div class="field-row">
+            <label for="ts-name">Name</label>
+            <input type="text" id="ts-name" name="name" placeholder="Your Name" required>
+        </div>
+
+        <div class="field-row">
+            <label for="ts-email">Email</label>
+            <input type="email" id="ts-email" name="email" placeholder="Your Email" required>
+        </div>
+
+        <div class="field-row">
+            <label for="ts-phone">Phone Number</label>
+            <input type="text" id="ts-phone" name="phone" placeholder="Your Phone Number" required>
+        </div>
+
+        <div class="field-row">
+            <label for="ts-message">Message</label>
+            <textarea id="ts-message" name="message" rows="4" placeholder="Write your message here..." required></textarea>
+        </div>
+
+        <div class="field-row field-inline">
+            <label for="ts-captcha">3 + 4 = ?</label>
+            <input type="text" id="ts-captcha" name="captcha" placeholder="Your answer" required>
+        </div>
+
+        <div class="field-row field-checkbox">
+            <label>
+                <input type="checkbox" name="consent" required>
+                I agree that my information may be used to process this inquiry.
+            </label>
+        </div>
+
+        <button type="submit" class="ts-submit">Send Message</button>
+
+    </form>
+</section>
 
 <!-- ⭐ FOOTER -->
 <footer class="site-footer">
