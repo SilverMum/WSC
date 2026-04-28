@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="styles.css?v=10">
 </head>
 
-<body>
+<body class="kitchen-bg">
     
 <!-- ⭐ FULL NAV BAR -->
 <header>
@@ -73,7 +73,7 @@
 </header>
 
 <!-- Spacer under fixed nav -->
-<section style="height: 180px;"></section>
+<section style="height: 90px;"></section>
 
 <main>
     <section class="content-section" id="kitchen-page" style="text-align:center;">
@@ -81,62 +81,74 @@
        <!-- Kitchen Title Image -->
 <img src="images/kitchentitle.png" 
      alt="Kitchen Title" 
-     style="max-width:40%; margin-bottom:45px;">
+     class="kitchen-title-img">
 
-<div class="kitchen-layout">
+<section class="home-kitchen-card outer-card">
+    <div class="inner-card">
 
-    <img 
-        src="images/kitchen-badge.png" 
-        alt="Rob n Sons Kitchen badge" 
-        class="kitchen-badge"
-    >
+        <div class="kitchen-layout">
 
-    <div class="kitchen-description">
-        <p>
-            Rob n Sons Kitchen is proud to introduce ourselves!
-            I am Rob Coyle, my sons Wyatt, Cooper, and aunt Joan.
-            We plan to bring you a fresh new look to down-home cooking!
-            Our first meal will be Mother's Day Brunch Buffet on May 11th
-            (see the bar for tickets). Then we plan to open for regular
-            hours starting Tuesday May 13th. Our regular hours will be
-            11am–8pm Tuesday–Saturday. We value your input so feel free to come
-            say hi and let us know how we are doing! We look forward to cooking
-            for all of you soon!!
-        </p>
+            <img 
+                src="images/kitchen-badge.png" 
+                alt="Rob n Sons Kitchen badge" 
+                class="kitchen-badge"
+            >
+
+            <div class="kitchen-description">
+                <p>
+                    Rob n Sons Kitchen is proud to introduce ourselves!
+                    I am Rob Coyle, my sons Wyatt, Cooper, and aunt Joan.
+                    We plan to bring you a fresh new look to down-home cooking!
+                    Our first meal will be Mother's Day Brunch Buffet on May 11th
+                    (see the bar for tickets). Then we plan to open for regular
+                    hours starting Tuesday May 13th. Our regular hours will be
+                    11am–8pm Tuesday–Saturday. We value your input so feel free to come
+                    say hi and let us know how we are doing! We look forward to cooking
+                    for all of you soon!!
+                </p>
+            </div>
+
+        </div>
+
     </div>
+</section>
 
+    <!-- ⭐ KITCHEN FACEBOOK FEED — MATCHED DOUBLE CARD -->
+<div class="home-kitchen-card outer-card">
+    <div class="inner-card">
+
+        <h2 class="kitchen-feed-title">Latest Updates from Facebook</h2>
+
+        <div class="kitchen-fb-scroll">
+
+            <!-- FIRST POST -->
+            <iframe 
+                src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3D122094987008817145%26id%3D61574514355825%26substory_index%3D2617677128632727&show_text=true&width=500" 
+                width="100%" 
+                height="533" 
+                style="border:none;overflow:hidden;" 
+                scrolling="yes" 
+                frameborder="0" 
+                allowfullscreen="true" 
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+            </iframe>
+
+            <!-- SECOND POST -->
+            <iframe 
+                src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid02xG5qK47assBF9CRu9smDm6ZGPvugVuzJuGGz6HXp3aMGAfP6usGAMrRMQ2MUEg4Xl%26id%3D61574514355825&show_text=true&width=500" 
+                width="100%" 
+                height="609" 
+                style="border:none;overflow:hidden;" 
+                scrolling="yes" 
+                frameborder="0" 
+                allowfullscreen="true" 
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+            </iframe>
+
+        </div>
+
+    </div>
 </div>
-
-    </section>
-
-    <!-- ⭐ FACEBOOK EMBEDDED POSTS INSIDE RED SCROLLABLE BOX -->
-    <div class="fb-page-container">
-
-        <!-- FIRST POST (older one, but you want it at the top) -->
-        <iframe 
-            src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3D122094987008817145%26id%3D61574514355825%26substory_index%3D2617677128632727&show_text=true&width=500" 
-            width="100%" 
-            height="533" 
-            style="border:none;overflow:hidden;" 
-            scrolling="yes" 
-            frameborder="0" 
-            allowfullscreen="true" 
-            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
-        </iframe>
-
-        <!-- SECOND POST (newest one) -->
-        <iframe 
-            src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid02xG5qK47assBF9CRu9smDm6ZGPvugVuzJuGGz6HXp3aMGAfP6usGAMrRMQ2MUEg4Xl%26id%3D61574514355825&show_text=true&width=500" 
-            width="100%" 
-            height="609" 
-            style="border:none;overflow:hidden;" 
-            scrolling="yes" 
-            frameborder="0" 
-            allowfullscreen="true" 
-            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
-        </iframe>
-
-    </div>
 
 </main>
 
