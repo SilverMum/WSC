@@ -52,6 +52,13 @@ main {
     z-index: -1;
 }
 
+/* Force dropdown menus above TV page cards */
+.dropdown-menu,
+.submenu-right {
+    position: absolute;
+    z-index: 99999; /* higher than nav, cards, shadows, everything */
+}
+
 /* ------------------------------
    NAVIGATION
 --------------------------------*/
@@ -206,6 +213,23 @@ html {
     box-shadow: inset 0 0 6px rgba(0,0,0,0.2);
 }
 
+/* Keep Members text + arrow on one line */
+.dropdown-sub {
+    display: flex;
+    align-items: center;
+    gap: 6px; /* space between text and arrow */
+    white-space: nowrap;
+}
+
+.submenu-link {
+    display: inline-block;
+}
+
+.submenu-toggle {
+    display: inline-block;
+    white-space: nowrap;
+}
+
 /* ------------------------------
    HERO SECTION
 --------------------------------*/
@@ -285,8 +309,8 @@ html {
 /* gold behind green using subtle offset */
 .pledge-title-gold {
     position: absolute;
-    top: 0.5px;      /* ⭐ shifted down */
-    left: 0.5px;     /* ⭐ shifted right */
+    top: 0.5px;
+    left: 0.5px;
     color: #d4a017;
     pointer-events: none;
     z-index: 1;
@@ -318,8 +342,8 @@ html {
 /* gold layer with subtle offset */
 .pledge-paragraph-gold {
     position: absolute;
-    top: 0.5px;      /* ⭐ shifted down */
-    left: 0.5px;     /* ⭐ shifted right */
+    top: 0.5px;
+    left: 0.5px;
     color: #d4a017;
     width: 100%;
     pointer-events: none;
@@ -334,6 +358,48 @@ html {
 }
 
 /* ------------------------------
+   HOMEPAGE — PLEDGE WHITE CARD
+--------------------------------*/
+.home-pledge-card.outer-card {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    backdrop-filter: blur(4px);
+    position: relative;
+}
+
+/* INNER CARD — updated to soft fog gray */
+.home-pledge-card .inner-card {
+    background: rgba(230, 235, 234, 0.55); /* soft fog gray */
+    padding: 30px;
+    border-radius: 12px;
+
+    box-shadow:
+       0 4px 14px rgba(47, 79, 62, 0.35),
+       0 8px 28px rgba(47, 79, 62, 0.25);
+
+    position: relative;
+    z-index: 1;
+}
+
+/* Giant decorative quote */
+.home-pledge-card.outer-card::before {
+    content: "“";
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 160px;
+    transform: translate(8px, 12px);
+    line-height: 1;
+    color: rgba(50, 168, 82, 0.75);
+    pointer-events: none;
+    font-family: Georgia, serif;
+    z-index: 0;
+}
+
+/* ------------------------------
    FACEBOOK BUTTON
 --------------------------------*/
 .facebook-button {
@@ -344,7 +410,7 @@ html {
 .facebook-button img {
     width: 25%;
     min-width: 180px;
-    max-width: 260px;
+    max-width: 320px; 
     height: auto;
     display: block;
     margin: 0 auto;
@@ -358,19 +424,42 @@ html {
 
 .facebook-note {
     margin-top: 16px;
-    font-size: 1.1rem;
+    font-size: 1.4rem;
     color: #3B8BFF;
     font-weight: 600;
     text-align: center;
     white-space: normal;
+
+    text-shadow:
+        0 0 1px black,
+        0 0 2px black,
+        0 0 3px black;
 }
 
-.wsc-facebook-label {
-    color: #1877F2; /* Facebook blue */
-    text-decoration: underline;
-    margin: 0 0 4px 0; /* small bottom gap to pull it closer to the button */
-    padding: 0;
-    font-weight: bold; /* now it's bold */
+/* ------------------------------
+   FACEBOOK CARD — OUTER WRAPPER
+--------------------------------*/
+.facebook-card.outer-card {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px; /* gap around inner card */
+    background: rgba(255, 255, 255, 0.3); /* 30% white */
+    border-radius: 12px;
+    backdrop-filter: blur(4px);
+    text-align: center;
+}
+
+/* ------------------------------
+   FACEBOOK CARD — INNER CARD
+--------------------------------*/
+.facebook-card .inner-card {
+    background: rgba(230, 235, 234, 0.55); /* soft fog gray */
+    padding: 30px;
+    border-radius: 12px;
+
+    box-shadow:
+       0 4px 14px rgba(47, 79, 62, 0.35),
+       0 8px 28px rgba(47, 79, 62, 0.25);
 }
 
 /* ------------------------------
@@ -381,7 +470,7 @@ html {
     max-width: 900px;
     margin: 0 auto;
     background-color: transparent;
-    border-bottom: none; /* FIXED — removed old grey divider */
+    border-bottom: none;
 }
 
 .section-title {
@@ -399,72 +488,50 @@ html {
 }
 
 /* ------------------------------
-   SLIDESHOW
+   HOMEPAGE — MEETING WHITE CARD
 --------------------------------*/
-.slideshow-container {
+.home-meeting-card.outer-card {
     max-width: 900px;
-    margin: 0 auto 20px;
+    margin: 40px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    backdrop-filter: blur(4px);
+    text-align: center;
 }
 
-.slideshow-container img {
-    width: 100%;
-    height: auto;
-    display: none;
-    border-radius: 10px;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
+.home-meeting-card .inner-card {
+    background: rgba(230, 235, 234, 0.55); /* soft fog gray */
+    padding: 30px;
+    border-radius: 12px;
+
+    box-shadow:
+       0 4px 14px rgba(47, 79, 62, 0.35),
+       0 8px 28px rgba(47, 79, 62, 0.25);
 }
 
-.slideshow-container img.active {
-    display: block;
-    opacity: 1;
-}
-
-/* ------------------------------
-   KITCHEN SECTION (HOMEPAGE)
---------------------------------*/
-#kitchen {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-
-#kitchen .section-title {
-    color: black;
-}
-
-/* ⭐ FIXED: Image left, text right, never stacks */
-.kitchen-layout {
-    display: flex;
-    align-items: center;      /* centers image + text vertically */
-    justify-content: center;  /* keeps layout balanced */
-    gap: 32px;
-    margin-top: 20px;
-    flex-wrap: nowrap;        /* prevents stacking */
-}
-
-/* Image stays a reasonable size */
-.kitchen-badge {
-    max-width: 320px;
-    width: 100%;
-    height: auto;
-}
-
-/* Text stays beside the image even when bold */
-.kitchen-description {
-    flex: 1;                  /* allows text to shrink instead of dropping */
-    min-width: 260px;         /* prevents collapse */
-    font-size: 1.2rem;        /* matches your bold look */
-    line-height: 1.6;
-    text-align: left;
-    color: #000;
+.meeting-title {
+    font-size: 1.8em;
     font-weight: bold;
+    color: red;
+    line-height: 1.4;
+    margin-bottom: 5px;
 }
 
-/* Reduce space between Kitchen and the divider BELOW it */
-#kitchen + .section-divider {
-    margin-top: 25px;
+.meeting-logo {
+    max-width: 300px;
+    height: auto;
+    margin-top: 5px;
+}
+
+@media (max-width: 700px) {
+    .meeting-logo {
+        display: block;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        max-width: 70% !important;
+        text-align: center;
+    }
 }
 
 /* ------------------------------
@@ -486,8 +553,8 @@ html {
 .range-simple-subtitle {
     font-size: 1.3rem;
     font-weight: 600;
-    color: #000;      /* changed from red */
-    font-style: italic; /* new */
+    color: #000;
+    font-style: italic;
     margin-top: 0;
 }
 
@@ -499,32 +566,57 @@ html {
     margin: 10px auto 40px;
 }
 
-.range-button-simple-img {
-    width: 320px;
-    max-width: 90%;
-    height: auto;
-    cursor: pointer;
-    transition: transform 0.2s ease, filter 0.2s ease;
-}
-
 .range-button-simple-img:hover {
     transform: translateY(-3px);
     filter: brightness(1.1);
 }
 
 /* ------------------------------
-   HOTDOG SECTION
+   HOMEPAGE — RANGE WHITE CARD
 --------------------------------*/
-.range-hotdog img {
-    display: block;
-    margin: 30px auto;
-    max-width: 600px;
-    width: 100%;
+.home-range-card.outer-card {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    backdrop-filter: blur(4px);
+    text-align: center;
+}
+
+/* UNIVERSAL INNER CARD — updated */
+.inner-card {
+    background: rgba(230, 235, 234, 0.55); /* soft fog gray */
+    padding: 30px;
+    border-radius: 12px;
+
+    box-shadow:
+       0 4px 14px rgba(47, 79, 62, 0.35),
+       0 8px 28px rgba(47, 79, 62, 0.25);
+}
+
+.range-simple-title {
+    margin-bottom: 15px;
+}
+
+.range-simple-subtitle {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.range-button-simple-img {
+    width: 380px;      /* increased from 320px */
+    max-width: 95%;    /* stays responsive */
     height: auto;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: transform 0.2s ease, filter 0.2s ease;
 }
 
 /* ------------------------------
-   BAND SECTION
+   RIB & CHICKEN
 --------------------------------*/
 .club-ribchicken img {
     display: block;
@@ -534,37 +626,90 @@ html {
     height: auto;
 }
 
-#band-image {
-    display: block;
-    margin: 40px auto 0;
+.white-card.outer-card {
     max-width: 900px;
-    width: 100%;
+    margin: 40px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    backdrop-filter: blur(4px);
+}
+
+.white-card .inner-card {
+    background: rgba(230, 235, 234, 0.55); /* soft fog gray */
+    padding: 30px;
+    border-radius: 12px;
+
+    box-shadow:
+       0 4px 14px rgba(47, 79, 62, 0.35),
+       0 8px 28px rgba(47, 79, 62, 0.25);
+}
+
+.ribchicken-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.ribchicken-left img {
+    max-width: 420px;
     height: auto;
+    border-radius: 10px;
+}
+
+.ribchicken-right {
+    max-width: 500px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: black;
+}
+
+@media (max-width: 900px) {
+    .ribchicken-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
 }
 
 /* ------------------------------
-   MAX BAND SIDE-BY-SIDE SECTION
+   MAX BAND
 --------------------------------*/
+.maxband-card.outer-card {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    backdrop-filter: blur(4px);
+}
 
-/* Wrapper: image left, text right */
+.maxband-card .inner-card {
+    background: rgba(230, 235, 234, 0.55); /* soft fog gray */
+    padding: 30px;
+    border-radius: 12px;
+
+    box-shadow:
+       0 4px 14px rgba(47, 79, 62, 0.35),
+       0 8px 28px rgba(47, 79, 62, 0.25);
+}
+
 .maxband-wrapper {
     display: flex;
-    align-items: stretch;   /* allows both sides to match height */
     justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
     gap: 40px;
-    margin: 40px auto;
+    margin: 20px auto;
     max-width: 1200px;
 }
 
-.maxband-left {
-    display: flex;          /* allows the image to stretch */
-    align-items: stretch;
-}
-
 .maxband-left img {
-    height: 100%;           /* match text height */
+    height: 100%;
     width: auto;
-    object-fit: cover;      /* fills the height without distortion */
+    object-fit: cover;
     border-radius: 10px;
 }
 
@@ -576,35 +721,73 @@ html {
     color: black;
 }
 
-/* Mobile layout */
+/* ------------------------------
+   BAND IMAGE — OUTER CARD
+--------------------------------*/
+.band-card.outer-card {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px; /* gap around inner card */
+    background: rgba(255, 255, 255, 0.3); /* 30% white */
+    border-radius: 12px;
+    backdrop-filter: blur(4px);
+    text-align: center;
+}
+
+/* ------------------------------
+   BAND IMAGE — INNER CARD
+--------------------------------*/
+.band-card .inner-card {
+    background: rgba(230, 235, 234, 0.55); /* soft fog gray */
+    padding: 30px;
+    border-radius: 12px;
+
+    box-shadow:
+       0 4px 14px rgba(47, 79, 62, 0.35),
+       0 8px 28px rgba(47, 79, 62, 0.25);
+}
+
+/* ------------------------------
+   BAND IMAGE ITSELF
+--------------------------------*/
+#band-image {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+}
+
 @media (max-width: 900px) {
     .maxband-wrapper {
         flex-direction: column;
         text-align: center;
+        margin: 20px auto;
     }
 }
 
 /* ------------------------------
-   CORN HOLE AND EUCHRE
+   ACTIVITIES IMAGE
 --------------------------------*/
 .activities-image {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 30px;
     text-align: center;
-    margin: 40px 0; /* optional spacing */
-    padding: 0 180px;   /* adds left/right spacing */
 }
 
 .activities-image img {
     max-width: 100%;
     height: auto;
-    display: inline-block;
+    display: block;
+    margin: 0 auto;
 }
 
 @media (max-width: 600px) {
     .ribchicken-img {
-        max-width: 90% !important; /* 10% smaller on mobile */
+        max-width: 90% !important;
         height: auto !important;
         display: block !important;
-        margin: 0 auto !important; /* keeps it centered */
+        margin: 0 auto !important;
     }
 }
 
@@ -614,7 +797,7 @@ html {
 .contact-section {
     text-align: center;
     color: #000;
-    font-size: 1.6rem; /* matches universal body size */
+    font-size: 1.6rem;
     font-weight: 700;
     line-height: 1.6;
     margin: 40px auto;
@@ -630,7 +813,6 @@ html {
     height: 20px;
 }
 
-/* Arrow divider line */
 .section-divider {
     width: 100%;
     margin: 40px auto;
@@ -639,7 +821,7 @@ html {
 
 .section-divider img {
     width: 100%;
-    max-width: 600px; /* adjust to your preferred length */
+    max-width: 600px;
     height: auto;
     display: block;
     margin: 0 auto;
@@ -650,29 +832,51 @@ html {
 }
 
 /* ------------------------------
+   CONTACT CARD
+--------------------------------*/
+.home-contact-card.outer-card {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    backdrop-filter: blur(4px);
+    text-align: center;
+}
+
+.home-contact-card .inner-card {
+    background: rgba(230, 235, 234, 0.55); /* soft fog gray */
+    padding: 30px;
+    border-radius: 12px;
+
+    box-shadow:
+       0 4px 14px rgba(47, 79, 62, 0.35),
+       0 8px 28px rgba(47, 79, 62, 0.25);
+}
+
+.contact-line {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: black;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+/* ------------------------------
    PARTNERSHIP IMAGE
 --------------------------------*/
 #partnership {
     border-bottom: none;
 }
 
-/* Partnership title spacing */
-#contact-title h2,
-#partnership h2 {
-    margin-top: 20px;   /* half the space above the title */
-    margin-bottom: 10px; /* tighter space under the title */
-}
-
-/* Tighten space BELOW the first divider */
 .section-divider img {
     display: block;
-    margin: 10px auto; /* reduced space */
+    margin: 10px auto;
 }
 
-/* Tighten space ABOVE and BELOW the Partnership image */
 .partnership-img {
     display: block;
-    margin: 10px auto; /* this controls BOTH spaces */
+    margin: 10px auto;
     width: 100%;
     max-width: 900px;
     height: auto;
@@ -680,7 +884,45 @@ html {
 }
 
 /* ------------------------------
-   ACTIVITIES SECTION
+   PARTNERSHIP — OUTER CARD
+--------------------------------*/
+.partnership-card.outer-card {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px; /* gap around inner card */
+    background: rgba(255, 255, 255, 0.3); /* 30% white */
+    border-radius: 12px;
+    backdrop-filter: blur(4px);
+    text-align: center;
+}
+
+/* ------------------------------
+   PARTNERSHIP — INNER CARD
+--------------------------------*/
+.partnership-card .inner-card {
+    background: rgba(230, 235, 234, 0.55); /* soft fog gray */
+    padding: 30px;
+    border-radius: 12px;
+
+    box-shadow:
+       0 4px 14px rgba(47, 79, 62, 0.35),
+       0 8px 28px rgba(47, 79, 62, 0.25);
+}
+
+/* ------------------------------
+   PARTNERSHIP IMAGE
+--------------------------------*/
+.partnership-img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* ------------------------------
+   ACTIVITIES CARD
 --------------------------------*/
 .activities-section {
     width: 100%;
@@ -706,6 +948,37 @@ html {
 
 .activities-section {
     margin-bottom: 10px;
+}
+
+.home-activities-card.outer-card {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    backdrop-filter: blur(4px);
+    text-align: center;
+}
+
+.home-activities-card .inner-card {
+    background: rgba(230, 235, 234, 0.55); /* soft fog gray */
+    padding: 30px;
+    border-radius: 12px;
+
+    box-shadow:
+       0 4px 14px rgba(47, 79, 62, 0.35),
+       0 8px 28px rgba(47, 79, 62, 0.25);
+}
+
+.activities-text {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: black;
+    line-height: 1.6;
+}
+
+.activities-title {
+    margin-bottom: 20px;
 }
 
 /* ------------------------------
@@ -745,96 +1018,57 @@ body.home main {
    ========================================================= */
 
 /* ------------------------------
-   PRIVATE EVENTS — TEXT ABOVE, PDF BELOW
+   PRIVATE EVENTS — TEXT CARD
 --------------------------------*/
-.private-events-section {
+
+/* Outer card (30% white + blur) */
+.private-events-text-card.outer-card {
     max-width: 900px;
-    margin: 30px auto;
-    padding: 0 20px;
+    margin: 40px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    backdrop-filter: blur(4px);
     text-align: center;
 }
 
+/* Inner card — soft sunrise cream + warm deep shadow */
+.private-events-text-card .inner-card {
+    background: rgba(255, 236, 220, 0.55); /* soft sunrise cream */
+    padding: 30px;
+    border-radius: 12px;
+
+    box-shadow:
+        0 4px 14px rgba(90, 45, 20, 0.45),
+        0 8px 28px rgba(90, 45, 20, 0.35);
+}
+
+/* Title text inside the card */
 .private-events-text {
     font-size: 2.2rem;
     font-weight: 700;
     color: #e60000;
     line-height: 1.5;
-    margin-bottom: 30px;
+    margin: 0;
+
+    text-shadow:
+        0 0 1px black,
+        0 0 2px black,
+        0 0 3px black;
 }
 
+/* ------------------------------
+   PRIVATE EVENTS — PDF BUTTON
+--------------------------------*/
 .private-events-pdf {
     width: 260px;
     height: auto;
     display: block;
-    margin: 0 auto;
-}
-
-/* FORCE top spacing change for Private Events page */
-.private-events-section {
-    margin-top: 30px !important;   /* was 40px */
+    margin: 20px auto 40px;
 }
 
 /* ------------------------------
-   PRIVATE EVENTS — TEXT + PDF BLOCK (NEW)
---------------------------------*/
-.private-events-info {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 40px;
-    max-width: 1100px;
-    margin: 40px auto;
-    padding: 0 20px;
-    flex-wrap: wrap;
-}
-
-.private-events-info .private-events-right {
-    flex: 1 1 60%;
-}
-
-.private-events-info .private-events-left {
-    flex: 1 1 40%;
-    text-align: center;
-}
-
-.private-events-info img.private-events-pdf {
-    width: 306px;   /* perfect size match */
-    height: auto;
-    display: block;
-    margin: 0 auto;
-}
-
-/* ------------------------------
-   PRIVATE EVENTS HEADER CAROUSEL
---------------------------------*/
-.private-events-header-carousel {
-    width: 100%;
-    height: 380px;
-    overflow: hidden;
-    margin-bottom: 40px;
-}
-
-.carousel-container {
-    position: relative;
-    width: 100%;
-    height: 100%;
-}
-
-.carousel-slide {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-}
-
-.carousel-slide.active {
-    opacity: 1;
-}
-
-/* ------------------------------
-   PRIVATE EVENTS — PARTY IMAGE
+   PRIVATE EVENTS — HEADER IMAGE
 --------------------------------*/
 .private-events-header-image img {
     display: block;
@@ -850,54 +1084,73 @@ body.home main {
 --------------------------------*/
 .private-events-gallery {
     width: 100%;
-    margin: 60px auto;
+    margin: 40px auto 60px;
     padding: 0 20px;
 }
 
 .private-events-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 columns */
-    gap: 20px;                              /* spacing between images */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
     max-width: 1200px;
     margin: 0 auto;
-}
-
-.private-events-grid a {
-    display: block;
 }
 
 .private-events-grid img {
     width: 100%;
     height: auto;
     object-fit: cover;
-    border-radius: 10px;   /* optional but looks clean */
+    border-radius: 10px;
     display: block;
 }
 
-/* ------------------------------
-   PRIVATE EVENTS CAROUSEL
---------------------------------*/
-.private-events-carousel {
-    max-width: 900px;
-    margin: 0 auto;
+/* Mobile: stack images 1 per row */
+@media (max-width: 700px) {
+    .private-events-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
-.private-events-carousel img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
+/* ------------------------------
+   PRIVATE EVENTS PAGE BACKGROUND
+--------------------------------*/
+.private-events-bg {
+    position: relative;
+    min-height: 100vh;
+    background: url('images/private-events-background.jpg') center center / cover no-repeat fixed;
+}
+
+/* 30% white wash overlay */
+.private-events-bg::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.3);
+    z-index: -1;
 }
 
 /* ------------------------------
    LOGIN PAGE
 --------------------------------*/
-.login-page-wrapper {
+
+/* Make the whole page a vertical layout so footer stays at bottom */
+body.login-bg {
     display: flex;
-    justify-content: center;
-    padding-top: 60px;   /* was 120px — reduced by half */
-    padding-bottom: 40px;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
+/* Wrapper that controls spacing under the fixed nav */
+body.login-bg .login-page-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 120px !important; /* nav height (110px) + 10px gap */
+    margin-bottom: 20px; /* space before footer */
+    padding-bottom: 0;
+    flex: 1; /* pushes footer to bottom */
+}
+
+/* Login form card */
 .login-form {
     display: flex;
     flex-direction: column;
@@ -910,12 +1163,14 @@ body.home main {
     box-shadow: 0 4px 18px rgba(0,0,0,0.12);
 }
 
+/* Labels */
 .login-form label {
     font-size: 1.1rem;
     font-weight: 600;
     color: #333;
 }
 
+/* Inputs */
 .login-form input {
     font-size: 1.1rem;
     padding: 12px 14px;
@@ -931,6 +1186,7 @@ body.home main {
     outline: none;
 }
 
+/* Login button */
 .login-btn {
     padding: 12px 18px;
     font-size: 1.1rem;
@@ -948,6 +1204,7 @@ body.home main {
     transform: translateY(-2px);
 }
 
+/* Forgot links */
 .login-links {
     display: flex;
     flex-direction: column;
@@ -966,19 +1223,84 @@ body.home main {
 }
 
 /* ------------------------------
-   RANGE PAGE HEADER IMAGE
+   FIXED FOOTER — 20px below login box
 --------------------------------*/
-.range-header img {
-    width: 100%;
-    height: auto;
-    display: block;
-    max-height: 420px;
-    object-fit: cover;
+body.login-bg .site-footer {
+    margin-top: 20px !important;
+    position: relative;
+    bottom: 0;
+    z-index: 1;
 }
 
 /* ------------------------------
-   RANGE STATUS SECTION
+   LOGIN PAGE BACKGROUND
 --------------------------------*/
+.login-bg {
+    position: relative;
+    background: url('images/login-background.jpg') center center / cover no-repeat fixed;
+}
+
+/* 30% white wash overlay — behind everything */
+.login-bg::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.3);
+    z-index: -1;
+}
+
+/* ============================================================
+   RANGE PAGE — GLOBAL BACKGROUND
+============================================================ */
+
+.range-bg {
+    position: relative;
+    min-height: 100vh;
+    background: url('images/range-background1.jpg') center center / cover no-repeat fixed;
+}
+
+.range-bg::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.2);
+    z-index: -1;
+}
+
+/* ============================================================
+   RANGE PAGE — MATCH ARCHERY SPACING
+============================================================ */
+
+.range-bg section {
+    margin-bottom: 30px; /* ⭐ half spacing between cards */
+}
+
+/* Remove accidental <br> spacing ONLY on Range page */
+.range-bg br {
+    display: none;
+}
+
+/* ------------------------------
+   RANGE HEADER IMAGE (matches OFHA)
+--------------------------------*/
+.range-header {
+    max-width: 1200px;
+    margin: 0 auto 30px;
+    padding: 0 40px;
+    text-align: center;
+}
+
+.range-header-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+}
+
+/* ============================================================
+   STATUS SECTION
+============================================================ */
+
 .range-status-section {
     padding: 30px 20px;
     max-width: 1200px;
@@ -989,7 +1311,7 @@ body.home main {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    gap: 40px;
+    gap: 20px;
 }
 
 .range-status-img {
@@ -999,57 +1321,19 @@ body.home main {
     max-width: 600px;
 }
 
-/* RANGE OPEN BUTTON */
-.range-open-button-section {
-    width: 100%;
-    display: block;
-    margin: 20px 0;
+.range-status-left img {
+    max-width: 450px;
+    margin-left: auto;
 }
 
-.range-open-button-wrapper {
-    text-align: center;
-}
+/* ============================================================
+   FACEBOOK BUTTON
+============================================================ */
 
-.range-open-button-img {
-    width: 450px;
-    max-width: 90%;
-    height: auto;
-    cursor: pointer;
-    transition: transform 0.2s ease, filter 0.2s ease;
-}
-
-.range-open-button-img:hover {
-    transform: translateY(-3px);
-    filter: brightness(1.1);
-}
-
-/* RANGE NOTICE SECTION */
-.range-notice-section {
-    max-width: 900px;
-    margin: 50px auto;
-    padding: 0 20px;
-}
-
-.range-notice-title {
-    text-align: center;
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 25px;
-}
-
-.range-notice-body {
-    font-size: 18px;
-    font-weight: bold;
-    line-height: 1.6;
-    margin-top: 20px;
-}
-
-/* RANGE FACEBOOK BUTTON */
 .range-facebook-section {
     width: 100%;
-    display: block;
-    margin: 10px 0 30px;
     text-align: center;
+    margin: 10px 0 30px;
 }
 
 .range-facebook-img {
@@ -1065,80 +1349,119 @@ body.home main {
     filter: brightness(1.1);
 }
 
-/* RANGE TRAPPER NOTICE */
-.range-trapper-section {
-    margin: 40px auto;
-    max-width: 900px;
-    padding: 0 20px;
+/* ============================================================
+   RANGE OPEN BUTTON
+============================================================ */
+
+.range-open-button-wrapper {
+    text-align: center;
+    margin: 25px 0;
 }
 
-.range-trapper-title {
+.range-open-button-img {
+    width: 450px;
+    max-width: 90%;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.range-open-button-img:hover {
+    transform: translateY(-3px);
+    filter: brightness(1.1);
+}
+
+/* ============================================================
+   DOUBLE-CARD SYSTEM (RANGE ONLY — BLUE VERSION)
+============================================================ */
+
+.range-bg .outer-card {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.30);
+    border-radius: 12px;
+    backdrop-filter: blur(4px);
+    position: relative;
+}
+
+.range-bg .inner-card {
+    background: rgba(175, 205, 240, 0.55);
+    padding: 30px;
+    border-radius: 12px;
     text-align: center;
-    font-size: 26px;
-    font-weight: bold;
+
+    box-shadow:
+       0 6px 18px rgba(20, 40, 70, 0.45),
+       0 12px 32px rgba(20, 40, 70, 0.30);
+
+    position: relative;
+    z-index: 1;
+}
+
+/* ============================================================
+   RANGE PAGE — TEXT COLORS (BLUE VERSION)
+============================================================ */
+
+.range-bg .inner-card h2,
+.range-bg .inner-card h3,
+.range-bg .inner-card p,
+.range-bg .inner-card li,
+.range-bg .inner-card a {
+    color: #062a55;
+}
+
+/* ============================================================
+   RANGE PAGE — TYPOGRAPHY (MATCH ARCHERY SCALE)
+============================================================ */
+
+.range-bg h2 {
+    font-size: 2.4rem;
+    font-weight: 700;
     margin-bottom: 20px;
 }
 
-.range-trapper-text {
-    text-align: left;
-    margin: 0 auto;
-    max-width: 800px;
-    font-size: 18px;
-    line-height: 1.6;
-    font-weight: bold;
-}
-
-/* RANGE INFO SECTION */
-.range-info-section {
-    margin: 50px auto;
-    max-width: 900px;
-    padding: 0 20px;
-}
-
-.range-info-title {
-    text-align: center;
-    font-size: 26px;
-    font-weight: bold;
+.range-bg h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
     margin-bottom: 20px;
 }
 
-.range-info-text {
+.range-bg p,
+.range-bg li {
+    font-size: 1.15rem;
+    line-height: 1.65;
+}
+
+/* ============================================================
+   CUSTOM INDENT CLASS (10-SPACE VISUAL INDENT)
+============================================================ */
+
+.range-indent {
     text-align: left;
-    margin: 0 auto;
-    max-width: 800px;
-    font-size: 18px;
-    line-height: 1.6;
-    font-weight: bold;
+    padding-left: 40px;
 }
 
-/* RANGE RULES SECTION */
-.range-rules-section {
-    margin: 50px auto;
-    max-width: 900px;
-    padding: 0 20px;
+/* ============================================================
+   CARD 5 — FIX SPACING (Pre‑Shot Packages ONLY)
+============================================================ */
+
+.packages-card h3 {
+    margin-top: 30px;   /* space above each title */
+    margin-bottom: 5px; /* tighten space under title */
 }
 
-.range-rules-title {
-    text-align: center;
-    font-size: 26px;
-    font-weight: bold;
-    margin-bottom: 20px;
+.packages-card p {
+    margin-top: 0;       /* remove extra space above the line */
+    margin-bottom: 30px; /* space below the line */
 }
 
-.range-rules-text {
-    text-align: left;
-    margin: 0 auto;
-    max-width: 800px;
-    font-size: 18px;
-    line-height: 1.6;
-    font-weight: bold;
-}
+/* ============================================================
+   RESTRICTED FIREARMS SECTION
+============================================================ */
 
-/* RANGE RESTRICTED FIREARM NOTICE */
-.range-restricted-section {
-    margin: 50px auto;
-    max-width: 900px;
-    padding: 0 20px;
+.restricted-firearms-wrapper {
+    margin-top: 30px;
     text-align: center;
 }
 
@@ -1153,8 +1476,8 @@ body.home main {
     max-width: 600px;
     width: 100%;
     height: auto;
-    display: block;
     margin: 0 auto;
+    display: block;
 }
 
 .range-revised-date {
@@ -1164,26 +1487,143 @@ body.home main {
     margin-top: 20px;
 }
 
+/* ============================================================
+   CONTACT FORM (BLUE THEME)
+============================================================ */
+
+.trap-skeet-contact {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: #0b1a33;
+    border-radius: 10px;
+    box-shadow: 0 0 25px rgba(0,0,0,0.6);
+    color: #e8f0ff;
+}
+
+.trap-skeet-contact h2 {
+    margin-bottom: 0.5rem;
+    font-size: 1.8rem;
+    letter-spacing: 0.04em;
+    color: #4aa3ff;
+    text-transform: uppercase;
+}
+
+.trap-skeet-intro {
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+    color: #c7d6f5;
+}
+
+.trap-skeet-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem 2rem;
+}
+
+.field-row {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.field-row label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #bcd4ff;
+}
+
+.field-row input,
+.field-row textarea {
+    background: #000814;
+    border: 1px solid #1e5fb3;
+    border-radius: 4px;
+    padding: 0.6rem 0.75rem;
+    color: #e8f0ff;
+}
+
+.field-row:nth-child(4) {
+    grid-column: 1 / 3;
+}
+
+#ts-message {
+    height: 140px;
+}
+
+.field-inline,
+.field-checkbox {
+    grid-column: 1 / 3;
+}
+
+.ts-submit {
+    grid-column: 1 / 3;
+    margin-top: 0.5rem;
+    background: #1e5fb3;
+    color: #fff;
+    border-radius: 999px;
+    padding: 0.7rem 1.8rem;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+/* ============================================================
+   MOBILE RESPONSIVE
+============================================================ */
+
+@media (max-width: 600px) {
+
+    .trap-skeet-contact {
+        margin: 0 1rem;
+        padding: 1.5rem;
+    }
+
+    .trap-skeet-form {
+        grid-template-columns: 1fr;
+    }
+
+    .field-row:nth-child(4),
+    .field-inline,
+    .field-checkbox,
+    .ts-submit {
+        grid-column: 1 / 2;
+    }
+}
+
 /* ------------------------------
-   ARCHERY HEADER IMAGE
+   ARCHERY HEADER IMAGE (MATCH OFHA)
 --------------------------------*/
 .archery-header {
-    width: 100%;
-    margin: 0;
-    padding: 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
 }
 
 .archery-header-img {
     width: 100%;
-    height: 380px;
-    object-fit: cover;
+    height: auto;
     display: block;
+    border-radius: 10px;
+    object-fit: cover;
 }
 
-/* ARCHERY INFO */
+/* ------------------------------
+   GLOBAL ARCHERY PAGE SPACING
+--------------------------------*/
+.archery-page {
+    padding-top: 140px; /* nav height + breathing room */
+}
+
+.archery-page section {
+    margin-bottom: 40px; /* ⭐ consistent spacing between all content */
+}
+
+/* ------------------------------
+   ARCHERY INFO (plain text inside cards)
+--------------------------------*/
 .archery-info {
     max-width: 800px;
-    margin: 40px auto;
+    margin: 0 auto;
     padding: 0 20px;
     text-align: center;
 }
@@ -1206,6 +1646,7 @@ body.home main {
 .archery-pricing {
     font-size: 1.4rem;
     margin-bottom: 20px;
+    font-weight: 700;
 }
 
 .archery-season {
@@ -1218,7 +1659,7 @@ body.home main {
 
 .archery-weather {
     font-size: 1.4rem;
-    color: #e60000;
+    color: #8b0000;
     font-weight: 700;
     margin-bottom: 30px;
 }
@@ -1230,13 +1671,14 @@ body.home main {
     font-weight: 600;
 }
 
-/* ARCHERY IMAGE TRIO */
+/* ------------------------------
+   ARCHERY IMAGE TRIO
+--------------------------------*/
 .archery-image-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 20px;
-    margin: 40px auto;
     flex-wrap: wrap;
 }
 
@@ -1246,10 +1688,55 @@ body.home main {
     object-fit: cover;
 }
 
-/* ARCHERY CANCELLATIONS */
+/* WIDE CARD FOR IMAGE TRIO ONLY */
+.outer-card.wide-card {
+    max-width: 1200px; /* wider than normal cards */
+}
+
+.inner-card.green-card.wide-inner {
+    padding: 40px; /* more breathing room */
+}
+
+/* ------------------------------
+   GREEN DOUBLE-LAYER CARD SYSTEM
+--------------------------------*/
+.outer-card {
+    max-width: 900px;
+    margin: 0 auto; /* spacing handled globally */
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    backdrop-filter: blur(4px);
+    position: relative;
+}
+
+.inner-card.green-card {
+    background: rgba(220, 245, 230, 0.55);
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+
+    box-shadow:
+       0 6px 18px rgba(10, 50, 30, 0.55),
+       0 12px 32px rgba(10, 50, 30, 0.35);
+
+    position: relative;
+    z-index: 1;
+}
+
+.green-card h2,
+.green-card h3,
+.green-card p,
+.green-card li,
+.green-card a {
+    color: #063b1d;
+}
+
+/* ------------------------------
+   ARCHERY CANCELLATIONS
+--------------------------------*/
 .archery-cancellations {
     text-align: center;
-    margin: 60px auto 20px;
 }
 
 .archery-cancel-title {
@@ -1257,9 +1744,19 @@ body.home main {
     font-weight: 700;
 }
 
+.archery-dates {
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-align: center;
+    color: #000;
+}
+
+/* ------------------------------
+   ARCHERY CONTACT FORM (CLEAN + HORIZONTAL)
+--------------------------------*/
 .archery-cancel {
-  max-width: 520px;
-  margin: 2rem auto;
+  max-width: 700px;
+  margin: 0 auto;
   padding: 2rem;
   background: #111;
   border-radius: 10px;
@@ -1268,18 +1765,11 @@ body.home main {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
-/* wider on larger screens, still vertical */
-@media (min-width: 900px) {
-  .archery-cancel {
-    max-width: 700px;
-  }
-}
-
 .archery-cancel h2 {
   margin: 0 0 0.5rem;
   font-size: 1.8rem;
   letter-spacing: 0.04em;
-  color: #4cc26b; /* green heading */
+  color: #4cc26b;
   text-transform: uppercase;
 }
 
@@ -1289,18 +1779,14 @@ body.home main {
   color: #cccccc;
 }
 
-.archery-dates {
-    font-size: 1.6rem; /* 2 sizes bigger than before */
-    font-weight: bold; /* make the dates bold */
-    text-align: center;
-    margin-bottom: 40px; /* 2 finger widths */
-    color: #000; /* adjust if needed */
-}
-
+/* ------------------------------------
+   HORIZONTAL FORM LAYOUT
+------------------------------------ */
 .archery-cancel-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem 2rem;
+    align-items: start;
 }
 
 .field-row {
@@ -1319,7 +1805,7 @@ body.home main {
 .field-row input,
 .field-row textarea {
   background: #000;
-  border: 1px solid #b3261e; /* red outline */
+  border: 1px solid #b3261e;
   border-radius: 4px;
   padding: 0.6rem 0.75rem;
   color: #f5f5f5;
@@ -1336,6 +1822,21 @@ body.home main {
   outline: none;
   border-color: #ff4b3a;
   box-shadow: 0 0 0 1px #ff4b3a33;
+}
+
+/* Message field spans full width */
+.field-row:nth-child(4) {
+    grid-column: 1 / 3;
+}
+
+#ac-message {
+    height: 140px;
+}
+
+/* Captcha + checkbox full width */
+.field-inline,
+.field-checkbox {
+    grid-column: 1 / 3;
 }
 
 .field-inline {
@@ -1363,7 +1864,9 @@ body.home main {
   accent-color: #b3261e;
 }
 
+/* Submit button full width row */
 .ac-submit {
+  grid-column: 1 / 3;
   margin-top: 0.5rem;
   align-self: flex-start;
   background: #b3261e;
@@ -1390,207 +1893,235 @@ body.home main {
   box-shadow: 0 4px 10px rgba(0,0,0,0.5);
 }
 
-/* small-screen padding tweak */
+/* Mobile layout */
 @media (max-width: 600px) {
   .archery-cancel {
-    margin: 1.5rem 1rem;
+    margin: 0 1rem;
     padding: 1.5rem;
+  }
+
+  .archery-cancel-form {
+    grid-template-columns: 1fr;
+  }
+
+  .field-row:nth-child(4),
+  .field-inline,
+  .field-checkbox,
+  .ac-submit {
+    grid-column: 1 / 2;
   }
 }
 
 /* ------------------------------
-   OFHA HEADER IMAGE
+   ARCHERY PAGE BACKGROUND
+--------------------------------*/
+.archery-page {
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.60), rgba(255, 255, 255, 0.60)),
+        url("images/archery-background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* ------------------------------
+   OFHA PAGE BACKGROUND
+--------------------------------*/
+.ofha-bg {
+    position: relative;
+    min-height: 100vh;
+    background: url('images/ofha-background.jpg') center center / cover no-repeat fixed;
+}
+
+/* 30% white wash overlay */
+.ofha-bg::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.3);
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* ------------------------------
+   OFHA HEADER IMAGE (breathing room)
 --------------------------------*/
 .ofha-header {
-    width: 100%;
-    margin: 0;
-    padding: 0;
+    max-width: 1200px;
+    margin: 0 auto 30px;
+    padding: 0 40px;
+    text-align: center;
 }
 
 .ofha-header-img {
     width: 100%;
-    height: 380px;
-    object-fit: cover;
-    display: block;
-}
-
-/* OFHA INTRO */
-.ofha-intro {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1100px;
-    margin: 40px auto;
-    padding: 0 20px;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.ofha-intro-left {
-    flex: 1;
-    text-align: center;
-    font-size: 2rem;
-    line-height: 1.5;
-    color: #005BBB;
-    font-weight: 700;
-}
-
-.ofha-intro-right {
-    flex: 1;
-    text-align: center;
-}
-
-.ofha-logo {
-    width: 180px;
     height: auto;
-    display: inline-block;
-}
-
-.ofha-text-link {
     display: block;
-    margin-top: 10px;
-    text-align: center;
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: #005BBB;
-    text-decoration: none;
-}
-
-.ofha-text-link:hover {
-    text-decoration: underline;
-}
-
-/* OFHA MEMBERSHIP */
-.ofha-membership {
-    text-align: center;
-    max-width: 900px;
-    margin: 50px auto;
-    padding: 0 20px;
-}
-
-.ofha-membership p {
-    font-size: 1.6rem;
-    color: #005BBB;
-    font-weight: 600;
-    line-height: 1.6;
-    margin-bottom: 25px;
-}
-
-/* OFHA REASONS */
-.ofha-reasons {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 0 20px;
-    color: #005BBB;
-}
-
-.ofha-reasons h3 {
-    font-size: 2rem;
-    font-weight: 700;
-    margin-bottom: 20px;
-    text-align: left;
-}
-
-.ofha-reasons ol {
-    font-size: 1.6rem;
-    line-height: 1.6;
-    padding-left: 20px;
-    text-align: left;
-}
-
-.ofha-reasons li {
-    margin-bottom: 12px;
-}
-
-/* OFAH ADVOCACY */
-.ofah-advocacy {
-    text-align: center;
-    color: #005BBB;
-    max-width: 900px;
-    margin: 60px auto;
-    padding: 0 20px;
-}
-
-.ofah-advocacy h2 {
-    font-size: 2.8rem;
-    font-weight: 800;
-    margin-bottom: 10px;
-}
-
-.ofah-advocacy h3 {
-    font-size: 2rem;
-    font-weight: 700;
-    margin-bottom: 20px;
-}
-
-.ofah-advocacy p {
-    font-size: 1.6rem;
-    line-height: 1.6;
-    margin-bottom: 25px;
-}
-
-/* OFAH CONSERVATION */
-.ofah-conservation {
-    text-align: center;
-    color: #005BBB;
-    max-width: 900px;
-    margin: 60px auto;
-    padding: 0 20px;
-}
-
-.ofah-conservation h2 {
-    font-size: 2.8rem;
-    font-weight: 800;
-    margin-bottom: 20px;
-}
-
-.ofah-conservation h3 {
-    font-size: 2rem;
-    font-weight: 700;
-    margin: 30px 0 15px;
-}
-
-.ofah-conservation p {
-    font-size: 1.6rem;
-    line-height: 1.6;
-    margin-bottom: 25px;
-}
-
-/* DIVIDER (CLUB EVENTS, ETC.) */
-
-/* QUICK LINKS TITLE */
-.quick-links-title {
-    text-align: center;
-    font-size: 2.4rem;
-    font-weight: 900;
-    color: #e60000;
-    letter-spacing: 1px;
-    margin: 40px 0 20px;
+    border-radius: 12px;
 }
 
 /* ------------------------------
-   OFHA QUICK LINKS ROW (FIXED)
+   CARD SYSTEM (GLOBAL FOR OFHA)
 --------------------------------*/
+.outer-card {
+    max-width: 900px;
+    margin: 0 auto 20px; /* 20px spacing between cards */
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.30);
+    border-radius: 16px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
+
+.inner-card.ofha-card {
+    background: rgba(150, 180, 220, 0.60);
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: inset 0 0 18px rgba(0, 0, 0, 0.25);
+}
+
+/* Darkened OFHA text */
+.ofha-card h2,
+.ofha-card h3,
+.ofha-card p,
+.ofha-card li,
+.ofha-card a {
+    color: #062a55;
+}
+
+/* ------------------------------
+   GLOBAL TEXT SIZE UPGRADE
+--------------------------------*/
+.ofha-card p,
+.ofha-card li {
+    font-size: 1.35rem;
+    line-height: 1.65;
+}
+
+.ofha-card h3 {
+    font-size: 1.9rem;
+    font-weight: 700;
+}
+
+.ofha-card h2 {
+    font-size: 2.4rem;
+    font-weight: 800;
+}
+
+/* ------------------------------
+   FIXED INTRO ROW (text left, logo right)
+--------------------------------*/
+.ofha-info-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.ofha-info-text {
+    flex: 1;
+}
+
+.ofha-info-text p {
+    font-size: 1.6rem;   /* UPDATED */
+    font-weight: 700;
+    text-align: center;
+}
+
+.ofha-info-logo {
+    flex: 0 0 auto;
+    text-align: right;
+}
+
+.ofha-info-logo img {
+    max-width: 160px;
+    height: auto;
+}
+
+/* Center the link text under the logo */
+.ofha-info-logo a.ofha-text-link {
+    text-align: center;
+    display: block;
+    width: 100%;
+}
+
+/* ------------------------------
+   MEMBERSHIP CARD (centered + bold)
+--------------------------------*/
+.ofha-membership p {
+    text-align: center;
+    font-size: 1.6rem;  /* MATCHES intro text */
+    font-weight: 700;
+    line-height: 1.65;
+}
+
+/* ------------------------------
+   REASONS SECTION
+--------------------------------*/
+.ofha-reasons h3 {
+    margin-bottom: 12px;
+}
+
+.ofha-reasons ol {
+    padding-left: 20px;
+    line-height: 1.6;
+}
+
+/* ------------------------------
+   ADVOCACY SECTION
+--------------------------------*/
+.ofah-advocacy h2 {
+    margin-top: 10px;
+    margin-bottom: 6px;
+}
+
+.ofah-advocacy h3 {
+    margin-top: 10px;
+    margin-bottom: 6px;
+}
+
+.ofah-advocacy p {
+    margin-bottom: 12px;
+    line-height: 1.6;
+}
+
+/* ------------------------------
+   CONSERVATION SECTION
+--------------------------------*/
+.ofah-conservation h2 {
+    margin-bottom: 12px;
+}
+
+.ofah-conservation h3 {
+    margin-top: 18px;
+    margin-bottom: 8px;
+}
+
+.ofah-conservation p {
+    margin-bottom: 12px;
+    line-height: 1.6;
+}
+
+/* ------------------------------
+   QUICK LINKS SECTION
+--------------------------------*/
+.quick-links-title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #062a55;
+}
+
 .ofha-links-row {
     display: flex;
     justify-content: center;
-    align-items: center;
-    gap: 28px;              /* spacing between logos */
-    flex-wrap: nowrap;      /* keeps all 4 in one row */
-    margin: 40px auto;
-    max-width: 1200px;
-    padding: 0 20px;
-}
-
-.ofha-links-row a {
-    flex: 0 0 auto;         /* each logo keeps its natural size */
+    gap: 25px;
+    flex-wrap: wrap;
 }
 
 .ofha-links-row img {
-    width: 180px;           /* perfect professional size */
+    width: 165px;
     height: auto;
-    object-fit: contain;
-    display: block;
+    border-radius: 10px;
     transition: transform 0.2s ease;
 }
 
@@ -1599,71 +2130,363 @@ body.home main {
 }
 
 /* ------------------------------
-   MEMBERS PAGE
+   PAGE BACKGROUND (WOOD)
 --------------------------------*/
-.members-page {
-    text-align: center;
+.members-bg {
+    position: relative;
+    min-height: 100vh;
+    background: url('images/members-background.jpg') center center / cover no-repeat fixed;
+    z-index: 0;
 }
 
-.members-grid {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    gap: 60px;
-    margin-top: 30px;
+.members-bg::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.25);
+    z-index: -1;
 }
 
-.members-column {
-    max-width: 380px;
-    color: black;
-    font-weight: bold;
-    font-size: 1.1em;
-    line-height: 1.6;
+/* ------------------------------
+   DARK WOOD BACKING BOARD (TILED)
+--------------------------------*/
+.wood-back-card {
+    position: relative;
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 40px;
+    border-radius: 18px;
+
+    background: url('images/dark-wood.jpg') repeat center;
+    background-size: 400px auto;
+
+    box-shadow:
+        0 12px 28px rgba(0, 0, 0, 0.45),
+        inset 0 2px 4px rgba(255,255,255,0.15),
+        inset 0 -3px 6px rgba(0,0,0,0.35);
 }
 
+/* Wood block screws */
+.wood-back-card .wood-screw {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, #f2d7a0 0%, #8a6f3a 50%, #4a3518 100%);
+    box-shadow:
+        inset 0 1px 2px rgba(255,255,255,0.4),
+        inset 0 -2px 3px rgba(0,0,0,0.5);
+}
+
+.wood-back-card .wood-screw.bl { bottom: 16px; left: 16px; }
+.wood-back-card .wood-screw.br { bottom: 16px; right: 16px; }
+.wood-back-card .wood-screw.tl { top: 16px; left: 16px; }
+.wood-back-card .wood-screw.tr { top: 16px; right: 16px; }
+
+/* ------------------------------
+   GOLD SECTION PLAQUE
+--------------------------------*/
+.top-card {
+    position: relative;
+
+    background-image:
+        linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.35) 0%,
+            rgba(255, 255, 255, 0.10) 15%,
+            rgba(203, 183, 122, 1) 50%,
+            rgba(180, 160, 100, 0.85) 85%,
+            rgba(255, 255, 255, 0.25) 100%
+        ),
+        linear-gradient(
+            135deg,
+            #e8d8a8 0%,
+            #dccb93 40%,
+            #cbb77a 100%
+        ),
+        url("data:image/svg+xml;utf8,\
+        <svg xmlns='http://www.w3.org/2000/svg' width='100' height='100'>\
+        <filter id='n'>\
+        <feTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3'/>\
+        </filter>\
+        <rect width='100' height='100' filter='url(%23n)' opacity='0.08'/>\
+        </svg>");
+
+    background-blend-mode: overlay;
+
+    padding: 40px 35px;
+    border-radius: 14px;
+
+    box-shadow:
+        0 0 22px rgba(255, 255, 200, 0.35),
+        0 10px 26px rgba(0, 0, 0, 0.40),
+        inset 0 2px 6px rgba(255, 255, 255, 0.45),
+        inset 0 -3px 8px rgba(0, 0, 0, 0.28);
+}
+
+/* Top screws */
+.top-card::before,
+.top-card::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(circle at 30% 30%, #ffffff 0%, #c0a86a 40%, #8a6f3a 100%);
+    border-radius: 50%;
+    box-shadow:
+        inset 0 1px 3px rgba(255,255,255,0.6),
+        inset 0 -2px 4px rgba(0,0,0,0.4);
+}
+
+.top-card::before { top: 12px; left: 12px; }
+.top-card::after { top: 12px; right: 12px; }
+
+/* Bottom screws */
+.top-card .card-screw {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, #ffffff 0%, #c0a86a 40%, #8a6f3a 100%);
+    box-shadow:
+        inset 0 1px 3px rgba(255,255,255,0.6),
+        inset 0 -2px 4px rgba(0,0,0,0.4);
+}
+
+.top-card .card-screw.bl { bottom: 12px; left: 12px; }
+.top-card .card-screw.br { bottom: 12px; right: 12px; }
+
+/* ------------------------------
+   SECTION TITLE (BIG "MEMBERS")
+--------------------------------*/
+/* Only the big MEMBERS title on the wood block */
+.wood-back-card > .section-title {
+    color: #e8c96a !important;
+    text-shadow:
+        1px 1px 1px rgba(255,255,255,0.28),
+        -1px -1px 1px rgba(0,0,0,0.50);
+}
+
+/* ------------------------------
+   MEMBERS TITLE (INSIDE GOLD CARDS)
+   — RESTORED TO ORIGINAL DARK ENGRAVED
+--------------------------------*/
 .members-title {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-    text-decoration: underline;
-}
-
-.members-subtitle {
-    margin: 10px 0 5px;
-    font-weight: bold;
+    text-align: center;
+    font-size: 1.7rem;
+    font-weight: 900;
+    letter-spacing: 0.03em;
+    margin-bottom: 25px;
     text-transform: uppercase;
+
+    color: #3a1f0a;
+    text-shadow:
+        1px 1px 1px rgba(255,255,255,0.30),
+        -1px -1px 1px rgba(0,0,0,0.40);
 }
 
-.members-list {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 20px;
+/* ------------------------------
+   NAMEPLATE LIST
+--------------------------------*/
+.nameplate-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 10px;
+}
+
+/* ------------------------------
+   INDIVIDUAL NAMEPLATES
+--------------------------------*/
+.nameplate {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 10px;
+    border-radius: 6px;
+
+    background: linear-gradient(
+        135deg,
+        #f7e7a3 0%,
+        #e6d28c 40%,
+        #d4bd75 100%
+    );
+
+    box-shadow:
+        0 3px 8px rgba(0,0,0,0.25),
+        inset 0 1px 2px rgba(255,255,255,0.4),
+        inset 0 -2px 3px rgba(0,0,0,0.25);
+}
+
+/* Engraved text */
+.nameplate span {
+    font-weight: 800;
+    font-size: 1.05rem;
+    color: #3a1f0a;
+
+    text-shadow:
+        1px 1px 1px rgba(255,255,255,0.30),
+        -1px -1px 1px rgba(0,0,0,0.40);
+}
+
+/* Remove screws from nameplates */
+.nameplate .screw {
+    display: none !important;
+}
+
+/* ------------------------------
+   MEMBERS GRID
+--------------------------------*/
+.members-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 45px;
+    margin-top: 20px;
+}
+
+/* ------------------------------
+   NEW PLEDGE BLOCK
+--------------------------------*/
+.pledge-block {
+    max-width: 900px;
+    margin: 60px auto;
+}
+
+/* Wood base */
+.pledge-wood {
+    position: relative;
+    padding: 50px;
+    border-radius: 18px;
+
+    background: url('images/dark-wood.jpg') repeat center;
+    background-size: 420px auto;
+
+    box-shadow:
+        0 14px 30px rgba(0,0,0,0.45),
+        inset 0 2px 4px rgba(255,255,255,0.15),
+        inset 0 -3px 6px rgba(0,0,0,0.35);
+}
+
+/* Pledge screws */
+.pledge-screw {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+
+    background: radial-gradient(circle at 30% 30%, #f2d7a0 0%, #8a6f3a 50%, #4a3518 100%);
+    box-shadow:
+        inset 0 1px 2px rgba(255,255,255,0.4),
+        inset 0 -2px 3px rgba(0,0,0,0.5);
+}
+
+.pledge-screw.tl { top: 16px; left: 16px; }
+.pledge-screw.tr { top: 16px; right: 16px; }
+.pledge-screw.bl { bottom: 16px; left: 16px; }
+.pledge-screw.br { bottom: 16px; right: 16px; }
+
+/* Glass */
+.pledge-glass {
+    padding: 40px 35px;
+    border-radius: 16px;
+
+    background: rgba(255, 255, 255, 0.22);
+    backdrop-filter: blur(18px) saturate(160%);
+    -webkit-backdrop-filter: blur(18px) saturate(160%);
+
+    border: 2px solid rgba(255,255,255,0.35);
+
+    box-shadow:
+        0 8px 22px rgba(0,0,0,0.35),
+        inset 0 1px 4px rgba(255,255,255,0.5),
+        inset 0 -2px 6px rgba(0,0,0,0.25);
+}
+
+/* Pledge text (bright gold engraved) */
+.pledge-title,
+.pledge-text {
+    text-align: center;
+    color: #e8c96a;
+    text-shadow:
+        1px 1px 1px rgba(255,255,255,0.28),
+        -1px -1px 1px rgba(0,0,0,0.50);
+}
+
+.pledge-title {
+    font-size: 1.9rem;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+.pledge-text {
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.55;
+}
+
+/* ------------------------------
+   MOBILE SUPPORT
+--------------------------------*/
+@media (max-width: 800px) {
+    .members-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .nameplate {
+        display: block;
+        width: fit-content;
+        margin: 0 auto;
+    }
 }
 
 /* ------------------------------
    CHEESE & CRACKER
 --------------------------------*/
-/* ⭐ CHEESE & CRACKER — DESKTOP SIDE-BY-SIDE */
+
+/* ⭐ PAGE-LEVEL CENTERING (must come BEFORE card rules) */
+.content-section {
+    max-width: 1200px;
+    margin: 0 auto;      /* ⭐ TRUE PAGE-LEVEL CENTERING */
+}
+
+/* ------------------------------
+   FIX PAGE PADDING FOR CENTERING
+--------------------------------*/
+body.cheese-bg .content-section {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+/* ------------------------------
+   CHEESE & CRACKER — DESKTOP SIDE-BY-SIDE
+--------------------------------*/
 .cheesecracker-wrapper {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;      /* ⭐ centers vertically + horizontally */
     gap: 40px;
     flex-wrap: nowrap;
+    width: fit-content;       /* ⭐ shrink to exact combined image width */
+    margin: 0 auto;           /* ⭐ centers wrapper under title */
 }
 
 .cheesecracker-img {
-    height: 450px;
+    display: block;           /* ⭐ centers each image individually */
+    margin: 0 auto;           /* ⭐ fixes visual drift from uneven PNGs */
+    height: 405px;            /* 10% smaller */
     width: auto;
-    max-width: 45vw;
+    max-width: 34vw;          /* prevents overflow */
 }
 
-/* ⭐ CHEESE & CRACKER — MOBILE STACKED */
+/* ------------------------------
+   CHEESE & CRACKER — MOBILE STACKED
+--------------------------------*/
 @media (max-width: 600px) {
     .cheesecracker-wrapper {
         flex-direction: column;
         flex-wrap: wrap;
         gap: 20px;
+        width: 100%;          /* mobile safe */
     }
 
     .cheesecracker-img {
@@ -1675,66 +2498,258 @@ body.home main {
 }
 
 /* ------------------------------
-   KITCHEN PAGE TITLE (SEPARATE PAGE)
+   CHEESE CARD — OUTER WRAPPER
+--------------------------------*/
+.cheese-card.outer-card {
+    width: fit-content;
+    max-width: 95vw;
+    display: block;
+    margin-left: auto;   /* ⭐ EXACT MATCH TO TITLE IMAGE */
+    margin-right: auto;  /* ⭐ EXACT MATCH TO TITLE IMAGE */
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.30);
+    border-radius: 12px;
+    backdrop-filter: blur(4px);
+    text-align: center;
+}
+
+/* ------------------------------
+   CHEESE CARD — INNER CARD
+--------------------------------*/
+.cheese-inner-card {
+    background: rgba(255, 245, 230, 0.55);
+    padding: 20px;
+    border-radius: 12px;
+
+    box-shadow:
+        0 4px 14px rgba(120, 80, 40, 0.35),
+        0 8px 28px rgba(120, 80, 40, 0.25);
+}
+
+/* ------------------------------
+   FULL-PAGE CHEESE BACKGROUND
+--------------------------------*/
+.cheese-bg {
+    position: relative;
+    min-height: 100vh;
+    background: url('images/cheese-background.jpg') center bottom / cover no-repeat fixed;
+    z-index: 0;
+}
+
+/* 30% white wash overlay */
+.cheese-bg::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.3);
+    z-index: -1;
+}
+
+/* ------------------------------
+   KITCHEN PAGE TITLE
 --------------------------------*/
 #kitchen-page .section-title {
     font-size: 3.2rem;
-    color: #000000;
+    color: #000;
     text-decoration: underline;
-    margin-top: 0;
     font-weight: 800;
+    margin-top: 25px; /* final chosen spacing */
 }
 
-/* Reduce top spacing on the Kitchen PAGE only */
+/* Kitchen Title Image */
+.kitchen-title-img {
+    max-width: 50%;
+    margin: 45px auto 45px auto;
+    display: block;
+}
+
+/* ------------------------------
+   KITCHEN PAGE SPACING
+--------------------------------*/
+#kitchen-page {
+    padding-top: 40px !important;
+}
+
 #kitchen-page .content-section {
     padding-top: 40px;
 }
 
-/* FORCE top spacing change for Kitchen PAGE (not homepage) */
-#kitchen-page {
-    padding-top: 60px !important;
-}
-
-/* ⭐ FIXED: Image left, text right, never stacks */
-.kitchen-layout {
+/* ------------------------------
+   KITCHEN PAGE — DESKTOP LAYOUT
+--------------------------------*/
+#kitchen-page .kitchen-layout {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 40px;
-    flex-wrap: nowrap;      /* prevents stacking */
+    gap: 20px;
+    flex-wrap: nowrap;
     margin-top: 20px;
 }
 
-/* Image sizing */
-.kitchen-badge {
+#kitchen-page .kitchen-badge {
     max-width: 350px;
     width: 100%;
     height: auto;
+    display: block;
 }
 
-/* Text block */
-.kitchen-description {
+#kitchen-page .kitchen-description {
     flex: 1;
     min-width: 260px;
     font-size: 1.2rem;
     line-height: 1.6;
     color: black;
     font-weight: bold;
+    text-align: left;
 }
 
+/* ------------------------------
+   FACEBOOK EMBED BOX
+--------------------------------*/
 .fb-page-container {
-    width: calc(100% - 20px); /* full width minus 10px padding each side */
+    width: calc(100% - 20px);
     margin: 0 auto;
     padding: 10px;
-    border: 3px solid red; /* red border */
+    border: 3px solid red;
     box-sizing: border-box;
     overflow: hidden;
 }
 
 .fb-page {
     width: 100% !important;
-    height: 800px !important; /* adjust height if needed */
+    height: 800px !important;
     overflow-y: scroll;
+}
+
+/* ------------------------------
+   KITCHEN FACEBOOK FEED CARD
+--------------------------------*/
+.kitchen-fb-scroll {
+    max-height: 800px;
+    overflow-y: auto;
+    padding-right: 12px;
+    margin-top: 20px;
+}
+
+/* Scrollbar styling */
+.kitchen-fb-scroll::-webkit-scrollbar {
+    width: 10px;
+}
+
+.kitchen-fb-scroll::-webkit-scrollbar-track {
+    background: rgba(255, 236, 220, 0.55);
+    border-radius: 10px;
+}
+
+.kitchen-fb-scroll::-webkit-scrollbar-thumb {
+    background: rgba(90, 45, 20, 0.55);
+    border-radius: 10px;
+}
+
+.kitchen-feed-title {
+    margin: 0 0 10px 0;
+    font-size: 1.6rem;
+    color: #5a2d14;
+}
+
+/* ------------------------------
+   KITCHEN PAGE BACKGROUND
+--------------------------------*/
+.kitchen-bg {
+    position: relative;
+    min-height: 100vh;
+    background: url('images/kitchen-background.png') center bottom / cover no-repeat fixed;
+    z-index: 0;
+}
+
+.kitchen-bg::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.3);
+    z-index: -1;
+}
+
+/* ------------------------------
+   KITCHEN — DOUBLE CARD STYLE
+--------------------------------*/
+.home-kitchen-card.outer-card {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    backdrop-filter: blur(4px);
+}
+
+.home-kitchen-card .inner-card {
+    background: rgba(255, 236, 220, 0.55);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow:
+        0 4px 14px rgba(90, 45, 20, 0.45),
+        0 8px 28px rgba(90, 45, 20, 0.35);
+}
+
+/* Layout inside card */
+.home-kitchen-card .kitchen-layout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.home-kitchen-card .kitchen-badge {
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.home-kitchen-card .kitchen-description {
+    max-width: 450px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: black;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* ------------------------------
+   MOBILE FIXES
+--------------------------------*/
+@media (max-width: 768px) {
+    #kitchen-page .kitchen-layout {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    #kitchen-page .kitchen-badge {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    #kitchen-page .kitchen-description {
+        text-align: center;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 700px) {
+    .home-kitchen-card .kitchen-layout {
+        flex-direction: column;
+    }
+
+    .home-kitchen-card .kitchen-badge {
+        margin-bottom: 20px;
+    }
 }
 
 /* ------------------------------
@@ -1746,7 +2761,7 @@ body.home main {
     max-width: 900px;
     margin: 0 auto;
     padding: 20px 20px 60px;
-    text-align: center; /* center EVERYTHING */
+    text-align: center;
 }
 
 /* Main white title */
@@ -1758,7 +2773,7 @@ body.home main {
     text-shadow: 0 2px 6px rgba(0,0,0,0.4);
 }
 
-/* Optional subtitle under main title */
+/* Optional subtitle */
 .airrifle-subtitle {
     font-size: 1.8rem;
     font-weight: 700;
@@ -1767,54 +2782,74 @@ body.home main {
     text-shadow: 0 2px 6px rgba(0,0,0,0.4);
 }
 
-/* Section headers (black) */
+/* Section headers (now white) */
 .airrifle-subheader {
     font-size: 2.2rem;
     font-weight: 700;
     margin-top: 40px;
-    margin-bottom: 15px; /* space under each title */
-    color: black;
+    margin-bottom: 15px;
+    color: white;
 }
 
-/* Body text (black) */
+/* Body text (now white) */
 .airrifle-text {
     font-size: 1.3rem;
     line-height: 1.6;
-    color: black;
+    color: white;
     margin-bottom: 20px;
 }
 
-/* AIR-RIFLE CANCELLATION TITLE */
-.airrifle-cancel-title {
+/* ⭐ CALENDAR TITLE — underline white + centered */
+.airrifle-calendar-title {
     text-align: center;
-    font-size: 32px;      /* Same size as Archery */
-    font-weight: bold;    /* Makes it bold */
-    margin-top: 40px;
-    margin-bottom: 10px;
-    color: black;         /* White title for blue background */
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-decoration: underline;
+    text-decoration-color: white !important;
+    text-underline-offset: 6px;
 }
 
-/* AIR-RIFLE CANCELLATION FORM — BLUE THEME */
+/* ⭐ CALENDAR — centered + same width as white cards */
+iframe[src*="google.com/calendar"] {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 900px;
+    height: 600px;
+}
+
+/* AIR-RIFLE CANCELLATION TITLE — unchanged */
+.airrifle-cancel-title {
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    color: black;
+}
+
+/* Dark Oak contact card (was blue) */
 .airrifle-cancel {
     max-width: 700px;
     margin: 40px auto;
     padding: 20px;
-    background: #003366; /* Deep blue background */
+    background: rgba(60, 40, 25, 1); /* solid dark oak */
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.3);
-    color: white; /* Makes all text inside white */
+    color: white;
 }
 
 .airrifle-cancel h2 {
     text-align: center;
     margin-bottom: 10px;
-    color: white; /* Title white */
+    color: white;
 }
 
 .airrifle-cancel-intro {
     text-align: center;
     margin-bottom: 20px;
-    color: white; /* Intro text white */
+    color: white;
 }
 
 .airrifle-cancel-form .field-row {
@@ -1826,7 +2861,7 @@ body.home main {
 .airrifle-cancel-form label {
     font-weight: bold;
     margin-bottom: 5px;
-    color: white; /* Label text white */
+    color: white;
 }
 
 .airrifle-cancel-form input,
@@ -1835,8 +2870,8 @@ body.home main {
     border: 1px solid #ccc;
     border-radius: 6px;
     font-size: 16px;
-    background: white; /* White input boxes */
-    color: black; /* Black text inside inputs */
+    background: white;
+    color: black;
 }
 
 .airrifle-cancel-form .field-inline {
@@ -1848,10 +2883,10 @@ body.home main {
 .airrifle-cancel-form .field-checkbox {
     display: flex;
     align-items: center;
-    color: white; /* Checkbox label white */
+    color: white;
 }
 
-/* Submit button (same as Archery) */
+/* Submit button */
 .ac-submit {
     width: 100%;
     padding: 12px;
@@ -1868,171 +2903,274 @@ body.home main {
     background: #8a0000;
 }
 
+/* Make all text white EXCEPT the nav */
+.air-rifle-bg *:not(.main-nav):not(.main-nav *):not(.main-nav a) {
+    color: white !important;
+}
+
+/* AIR RIFLE PAGE BACKGROUND */
+.air-rifle-bg {
+    position: relative;
+    min-height: 100vh;
+    background: url('images/air-rifle-background.jpg') center center / cover no-repeat fixed;
+}
+
+/* 30% white wash overlay */
+.air-rifle-bg::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.3);
+    z-index: -1;
+}
+
 /* ------------------------------
-   /* TV Page Styling */
+   AIR RIFLE — DARK OAK CARD STYLE
+--------------------------------*/
+.airrifle-card.outer-card {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+
+    /* Dark Oak overlay */
+    background: rgba(60, 40, 25, 0.40);
+
+    border-radius: 12px;
+    backdrop-filter: blur(4px);
+}
+
+.airrifle-card .inner-card {
+    /* Slightly lighter oak tint for inner layer */
+    background: rgba(80, 55, 35, 0.55);
+
+    padding: 30px;
+    border-radius: 12px;
+
+    /* Shadow tuned to brown tones */
+    box-shadow:
+        0 4px 14px rgba(40, 25, 15, 0.45),
+        0 8px 28px rgba(40, 25, 15, 0.35);
+}
+
+/* -----------------------------------------
+   AIR RIFLE — CALENDAR CARD (extra width)
+------------------------------------------*/
+.airrifle-card.outer-card.calendar-card {
+    max-width: 1050px;   /* wider than normal cards */
+    padding: 25px 30px;  /* a bit more breathing room */
+}
+
+.airrifle-card.outer-card.calendar-card .inner-card {
+    padding: 35px;       /* slightly larger inner padding */
+}
+
+/* ------------------------------
+   TV Page Wrapper
+------------------------------ */
 
 .tv-wrapper {
     max-width: 900px;
     margin: 0 auto;
-    padding: 20px 20px 60px;
+    padding: 10px; /* tightened by 10px */
     text-align: center;
 }
 
+/* ------------------------------
+   Titles & Text
+------------------------------ */
+
 .tv-title {
-    font-size: 2.2rem;        /* matches homepage section titles */
+    font-size: 2.2rem;
     font-weight: 700;
-    color: black;
+    color: #002b45;
     text-decoration: underline;
-    margin-bottom: 25px;
+    margin: 10px 0; /* tightened */
 }
 
-.tv-video {
-    width: 100%;
-    max-width: 800px;
-    border-radius: 8px;
-    margin-top: 10px;
-}
-
-/* TV Page Links */
-.tv-title {
-    font-size: 2.2rem;      /* matches homepage section titles */
+.tv-subtitle {
+    font-size: 1.8rem;
     font-weight: 700;
-    color: black;
-    text-decoration: underline;
-    margin-top: 40px;
-    margin-bottom: 10px;
+    color: #002b45;
     text-align: center;
+    margin-bottom: 10px; /* tightened */
+    text-decoration: underline;
 }
 
 .tv-link {
     text-align: center;
-    margin-bottom: 25px;
+    margin-bottom: 15px; /* tightened */
 }
 
 .tv-link a {
     font-size: 1.4rem;
     font-weight: 600;
-    color: #1877F2;              /* Facebook blue */
+    color: #1877F2;
     text-decoration: underline;
     transition: color 0.2s ease;
 }
 
 .tv-link a:hover {
-    color: #0d5fcc;              /* slightly darker hover */
+    color: #0d5fcc;
 }
 
-.tv-map {
+/* ------------------------------
+   CARD STYLE (Blue Theme)
+------------------------------ */
+
+.style-card-outer {
+    background: rgba(255, 255, 255, 0.3);
+    padding: 15px; /* tightened */
+    border-radius: 12px;
+    backdrop-filter: blur(2px);
+    margin-bottom: 20px; /* consistent spacing */
+}
+
+.style-card-inner {
+    background: rgba(173, 216, 255, 0.5);
+    padding: 15px; /* tightened */
+    border-radius: 10px;
+    box-shadow:
+        0 4px 12px rgba(80, 140, 200, 0.35),
+        0 10px 28px rgba(80, 140, 200, 0.25);
+}
+
+/* ------------------------------
+   Video Styling
+------------------------------ */
+
+.tv-video {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 10px;
     display: block;
-    margin: 30px auto;
-    max-width: 600px;
-    width: 90%;
-    height: auto;
-    border-radius: 8px;
+    margin: 15px auto; /* tightened */
+    box-shadow: 0 4px 12px rgba(80, 140, 200, 0.35);
 }
 
-.tv-info {
-    font-family: monospace;
-    font-size: 1.3rem;
-    font-weight: 700;
-    color: black;
-    text-align: center;
-    white-space: pre-wrap;
-    margin-top: 20px;
-    margin-bottom: 40px;
-}
-
-/* TV Page Image Grid */
-.tv-grid {
-    margin-top: 40px;
-    margin-left: -50px;   /* keep the top images shifted left */
-}
-
-.tv-grid-top {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 25px;
-    justify-items: center;
-    align-items: center;
-    margin-bottom: 25px;
-}
-
-/* BOTTOM IMAGE — centered, no width changes */
-.tv-grid-bottom {
-    display: flex;
-    justify-content: center;   /* centers the bottom image */
-    margin-left: 0;            /* remove the left shift ONLY for this row */
-}
-
-.tv-grid-bottom img {
-    width: auto;               /* natural width */
-    max-width: 100%;           /* prevents overflow */
-    height: auto;
-    object-fit: contain;
-    display: block;
-}
-
-/* ORIGINAL IMAGE RULES */
-.tv-grid-img {
-    width: 90%;
-    max-width: 450px;
-    height: auto;
-    border-radius: 8px;
-}
-
-.tv-grid-img-wide {
-    width: 95%;
-    max-width: 900px;
-    height: auto;
-    border-radius: 8px;
-}
+/* ------------------------------
+   Info Blocks
+------------------------------ */
 
 .tv-info-block {
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom: 40px;
+    margin: 15px 0; /* tightened */
 }
 
 .tv-info-line {
-    font-size: 1.3rem;
-    font-weight: 700;
-    color: black;
-    margin-bottom: 12px;
+    background: rgba(255, 255, 255, 0.25);
+    padding: 10px 12px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+    color: #002b45;
+    line-height: 1.4;
+    font-weight: 600;
 }
 
-/* MATCHED HEIGHTS FOR TOP TWO IMAGES */
+/* ------------------------------
+   WSC TV Info
+------------------------------ */
+
+.tv-info {
+    background: rgba(255, 255, 255, 0.25);
+    padding: 12px; /* tightened */
+    border-radius: 8px;
+    font-family: "Courier New", monospace;
+    font-size: 15px;
+    line-height: 1.45;
+    white-space: pre-wrap;
+    overflow-x: auto;
+    margin-top: 10px; /* tightened */
+    color: #002b45;
+}
+
+/* ------------------------------
+   TV Image Stack
+------------------------------ */
+
+.tv-grid-top,
+.tv-grid-bottom {
+    display: block; /* stack vertically */
+}
+
 .tv-grid-img,
 .tv-grid-img-wide {
-    height: 540px;
-    width: auto;
-    object-fit: contain;
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    border-radius: 10px;
     display: block;
-    margin: 0 auto;
-    max-width: none;
+    margin: 15px auto; /* tightened */
+    box-shadow: 0 4px 12px rgba(80, 140, 200, 0.35);
 }
 
-/* Antenna Box Section */
-.tv-subtitle {
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: black;
-    text-align: center;
-    margin-bottom: 25px;
-    text-decoration: underline;
+/* Make the top map image smaller */
+.tv-grid-top img:first-child {
+    max-width: 350px;
+    width: 100%;
+    margin: 10px auto;
 }
+
+/* ------------------------------
+   Antenna Box Image
+------------------------------ */
 
 .tv-antenna-img {
     display: block;
-    margin: 0 auto 40px auto;
+    margin: 15px auto; /* tightened */
     width: 95%;
-    max-width: 1000px;   /* large but not wider than the page */
-    height: auto;
-    border-radius: 8px;
+    max-width: 900px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(80, 140, 200, 0.35);
 }
 
-.tv-wrapper h2.tv-title:last-of-type,
-.tv-wrapper h2.tv-title:nth-last-of-type(2),
-.tv-wrapper h2.tv-title:nth-last-of-type(3) {
-    text-decoration: none;
+/* Ensure dropdown menus appear ABOVE all cards */
+.dropdown-menu,
+.submenu-right {
+    position: absolute;
+    z-index: 10000; /* higher than nav + cards */
+}
+
+/* ------------------------------
+   TV Page Background
+------------------------------ */
+
+body.TV-bg {
+    position: relative;
+    min-height: 100vh;
+    background: url('images/TV-background.png') center bottom / cover no-repeat fixed;
+}
+
+body.TV-bg::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.3);
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* FIX — do NOT force TV page content above the nav */
+body.TV-bg > * {
+    position: relative;
+    z-index: auto; /* was 1 — this caused the dropdown to hide */
+}
+
+/* ------------------------------
+   NAV FIX — keeps nav ABOVE content
+------------------------------ */
+
+/* Keep nav fixed AND above all content */
+.main-nav {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999 !important;
+}
+
+header {
+    position: relative;
+    z-index: 9998; /* safe, but not overriding nav */
 }
 
 /* =========================================================
@@ -2526,16 +3664,6 @@ body.home main {
 #archery-calendar .calendar-container {
     padding: 15px;
     border-radius: 6px;
-}
-
-/* Full green card */
-#archery-calendar {
-    background-color: rgba(76, 194, 107, 0.12); /* soft translucent green */
-    padding: 25px 35px; /* desktop padding */
-    border-radius: 10px;
-    margin: 0 auto 40px auto;
-    max-width: 900px;
-    border: 3px solid #4cc26b;
 }
 
 /* =========================================================
