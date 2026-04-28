@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styles.css?v=10">
 </head>
 
-<body>
+<body class="TV-bg">
 
 <!-- NAV BAR -->
 <header>
@@ -19,55 +19,52 @@
 
         <div class="nav-spacer"></div>
 
-         <ul class="nav-links">
+        <ul class="nav-links">
 
-    <!-- HOME -->
-    <li><a href="index.html">Home</a></li>
+            <!-- HOME -->
+            <li><a href="index.html">Home</a></li>
 
-    <!-- EVENTS -->
-    <li class="dropdown">
-        <a href="#">Events ▾</a>
-        <ul class="dropdown-menu">
-
-            <!-- NEW: Calendar -->
-            <li><a href="calendar.html">Calendar</a></li>
-            <li><a href="index.html#club-events">Club Events</a></li>
-            <li><a href="private-events.html">Private Events</a></li>
-        </ul>
-    </li>
-
-    <!-- KITCHEN -->
-    <li><a href="kitchen.html">Kitchen</a></li>
-
-    <!-- GROUPS -->
-    <li class="dropdown">
-        <a href="#">Groups ▾</a>
-        <ul class="dropdown-menu">
-            <li><a href="range.html">Range</a></li>
-            <li><a href="archery.html">Archery</a></li>
-            <li><a href="ofha.html">OFHA</a></li>
-            <li><a href="cheese-cracker.html">Cheese & Cracker Club</a></li>
-            <li><a href="air-rifle.html">Air Rifle</a></li>
-
-            <!-- MEMBERS with right-side submenu -->
-            <li class="dropdown-sub">
-                <a href="members.html" class="submenu-link">Members</a>
-                <span class="submenu-toggle">▸</span>
-
-                <ul class="submenu-right">
-                    <li><a href="staff-tv-info.html">Staff TV Info</a></li>
+            <!-- EVENTS -->
+            <li class="dropdown">
+                <a href="#">Events ▾</a>
+                <ul class="dropdown-menu">
+                    <li><a href="calendar.html">Calendar</a></li>
+                    <li><a href="index.html#club-events">Club Events</a></li>
+                    <li><a href="private-events.html">Private Events</a></li>
                 </ul>
             </li>
+
+            <!-- KITCHEN -->
+            <li><a href="kitchen.html">Kitchen</a></li>
+
+            <!-- GROUPS -->
+            <li class="dropdown">
+                <a href="#">Groups ▾</a>
+                <ul class="dropdown-menu">
+                    <li><a href="range.html">Range</a></li>
+                    <li><a href="archery.html">Archery</a></li>
+                    <li><a href="ofha.html">OFHA</a></li>
+                    <li><a href="cheese-cracker.html">Cheese & Cracker Club</a></li>
+                    <li><a href="air-rifle.html">Air Rifle</a></li>
+
+                    <li class="dropdown-sub">
+                        <a href="members.html" class="submenu-link">Members</a>
+                        <span class="submenu-toggle">▸</span>
+
+                        <ul class="submenu-right">
+                            <li><a href="staff-tv-info.html">Staff TV Info</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- CONTACT -->
+            <li><a href="index.html#contact-title">Contact</a></li>
+
+            <!-- LOGIN -->
+            <li><a href="login.html">Login</a></li>
+
         </ul>
-    </li>
-
-    <!-- CONTACT -->
-    <li><a href="index.html#contact-title">Contact</a></li>
-
-    <!-- LOGIN -->
-    <li><a href="login.html">Login</a></li>
-
-</ul>
     </nav>
 </header>
 
@@ -76,124 +73,159 @@
 
 <main>
 
-    <section class="content-section" id="staff-tv-info">
+<!-- PAGE TITLE -->
+<section class="content-section" id="staff-tv-info">
+    <div class="style-card-outer">
+        <div class="style-card-inner">
+            <h1 class="section-title" style="text-align:center; margin-bottom:30px;">
+                Staff TV Info
+            </h1>
+        </div>
+    </div>
+</section>
 
-        <h1 class="section-title" style="text-align:center; margin-bottom:30px;">
-            Staff TV Info
-        </h1>
-
-    </section>
-
+<!-- HOW TO USE CONTROLLER -->
 <section class="tv-wrapper">
+    <div class="style-card-outer">
+        <div class="style-card-inner">
 
-    <h2 class="tv-title">How to Use TV Switch Controller</h2>
+            <h2 class="tv-title">How to Use TV Switch Controller</h2>
 
-    <video class="tv-video" controls>
-        <source src="https://windsorsportsmensclub.org/Docs/Matrix.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
+            <video class="tv-video" controls>
+                <source src="https://windsorsportsmensclub.org/Docs/Matrix.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
 
+        </div>
+    </div>
 </section>
 
-    <section class="tv-wrapper">
+<!-- TSN / SPORTSNET / DAZN (BROKEN INTO 3 SECTIONS) -->
+<section class="tv-wrapper">
+    <div class="style-card-outer">
+        <div class="style-card-inner">
 
-    <h2 class="tv-title">TSN Schedule</h2>
-    <p class="tv-link">
-        <a href="https://www.tsn.ca/live/schedule/" target="_blank">
-            tsn.ca/live/schedule
-        </a>
-    </p>
+            <!-- TSN -->
+            <div class="tv-info-block">
+                <h2 class="tv-title">TSN Schedule</h2>
+                <p class="tv-link">
+                    <a href="https://www.tsn.ca/live/schedule/" target="_blank">
+                        tsn.ca/live/schedule
+                    </a>
+                </p>
+            </div>
 
-    <h2 class="tv-title">Sportsnet Schedule</h2>
-    <p class="tv-link">
-        <a href="https://watch.sportsnet.ca/sportschedule" target="_blank">
-            Sportsnet - Sport Schedule
-        </a>
-    </p>
+            <!-- Sportsnet -->
+            <div class="tv-info-block">
+                <h2 class="tv-title">Sportsnet Schedule</h2>
+                <p class="tv-link">
+                    <a href="https://watch.sportsnet.ca/sportschedule" target="_blank">
+                        Sportsnet - Sport Schedule
+                    </a>
+                </p>
+            </div>
 
-    <h2 class="tv-title">DAZN</h2>
-    <p class="tv-link">
-        <a href="https://www.dazn.com/en-CA/schedule" target="_blank">
-            dazn.com/en-CA/schedule
-        </a>
-    </p>
+            <!-- DAZN -->
+            <div class="tv-info-block">
+                <h2 class="tv-title">DAZN</h2>
+                <p class="tv-link">
+                    <a href="https://www.dazn.com/en-CA/schedule" target="_blank">
+                        dazn.com/en-CA/schedule
+                    </a>
+                </p>
+            </div>
 
+        </div>
+    </div>
 </section>
 
+<!-- TV GRID -->
 <section class="tv-wrapper tv-grid">
+    <div class="style-card-outer">
+        <div class="style-card-inner">
 
-    <div class="tv-grid-top">
-        <img src="images/tvmap.png" alt="TV Channel Map" class="tv-grid-img">
-        <img src="images/tvfunction.png" alt="TV Function Panel" class="tv-grid-img">
+            <div class="tv-grid-top">
+                <img src="images/tvmap.png" alt="TV Channel Map" class="tv-grid-img">
+                <img src="images/tvfunction.png" alt="TV Function Panel" class="tv-grid-img">
+            </div>
+
+            <div class="tv-grid-bottom">
+                <img src="images/tvfrontpanel.png" alt="TV Front Panel" class="tv-grid-img-wide">
+            </div>
+
+        </div>
     </div>
+</section>
 
-    <div class="tv-grid-bottom">
-        <img src="images/tvfrontpanel.png" alt="TV Front Panel" class="tv-grid-img-wide">
+<!-- WSC TV INFO (BROKEN INTO INDIVIDUAL LINES LIKE CHANNEL SELECTION) -->
+<section class="tv-wrapper">
+    <div class="style-card-outer">
+        <div class="style-card-inner">
+
+            <h2 class="tv-title">WSC TV Info</h2>
+
+            <div class="tv-info-block">
+                <p class="tv-info-line"><strong>Output 1:</strong> SE Big LG — HDMI 1</p>
+                <p class="tv-info-line"><strong>Output 2:</strong> SW Big LG — HDMI 1</p>
+                <p class="tv-info-line"><strong>Output 3:</strong> Roku behind Bar — HDMI 2</p>
+                <p class="tv-info-line"><strong>Output 4:</strong> (2 TVs) Middle of Bar Samsung — HDMI 2</p>
+                <p class="tv-info-line"><strong>Output 5:</strong> Samsung at edge of bar (south side) — HDMI 2</p>
+                <p class="tv-info-line"><strong>Output 6:</strong> RCA near east entrance doors — HDMI 3</p>
+                <p class="tv-info-line"><strong>Output 7:</strong> RCA TV on pillar facing south — HDMI 3</p>
+                <p class="tv-info-line"><strong>Output 8:</strong> Projector near stage — HDMI 2</p>
+            </div>
+
+        </div>
     </div>
-
 </section>
 
-    <section class="tv-wrapper">
+<!-- CHANNEL SELECTION (ALREADY BROKEN UP) -->
+<section class="tv-wrapper">
+    <div class="style-card-outer">
+        <div class="style-card-inner">
 
-    <h2 class="tv-title">WSC TV Info</h2>
+            <h2 class="tv-title">Channel Selection</h2>
 
-    <pre class="tv-info">
-WSC TV info                                       TV    Port:
+            <div class="tv-info-block">
+                <p class="tv-info-line"><strong>Input 1:</strong> Firestick FS1 — TSN & SportsNet</p>
+                <p class="tv-info-line"><strong>Input 2:</strong> Firestick FS2 — TSN & SportsNet & IPTV</p>
+                <p class="tv-info-line"><strong>Input 3:</strong> (unused)</p>
+                <p class="tv-info-line"><strong>Input 4:</strong> Firestick FS4 — Prime Video & DAZN Sports</p>
+                <p class="tv-info-line"><strong>Input 5:</strong> (unused)</p>
+                <p class="tv-info-line"><strong>Input 6:</strong> (unused)</p>
+                <p class="tv-info-line"><strong>Input 7:</strong> (unused)</p>
+                <p class="tv-info-line"><strong>Input 8:</strong> Antenna with controller on shelf</p>
+            </div>
 
-Output 1   SE Big LG                              HDMI 1
-
-Output 2   SW Big LG                              HDMI 1
-
-Output 3   Roku behind Bar                        HDMI 2
-
-Output 4   (2 TVs) middle of bar Samsung          HDMI 2
-
-Output 5   Samsung at edge of bar (south side)    HDMI 2
-
-Output 6   RCA near east entrance doors           HDMI 3
-
-Output 7   RCA TV on pillar facing south          HDMI 3
-
-Output 8   Projector near stage                   HDMI 2
-    </pre>
-
-</section>
-
-    <section class="tv-wrapper">
-
-    <h2 class="tv-title">Channel Selection</h2>
-
-    <div class="tv-info-block">
-
-        <p class="tv-info-line"><strong>Input 1:</strong> Firestick FS1 — TSN & SportsNet</p>
-        <p class="tv-info-line"><strong>Input 2:</strong> Firestick FS2 — TSN & SportsNet & IPTV</p>
-        <p class="tv-info-line"><strong>Input 3:</strong> (unused)</p>
-        <p class="tv-info-line"><strong>Input 4:</strong> Firestick FS4 — Prime Video & DAZN Sports</p>
-        <p class="tv-info-line"><strong>Input 5:</strong> (unused)</p>
-        <p class="tv-info-line"><strong>Input 6:</strong> (unused)</p>
-        <p class="tv-info-line"><strong>Input 7:</strong> (unused)</p>
-        <p class="tv-info-line"><strong>Input 8:</strong> Antenna with controller on shelf</p>
-
+        </div>
     </div>
-
 </section>
 
-    <section class="tv-wrapper">
+<!-- ANTENNA BOX INFO -->
+<section class="tv-wrapper">
+    <div class="style-card-outer">
+        <div class="style-card-inner">
 
-    <h2 class="tv-title">Antenna Box Info</h2>
+            <h2 class="tv-title">Antenna Box Info</h2>
+            <h3 class="tv-subtitle">BZB TV Box</h3>
 
-    <h3 class="tv-subtitle">BZB TV Box</h3>
+            <img src="images/antenna.png" alt="Antenna Box Diagram" class="tv-antenna-img">
 
-    <img src="images/antenna.png" alt="Antenna Box Diagram" class="tv-antenna-img">
-
+        </div>
+    </div>
 </section>
 
-    <section class="tv-wrapper">
+<!-- ANTENNA INSTRUCTIONS -->
+<section class="tv-wrapper">
+    <div class="style-card-outer">
+        <div class="style-card-inner">
 
-    <h2 class="tv-title">1) Select TV # to display antenna (top row).</h2>
-    <h2 class="tv-title">2) Select #8 bottom row and use remote to select channel.</h2>
-    <h2 class="tv-title">3) Use antenna direction controller if necessary.</h2>
+            <h2 class="tv-title">1) Select TV # to display antenna (top row).</h2>
+            <h2 class="tv-title">2) Select #8 bottom row and use remote to select channel.</h2>
+            <h2 class="tv-title">3) Use antenna direction controller if necessary.</h2>
 
+        </div>
+    </div>
 </section>
 
 </main>
