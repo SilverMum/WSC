@@ -2,18 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <!-- Correct viewport tag -->
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
-
     <title>Windsor Sportsmen’s Club</title>
-
-    <!-- Your stylesheet -->
     <link rel="stylesheet" href="styles.css?v=7">
 </head>
 
-<body>
-    
-<!-- ⭐ FULL NAV BAR -->
+<body class="members-bg">
+
 <header>
     <nav class="main-nav">
 
@@ -23,194 +18,226 @@
 
         <div class="nav-spacer"></div>
 
-         <ul class="nav-links">
+        <ul class="nav-links">
 
-    <!-- HOME -->
-    <li><a href="index.html">Home</a></li>
+            <li><a href="index.html">Home</a></li>
 
-    <!-- EVENTS -->
-    <li class="dropdown">
-        <a href="#">Events ▾</a>
-        <ul class="dropdown-menu">
-
-            <!-- NEW: Calendar -->
-            <li><a href="calendar.html">Calendar</a></li>
-            <li><a href="index.html#club-events">Club Events</a></li>
-            <li><a href="private-events.html">Private Events</a></li>
-        </ul>
-    </li>
-
-    <!-- KITCHEN -->
-    <li><a href="kitchen.html">Kitchen</a></li>
-
-    <!-- GROUPS -->
-    <li class="dropdown">
-        <a href="#">Groups ▾</a>
-        <ul class="dropdown-menu">
-            <li><a href="range.html">Range</a></li>
-            <li><a href="archery.html">Archery</a></li>
-            <li><a href="ofha.html">OFHA</a></li>
-            <li><a href="cheese-cracker.html">Cheese & Cracker Club</a></li>
-            <li><a href="air-rifle.html">Air Rifle</a></li>
-
-            <!-- MEMBERS with right-side submenu -->
-            <li class="dropdown-sub">
-                <a href="members.html" class="submenu-link">Members</a>
-                <span class="submenu-toggle">▸</span>
-
-                <ul class="submenu-right">
-                    <li><a href="staff-tv-info.html">Staff TV Info</a></li>
+            <li class="dropdown">
+                <a href="#">Events ▾</a>
+                <ul class="dropdown-menu">
+                    <li><a href="calendar.html">Calendar</a></li>
+                    <li><a href="index.html#club-events">Club Events</a></li>
+                    <li><a href="private-events.html">Private Events</a></li>
                 </ul>
             </li>
+
+            <li><a href="kitchen.html">Kitchen</a></li>
+
+            <li class="dropdown">
+                <a href="#">Groups ▾</a>
+                <ul class="dropdown-menu">
+                    <li><a href="range.html">Range</a></li>
+                    <li><a href="archery.html">Archery</a></li>
+                    <li><a href="ofha.html">OFHA</a></li>
+                    <li><a href="cheese-cracker.html">Cheese & Cracker Club</a></li>
+                    <li><a href="air-rifle.html">Air Rifle</a></li>
+
+                    <li class="dropdown-sub">
+                        <a href="members.html" class="submenu-link">Members</a>
+                        <span class="submenu-toggle">▸</span>
+                        <ul class="submenu-right">
+                            <li><a href="staff-tv-info.html">Staff TV Info</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <li><a href="index.html#contact-title">Contact</a></li>
+            <li><a href="login.html">Login</a></li>
+
         </ul>
-    </li>
-
-    <!-- CONTACT -->
-    <li><a href="index.html#contact-title">Contact</a></li>
-
-    <!-- LOGIN -->
-    <li><a href="login.html">Login</a></li>
-
-</ul>
     </nav>
 </header>
 
-<!-- Spacer under fixed nav -->
 <section style="height: 160px;"></section>
 
-<!-- ⭐ PAGE CONTENT -->
 <main>
-      <!-- PLEDGE TITLE -->
-    <div class="pledge-title-wrapper" style="margin-top:40px;">
-        <span class="pledge-title-gold">CONSERVATION PLEDGE</span>
-        <span class="pledge-title-green">CONSERVATION PLEDGE</span>
+
+<!-- ⭐ PLEDGE BLOCK -->
+<section class="pledge-block">
+
+    <div class="pledge-wood">
+        <div class="pledge-screw tl"></div>
+        <div class="pledge-screw tr"></div>
+        <div class="pledge-screw bl"></div>
+        <div class="pledge-screw br"></div>
+
+        <div class="pledge-glass">
+            <h2 class="pledge-title">CONSERVATION PLEDGE</h2>
+
+            <p class="pledge-text">
+                I give my pledge as a Canadian, to save and faithfully defend from waste,
+                the natural resources of my country, its air, soil and minerals, its waters,
+                forests and wildlife.
+            </p>
+        </div>
     </div>
 
-    <!-- PLEDGE PARAGRAPH -->
-    <div class="pledge-paragraph-wrapper">
-        <div class="pledge-paragraph-gold">
-            I give my pledge as a Canadian, to save and faithfully defend from waste,
-            the natural resources of my country, its air, soil and minerals, its waters,
-            forests and wildlife.
-        </div>
+</section>
 
-        <div class="pledge-paragraph-green">
-            I give my pledge as a Canadian, to save and faithfully defend from waste,
-            the natural resources of my country, its air, soil and minerals, its waters,
-            forests and wildlife.
-        </div>
-    </div>
+<!-- ⭐ MEMBERS SECTION -->
+<section class="wood-back-card">
 
-<div class="content-section members-page">
-    <h2 class="section-title" style="color:black; text-decoration: underline; font-weight:800; text-align:center;">
+    <!-- Bottom screws added -->
+    <div class="wood-screw tl"></div>
+    <div class="wood-screw tr"></div>
+    <div class="wood-screw bl"></div>
+    <div class="wood-screw br"></div>
+
+
+    <h2 class="section-title" style="text-align:center; font-weight:800; text-decoration:underline; color:#3a1f0a;">
         Members
     </h2>
 
     <div class="members-grid">
 
-        <!-- LEFT COLUMN: EXEC + DIRECTORS -->
-        <div class="members-column">
+        <!-- ⭐ EXECUTIVE -->
+        <div class="top-card">
 
-            <!-- EXECUTIVE -->
+            <!-- Bottom screws added -->
+            <div class="card-screw bl"></div>
+            <div class="card-screw br"></div>
+
             <h3 class="members-title">Windsor Sportsmen's Club Executive</h3>
-            <ul class="members-list">
-                <li>PRESIDENT — MARK REAUME</li>
-                <li>1ST VICE PRESIDENT — MAX MATTHEWS</li>
-                <li>2ND VICE PRESIDENT — ADAM VELDHUIS</li>
-                <li>SECRETARY — RICK MAHONEY</li>
-                <li>TREASURER — PETE FETTES</li>
-            </ul>
 
-            <!-- DIRECTORS -->
+            <div class="nameplate-list">
+
+                <div class="nameplate">
+                    <span>PRESIDENT — MARK REAUME</span>
+                </div>
+
+                <div class="nameplate">
+                    <span>1ST VICE PRESIDENT — MAX MATTHEWS</span>
+                </div>
+
+                <div class="nameplate">
+                    <span>2ND VICE PRESIDENT — ADAM VELDHUIS</span>
+                </div>
+
+                <div class="nameplate">
+                    <span>SECRETARY — RICK MAHONEY</span>
+                </div>
+
+                <div class="nameplate">
+                    <span>TREASURER — PETE FETTES</span>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ⭐ DIRECTORS -->
+        <div class="top-card">
+
+            <!-- Bottom screws added -->
+            <div class="card-screw bl"></div>
+            <div class="card-screw br"></div>
+
             <h3 class="members-title">Directors</h3>
+
             <p class="members-subtitle">2026</p>
-            <ul class="members-list">
-                <li>MARK DELOYDE</li>
-                <li>RICK MAHONEY</li>
-                <li>MAX MATTHEWS</li>
-                <li>LEN MENARD</li>
-                <li>ADAM VELDHUIS</li>
-            </ul>
+            <div class="nameplate-list">
+
+                <div class="nameplate"><span>MARK DELOYDE</span></div>
+                <div class="nameplate"><span>RICK MAHONEY</span></div>
+                <div class="nameplate"><span>MAX MATTHEWS</span></div>
+                <div class="nameplate"><span>LEN MENARD</span></div>
+                <div class="nameplate"><span>ADAM VELDHUIS</span></div>
+
+            </div>
 
             <p class="members-subtitle">2027</p>
-            <ul class="members-list">
-                <li>MARK REAUME</li>
-                <li>TOM HARSHAW</li>
-                <li>PETE FETTES</li>
-                <li>MARDEE GAGNON</li>
-                <li>BERNIE BISSONNETTE</li>
-            </ul>
+            <div class="nameplate-list">
 
+                <div class="nameplate"><span>MARK REAUME</span></div>
+                <div class="nameplate"><span>TOM HARSHAW</span></div>
+                <div class="nameplate"><span>PETE FETTES</span></div>
+                <div class="nameplate"><span>MARDEE GAGNON</span></div>
+                <div class="nameplate"><span>BERNIE BISSONNETTE</span></div>
+
+            </div>
         </div>
 
-        <!-- RIGHT COLUMN: LIFE + 50 YEAR -->
-        <div class="members-column">
+        <!-- ⭐ LIFE MEMBERS -->
+        <div class="top-card">
 
-            <!-- LIFE MEMBERS -->
+            <!-- Bottom screws added -->
+            <div class="card-screw bl"></div>
+            <div class="card-screw br"></div>
+
             <h3 class="members-title">Life Members</h3>
-            <ul class="members-list">
-                <li>ART BELANGER</li>
-                <li>LARRY LENG</li>
-                <li>RON MASSE</li>
-                <li>MIKE MIEHLS</li>
-                <li>MARK REAUME</li>
-                <li>GREG ROSSYAN</li>
-                <li>JOHN SCHMUTZ</li>
-                <li>CHUCK GRAINGER</li>
-                <li>GEORGE BRYDON</li>
-                <li>KATHY BURNS</li>
-                <li>MARK DELOYDE</li>
-                <li>DENNIS MCKEEGAN</li>
-            </ul>
 
-            <!-- 50 YEAR HONOURARY MEMBERS -->
+            <div class="nameplate-list">
+
+                <div class="nameplate"><span>ART BELANGER</span></div>
+                <div class="nameplate"><span>LARRY LENG</span></div>
+                <div class="nameplate"><span>RON MASSE</span></div>
+                <div class="nameplate"><span>MIKE MIEHLS</span></div>
+                <div class="nameplate"><span>MARK REAUME</span></div>
+                <div class="nameplate"><span>GREG ROSSYAN</span></div>
+                <div class="nameplate"><span>JOHN SCHMUTZ</span></div>
+                <div class="nameplate"><span>CHUCK GRAINGER</span></div>
+                <div class="nameplate"><span>GEORGE BRYDON</span></div>
+                <div class="nameplate"><span>KATHY BURNS</span></div>
+                <div class="nameplate"><span>MARK DELOYDE</span></div>
+                <div class="nameplate"><span>DENNIS MCKEEGAN</span></div>
+
+            </div>
+        </div>
+
+        <!-- ⭐ 50 YEAR HONOURARY -->
+        <div class="top-card">
+
+            <!-- Bottom screws added -->
+            <div class="card-screw bl"></div>
+            <div class="card-screw br"></div>
+
             <h3 class="members-title">50 Year Honourary Members</h3>
-            <ul class="members-list">
-                <li>WALTER BOUFFORD</li>
-                <li>STEVE COX</li>
-                <li>BOB GRAY</li>
-                <li>LEN KALBOL</li>
-                <li>CLARENCE MCVITTIE</li>
-                <li>DANNY O'NEIL</li>
-                <li>MIKE JOHNSON</li>
-                <li>GEORGE HORVATH</li>
-                <li>RAY CHABOT</li>
-                <li>HARVEY DEMERS</li>
-                <li>TOM HOFFMAN</li>
-                <li>RICK MAHONEY</li>
-                <li>JIM MELOCHE</li>
-                <li>BOB PYNE</li>
-                <li>HENRY SZARAN</li>
-                <li>JOHN TEHAN</li>
-                <li>JAMES COGLIATI</li>
-                <li>GARY FATHERS</li>
-                <li>RON MASSE</li>
-                <li>DOUG MCCAULEY</li>
-                <li>LARRY MIEHLS</li>
-                <li>JAROD NICHOL</li>
-                <li>NORM WALKER</li>
-            </ul>
 
+            <div class="nameplate-list">
+
+                <div class="nameplate"><span>WALTER BOUFFORD</span></div>
+                <div class="nameplate"><span>STEVE COX</span></div>
+                <div class="nameplate"><span>BOB GRAY</span></div>
+                <div class="nameplate"><span>LEN KALBOL</span></div>
+                <div class="nameplate"><span>CLARENCE MCVITTIE</span></div>
+                <div class="nameplate"><span>DANNY O'NEIL</span></div>
+                <div class="nameplate"><span>MIKE JOHNSON</span></div>
+                <div class="nameplate"><span>GEORGE HORVATH</span></div>
+                <div class="nameplate"><span>RAY CHABOT</span></div>
+                <div class="nameplate"><span>HARVEY DEMERS</span></div>
+                <div class="nameplate"><span>TOM HOFFMAN</span></div>
+                <div class="nameplate"><span>RICK MAHONEY</span></div>
+                <div class="nameplate"><span>JIM MELOCHE</span></div>
+                <div class="nameplate"><span>BOB PYNE</span></div>
+                <div class="nameplate"><span>HENRY SZARAN</span></div>
+                <div class="nameplate"><span>JOHN TEHAN</span></div>
+                <div class="nameplate"><span>JAMES COGLIATI</span></div>
+                <div class="nameplate"><span>GARY FATHERS</span></div>
+                <div class="nameplate"><span>RON MASSE</span></div>
+                <div class="nameplate"><span>DOUG MCCAULEY</span></div>
+                <div class="nameplate"><span>LARRY MIEHLS</span></div>
+                <div class="nameplate"><span>JAROD NICHOL</span></div>
+                <div class="nameplate"><span>NORM WALKER</span></div>
+
+            </div>
         </div>
 
     </div>
-    
-    <!-- RED MEETING NOTICE -->
-    <div style="text-align:center; margin-top:60px;">
 
-        <p style="font-size:1.4em; font-weight:bold; color:red; line-height:1.4;">
-            GENERAL MEMBERSHIP MEETING<br>
-            MAY 26TH &nbsp; 7:00PM
-        </p>
-
-        <img src="images/WINDSOR SPORTSMANS REMAKE.png" 
-             alt="Windsor Sportsmen's Club Logo"
-             style="max-width:300px; height:auto; margin-top:15px;">
-    </div>
+</section>
 
 </main>
 
-<!-- ⭐ FOOTER -->
 <footer class="site-footer">
     <p>©2024 Windsor Sportsmen's Club. All Rights Reserved.</p>
 </footer>
