@@ -7,11 +7,11 @@
     <link rel="stylesheet" href="styles.css?v=10">
 </head>
 
-    <script>
+<script>
 document.querySelectorAll('.dropdown > a').forEach(link => {
     link.addEventListener('click', function(e) {
         if (window.innerWidth <= 900) {
-            e.preventDefault(); // stop link from navigating
+            e.preventDefault();
             this.parentElement.classList.toggle('open');
         }
     });
@@ -40,60 +40,49 @@ document.querySelectorAll('.dropdown-sub > a').forEach(link => {
 
         <ul class="nav-links">
 
-    <!-- HOME -->
-    <li><a href="index.html">Home</a></li>
+            <li><a href="index.html">Home</a></li>
 
-    <!-- EVENTS -->
-    <li class="dropdown">
-        <a href="#">Events ▾</a>
-        <ul class="dropdown-menu">
-
-            <!-- NEW: Calendar -->
-            <li><a href="calendar.html">Calendar</a></li>
-            <li><a href="index.html#club-events">Club Events</a></li>
-            <li><a href="private-events.html">Private Events</a></li>
-        </ul>
-    </li>
-
-    <!-- KITCHEN -->
-    <li><a href="kitchen.html">Kitchen</a></li>
-
-    <!-- GROUPS -->
-    <li class="dropdown">
-        <a href="#">Groups ▾</a>
-        <ul class="dropdown-menu">
-            <li><a href="range.html">Range</a></li>
-            <li><a href="archery.html">Archery</a></li>
-            <li><a href="ofha.html">OFHA</a></li>
-            <li><a href="cheese-cracker.html">Cheese & Cracker Club</a></li>
-            <li><a href="air-rifle.html">Air Rifle</a></li>
-
-            <!-- MEMBERS with right-side submenu -->
-            <li class="dropdown-sub">
-                <a href="members.html" class="submenu-link">Members</a>
-                <span class="submenu-toggle">▸</span>
-
-                <ul class="submenu-right">
-                    <li><a href="staff-tv-info.html">Staff TV Info</a></li>
+            <li class="dropdown">
+                <a href="#">Events ▾</a>
+                <ul class="dropdown-menu">
+                    <li><a href="calendar.html">Calendar</a></li>
+                    <li><a href="index.html#club-events">Club Events</a></li>
+                    <li><a href="private-events.html">Private Events</a></li>
                 </ul>
             </li>
+
+            <li><a href="kitchen.html">Kitchen</a></li>
+
+            <li class="dropdown">
+                <a href="#">Groups ▾</a>
+                <ul class="dropdown-menu">
+                    <li><a href="range.html">Range</a></li>
+                    <li><a href="archery.html">Archery</a></li>
+                    <li><a href="ofha.html">OFHA</a></li>
+                    <li><a href="cheese-cracker.html">Cheese & Cracker Club</a></li>
+                    <li><a href="air-rifle.html">Air Rifle</a></li>
+
+                    <li class="dropdown-sub">
+                        <a href="members.html" class="submenu-link">Members</a>
+                        <span class="submenu-toggle">▸</span>
+
+                        <ul class="submenu-right">
+                            <li><a href="staff-tv-info.html">Staff TV Info</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <li><a href="index.html#contact-title">Contact</a></li>
+
+            <li><a href="login.html">Login</a></li>
+
         </ul>
-    </li>
-
-    <!-- CONTACT -->
-    <li><a href="index.html#contact-title">Contact</a></li>
-
-    <!-- LOGIN -->
-    <li><a href="login.html">Login</a></li>
-
-</ul>
 
     </nav>
 </header>
 
-<!-- Spacer under fixed nav -->
 <section style="height: 20px;"></section>
-
 <section style="height: 160px;"></section>
 
 <main>
@@ -102,275 +91,316 @@ document.querySelectorAll('.dropdown-sub > a').forEach(link => {
 
     <h1 class="hero-title home-hero-title">Welcome to the Windsor Sportsmen’s Club</h1>
 
-    <!-- ⭐ KEEP THIS EXACTLY AS-IS -->
     <div class="header-underline">
         <img src="images/Sportsmen's-Header.png" alt="Header underline image">
     </div>
 
-    <!-- PLEDGE TITLE -->
-    <div class="pledge-title-wrapper">
-        <span class="pledge-title-gold">CONSERVATION PLEDGE</span>
-        <span class="pledge-title-green">CONSERVATION PLEDGE</span>
-    </div>
+    <!-- ⭐ PLEDGE — UPDATED TO YOUR DOUBLE CARD STYLE -->
+    <section class="home-pledge-card outer-card">
+        <div class="inner-card">
 
-    <!-- PLEDGE PARAGRAPH -->
-    <div class="pledge-paragraph-wrapper">
-        <div class="pledge-paragraph-gold">
-            I give my pledge as a Canadian, to save and faithfully defend from waste,
-            the natural resources of my country, its air, soil and minerals, its waters,
-            forests and wildlife.
+            <div class="pledge-title-wrapper">
+                <span class="pledge-title-gold">CONSERVATION PLEDGE</span>
+                <span class="pledge-title-green">CONSERVATION PLEDGE</span>
+            </div>
+
+            <div class="pledge-paragraph-wrapper">
+                <div class="pledge-paragraph-gold">
+                    I give my pledge as a Canadian, to save and faithfully defend from waste,
+                    the natural resources of my country, its air, soil and minerals, its waters,
+                    forests and wildlife.
+                </div>
+
+                <div class="pledge-paragraph-green">
+                    I give my pledge as a Canadian, to save and faithfully defend from waste,
+                    the natural resources of my country, its air, soil and minerals, its waters,
+                    forests and wildlife.
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+</section>
+
+<section class="facebook-card outer-card">
+    <div class="inner-card">
+
+        <div class="facebook-button">
+            <a href="https://www.facebook.com/groups/100671860008159/" target="_blank">
+                <img src="images/facebook-button.png" alt="Facebook Button">
+            </a>
+
+            <p class="facebook-note">
+                Follow us on Facebook for Up Coming Events and Restaurant Menu
+            </p>
         </div>
 
-        <div class="pledge-paragraph-green">
-            I give my pledge as a Canadian, to save and faithfully defend from waste,
-            the natural resources of my country, its air, soil and minerals, its waters,
-            forests and wildlife.
-        </div>
-    </div>
-
-<!-- FACEBOOK BUTTON -->
-    <p class="wsc-facebook-label">WSC Facebook</p>
-
-<div class="facebook-button">
-    <a href="https://www.facebook.com/groups/100671860008159/" target="_blank">
-        <img src="images/facebook-button.png" alt="Facebook Button">
-    </a>
-
-    <p class="facebook-note">
-        Follow us on Facebook for Up Coming Events and Restaurant Menu
-    </p>
-
-    <!-- ⭐ FIRST DIVIDER -->
-    <div class="section-divider">
-        <img src="images/divider.png" alt="Section Divider">
-    </div>
-</div>
-
-<!-- SLIDESHOW -->
-<section class="content-section">
-    <div class="slideshow-container">
-        <img src="images/slide1.jpg" class="slide active">
-        <img src="images/slide2.jpg" class="slide">
-        <img src="images/slide3.jpg" class="slide">
     </div>
 </section>
 
-        <!-- RED MEETING NOTICE -->
-    <div style="text-align:center; margin-top:60px;">
+<!-- ⭐ MEMBERSHIP — UPDATED TO YOUR DOUBLE CARD STYLE -->
+<section class="home-meeting-card outer-card">
+    <div class="inner-card">
 
-        <p style="font-size:1.8em; font-weight:bold; color:red; line-height:1.4;">
+        <p class="meeting-title">
             GENERAL MEMBERSHIP MEETING<br>
-            APRIL 20TH &nbsp; 7:00PM
+            MAY 25TH &nbsp; 7:00PM
         </p>
 
         <img src="images/WINDSOR SPORTSMANS REMAKE.png" 
              alt="Windsor Sportsmen's Club Logo"
-             style="max-width:300px; height:auto; margin-top:15px;">
-    </div>
-    
-<!-- ⭐ NEW DIVIDER BEFORE KITCHEN -->
-<div class="section-divider">
-    <img src="images/divider.png" alt="Section Divider">
-</div>
+             class="meeting-logo">
 
-<!-- KITCHEN SECTION -->
-<section class="content-section" id="kitchen">
-    <h2 class="section-title" style="color:black; text-decoration: underline; font-weight: 800;">Kitchen</h2>
-
-    <div class="kitchen-layout" style="display:flex; justify-content:center; align-items:center; flex-wrap:wrap;">
-
-        <img src="images/kitchen-badge.png" 
-             alt="Rob n Sons Kitchen badge" 
-             class="kitchen-badge" 
-             style="max-width:420px; height:auto; border-radius:10px; margin-right:10px;">
-
-        <div class="kitchen-description" 
-             style="text-align:center; color:black; font-weight:bold; font-size:1.2em; line-height:1.6; margin-left:10px;">
-            
-            <p>
-                Rob n Sons Kitchen is proud to introduce ourselves!
-                I am Rob Coyle, my sons Wyatt, Cooper, and aunt Joan.
-                We plan to bring you a fresh new look to down-home cooking!
-                Our first meal will be Mother's Day Brunch Buffet on May 11th
-                (see the bar for tickets). Then we plan to open for regular
-                hours starting Tuesday May 13th. Our regular hours will be
-                11am–8pm Tuesday–Saturday. We value your input so feel free to come
-                say hi and let us know how we are doing! We look forward to cooking
-                for all of you soon!!
-            </p>
-
-        </div>
     </div>
 </section>
 
-<!-- ⭐ IMAGE DIVIDER (correct placement) -->
 <div class="section-divider">
     <img src="images/divider.png" alt="Section Divider">
 </div>
 
-<!-- RANGE SECTION -->
-<div class="range-simple-section">
+<!-- ⭐ RANGE SECTION (already correct) -->
+<section class="home-range-card outer-card">
+    <div class="inner-card">
 
-    <h2 class="range-simple-title" style="color:black; text-decoration: underline; font-weight: 800;">Range</h2>
-    <p class="range-simple-subtitle">
-        Range opening soon, check back for details here or on Facebook!
-    </p>
-</div>
+        <!-- ⭐ MATCHES HOME PAGE TITLES -->
+        <h2 class="range-simple-title">Good Afternoon Shooters!</h2>
 
-<div class="range-button-simple">
-    <a href="https://teamup.com/ksmhmp1jc5r9ceo99x" target="_blank">
-        <img src="images/Range-Open.png" alt="Range Open Button" class="range-button-simple-img">
-    </a>
-</div>
+        <!-- ⭐ BUTTON DIRECTLY UNDER TITLE -->
+        <div class="range-button-simple" style="margin: 20px 0;">
+            <a href="https://teamup.com/ksqefxnfm1tv8mriaq" target="_blank">
+                <img src="images/Range-Open.png" alt="Range Open Button" class="range-button-simple-img">
+            </a>
+        </div>
+
+        <!-- ⭐ TOP TEXT — LEFT ALIGNED + MATCHES RIBS & CHICKEN SIZE -->
+        <div style="text-align:left; font-size:1.2rem; line-height:1.6; color:black;">
+
+            <p>I'm happy to announce that we completed all our repairs and the club is ready to open this coming weekend. We will begin our normal operations this Saturday May 2nd.</p>
+
+            <p>A couple of items to note:</p>
+
+            <p>Memberships can be paid in the skeet shack. It's going to be a busy morning, so please give yourself a little extra time as we get settled with the new processes and Target Tag systems.</p>
+
+            <p>There will be a cost increase this season to the Trap &amp; Skeet Associate Membership. The cost is now $100.00 annually. This is due to the rising cost of clay targets and delivery due to fuel price surcharges. By increasing the membership fee we are able to hold the current cost per round.</p>
+
+            <p>With the introduction of the Target Tag system we also have new package options for our members looking to pre‑purchase their rounds. The standard single round and 10 + 1 shooters card pricing is all still available.</p>
+
+        </div>
+
+        <!-- ⭐ PACKAGES — CENTERED + SPACED LIKE IMAGE 2 -->
+        <div style="text-align:center; font-size:1.2rem; line-height:1.6; color:black; margin-top:40px;">
+
+            <h3 style="font-size:1.8rem; font-weight:800; margin-bottom:10px;">2026 Member Pre‑Shot Packages</h3>
+
+            <p><em>Maximize your season. Support the club. Shoot more for less.</em></p>
+            <p><em>(You must be a member with a Trap &amp; Skeet Associate Membership to purchase packages)</em></p>
+
+            <!-- ⭐ BRONZE -->
+            <div style="margin-top:30px;">
+                <h4 style="font-size:1.4rem; font-weight:800;">The Bronze Package | $80</h4>
+                <p><em>The Standard.</em> Perfect for the casual weekend shooter who wants a simple, no‑fuss discount.</p>
+                <p><strong>What you get:</strong> 11 Rounds of Trap or Skeet.</p>
+                <p><strong>The Perk:</strong> Buy 10, get 1 FREE.</p>
+                <p><strong>Savings:</strong> Covers your annual guest fee or a couple of boxes of shells.</p>
+            </div>
+
+            <!-- ⭐ SILVER -->
+            <div style="margin-top:30px;">
+                <h4 style="font-size:1.4rem; font-weight:800;">The Silver Package | $150</h4>
+                <p><em>The Monthly Regular.</em> Designed for the shooter who outpaces the basic card but isn't at the club every single day.</p>
+                <p><strong>What you get:</strong> 22 Rounds.</p>
+                <p><strong>The Perk:</strong> Nearly 4 Rounds FREE.</p>
+                <p><strong>Why it’s better:</strong> Drops your per‑round cost significantly below the standard $8 rate.</p>
+            </div>
+
+            <!-- ⭐ GOLD -->
+            <div style="margin-top:30px;">
+                <h4 style="font-size:1.4rem; font-weight:800;">The Gold Package | $250</h4>
+                <p><em>The Competitive Edge.</em> For the league shooter or the family that shares a card. This is our most popular “Value” tier.</p>
+                <p><strong>What you get:</strong> 38 Rounds.</p>
+                <p><strong>The Perk:</strong> Includes 7 FREE Rounds.</p>
+                <p><strong>Why it’s better:</strong> You’re essentially shooting for $6.57 per round all season long.</p>
+            </div>
+
+            <!-- ⭐ PLATINUM -->
+            <div style="margin-top:30px;">
+                <h4 style="font-size:1.4rem; font-weight:800;">The Platinum Package | $500</h4>
+                <p><em>The Heavy Hitter.</em> You’re here every week, shooting multiple rounds, and want the best possible margin.</p>
+                <p><strong>What you get:</strong> 80 Rounds.</p>
+                <p><strong>The Perk:</strong> A massive 18 ROUNDS FREE.</p>
+                <p><strong>Why it’s better:</strong> This locks in a 25% discount on your targets. Secure your supply now and don't worry about price hikes mid‑season.</p>
+            </div>
+
+            <!-- ⭐ DIAMOND -->
+            <div style="margin-top:30px;">
+                <h4 style="font-size:1.4rem; font-weight:800;">The Diamond Package | $1,000</h4>
+                <p><em>The Ultimate Supporter.</em> This tier is for our most dedicated members who want to ensure the club’s success while securing the lowest possible rate.</p>
+                <p><strong>What you get:</strong> 165 Rounds.</p>
+                <p><strong>The Perk:</strong> 40 ROUNDS FREE. (A $320.00 Added Value).</p>
+
+                <!-- ⭐ EXTRA SPACE + LEFT ALIGN FOR FINAL PARAGRAPH -->
+                <p style="margin-top:20px; text-align:left;">
+                    <strong>The Privilege:</strong> This brings your cost down to $6.06 per round. You are essentially shooting at our near‑wholesale cost, providing the club with the vital upfront capital needed to maintain facilities and inventory for 2026.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
 
 <div class="section-divider">
     <img src="images/divider.png" alt="Section Divider">
 </div>
 
-<!-- CLUB EVENTS TARGET -->
 <div id="club-events"></div>
 
-<!-- CLUB EVENTS TITLE -->
 <h2 class="section-title" style="color:black; text-decoration: underline; font-weight: 800;">
     Club Events
 </h2>
 
-<!-- ⭐ RIB & CHICKEN EVENT SECTION -->
-<div class="ribchicken-wrapper" 
-     style="display:flex; justify-content:center; align-items:center; flex-wrap:wrap; margin-top:40px;">
+<!-- ⭐ RIB & CHICKEN (already correct) -->
+<div class="white-card outer-card">
+    <div class="inner-card">
 
-    <!-- LEFT: IMAGE -->
-    <div class="ribchicken-left" style="margin-right:10px;">
-        <img class="ribchicken-img"
-             src="images/ribchicken.png" 
-             alt="Rib & Chicken Dinner Image" 
-             style="max-width:420px; height:auto; border-radius:10px;">
+        <div class="ribchicken-wrapper">
+
+            <div class="ribchicken-left">
+                <img class="ribchicken-img"
+                     src="images/ribchicken.png" 
+                     alt="Rib & Chicken Dinner Image">
+            </div>
+
+            <div class="ribchicken-right">
+                <p>Rib & Chicken Dinner – May 29th 2026, 6:30pm</p>
+                <p>Rib and Chicken Dinner</p>
+                <p>Ribs $25.00 &nbsp;&nbsp;&nbsp; Chicken $20.00</p>
+                <p>May 29th, 6:30pm</p>
+                <p>Windsor Sportsmen's Club<br>
+                   2401 Dougall Ave, Windsor Ont.<br>
+                   519‑966‑1600</p>
+            </div>
+
+        </div>
+
     </div>
-
-    <!-- RIGHT: TEXT -->
-    <div class="ribchicken-right" 
-         style="text-align:center; color:black; font-weight:bold; font-size:1.2em; line-height:1.6; margin-left:10px;">
-        
-        <p style="margin-bottom:10px;">Rib & Chicken Dinner – May 29th 2026, 6:30pm</p>
-        <p>Rib and Chicken Dinner</p>
-        <p>Ribs $25.00 &nbsp;&nbsp;&nbsp; Chicken $20.00</p>
-        <p>May 29th, 6:30pm</p>
-        <p>Windsor Sportsmen's Club<br>
-           2401 Dougall Ave, Windsor Ont.<br>
-           519‑966‑1600</p>
-    </div>
-
 </div>
 
-<!-- BAND IMAGE -->
-<img 
-    src="images/519 BAND.png" 
-    alt="519 Band" 
-    id="band-image"
->
+<!-- ⭐ MAX BAND — UPDATED TO YOUR DOUBLE CARD STYLE -->
+<div class="maxband-card outer-card">
+    <div class="inner-card">
 
-  <!-- MAX BAND IMAGE + TEXT SIDE BY SIDE -->
-<div class="maxband-wrapper" 
-     style="display:flex; justify-content:center; align-items:center; flex-wrap:wrap; margin-top:40px;">
+        <div class="maxband-wrapper">
 
-    <!-- LEFT: IMAGE (1/3 smaller) -->
-    <div class="maxband-left" style="margin-right:10px;">
-        <img src="images/MAXband.png" alt="Max Band Image" style="max-width:420px; height:auto; border-radius:10px;">
+            <div class="maxband-left" style="margin-right:10px;">
+                <img src="images/MAXband.png" alt="Max Band Image" style="max-width:420px; height:auto; border-radius:10px;">
+            </div>
+
+            <div class="maxband-right" 
+                style="text-align:center; color:black; font-weight:bold; font-size:1.2em; line-height:1.6; margin-left:10px;">
+
+                <p>Friday, May 01<br>
+                Windsor Sportsmen's Club<br>
+                2401 Dougall Ave, Windsor</p>
+
+                <p>Tickets: $35 - $30 CSBS Members</p>
+
+                <p>Doors Open 6pm - Showtime 7pm</p>
+
+                <p>The award-winning Johnny Max Band, led by the charismatic and whip sharp Johnny Max, have been touring Canada and Europe for over 30 years and bring their remarkable rhythm and blues, Memphis meets Chicago & New Orleans sound to enthusiastic crowds wherever they go.</p>
+
+                <p>With two JUNO award nominations, eight Maple Blues awards nominations, and the winner of the International Songwriting Competition Award for "Daddy's Little Girl" The Johnny Max Band consistently wows audiences with joyous, sometimes raucous rhythms and masterful showmanship.</p>
+
+                <p>Tickets Available @ Windsor Sportsmen's Club<br>
+                Long&McQuade - D&R Vacuum<br>
+                Contact: Mike McCann (226) 757-0748</p>
+            </div>
+
+        </div>
+
     </div>
-
-    <!-- RIGHT: EVENT TEXT (MATCHED TO RIB & CHICKEN STYLE) -->
-    <div class="maxband-right" 
-         style="text-align:center; color:black; font-weight:bold; font-size:1.2em; line-height:1.6; margin-left:10px;">
-
-        <p>Friday, May 01<br>
-        Windsor Sportsmen's Club<br>
-        2401 Dougall Ave, Windsor</p>
-
-        <p>Tickets: $35 - $30 CSBS Members</p>
-
-        <p>Doors Open 6pm - Showtime 7pm</p>
-
-        <p>The award-winning Johnny Max Band, led by the charismatic and whip sharp Johnny Max, have been touring Canada and Europe for over 30 years and bring their remarkable rhythm and blues, Memphis meets Chicago & New Orleans sound to enthusiastic crowds wherever they go.</p>
-
-        <p>With two JUNO award nominations, eight Maple Blues awards nominations, and the winner of the International Songwriting Competition Award for "Daddy's Little Girl" The Johnny Max Band consistently wows audiences with joyous, sometimes raucous rhythms and masterful showmanship.</p>
-
-        <p>Tickets Available @ Windsor Sportsmen's Club<br>
-        Long&McQuade - D&R Vacuum<br>
-        Contact: Mike McCann (226) 757-0748</p>
-    </div>
-
 </div>
 
-    <div class="activities-image">
+<section class="band-card outer-card">
+    <div class="inner-card">
+        <img 
+            src="images/519 BAND.png" 
+            alt="519 Band" 
+            id="band-image"
+        >
+    </div>
+</section>
+
+<div class="activities-image">
     <img src="images/Tuesday-Nights.png" alt="Tuesday Nights">
 </div>
 
-<!-- HOTDOG IMAGE UNDER BAND IMAGE -->
-<div class="range-hotdog">
-    <img src="images/hotdog.png" alt="Hotdog Image">
-</div>
-
-<!-- DIVIDER -->
 <div class="section-divider">
     <img src="images/divider.png" alt="Section Divider">
 </div>
 
-<!-- CONTACT SECTION -->
-<section id="contact" class="contact-section">
+<!-- ⭐ CONTACT — UPDATED TO YOUR DOUBLE CARD STYLE -->
+<section id="contact" class="home-contact-card outer-card">
+    <div class="inner-card">
 
-    <h2 id="contact-title" class="section-title" style="color:black; text-decoration: underline; font-weight: 800;">
-        Contact
-    </h2>
+        <h2 id="contact-title" class="section-title" style="color:black; text-decoration: underline; font-weight: 800;">
+            Contact
+        </h2>
 
-    <p class="contact-line"><strong>Clubhouse Location :</strong> 2401 Dougall Avenue</p>
+        <p class="contact-line"><strong>Clubhouse Location :</strong> 2401 Dougall Avenue</p>
 
-    <p class="contact-line"><strong>Mailing Address:</strong> 2401 Dougall Avenue<br>
-    Windsor, ON N8X1T3</p>
+        <p class="contact-line">
+            <strong>Mailing Address:</strong> 2401 Dougall Avenue<br>
+            Windsor, ON N8X1T3
+        </p>
 
-    <p class="contact-line"><strong>Telephone:</strong> 519-966-1600</p>
+        <p class="contact-line"><strong>Telephone:</strong> 519-966-1600</p>
 
-    <p class="contact-line"><strong>Fax:</strong> 519-966-4535</p>
+        <p class="contact-line"><strong>Fax:</strong> 519-966-4535</p>
 
-    <p class="contact-line"><strong>E-Mail Office:</strong> WSC2401@outlook.com</p>
+        <p class="contact-line"><strong>E-Mail Office:</strong> WSC2401@outlook.com</p>
 
-    <div class="contact-spacer"></div>
+        <div class="contact-spacer"></div>
 
+    </div>
 </section>
 
 <div class="section-divider">
     <img src="images/divider.png" alt="Section Divider">
 </div>
 
-<!-- PARTNERSHIP IMAGE -->
-<section class="content-section" id="partnership">
-
-    <h2 class="section-title" style="color:black; text-decoration: underline; font-weight: 800;">
-        Partnership
-    </h2>
-
-    <img 
-        src="images/Partnership.png" 
-        alt="Partnership Announcement"
-        class="partnership-img"
-    >
+<section id="partnership" class="partnership-card outer-card">
+    <div class="inner-card">
+        <img 
+            src="images/Partnership.png" 
+            alt="Partnership Announcement"
+            class="partnership-img"
+        >
+    </div>
 </section>
 
 <div class="section-divider">
     <img src="images/divider.png" alt="Section Divider">
 </div>
 
-<!-- ACTIVITIES -->
-<section class="activities-section">
-    
-    <h2 class="activities-title" style="color:black; text-decoration: underline; font-weight: 800;">Activities</h2>
+<!-- ⭐ ACTIVITIES — UPDATED TO YOUR DOUBLE CARD STYLE -->
+<section class="home-activities-card outer-card">
+    <div class="inner-card">
 
-    <p class="activities-text">
-        - Conservation Meetings - Archery - Horseshoes <br>
-        - Euchre Leagues - Dart Leagues - Pool Leagues <br>
-        - Golf League - Trap & Skeet - Bridge League <br>
-        - Mah-jong League - Cornhole League <br>
-        - WSC Jr. Sportsmen's Club
-    </p>
+        <h2 class="activities-title" style="color:black; text-decoration: underline; font-weight: 800;">
+            Activities
+        </h2>
+
+        <p class="activities-text">
+            - Conservation Meetings - Archery - Horseshoes <br>
+            - Euchre Leagues - Dart Leagues - Pool Leagues <br>
+            - Golf League - Trap & Skeet - Bridge League <br>
+            - Mah-jong League - Cornhole League <br>
+            - WSC Jr. Sportsmen's Club
+        </p>
+
+    </div>
 </section>
 
 </main>
