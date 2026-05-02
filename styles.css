@@ -70,14 +70,14 @@ main {
     z-index: 2000;
     display: flex;
     align-items: center;
-    justify-content: space-between; /* FIX */
-    padding: 5px 24px;
-    background-color: #f2f2f2;
+    justify-content: center; /* centered nav */
+    padding: 10px 0;
+    background-color: #1a1a1a;
     border-bottom: 1px solid #ddd;
 }
 
 .nav-spacer {
-    flex: 1;
+    display: none;
 }
 
 .logo img {
@@ -98,31 +98,54 @@ main {
     position: relative;
 }
 
+/* Base nav link style */
 .nav-links a {
-    text-decoration: underline;
-    color: #222;
+    padding: 10px 14px;
+    font-size: 1.2rem;
     font-weight: 600;
-    font-size: 1.7rem;
-    padding: 6px 10px;
+    color: #fff;
+    text-decoration: none;
     border-radius: 4px;
     transition: all 0.2s ease;
     white-space: nowrap;
 }
 
-.nav-links a:hover {
-    background-color: #eaeaea;
-    color: #000;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+/* Dark hover style for TOP NAV (matches dropdown) */
+.nav-links > li > a:hover {
+    background-color: #333 !important;
+    color: #fff !important;
+    box-shadow: none;
     transform: translateY(-2px);
 }
 
-/* ⭐ Smooth scrolling */
-html {
-    scroll-behavior: smooth;
+/* Make the Members submenu arrow white */
+.submenu-toggle {
+    color: #fff !important;
 }
 
 /* ------------------------------
-   DROPDOWN MENU
+   TRAP & SKEET TWO-LINE ITEM
+--------------------------------*/
+.nav-trap-skeet a {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 14px;
+    line-height: 1.1;
+    display: inline-block;
+    text-align: left !important;
+}
+
+.nav-trap-skeet a span {
+    font-size: 0.85em;
+    font-weight: 600;
+    display: block;
+    color: #fff;
+}
+
+/* ------------------------------
+   DROPDOWN MENU (Unified Dark Theme)
 --------------------------------*/
 .dropdown {
     position: relative;
@@ -133,11 +156,11 @@ html {
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: #ffffff;
-    border: 1px solid #ddd;
+    min-width: 220px;
     padding: 8px 0;
     list-style: none;
-    min-width: 220px;
+    background-color: #1a1a1a !important;
+    border: none !important;
     box-shadow: 0 4px 8px rgba(0,0,0,0.15);
     z-index: 2100;
 }
@@ -146,88 +169,77 @@ html {
     display: block;
 }
 
-.dropdown-menu li a {
+.dropdown-menu a {
     display: block;
     padding: 10px 18px;
-    text-decoration: underline;
-    color: #222;
-    font-weight: 600;
     font-size: 1.5rem;
+    font-weight: 600;
+    color: #fff !important;
+    text-decoration: none;
     transition: all 0.2s ease;
     white-space: normal;
 }
 
-.dropdown-menu li a:hover {
-    background-color: #eaeaea;
-    color: #000;
-    box-shadow: inset 0 0 6px rgba(0,0,0,0.2);
+.dropdown-menu a:hover {
+    background-color: #333;
+    color: #fff;
 }
 
 /* ------------------------------
    RIGHT-SIDE SUBMENU (Members)
 --------------------------------*/
-
-/* Only affect the Members submenu — do NOT touch top-level nav items */
 .nav-links li.dropdown-sub {
     position: relative;
 }
 
 .dropdown-sub > a {
-    padding-right: 18px; /* space for arrow */
+    padding-right: 18px;
 }
 
-/* Right-side flyout */
 .submenu-right {
     display: none;
     position: absolute;
     top: 0;
-    left: 100%; /* positions it to the RIGHT of Members */
-    background-color: #ffffff;
-    border: 1px solid #ddd;
+    left: 100%;
     min-width: 200px;
     padding: 8px 0;
     list-style: none;
+    background-color: #1a1a1a !important;
+    border: none !important;
     box-shadow: 0 4px 8px rgba(0,0,0,0.15);
     z-index: 2200;
 }
 
-/* Show submenu on hover */
 .dropdown-sub:hover > .submenu-right {
     display: block;
 }
 
-/* Styling for submenu links */
-.submenu-right li a {
+.submenu-right a {
     display: block;
     padding: 10px 18px;
-    text-decoration: underline;
-    color: #222;
-    font-weight: 600;
     font-size: 1.5rem;
+    font-weight: 600;
+    color: #fff !important;
+    text-decoration: none;
     white-space: nowrap;
 }
 
-.submenu-right li a:hover {
-    background-color: #eaeaea;
-    color: #000;
-    box-shadow: inset 0 0 6px rgba(0,0,0,0.2);
+.submenu-right a:hover {
+    background-color: #333;
+    color: #fff;
 }
 
-/* Keep Members text + arrow on one line */
+/* Keep Members text + arrow aligned */
 .dropdown-sub {
     display: flex;
     align-items: center;
-    gap: 6px; /* space between text and arrow */
+    gap: 6px;
     white-space: nowrap;
 }
 
-.submenu-link {
-    display: inline-block;
-}
-
+.submenu-link,
 .submenu-toggle {
     display: inline-block;
-    white-space: nowrap;
 }
 
 /* ------------------------------
@@ -246,6 +258,16 @@ html {
     margin-bottom: 35px;
     text-shadow: 0 2px 6px rgba(0,0,0,0.4);
     white-space: nowrap;   /* desktop stays on one line */
+}
+
+/* Subtitle under homepage title — styled like the main title but smaller */
+.home-subtitle {
+    text-align: center;
+    font-size: clamp(1.8rem, 3vw, 2.4rem); /* 2 sizes bigger than before */
+    font-weight: 800; /* matches the main title weight */
+    color: inherit; /* same color as the title */
+    margin-top: -20px; /* pulls it closer to the title like your screenshot */
+    text-shadow: 0 2px 6px rgba(0,0,0,0.4); /* matches the title shadow */
 }
 
 @media (max-width: 900px) {
@@ -982,15 +1004,15 @@ html {
 }
 
 /* ------------------------------
-   FOOTER
+   FOOTER — DARK THEME (GLOBAL)
 --------------------------------*/
 .site-footer {
-    background-color: #1877F2;
+    background-color: #1a1a1a;   /* dark footer */
     color: #ffffff;
     text-align: center;
     padding: 25px 10px;
     width: 100%;
-    max-width: 100%;   /* forces full width even inside a max-width container */
+    max-width: 100%;
     margin-top: 40px;
 }
 
@@ -1249,344 +1271,419 @@ body.login-bg .site-footer {
     z-index: -1;
 }
 
-/* ============================================================
-   RANGE PAGE — GLOBAL BACKGROUND
-============================================================ */
-
-.range-bg {
-    position: relative;
-    min-height: 100vh;
-    background: url('images/range-background1.jpg') center center / cover no-repeat fixed;
-}
-
-.range-bg::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    background: rgba(255, 255, 255, 0.2);
-    z-index: -1;
-}
-
-/* ============================================================
-   RANGE PAGE — MATCH ARCHERY SPACING
-============================================================ */
-
-.range-bg section {
-    margin-bottom: 30px; /* ⭐ half spacing between cards */
-}
-
-/* Remove accidental <br> spacing ONLY on Range page */
-.range-bg br {
-    display: none;
-}
-
 /* ------------------------------
-   RANGE HEADER IMAGE (matches OFHA)
+   TRAP & SKEET RANGE PAGE
 --------------------------------*/
-.range-header {
-    max-width: 1200px;
-    margin: 0 auto 30px;
-    padding: 0 40px;
-    text-align: center;
-}
-
-.range-header-img {
+/* --------------------------------------------------
+   HEADER IMAGE
+-------------------------------------------------- */
+.page-header img {
     width: 100%;
+    max-width: 100%;
     height: auto;
-    display: block;
-    border-radius: 12px;
-}
-
-/* ============================================================
-   STATUS SECTION
-============================================================ */
-
-.range-status-section {
-    padding: 30px 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.range-status-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    gap: 20px;
-}
-
-.range-status-img {
-    width: 100%;
-    height: auto;
-    display: block;
-    max-width: 600px;
-}
-
-.range-status-left img {
-    max-width: 450px;
-    margin-left: auto;
-}
-
-/* ============================================================
-   FACEBOOK BUTTON
-============================================================ */
-
-.range-facebook-section {
-    width: 100%;
-    text-align: center;
-    margin: 10px 0 30px;
-}
-
-.range-facebook-img {
-    width: 390px;
-    max-width: 90%;
-    height: auto;
-    cursor: pointer;
-    transition: transform 0.2s ease, filter 0.2s ease;
-}
-
-.range-facebook-img:hover {
-    transform: translateY(-3px);
-    filter: brightness(1.1);
-}
-
-/* ============================================================
-   RANGE OPEN BUTTON
-============================================================ */
-
-.range-open-button-wrapper {
-    text-align: center;
-    margin: 25px 0;
-}
-
-.range-open-button-img {
-    width: 450px;
-    max-width: 90%;
-    height: auto;
-    cursor: pointer;
-    transition: transform 0.2s ease, filter 0.2s ease;
-}
-
-.range-open-button-img:hover {
-    transform: translateY(-3px);
-    filter: brightness(1.1);
-}
-
-/* ============================================================
-   DOUBLE-CARD SYSTEM (RANGE ONLY — BLUE VERSION)
-============================================================ */
-
-.range-bg .outer-card {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.30);
-    border-radius: 12px;
-    backdrop-filter: blur(4px);
-    position: relative;
-}
-
-.range-bg .inner-card {
-    background: rgba(175, 205, 240, 0.55);
-    padding: 30px;
-    border-radius: 12px;
-    text-align: center;
-
-    box-shadow:
-       0 6px 18px rgba(20, 40, 70, 0.45),
-       0 12px 32px rgba(20, 40, 70, 0.30);
-
-    position: relative;
-    z-index: 1;
-}
-
-/* ============================================================
-   RANGE PAGE — TEXT COLORS (BLUE VERSION)
-============================================================ */
-
-.range-bg .inner-card h2,
-.range-bg .inner-card h3,
-.range-bg .inner-card p,
-.range-bg .inner-card li,
-.range-bg .inner-card a {
-    color: #062a55;
-}
-
-/* ============================================================
-   RANGE PAGE — TYPOGRAPHY (MATCH ARCHERY SCALE)
-============================================================ */
-
-.range-bg h2 {
-    font-size: 2.4rem;
-    font-weight: 700;
-    margin-bottom: 20px;
-}
-
-.range-bg h3 {
-    font-size: 1.4rem;
-    font-weight: 600;
-    margin-bottom: 20px;
-}
-
-.range-bg p,
-.range-bg li {
-    font-size: 1.15rem;
-    line-height: 1.65;
-}
-
-/* ============================================================
-   CUSTOM INDENT CLASS (10-SPACE VISUAL INDENT)
-============================================================ */
-
-.range-indent {
-    text-align: left;
-    padding-left: 40px;
-}
-
-/* ============================================================
-   CARD 5 — FIX SPACING (Pre‑Shot Packages ONLY)
-============================================================ */
-
-.packages-card h3 {
-    margin-top: 30px;   /* space above each title */
-    margin-bottom: 5px; /* tighten space under title */
-}
-
-.packages-card p {
-    margin-top: 0;       /* remove extra space above the line */
-    margin-bottom: 30px; /* space below the line */
-}
-
-/* ============================================================
-   RESTRICTED FIREARMS SECTION
-============================================================ */
-
-.restricted-firearms-wrapper {
-    margin-top: 30px;
-    text-align: center;
-}
-
-.range-restricted-title {
-    font-size: 22px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    color: red;
-}
-
-.range-restricted-image img {
-    max-width: 600px;
-    width: 100%;
-    height: auto;
-    margin: 0 auto;
     display: block;
 }
 
-.range-revised-date {
-    text-align: center;
-    font-size: 18px;
-    font-weight: bold;
+/* Add 20px space between nav and header image on Trap & Skeet page */
+.trap-skeet-bg .page-header {
     margin-top: 20px;
 }
 
-/* ============================================================
-   CONTACT FORM (BLUE THEME)
-============================================================ */
-
-.trap-skeet-contact {
-    max-width: 700px;
-    margin: 0 auto;
-    padding: 2rem;
-    background: #0b1a33;
-    border-radius: 10px;
-    box-shadow: 0 0 25px rgba(0,0,0,0.6);
-    color: #e8f0ff;
+/* --------------------------------------------------
+   ANNOUNCEMENT + CALENDAR SECTION
+-------------------------------------------------- */
+.ts-announcement {
+    max-width: 1200px;
+    margin: 40px auto;
+    display: flex;
+    gap: 40px;
+    padding: 0 20px;
 }
 
-.trap-skeet-contact h2 {
-    margin-bottom: 0.5rem;
-    font-size: 1.8rem;
-    letter-spacing: 0.04em;
-    color: #4aa3ff;
-    text-transform: uppercase;
-}
-
-.trap-skeet-intro {
-    margin-bottom: 1.5rem;
-    font-size: 0.95rem;
-    color: #c7d6f5;
-}
-
-.trap-skeet-form {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5rem 2rem;
-}
-
-.field-row {
+.ts-left {
+    flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 0.35rem;
+    justify-content: center;
 }
 
-.field-row label {
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: #bcd4ff;
+.ts-left,
+.ts-left h2,
+.ts-left h3,
+.ts-left p,
+.ts-left ul,
+.ts-left li,
+.ts-left strong,
+.ts-left em {
+    color: white !important;
 }
 
-.field-row input,
-.field-row textarea {
-    background: #000814;
-    border: 1px solid #1e5fb3;
-    border-radius: 4px;
-    padding: 0.6rem 0.75rem;
-    color: #e8f0ff;
+.ts-left h2 {
+    font-size: 2.3rem;
+    font-weight: 700;
+    margin-bottom: 6px;
 }
 
-.field-row:nth-child(4) {
-    grid-column: 1 / 3;
+.ts-left p strong {
+    font-size: 1.45rem;
+    font-weight: 700;
 }
 
-#ts-message {
-    height: 140px;
+.ts-left p em {
+    font-size: 1.3rem;
 }
 
-.field-inline,
-.field-checkbox {
-    grid-column: 1 / 3;
+.ts-left h3 {
+    font-size: 1.45rem;
+    font-weight: 700;
+    margin-top: 22px;
+    margin-bottom: 12px;
 }
 
-.ts-submit {
-    grid-column: 1 / 3;
-    margin-top: 0.5rem;
-    background: #1e5fb3;
-    color: #fff;
-    border-radius: 999px;
-    padding: 0.7rem 1.8rem;
-    text-transform: uppercase;
+.ts-left ul {
+    margin-left: 20px;
+    margin-bottom: 20px;
+    line-height: 1.55;
+    font-size: 1.15rem;
+}
+
+.ts-left p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.ts-right {
+    flex: 1;
+}
+
+.ts-right iframe {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* ⭐ Orange card behind calendar */
+.calendar-card {
+    background: #ff9f43;
+    padding: 5px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+.calendar-card iframe {
+    width: 100%;
+    height: 600px;
+    border-radius: 10px;
+    border: none;
+}
+
+/* --------------------------------------------------
+   CARD GRID
+-------------------------------------------------- */
+.ts-card-grid {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.ts-card {
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 18px;
+    overflow: hidden;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    backdrop-filter: blur(6px);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ts-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+}
+
+.ts-card-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    object-position: top center;
+}
+
+.ts-card p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 15px 10px 20px 10px;
+}
+
+/* --------------------------------------------------
+   TEXT UTILITIES
+-------------------------------------------------- */
+.red-text {
+    color: #ff4d4d !important;
+}
+
+/* --------------------------------------------------
+   RANGE OPEN BUTTON
+-------------------------------------------------- */
+.range-open-button-img {
+    width: 52.5%;
+    max-width: 255px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* ⭐ Shotgun image fix */
+.range-restricted-image img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 20px auto;
+    object-fit: contain;
+}
+
+/* --------------------------------------------------
+   FIXED‑SIZE MODAL OVERLAY
+-------------------------------------------------- */
+.ts-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.75);
+    display: none;
+    justify-content: center;
+    z-index: 99999;
+}
+
+/* --------------------------------------------------
+   MODAL BOX
+-------------------------------------------------- */
+.ts-overlay-content {
+    width: 70vw;
+    height: 70vh;
+    margin-top: 12.5vh;
+    background: rgba(0,0,0,0.6);
+    border: 4px solid rgba(255,255,255,0.4);
+    border-radius: 12px;
+    position: relative;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    padding: 30px;
+    color: white;
+}
+
+/* --------------------------------------------------
+   FLOATING X BUTTON
+-------------------------------------------------- */
+.ts-close-wrapper {
+    position: fixed;
+    top: calc(12.5vh + 7px);
+    right: calc(15vw - 12px);
+    width: 38px;
+    height: 38px;
+    background: rgba(0,0,0,0.85);
+    border: 2px solid rgba(255,255,255,0.6);
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 200000;
+}
+
+.ts-close {
+    font-size: 1.6rem;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    line-height: 1;
+}
+
+/* --------------------------------------------------
+   MODAL TYPOGRAPHY
+-------------------------------------------------- */
+.ts-overlay-content p,
+.ts-overlay-content li,
+.ts-overlay-content strong,
+.ts-overlay-content em {
+    font-size: 1.25rem;
+    line-height: 1.6;
+}
+
+.ts-overlay-content h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.ts-overlay-content h3 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.ts-overlay-content .package-block p {
+    margin: 4px 0;
+}
+
+/* ⭐⭐⭐ CONTACT POPUP LEFT/RIGHT + ORANGE FORM CARD ⭐⭐⭐ */
+
+.ts-contact-flex {
+    display: flex;
+    gap: 10px; /* moved 10px closer */
+    margin-top: 20px;
+}
+
+.ts-contact-left {
+    flex: 0 0 40%;
+}
+
+.ts-contact-right {
+    flex: 0 0 60%;
+}
+
+.ts-contact-card {
+    background: #ff9f43;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+
+    /* ⭐ POSITION TWEAKS */
+    margin-top: 9px;      /* keeps the downward shift */
+    margin-left: -15px;   /* moved 10px more left than before */
+    margin-right: 4px;    /* keeps right edge visible */
+}
+
+.ts-contact-card input,
+.ts-contact-card textarea {
+    width: calc(100% - 10px); /* end 10px earlier on the right */
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+.ts-contact-card label {
+    font-weight: 600;
+}
+
+.ts-contact-card button {
+    width: 100%;
+    padding: 12px;
+    background: #1a1a1a;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
     cursor: pointer;
 }
 
-/* ============================================================
+.ts-contact-card button:hover {
+    background: #000;
+}
+
+/* --------------------------------------------------
+   BACKGROUND
+-------------------------------------------------- */
+body.trap-skeet-bg {
+    background: url('images/trap-skeet-background.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+body.trap-skeet-bg::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.05);
+    z-index: -1;
+}
+
+/* ============================
+   Trap & Skeet – Weather at bottom
+   ============================ */
+
+.trap-skeet-bg .ts-weather {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 40px 0 0 0;
+    padding: 0;
+}
+
+.trap-skeet-bg .ts-weather > div {
+    width: 100% !important;
+}
+
+/* ⭐ Facebook button under LEFT TEXT only */
+.trap-skeet-bg .ts-left .fb-bottom-button img {
+    width: 240px;
+    max-width: 240px;
+    height: auto;
+    display: block;
+    margin: 10px auto 0 auto;
+    transition: all 0.2s ease;
+}
+
+.trap-skeet-bg .ts-left .fb-bottom-button img:hover {
+    transform: translateY(-3px);
+    filter: brightness(1.1);
+}
+
+/* --------------------------------------------------
+   FOOTER
+-------------------------------------------------- */
+footer {
+    margin-top: 0;
+    padding: 20px 0;
+    text-align: center;
+    background: #1a1a1a;
+    color: white;
+    font-size: 0.9rem;
+}
+
+/* --------------------------------------------------
    MOBILE RESPONSIVE
-============================================================ */
+-------------------------------------------------- */
+@media (max-width: 992px) {
+    .ts-announcement {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .ts-right iframe {
+        height: 450px;
+    }
+
+    .ts-card-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
 
 @media (max-width: 600px) {
-
-    .trap-skeet-contact {
-        margin: 0 1rem;
-        padding: 1.5rem;
-    }
-
-    .trap-skeet-form {
+    .ts-card-grid {
         grid-template-columns: 1fr;
+        gap: 20px;
     }
 
-    .field-row:nth-child(4),
-    .field-inline,
-    .field-checkbox,
-    .ts-submit {
-        grid-column: 1 / 2;
+    .ts-card img {
+        height: 160px;
+    }
+
+    .ts-overlay-content {
+        width: 90vw;
+        height: 75vh;
+        margin-top: 10vh;
+        overflow-x: hidden;
     }
 }
 
@@ -3891,4 +3988,129 @@ header {
         display: block;
         border: 0;
     }
+}
+
+/* GLOBAL DARK FOOTER — must be last */
+footer {
+    margin-top: 0;
+    padding: 20px 0;
+    text-align: center;
+    background: #1a1a1a;
+    color: white;
+    font-size: 0.9rem;
+}
+
+/* Make ALL text on the entire site use Image 1's font */
+body, body * {
+    font-family: "Times New Roman", Times, serif !important;
+}
+
+/* =========================================================
+   TRAP & SKEET — ANNOUNCEMENT (IMAGE 1 EXACT STYLE)
+   ========================================================= */
+
+/* Base announcement block */
+.trap-skeet-bg .ts-announcement .ts-left {
+    margin-left: 20px !important;   /* aligned with card grid */
+    margin-right: 40px !important;
+    text-align: left !important;
+    line-height: 1.7 !important;
+    font-style: normal !important;  /* reset everything */
+}
+
+/* Headings */
+.trap-skeet-bg .ts-announcement .ts-left h2,
+.trap-skeet-bg .ts-announcement .ts-left h3 {
+    font-style: normal !important;
+    margin-left: 0 !important;
+}
+
+.trap-skeet-bg .ts-announcement .ts-left h3 {
+    font-weight: 800 !important; /* Important Notes */
+}
+
+/* Paragraphs */
+.trap-skeet-bg .ts-announcement .ts-left p {
+    font-style: normal !important;
+    font-size: 1.6rem !important;
+    margin-left: 0 !important;
+}
+
+/* ONLY the italic line */
+.trap-skeet-bg .ts-announcement .ts-left p em {
+    font-style: italic !important; /* Repairs are complete */
+}
+
+/* Ensure “The club reopens…” is NOT italic */
+.trap-skeet-bg .ts-announcement .ts-left p strong {
+    font-style: normal !important;
+    font-weight: 800 !important;
+}
+
+/* Bullet list */
+.trap-skeet-bg .ts-announcement .ts-left ul {
+    margin-left: 60px !important;
+    line-height: 1.7 !important;
+    font-size: 1.1rem !important;
+    font-style: normal !important;
+}
+
+.trap-skeet-bg .ts-announcement .ts-left li {
+    margin-bottom: 8px !important;
+    font-style: normal !important;
+}
+
+/* =========================================================
+   TRAP & SKEET — PAGE HORIZONTAL SPACING REDUCTION
+   ========================================================= */
+
+.trap-skeet-bg .ts-announcement {
+    padding-left: 0 !important;   /* aligns with card grid */
+    padding-right: 5px !important;
+}
+
+.trap-skeet-bg .ts-card-grid {
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+}
+
+.trap-skeet-bg main {
+    padding-left: 1px !important;
+    padding-right: 1px !important;
+}
+
+/* =========================================================
+   TRAP & SKEET — CALENDAR EXPANSION (20PX LEFT + 20PX DOWN)
+   ========================================================= */
+
+.trap-skeet-bg .calendar-card {
+    margin-left: -40px !important;   /* expand left */
+}
+
+.trap-skeet-bg .calendar-card iframe {
+    height: 640px !important;        /* expand down */
+}
+
+/* =========================================================
+   TRAP & SKEET — FORCE 40/60 LAYOUT FOR ANNOUNCEMENT + CALENDAR
+   ========================================================= */
+
+.trap-skeet-bg .ts-announcement {
+    display: flex !important;
+}
+
+.trap-skeet-bg .ts-announcement .ts-left {
+    flex: 0 0 40% !important;   /* text column */
+}
+
+.trap-skeet-bg .ts-announcement .ts-right {
+    flex: 0 0 60% !important;   /* calendar column */
+}
+
+/* =========================================================
+   TRAP & SKEET — FIX CALENDAR RIGHT-SIDE ALIGNMENT
+   ========================================================= */
+
+.trap-skeet-bg .ts-announcement .ts-right {
+    padding-right: 5px !important;   /* matches card grid right padding */
 }
