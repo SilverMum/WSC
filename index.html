@@ -29,9 +29,11 @@ document.querySelectorAll('.dropdown-sub > a').forEach(link => {
 
 <body class="home">
 
+<!-- ⭐ FULL NAV BAR -->
 <header>
     <nav class="main-nav">
 
+        <!-- Logo stays exactly where it was -->
         <div class="logo">
             <img src="images/WINDSOR SPORTSMANS REMAKE.png" alt="Windsor Sportsmen’s Club Logo">
         </div>
@@ -56,7 +58,15 @@ document.querySelectorAll('.dropdown-sub > a').forEach(link => {
             <li class="dropdown">
                 <a href="#">Groups ▾</a>
                 <ul class="dropdown-menu">
-                    <li><a href="range.html">Range</a></li>
+
+                    <!-- ⭐ Two-line Trap & Skeet link -->
+                    <li class="nav-trap-skeet">
+                        <a href="trap-skeet.html">
+                            Trap &amp; Skeet<br>
+                            <span>Range</span>
+                        </a>
+                    </li>
+
                     <li><a href="archery.html">Archery</a></li>
                     <li><a href="ofha.html">OFHA</a></li>
                     <li><a href="cheese-cracker.html">Cheese & Cracker Club</a></li>
@@ -70,6 +80,7 @@ document.querySelectorAll('.dropdown-sub > a').forEach(link => {
                             <li><a href="staff-tv-info.html">Staff TV Info</a></li>
                         </ul>
                     </li>
+
                 </ul>
             </li>
 
@@ -82,6 +93,7 @@ document.querySelectorAll('.dropdown-sub > a').forEach(link => {
     </nav>
 </header>
 
+
 <section style="height: 20px;"></section>
 <section style="height: 160px;"></section>
 
@@ -91,9 +103,10 @@ document.querySelectorAll('.dropdown-sub > a').forEach(link => {
 
     <h1 class="hero-title home-hero-title">Welcome to the Windsor Sportsmen’s Club</h1>
 
-    <div class="header-underline">
-        <img src="images/Sportsmen's-Header.png" alt="Header underline image">
-    </div>
+    <!-- New subtitle under the title -->
+    <h2 class="home-subtitle">2401 Dougall Ave, Windsor ON N8X 1T3</h2>
+
+</section>
 
     <!-- ⭐ PLEDGE — UPDATED TO YOUR DOUBLE CARD STYLE -->
     <section class="home-pledge-card outer-card">
@@ -287,34 +300,24 @@ document.querySelectorAll('.dropdown-sub > a').forEach(link => {
     </div>
 </div>
 
-<!-- ⭐ MAX BAND — UPDATED TO YOUR DOUBLE CARD STYLE -->
+<!-- ⭐ HOMEPAGE DOUBLE IMAGE CARD -->
 <div class="maxband-card outer-card">
     <div class="inner-card">
 
         <div class="maxband-wrapper">
 
+            <!-- mothers day -->
             <div class="maxband-left" style="margin-right:10px;">
-                <img src="images/MAXband.png" alt="Max Band Image" style="max-width:420px; height:auto; border-radius:10px;">
+                <img src="images/mothersday.png" 
+                     alt="Mothers Day Event" 
+                     style="width:100%; max-width:600px; height:auto; border-radius:10px;">
             </div>
 
-            <div class="maxband-right" 
-                style="text-align:center; color:black; font-weight:bold; font-size:1.2em; line-height:1.6; margin-left:10px;">
-
-                <p>Friday, May 01<br>
-                Windsor Sportsmen's Club<br>
-                2401 Dougall Ave, Windsor</p>
-
-                <p>Tickets: $35 - $30 CSBS Members</p>
-
-                <p>Doors Open 6pm - Showtime 7pm</p>
-
-                <p>The award-winning Johnny Max Band, led by the charismatic and whip sharp Johnny Max, have been touring Canada and Europe for over 30 years and bring their remarkable rhythm and blues, Memphis meets Chicago & New Orleans sound to enthusiastic crowds wherever they go.</p>
-
-                <p>With two JUNO award nominations, eight Maple Blues awards nominations, and the winner of the International Songwriting Competition Award for "Daddy's Little Girl" The Johnny Max Band consistently wows audiences with joyous, sometimes raucous rhythms and masterful showmanship.</p>
-
-                <p>Tickets Available @ Windsor Sportsmen's Club<br>
-                Long&McQuade - D&R Vacuum<br>
-                Contact: Mike McCann (226) 757-0748</p>
+            <!-- fishing derby -->
+            <div class="maxband-left" style="margin-left:10px;">
+                <img src="images/fishing derby.jpg" 
+                     alt="Fishing Derby" 
+                     style="width:100%; max-width:600px; height:auto; border-radius:10px;">
             </div>
 
         </div>
