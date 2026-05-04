@@ -300,14 +300,10 @@ main {
 
 /* Home page title bigger */
 .home-hero-title {
-    font-size: clamp(2.2rem, 4vw, 3.2rem);
+    font-size: clamp(2.2rem, 4vw, 4.0rem); /* 4 text sizes bigger */
     font-weight: 800;
-    white-space: normal !important;   /* ⭐ THIS FIXES THE WRAP */
-}
-
-/* Move homepage title upward without affecting anything else */
-.home-hero-title {
-    margin-top: -60px;   /* adjust this number until it looks perfect */
+    white-space: normal !important;
+    margin-top: -60px;
 }
 
 /* ------------------------------
@@ -415,7 +411,7 @@ main {
     font-size: 160px;
     transform: translate(8px, 12px);
     line-height: 1;
-    color: rgba(50, 168, 82, 0.75);
+    color: rgb(50, 168, 82); /* ← FULLY SOLID NOW */
     pointer-events: none;
     font-family: Georgia, serif;
     z-index: 0;
@@ -512,7 +508,8 @@ main {
 /* ------------------------------
    HOMEPAGE — MEETING WHITE CARD
 --------------------------------*/
-.home-meeting-card.outer-card {
+/* OUTER CARD — standard */
+.outer-card {
     max-width: 900px;
     margin: 40px auto;
     padding: 20px;
@@ -520,77 +517,26 @@ main {
     border-radius: 12px;
     backdrop-filter: blur(4px);
     text-align: center;
+    position: relative;
 }
 
-.home-meeting-card .inner-card {
-    background: rgba(230, 235, 234, 0.55); /* soft fog gray */
+/* INNER CARD — standard */
+.inner-card {
+    background: rgba(220, 230, 239, 0.55); /* new blue-gray with same opacity */
     padding: 30px;
     border-radius: 12px;
 
     box-shadow:
-       0 4px 14px rgba(47, 79, 62, 0.35),
-       0 8px 28px rgba(47, 79, 62, 0.25);
+        0 4px 14px rgba(47, 79, 62, 0.35),
+        0 8px 28px rgba(47, 79, 62, 0.25);
 }
 
-.meeting-title {
-    font-size: 1.8em;
-    font-weight: bold;
-    color: red;
-    line-height: 1.4;
-    margin-bottom: 5px;
-}
-
-.meeting-logo {
-    max-width: 300px;
+.membership-image {
+    width: 100%;
+    max-width: 900px;
     height: auto;
-    margin-top: 5px;
-}
-
-@media (max-width: 700px) {
-    .meeting-logo {
-        display: block;
-        margin-left: auto !important;
-        margin-right: auto !important;
-        max-width: 70% !important;
-        text-align: center;
-    }
-}
-
-/* ------------------------------
-   SIMPLE RANGE NOTICE SECTION
---------------------------------*/
-.range-simple-section {
-    text-align: center;
-    margin: 40px auto 10px;
-    padding: 10px 0;
-}
-
-.range-simple-title {
-    font-size: 2.2rem;
-    font-weight: 800;
-    color: #e60000;
-    margin-bottom: 8px;
-}
-
-.range-simple-subtitle {
-    font-size: 1.3rem;
-    font-weight: 600;
-    color: #000;
-    font-style: italic;
-    margin-top: 0;
-}
-
-/* ------------------------------
-   SIMPLE RANGE BUTTON
---------------------------------*/
-.range-button-simple {
-    text-align: center;
-    margin: 10px auto 40px;
-}
-
-.range-button-simple-img:hover {
-    transform: translateY(-3px);
-    filter: brightness(1.1);
+    display: block;
+    border-radius: 10px; /* optional */
 }
 
 /* ------------------------------
@@ -606,185 +552,54 @@ main {
     text-align: center;
 }
 
-/* UNIVERSAL INNER CARD — updated */
-.inner-card {
-    background: rgba(230, 235, 234, 0.55); /* soft fog gray */
-    padding: 30px;
-    border-radius: 12px;
-
-    box-shadow:
-       0 4px 14px rgba(47, 79, 62, 0.35),
-       0 8px 28px rgba(47, 79, 62, 0.25);
-}
-
-.range-simple-title {
-    margin-bottom: 15px;
-}
-
-.range-simple-subtitle {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: black;
-    margin-bottom: 20px;
-}
-
-.range-button-simple-img {
-    width: 380px;      /* increased from 320px */
-    max-width: 95%;    /* stays responsive */
-    height: auto;
-    cursor: pointer;
-    margin-top: 10px;
-    transition: transform 0.2s ease, filter 0.2s ease;
-}
-
 /* ------------------------------
-   RIB & CHICKEN
+   TRAP & SKEET HOME CARD IMAGE
 --------------------------------*/
-.club-ribchicken img {
-    display: block;
-    margin: 25px auto;
-    max-width: 900px;
+.trap-skeet-home-image {
     width: 100%;
     height: auto;
-}
-
-.white-card.outer-card {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.3);
-    border-radius: 12px;
-    backdrop-filter: blur(4px);
-}
-
-.white-card .inner-card {
-    background: rgba(230, 235, 234, 0.55); /* soft fog gray */
-    padding: 30px;
-    border-radius: 12px;
-
-    box-shadow:
-       0 4px 14px rgba(47, 79, 62, 0.35),
-       0 8px 28px rgba(47, 79, 62, 0.25);
-}
-
-.ribchicken-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-}
-
-.ribchicken-left img {
-    max-width: 420px;
-    height: auto;
-    border-radius: 10px;
-}
-
-.ribchicken-right {
-    max-width: 500px;
-    text-align: center;
-    font-weight: bold;
-    font-size: 1.2em;
-    line-height: 1.6;
-    color: black;
-}
-
-@media (max-width: 900px) {
-    .ribchicken-wrapper {
-        flex-direction: column;
-        text-align: center;
-    }
-}
-
-/* ------------------------------
-   MAX BAND
---------------------------------*/
-.maxband-card.outer-card {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.3);
-    border-radius: 12px;
-    backdrop-filter: blur(4px);
-}
-
-.maxband-card .inner-card {
-    background: rgba(230, 235, 234, 0.55); /* soft fog gray */
-    padding: 30px;
-    border-radius: 12px;
-
-    box-shadow:
-       0 4px 14px rgba(47, 79, 62, 0.35),
-       0 8px 28px rgba(47, 79, 62, 0.25);
-}
-
-.maxband-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: nowrap;
-    gap: 40px;
-    margin: 20px auto;
-    max-width: 1200px;
-}
-
-.maxband-left img {
-    height: 100%;
-    width: auto;
-    object-fit: cover;
-    border-radius: 10px;
-}
-
-.maxband-right {
-    max-width: 500px;
-    text-align: center;
-    line-height: 1.5;
-    font-size: 18px;
-    color: black;
-}
-
-/* ------------------------------
-   BAND IMAGE — OUTER CARD
---------------------------------*/
-.band-card.outer-card {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 20px; /* gap around inner card */
-    background: rgba(255, 255, 255, 0.3); /* 30% white */
-    border-radius: 12px;
-    backdrop-filter: blur(4px);
-    text-align: center;
-}
-
-/* ------------------------------
-   BAND IMAGE — INNER CARD
---------------------------------*/
-.band-card .inner-card {
-    background: rgba(230, 235, 234, 0.55); /* soft fog gray */
-    padding: 30px;
-    border-radius: 12px;
-
-    box-shadow:
-       0 4px 14px rgba(47, 79, 62, 0.35),
-       0 8px 28px rgba(47, 79, 62, 0.25);
-}
-
-/* ------------------------------
-   BAND IMAGE ITSELF
---------------------------------*/
-#band-image {
     display: block;
-    margin: 0 auto;
-    max-width: 100%;
-    height: auto;
+    border-radius: 12px; /* matches outer card corners */
 }
 
-@media (max-width: 900px) {
-    .maxband-wrapper {
-        flex-direction: column;
-        text-align: center;
-        margin: 20px auto;
-    }
+/* ------------------------------
+   EARLY EVENT CARD
+--------------------------------*/
+.early-event-card.outer-card {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    backdrop-filter: blur(4px);
+    text-align: center;
+}
+
+.event-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+}
+
+/* ------------------------------
+   LATER EVENT CARD
+--------------------------------*/
+.later-event-card.outer-card {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    backdrop-filter: blur(4px);
+    text-align: center;
+}
+
+.later-event-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
 }
 
 /* ------------------------------
@@ -811,77 +626,6 @@ main {
         display: block !important;
         margin: 0 auto !important;
     }
-}
-
-/* ------------------------------
-   CONTACT SECTION
---------------------------------*/
-.contact-section {
-    text-align: center;
-    color: #000;
-    font-size: 1.6rem;
-    font-weight: 700;
-    line-height: 1.6;
-    margin: 40px auto;
-    padding: 0 20px;
-    max-width: 900px;
-}
-
-.contact-line {
-    margin-bottom: 18px;
-}
-
-.contact-spacer {
-    height: 20px;
-}
-
-.section-divider {
-    width: 100%;
-    margin: 40px auto;
-    text-align: center;
-}
-
-.section-divider img {
-    width: 100%;
-    max-width: 600px;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-}
-
-#contact-title {
-    scroll-margin-top: 190px;
-}
-
-/* ------------------------------
-   CONTACT CARD
---------------------------------*/
-.home-contact-card.outer-card {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.3);
-    border-radius: 12px;
-    backdrop-filter: blur(4px);
-    text-align: center;
-}
-
-.home-contact-card .inner-card {
-    background: rgba(230, 235, 234, 0.55); /* soft fog gray */
-    padding: 30px;
-    border-radius: 12px;
-
-    box-shadow:
-       0 4px 14px rgba(47, 79, 62, 0.35),
-       0 8px 28px rgba(47, 79, 62, 0.25);
-}
-
-.contact-line {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: black;
-    line-height: 1.6;
-    margin-bottom: 10px;
 }
 
 /* ------------------------------
@@ -941,66 +685,6 @@ main {
     max-width: 900px;
     height: auto;
     border-radius: 10px;
-}
-
-/* ------------------------------
-   ACTIVITIES CARD
---------------------------------*/
-.activities-section {
-    width: 100%;
-    margin: 40px 0;
-    padding: 0 0 20px;
-    text-align: center;
-}
-
-.activities-title {
-    font-size: 2rem;
-    font-weight: 700;
-    margin-bottom: 20px;
-    color: #000;
-}
-
-.activities-text {
-    font-size: 1.3rem;
-    line-height: 1.8;
-    color: #000;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.activities-section {
-    margin-bottom: 10px;
-}
-
-.home-activities-card.outer-card {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.3);
-    border-radius: 12px;
-    backdrop-filter: blur(4px);
-    text-align: center;
-}
-
-.home-activities-card .inner-card {
-    background: rgba(230, 235, 234, 0.55); /* soft fog gray */
-    padding: 30px;
-    border-radius: 12px;
-
-    box-shadow:
-       0 4px 14px rgba(47, 79, 62, 0.35),
-       0 8px 28px rgba(47, 79, 62, 0.25);
-}
-
-.activities-text {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: black;
-    line-height: 1.6;
-}
-
-.activities-title {
-    margin-bottom: 20px;
 }
 
 /* ------------------------------
@@ -1298,6 +982,8 @@ body.login-bg .site-footer {
     display: flex;
     gap: 40px;
     padding: 0 20px;
+    justify-content: space-between;   /* keep spacing */
+    align-items: flex-start;          /* ⭐ STOP equal-height stretching */
 }
 
 .ts-left {
@@ -1354,6 +1040,9 @@ body.login-bg .site-footer {
 
 .ts-right {
     flex: 1;
+    max-width: 900px;              /* match card grid */
+    display: flex;
+    justify-content: flex-start;   /* align left */
 }
 
 .ts-right iframe {
@@ -1364,9 +1053,13 @@ body.login-bg .site-footer {
 /* ⭐ Orange card behind calendar */
 .calendar-card {
     background: #ff9f43;
-    padding: 5px;
+    padding: 5px 5px 3px 5px;      /* top right bottom left */
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    width: 100%;
+    max-width: 900px;              /* match grid width */
+    margin-left: 0;
+    margin-right: auto;            /* push right edge left */
 }
 
 .calendar-card iframe {
@@ -1374,6 +1067,48 @@ body.login-bg .site-footer {
     height: 600px;
     border-radius: 10px;
     border: none;
+}
+
+/* --------------------------------------------------
+   CARD GRID
+-------------------------------------------------- */
+.ts-card-grid {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.ts-card {
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 18px;
+    overflow: hidden;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    backdrop-filter: blur(6px);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ts-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+}
+
+.ts-card-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    object-position: top center;
+}
+
+.ts-card p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 15px 10px 20px 10px;
 }
 
 /* --------------------------------------------------
@@ -4113,4 +3848,40 @@ body, body * {
 
 .trap-skeet-bg .ts-announcement .ts-right {
     padding-right: 5px !important;   /* matches card grid right padding */
+}
+
+/* =========================================================
+   HOME PAGE — FACEBOOK SECTION (MATCH IMAGE STYLE)
+   ========================================================= */
+
+.facebook-section {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.facebook-button img {
+    width: 260px;
+    max-width: 90%;
+    height: auto;
+    display: block;
+    margin: 0 auto 15px auto;
+}
+
+.facebook-text p {
+    margin: 4px 0;
+    font-size: 1.4rem;
+    line-height: 1.4;
+}
+
+.facebook-text p:first-child {
+    font-weight: 800;
+}
+
+.facebook-text p:nth-child(2) {
+    font-style: italic;
+}
+
+/* MEMBERSHIP CARD WIDTH — MATCH ALL OTHER HOMEPAGE CARDS */
+.home-meeting-card.outer-card {
+    max-width: 900px !important;
 }
