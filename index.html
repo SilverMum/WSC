@@ -7,39 +7,21 @@
     <link rel="stylesheet" href="styles.css?v=10">
 </head>
 
-<script>
-document.querySelectorAll('.dropdown > a').forEach(link => {
-    link.addEventListener('click', function(e) {
-        if (window.innerWidth <= 900) {
-            e.preventDefault();
-            this.parentElement.classList.toggle('open');
-        }
-    });
-});
-
-document.querySelectorAll('.dropdown-sub > a').forEach(link => {
-    link.addEventListener('click', function(e) {
-        if (window.innerWidth <= 900) {
-            e.preventDefault();
-            this.parentElement.classList.toggle('open');
-        }
-    });
-});
-</script>
-
 <body class="home">
 
 <!-- ⭐ FULL NAV BAR -->
 <header>
     <nav class="main-nav">
 
-        <!-- Logo stays exactly where it was -->
+        <!-- Logo -->
         <div class="logo">
             <img src="images/WINDSOR SPORTSMANS REMAKE.png" alt="Windsor Sportsmen’s Club Logo">
         </div>
 
+        <!-- Spacer (kept for desktop layout) -->
         <div class="nav-spacer"></div>
 
+        <!-- Nav Links -->
         <ul class="nav-links">
 
             <li><a href="index.html">Home</a></li>
@@ -48,7 +30,7 @@ document.querySelectorAll('.dropdown-sub > a').forEach(link => {
                 <a href="#">Events ▾</a>
                 <ul class="dropdown-menu">
                     <li><a href="calendar.html">Calendar</a></li>
-                    <li><a href="index.html#club-events">Club Events</a></li>
+                    <li><a href="#club-events">Club Events</a></li>
                     <li><a href="private-events.html">Private Events</a></li>
                 </ul>
             </li>
@@ -59,17 +41,11 @@ document.querySelectorAll('.dropdown-sub > a').forEach(link => {
                 <a href="#">Groups ▾</a>
                 <ul class="dropdown-menu">
 
-                    <!-- ⭐ Two-line Trap & Skeet link -->
-                    <li class="nav-trap-skeet">
-                        <a href="trap-skeet.html">
-                            Trap &amp; Skeet<br>
-                            <span>Range</span>
-                        </a>
-                    </li>
+                    <li><a href="trap-skeet.html">Trap & Skeet</a></li>
 
                     <li><a href="archery.html">Archery</a></li>
                     <li><a href="ofha.html">OFHA</a></li>
-                    <li><a href="cheese-cracker.html">Cheese & Cracker Club</a></li>
+                    <li><a href="cheese-cracker.html">Cheese & Cracker</a></li>
                     <li><a href="air-rifle.html">Air Rifle</a></li>
 
                     <li class="dropdown-sub">
@@ -84,7 +60,7 @@ document.querySelectorAll('.dropdown-sub > a').forEach(link => {
                 </ul>
             </li>
 
-            <li><a href="index.html#contact-title">Contact</a></li>
+            <li><a href="#contact-title">Contact</a></li>
 
             <li><a href="login.html">Login</a></li>
 
@@ -93,9 +69,6 @@ document.querySelectorAll('.dropdown-sub > a').forEach(link => {
     </nav>
 </header>
 
-
-<section style="height: 20px;"></section>
-<section style="height: 160px;"></section>
 
 <main>
 
@@ -161,10 +134,6 @@ document.querySelectorAll('.dropdown-sub > a').forEach(link => {
 
     </div>
 </section>
-    
-<div class="section-divider">
-    <img src="images/divider.png" alt="Section Divider">
-</div>
 
 <!-- ⭐ TRAP & SKEET HOME CARD -->
 <section class="trap-skeet-home-card outer-card">
@@ -172,10 +141,6 @@ document.querySelectorAll('.dropdown-sub > a').forEach(link => {
          alt="Trap & Skeet Home Image" 
          class="trap-skeet-home-image">
 </section>
-
-<div class="section-divider">
-    <img src="images/divider.png" alt="Section Divider">
-</div>
 
 <div id="club-events"></div>
 
@@ -201,10 +166,6 @@ document.querySelectorAll('.dropdown-sub > a').forEach(link => {
     <img src="images/Tuesday-Nights.png" alt="Tuesday Nights">
 </div>
 
-<div class="section-divider">
-    <img src="images/divider.png" alt="Section Divider">
-</div>
-
 <section id="partnership" class="partnership-card outer-card">
     <div class="inner-card">
         <img 
@@ -221,18 +182,29 @@ document.querySelectorAll('.dropdown-sub > a').forEach(link => {
     <p>©2024 Windsor Sportsmen's Club. All Rights Reserved.</p>
 </footer>
 
+<!-- ⭐ JS MOVED HERE SO NAV WORKS PROPERLY -->
 <script>
-let slides = document.querySelectorAll('.slide');
-let index = 0;
+document.querySelectorAll('.dropdown > a').forEach(link => {
+    link.addEventListener('click', function(e) {
+        if (window.innerWidth <= 900) {
+            e.preventDefault();
+            this.parentElement.classList.toggle('open');
+        }
+    });
+});
 
-function showNextSlide() {
-    slides[index].classList.remove('active');
-    index = (index + 1) % slides.length;
-    slides[index].classList.add('active');
-}
-
-setInterval(showNextSlide, 5000);
+document.querySelectorAll('.dropdown-sub > a').forEach(link => {
+    link.addEventListener('click', function(e) {
+        if (window.innerWidth <= 900) {
+            e.preventDefault();
+            this.parentElement.classList.toggle('open');
+        }
+    });
+});
 </script>
+
+<!-- ⭐ YOUR MAIN NAVIGATION SCRIPT -->
+<script src="scripts.js"></script>
 
 </body>
 </html>
