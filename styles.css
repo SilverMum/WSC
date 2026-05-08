@@ -3936,8 +3936,640 @@ body, body * {
 .facebook-text p:nth-child(2) {
     font-style: italic;
 }
-
 /* MEMBERSHIP CARD WIDTH — MATCH ALL OTHER HOMEPAGE CARDS */
 .home-meeting-card.outer-card {
     max-width: 900px !important;
+}
+
+body.home main {
+    padding-top: 160px;
+}
+
+/* =========================================================
+   MOBILE NAVIGATION FIXES — ALIGNMENT + TOGGLE BEHAVIOR
+   ========================================================= */
+@media (max-width: 900px) {
+
+    /* Disable hover behavior on mobile so JS is in full control */
+    .dropdown:hover > .dropdown-menu {
+        display: none !important;
+    }
+
+    /* Normalize dropdown anchor width so alignment matches */
+    .nav-links li.dropdown {
+        width: auto !important;
+    }
+
+    .nav-links li.dropdown > a {
+        display: inline-block !important;
+    }
+
+    /* Perfect left alignment for all dropdowns */
+    .nav-links li.dropdown > .dropdown-menu {
+        left: 0 !important;
+        transform: translateX(0) !important;
+    }
+
+    /* ⭐ This is the missing piece: show menu when JS adds .open */
+    .nav-links li.dropdown > .dropdown-menu.open {
+        display: block !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links > li > a[href="trap-skeet.html"] {
+        font-size: 0 !important;
+        position: relative;
+    }
+
+    .nav-links > li > a[href="trap-skeet.html"]::after {
+        content: "Trap & Skeet";
+        font-size: 16px;
+        color: inherit;
+    }
+}
+
+@media (max-width: 900px) {
+
+    /* -----------------------------------------
+       GLOBAL MOBILE CARD FIXES
+    ----------------------------------------- */
+
+    /* Prevent content from sticking out of inner cards */
+    .inner-card {
+        overflow-wrap: break-word;
+        word-break: break-word;
+        max-width: 100%;
+        box-sizing: border-box;
+        padding-left: 2px;   /* your final padding choice */
+        padding-right: 2px;
+    }
+
+    /* Ensure images inside cards never overflow */
+    .inner-card img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    /* Prevent long links or long titles from pushing the card wider */
+    .inner-card a {
+        word-break: break-word;
+    }
+
+    /* Outer card spacing (your chosen minimal margins) */
+    .outer-card {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+/* =========================================================
+   KITCHEN PAGE — BASE STYLES (NOT MOBILE-ONLY)
+========================================================= */
+
+.kitchen-title-img {
+    max-width: 70%;
+    height: auto;
+    display: block;
+    margin: 110px auto 0;
+}
+
+.kitchen-layout {
+    display: block;
+    text-align: center;
+}
+
+.kitchen-badge {
+    max-width: 60%;
+    height: auto;
+    margin: 0 auto 20px;
+    display: block;
+}
+
+.kitchen-description p {
+    font-size: 0.95rem;
+    line-height: 1.35;
+    padding: 0 10px;
+    word-break: break-word;
+}
+
+.kitchen-fb-scroll iframe {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto;
+}
+
+
+/* =========================================================
+   MOBILE-ONLY — KITCHEN PAGE
+========================================================= */
+
+@media (max-width: 900px) {
+    .kitchen-description p {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .kitchen-description {
+        margin-left: -17px;
+    }
+}
+
+/* =========================================================
+   MOBILE-ONLY — PRIVATE EVENTS PAGE
+========================================================= */
+
+@media (max-width: 900px) {
+    .private-events-text {
+        font-size: 1.4rem;
+        line-height: 1.3;
+    }
+}
+
+/* =========================================================
+   MOBILE-ONLY — LOGIN PAGE
+========================================================= */
+
+@media (max-width: 900px) {
+    body.login-bg .login-form {
+        margin-top: 100px !important;
+    }
+}
+
+@media (max-width: 900px) {
+    body.cheese-bg main img[alt="Cheese and Cracker Club Title"] {
+        margin-top: 50px !important;
+    }
+}
+
+@media (max-width: 900px) {
+    body.TV-bg main {
+        margin-top: 80px !important;
+    }
+}
+
+@media (max-width: 900px) {
+    body.members-bg .pledge-title {
+        font-size: 1.5rem !important;
+        line-height: 1.15;
+        text-align: center;
+        white-space: normal !important; /* allow wrapping */
+    }
+
+    /* Force PLEDGE onto its own line */
+    body.members-bg .pledge-title::after {
+        content: "";
+        display: block; /* creates the line break */
+    }
+}
+
+/* =========================================================
+   MOBILE-ONLY — ARCHERY PAGE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    /* ---------------------------------------------
+       1) MOBILE TITLE (Windsor Sportsmen's / Air Rifle Range)
+       --------------------------------------------- */
+    body.archery-page .archery-title {
+        font-size: 1.7rem !important;
+        line-height: 1.15;
+        text-align: center;
+        white-space: normal !important; /* allow wrapping */
+    }
+
+    /* Force second part onto its own line */
+    body.archery-page .archery-title::after {
+        content: "";
+        display: block;
+    }
+
+
+    /* ---------------------------------------------
+       2) TIMES + PRIVATE EVENTS TEXT
+       --------------------------------------------- */
+
+    /* Replace times block with mobile-stacked version */
+    .archery-times {
+        text-align: center !important;
+        line-height: 1.6;
+        font-size: 0 !important; /* hide original */
+    }
+
+    .archery-times br {
+        display: none;
+    }
+
+    .archery-times::before {
+        content:
+            "5:30 - 6:30 pm"
+            "(17 and under)"
+            "6:30 - 7:30 pm"
+            "(17 and under)"
+            "7:30 - 8:30 pm"
+            "(Age 18+)";
+        white-space: pre-line;
+        display: block;
+        font-size: 1.3rem;
+        text-align: center;
+    }
+
+    /* Smaller private events text */
+    .archery-private {
+        font-size: 1rem !important;
+        line-height: 1.4;
+    }
+
+
+    /* ---------------------------------------------
+       3) HEADER IMAGE REMOVAL + MOBILE PAGE TITLE
+       --------------------------------------------- */
+
+    /* Remove header image */
+    .archery-header {
+        display: none !important;
+    }
+
+    /* Add ARCHERY title above content */
+    body.archery-page::before {
+        content: "ARCHERY";
+        display: block;
+        text-align: center;
+        font-size: 2.2rem;
+        font-weight: 700;
+        margin-top: 120px;
+        margin-bottom: 20px;
+        color: #ffffff;
+    }
+
+
+    /* ---------------------------------------------
+       4) CANCELATIONS TITLE FIX
+       --------------------------------------------- */
+
+    /* Fix spelling + size */
+    .archery-cancel-title {
+        font-size: 0 !important; /* hide original */
+        letter-spacing: 0.5px;
+    }
+
+    .archery-cancel-title::after {
+        content: "Archery Cancelations";
+        display: block;
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: inherit;
+    }
+}
+
+/* MOBILE ONLY — Air Rifle Title */
+@media (max-width: 900px) {
+    body.air-rifle-bg .airrifle-title {
+        display: block;
+        text-align: center;
+        font-size: 1.6rem;
+        line-height: 1.2;
+
+        /* Wrapping behavior */
+        white-space: normal !important;   /* allow natural wrapping */
+        overflow-wrap: break-word;        /* wrap long words only if needed */
+        word-break: normal;               /* avoid breaking words */
+    }
+}
+
+/* =========================================================
+   MOBILE-ONLY — OFHA PAGE (clean title only)
+========================================================= */
+@media (max-width: 900px) {
+
+    /* Remove the 160px spacer ONLY on mobile */
+    body.ofha-bg section[style*="height: 160px"] {
+        display: none !important;
+    }
+
+    /* Remove header image */
+    .ofha-header {
+        display: none !important;
+    }
+
+    /* Keep ALL content pushed down below the nav */
+    body.ofha-bg {
+        padding-top: 300px !important;
+    }
+
+    /* Mobile-only OFHA title — CLEAN, NO CARD */
+    body.ofha-bg::before {
+        content: "OFHA";
+        display: block;
+        text-align: center;
+        font-size: 2.4rem;
+        font-weight: 700;
+
+        /* Position title exactly where you want it */
+        margin-top: -40px;   /* adjust until perfect */
+        margin-bottom: 15px; /* 15px above first card */
+
+        /* Make white text readable on water background */
+        color: #ffffff;
+        text-shadow: 0 0 8px rgba(0,0,0,0.6);
+
+        /* Ensure title sits ABOVE background */
+        position: relative;
+        z-index: 5;
+    }
+
+    /* First card stays where it is */
+    body.ofha-bg .outer-card:first-of-type {
+        margin-top: 0 !important;
+    }
+
+    /* First card fixes */
+    .ofha-info-logo img.ofha-logo {
+        width: 50% !important;
+        height: auto;
+    }
+
+    .ofha-info-text p {
+        font-size: 1rem !important;
+        line-height: 1.4;
+    }
+
+    .ofha-info-row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .ofha-info-logo {
+        text-align: center;
+    }
+}
+   
+/* ============================================
+   MOBILE — Trap & Skeet Section
+   ============================================ */
+@media (max-width: 600px) {
+
+    /* Push page down under nav */
+    body {
+        padding-top: 50px;
+    }
+
+    /* Stack announcement + calendar vertically */
+    .ts-announcement {
+        display: block !important;   /* ⭐ FORCE STACKING ON MOBILE */
+        flex-direction: column;
+        gap: 50px;
+        padding: 0 15px;
+    }
+
+    /* Left column full width */
+    .ts-left {
+        width: 100%;
+        text-align: center;
+    }
+
+    .ts-left h2 {
+        font-size: 1.6rem;
+        line-height: 1.2;
+    }
+
+    /* Default list styling */
+    .ts-left ul {
+        text-align: left;
+        margin: 0 auto;
+        max-width: 320px;
+    }
+
+    /* ⭐ FIX: Important Notes list — remove indent + center block */
+    .ts-left ul {
+        max-width: none !important;
+        margin: 0 !important;
+        padding-left: 20px !important;
+        text-align: left !important;
+    }
+
+    /* Facebook + Instagram stacked + centered */
+    .fb-bottom-button {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        margin-top: 20px;
+    }
+
+    .fb-bottom-button img {
+        width: 120px;
+        height: auto;
+    }
+
+    /* Calendar wrapper */
+    .ts-right {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        /* ⭐ SHIFT ENTIRE CALENDAR RIGHT 47PX */
+        margin-left: 47px;
+    }
+
+    .calendar-card {
+        /* 5px space from screen edges */
+        width: calc(100% - 10px);
+        margin: 0 auto;
+
+        /* thin orange border around calendar */
+        padding: 2px;
+        background: #f9a825;
+
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+        box-sizing: border-box;
+    }
+
+    .calendar-card iframe {
+        width: 100% !important;
+        height: 600px !important;
+        border: none;
+        display: block;
+
+        /* ensure it fills the inner area */
+        min-width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    /* Header image responsive */
+    .page-header img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+}
+
+/* ============================================================
+   MOBILE — Trap & Skeet Info Card Overlays (INFO1–INFO8)
+   ============================================================ */
+@media (max-width: 600px) {
+
+    /* Fullscreen overlay container */
+    .ts-overlay {
+        position: fixed !important;
+        top: 0;
+        left: 0;
+        width: 100vw !important;
+        height: 100vh !important;
+        background: rgba(0,0,0,0.55);
+        display: none;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        overflow-y: auto;
+        padding: 0;
+        margin: 0;
+        z-index: 9999;
+    }
+
+    /* Sticky close button */
+    .ts-close-wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        padding: 15px 15px 0 0;
+        position: sticky;
+        top: 0;
+        z-index: 10000;
+        background: rgba(0,0,0,0.55);
+    }
+
+    .ts-close {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: #fff;
+        text-decoration: none;
+        padding: 5px 10px;
+    }
+
+    /* ⭐ FIX: Main content box scrolls internally */
+    .ts-overlay-content {
+        width: 92%;
+        max-width: 500px;
+        max-height: 85vh;          /* NEW */
+        overflow-y: auto;          /* NEW */
+        background: rgba(0,0,0,0.80) !important;
+        color: #fff !important;
+        padding: 22px 18px 40px 18px;
+        border-radius: 10px;
+        margin-bottom: 40px;
+        box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    }
+
+    /* Typography — all white */
+    .ts-overlay-content h2,
+    .ts-overlay-content h3,
+    .ts-overlay-content p,
+    .ts-overlay-content li,
+    .ts-overlay-content strong {
+        color: #fff !important;
+    }
+
+    /* Lists */
+    .ts-overlay-content ul,
+    .ts-overlay-content ol {
+        padding-left: 20px;
+        color: #fff !important;
+    }
+
+    /* Nested lists (INFO7 rules) */
+    .ts-overlay-content ul ul,
+    .ts-overlay-content ol ul {
+        padding-left: 25px;
+        margin-top: 8px;
+    }
+
+    /* Restricted firearms image (INFO7) */
+    .range-restricted-image img {
+        width: 100%;
+        height: auto;
+        display: block;
+        margin: 15px auto;
+    }
+
+    .restricted-firearms-wrapper {
+        text-align: center;
+    }
+
+    .range-revised-date {
+        margin-top: 10px;
+        font-size: 0.9rem;
+        text-align: center;
+        color: #fff !important;
+    }
+
+    /* Package blocks (INFO4) */
+    .package-block {
+        padding: 15px;
+        border-radius: 8px;
+        background: rgba(255,255,255,0.10);
+        margin-bottom: 25px;
+        text-align: left;
+        color: #fff !important;
+    }
+
+    .package-title {
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin-bottom: 8px;
+        color: #fff !important;
+    }
+
+    /* Range Open button (INFO2) */
+    .range-open-button-img {
+        width: 80%;
+        max-width: 260px;
+        height: auto;
+    }
+
+    /* ============================================================
+       INFO 8 — CONTACT FORM OVERLAY (LEFT/RIGHT FLEX FIX)
+       ============================================================ */
+
+    .ts-contact-flex {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .ts-contact-left,
+    .ts-contact-right {
+        width: 100%;
+        color: #fff !important;
+    }
+
+    .ts-contact-card {
+        background: #f9a825;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    .trap-skeet-form input,
+    .trap-skeet-form textarea {
+        width: 100%;
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    .field-row {
+        margin-bottom: 15px;
+    }
+
+    .ts-submit {
+        width: 100%;
+        padding: 12px;
+        font-size: 1.1rem;
+        border-radius: 8px;
+    }
 }
