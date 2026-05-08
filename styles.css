@@ -3722,7 +3722,7 @@ header {
 }
 
 .calendar-bg {
-    background-image: url("images/calendar-page-background.jpg");
+    background-image: url("images/calendar page background.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -4572,9 +4572,4 @@ body.home main {
         font-size: 1.1rem;
         border-radius: 8px;
     }
-}
-
-.calendar-bg {
-    min-height: 100vh;
-    background: url("images/calendar page background.jpg") center center / cover no-repeat fixed;
 }
