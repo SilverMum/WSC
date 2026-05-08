@@ -9,7 +9,6 @@
 
 <body class="trap-skeet-bg">
 
-<!-- ⭐ NEW UNIFIED NAVIGATION -->
 <!-- ⭐ FULL NAV BAR -->
 <header>
     <nav class="main-nav">
@@ -41,16 +40,11 @@
                 <ul class="dropdown-menu">
 
                     <!-- ⭐ Two-line Trap & Skeet link -->
-                    <li class="nav-trap-skeet">
-                        <a href="trap-skeet.html">
-                            Trap &amp; Skeet<br>
-                            <span>Range</span>
-                        </a>
-                    </li>
+                    <li><a href="trap-skeet.html">Trap & Skeet</a></li>
 
                     <li><a href="archery.html">Archery</a></li>
                     <li><a href="ofha.html">OFHA</a></li>
-                    <li><a href="cheese-cracker.html">Cheese & Cracker Club</a></li>
+                    <li><a href="cheese-cracker.html">Cheese & Cracker</a></li>
                     <li><a href="air-rifle.html">Air Rifle</a></li>
 
                     <li class="dropdown-sub">
@@ -441,7 +435,7 @@
         </p>
 
         <div class="restricted-firearms-wrapper">
-            <h3 class="red-text">Firearms similar to the shotgun shown below are not permitted on the range:</h3>
+            <h3 class="red-text">Firearms similar to the shotguns shown below are not permitted on the range:</h3>
 
             <div class="range-restricted-image">
                 <img src="images/shotguns.png" alt="Restricted Shotgun Example">
@@ -499,7 +493,114 @@
 
                     <h3 style="text-align:center; margin-bottom:15px;">Send a Message</h3>
 
-                    <form class="trap-skeet-form" action="https://formsubmit.co/jcanzoneri@gmail.com" method="POST">
+                    <form class="trap-skeet-form" action="https://formsubmit.co/info@windsorsportsmanstrapandskeet.com" method="POST">
+
+                        <!-- ⭐ REDIRECT BACK TO TRAP & SKEET OVERLAY -->
+                        <input type="hidden" name="_redirect" value="https://windsorsportsmanstrapandskeet.com/trap-skeet.html#info8">
+
+                        <div class="field-row">
+                            <label for="ts-name">Name</label>
+                            <input type="text" id="ts-name" name="name" placeholder="Your Name" required>
+                        </div>
+
+                        <div class="field-row">
+                            <label for="ts-email">Email</label>
+                            <input type="email" id="ts-email" name="email" placeholder="Your Email" required>
+                        </div>
+
+                        <div class="field-row">
+                            <label for="ts-phone">Phone Number</label>
+                            <input type="text" id="ts-phone" name="phone" placeholder="Your Phone Number" required>
+                        </div>
+
+                        <div class="field-row">
+                            <label for="ts-message">Message</label>
+                            <textarea id="ts-message" name="message" rows="4" placeholder="Write your message here..." required></textarea>
+                        </div>
+
+                        <div class="field-row field-inline">
+                            <label for="ts-captcha">3 + 4 = ?</label>
+                            <input type="text" id="ts-captcha" name="captcha" placeholder="Your answer" required>
+                        </div>
+
+                        <div class="field-row field-checkbox">
+                            <label>
+                                <input type="checkbox" name="consent" required>
+                                I agree that my information may be used to process this inquiry.
+                            </label>
+                        </div>
+
+                        <button type="submit" class="ts-submit">Send Message</button>
+
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<!-- ⭐ AUTO‑OPEN OVERLAY SCRIPT -->
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    if (window.location.hash === "#info8") {
+        const overlay = document.querySelector("#info8");
+        if (overlay) {
+            overlay.style.display = "flex";
+            document.body.style.overflow = "hidden";
+        }
+    }
+});
+</script>
+
+<!-- INFO 8 -->
+<div id="info8" class="ts-overlay">
+    <div class="ts-close-wrapper">
+        <a href="javascript:void(0)" class="ts-close" onclick="closeOverlay()">X</a>
+    </div>
+
+    <div class="ts-overlay-content">
+
+        <h2 style="text-align:center;">Contact Trap & Skeet</h2>
+
+        <!-- ⭐ LEFT / RIGHT FLEX WRAPPER -->
+        <div class="ts-contact-flex">
+
+            <!-- ⭐ LEFT SIDE (40%) -->
+            <div class="ts-contact-left">
+
+                <h2 class="clubhouse-title">Club House</h2>
+
+                <p class="clubhouse-sub">Restaurant & bar (Hours vary)</p>
+                <p class="clubhouse-sub">
+                    Check WSC website<br>
+                    or call for current hours
+                </p>
+                <p class="clubhouse-sub">Phone: 519.966.1600</p>
+
+                <h2>Range Facilities</h2>
+
+                <p><strong>1 × Trap Field</strong></p>
+                <p><strong>1 × Skeet Field</strong></p>
+                <p><strong>1 × Pattern Board</strong></p>
+
+                <br>
+
+                <p><strong>We do not sell shotgun shells</strong></p>
+                <p><strong>We do not rent firearms</strong></p>
+
+            </div>
+
+            <!-- ⭐ RIGHT SIDE (60%) — ORANGE CARD FORM -->
+            <div class="ts-contact-right">
+                <div class="ts-contact-card">
+
+                    <h3 style="text-align:center; margin-bottom:15px;">Send a Message</h3>
+
+                    <form class="trap-skeet-form" action="https://formsubmit.co/info@windsorsportsmanstrapandskeet.com" method="POST">
+
 
                         <div class="field-row">
                             <label for="ts-name">Name</label>
@@ -604,6 +705,6 @@ document.querySelectorAll('.dropdown-sub > a').forEach(link => {
     });
 });
 </script>
-
+<script src="scripts.js"></script>
 </body>
 </html>
