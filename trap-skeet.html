@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trap & Skeet</title>
     <link rel="stylesheet" href="styles.css">
+     <!-- Your new Trap & Skeet overlay + form styles -->
+    <link rel="stylesheet" href="styles/range.css">
 </head>
 
 <body class="trap-skeet-bg">
@@ -95,28 +97,27 @@
         <p>See you all this weekend! Thank you for your continued support!</p>
 
         <!-- ⭐ FACEBOOK BUTTON centered to LEFT COLUMN -->
-    <div class="fb-bottom-button">
-    <a href="https://www.facebook.com/profile.php?id=61575199292154" target="_blank">
-        <img src="images/facebook-button.png" alt="Facebook Button">
-    </a>
+        <div class="fb-bottom-button">
+            <a href="https://www.facebook.com/profile.php?id=61575199292154" target="_blank">
+                <img src="images/facebook-button.png" alt="Facebook Button">
+            </a>
 
-    <a href="https://www.instagram.com/wsc_trapandskeet?fbclid=IwY2xjawRl-r1leHRuA2FlbQIxMABicmlkETE5YTcwZUVYVlpFeWxUTHplc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHsle11AWIoRQszvzyZbA8HYT1FvJppadc9vY9LuxxDK8P2btKTLVHpAnBprr_aem_4GqLfVV-XzWYNSLLZL_sQA" 
-       target="_blank">
-        <img src="images/instagram-button.png" alt="Instagram Button">
-    </a>
-    </div>
+            <a href="https://www.instagram.com/wsc_trapandskeet" target="_blank">
+                <img src="images/instagram-button.png" alt="Instagram Button">
+            </a>
+        </div>
 
     </div>
 
     <div class="ts-right">
-    <div class="calendar-card">
-        <iframe 
-            src="https://teamup.com/ksqefxnfm1tv8mriaq?tz=Calendar%20default&showProfileAndInfo=0&showSidepanel=1&showViewHeader=1&showAgendaDetails=0&showDateControls=1&showDateRange=1" 
-            loading="lazy"
-            frameborder="0">
-        </iframe>
+        <div class="calendar-card">
+            <iframe 
+                src="https://teamup.com/ksqefxnfm1tv8mriaq?tz=Calendar%20default&showProfileAndInfo=0&showSidepanel=1&showViewHeader=1&showAgendaDetails=0&showDateControls=1&showDateRange=1" 
+                loading="lazy"
+                frameborder="0">
+            </iframe>
+        </div>
     </div>
-</div>
 
 </section>
 
@@ -487,53 +488,41 @@
 
             </div>
 
-            <!-- ⭐ RIGHT SIDE (60%) — ORANGE CARD FORM -->
-            <div class="ts-contact-right">
-                <div class="ts-contact-card">
+           <!-- ⭐ RIGHT SIDE (60%) — ORANGE CARD WITH NEW FORM -->
+<div class="ts-contact-right">
+    <div class="ts-contact-card">
 
-                    <h3 style="text-align:center; margin-bottom:15px;">Send a Message</h3>
+        <!-- ⭐ NEW FORMSPREE FORM -->
+        <div class="form-wrapper">
 
-                    <form class="trap-skeet-form" action="https://formsubmit.co/info@windsorsportsmanstrapandskeet.com" method="POST">
+            <h2 class="mask-title" style="text-align:center;">Contact Us</h2>
+            <p class="mask-subtitle" style="text-align:center;">Please fill in your information and we’ll get back to you shortly.</p>
 
-                        <!-- ⭐ REDIRECT BACK TO TRAP & SKEET OVERLAY -->
-                        <input type="hidden" name="_redirect" value="https://windsorsportsmanstrapandskeet.com/trap-skeet.html#info8">
+            <form action="https://formspree.io/f/xdabjenw" method="POST" class="wsc-contact-form" style="margin-top:40px;">
 
-                        <div class="field-row">
-                            <label for="ts-name">Name</label>
-                            <input type="text" id="ts-name" name="name" placeholder="Your Name" required>
-                        </div>
+                <label>Name *</label>
+                <input type="text" name="name" required>
 
-                        <div class="field-row">
-                            <label for="ts-email">Email</label>
-                            <input type="email" id="ts-email" name="email" placeholder="Your Email" required>
-                        </div>
+                <label>Email *</label>
+                <input type="email" name="email" required>
 
-                        <div class="field-row">
-                            <label for="ts-phone">Phone Number</label>
-                            <input type="text" id="ts-phone" name="phone" placeholder="Your Phone Number" required>
-                        </div>
+                <label>Message *</label>
+                <textarea name="message" rows="5" required></textarea>
 
-                        <div class="field-row">
-                            <label for="ts-message">Message</label>
-                            <textarea id="ts-message" name="message" rows="4" placeholder="Write your message here..." required></textarea>
-                        </div>
+                <button type="submit">Send Message</button>
+            </form>
 
-                        <div class="field-row field-inline">
-                            <label for="ts-captcha">3 + 4 = ?</label>
-                            <input type="text" id="ts-captcha" name="captcha" placeholder="Your answer" required>
-                        </div>
-
-                        <div class="field-row field-checkbox">
-                            <label>
-                                <input type="checkbox" name="consent" required>
-                                I agree that my information may be used to process this inquiry.
-                            </label>
-                        </div>
-
-                        <button type="submit" class="ts-submit">Send Message</button>
-
-                    </form>
-
+            <!-- ⭐ THANK YOU MESSAGE -->
+            <div id="thankyou-message" style="display:none; text-align:center; padding:40px;">
+                <div class="thankyou-card" style="
+                    background:#ff9f43;
+                    padding:40px;
+                    border-radius:12px;
+                    color:white;
+                    font-size:1.4rem;
+                ">
+                    <h2>Thank You!</h2>
+                    <p>We will get back to you as soon as we can!</p>
                 </div>
             </div>
 
@@ -542,116 +531,10 @@
     </div>
 </div>
 
-<!-- ⭐ AUTO‑OPEN OVERLAY SCRIPT -->
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-    if (window.location.hash === "#info8") {
-        const overlay = document.querySelector("#info8");
-        if (overlay) {
-            overlay.style.display = "flex";
-            document.body.style.overflow = "hidden";
-        }
-    }
-});
-</script>
-
-<!-- INFO 8 -->
-<div id="info8" class="ts-overlay">
-    <div class="ts-close-wrapper">
-        <a href="javascript:void(0)" class="ts-close" onclick="closeOverlay()">X</a>
-    </div>
-
-    <div class="ts-overlay-content">
-
-        <h2 style="text-align:center;">Contact Trap & Skeet</h2>
-
-        <!-- ⭐ LEFT / RIGHT FLEX WRAPPER -->
-        <div class="ts-contact-flex">
-
-            <!-- ⭐ LEFT SIDE (40%) -->
-            <div class="ts-contact-left">
-
-                <h2 class="clubhouse-title">Club House</h2>
-
-                <p class="clubhouse-sub">Restaurant & bar (Hours vary)</p>
-                <p class="clubhouse-sub">
-                    Check WSC website<br>
-                    or call for current hours
-                </p>
-                <p class="clubhouse-sub">Phone: 519.966.1600</p>
-
-                <h2>Range Facilities</h2>
-
-                <p><strong>1 × Trap Field</strong></p>
-                <p><strong>1 × Skeet Field</strong></p>
-                <p><strong>1 × Pattern Board</strong></p>
-
-                <br>
-
-                <p><strong>We do not sell shotgun shells</strong></p>
-                <p><strong>We do not rent firearms</strong></p>
-
-            </div>
-
-            <!-- ⭐ RIGHT SIDE (60%) — ORANGE CARD FORM -->
-            <div class="ts-contact-right">
-                <div class="ts-contact-card">
-
-                    <h3 style="text-align:center; margin-bottom:15px;">Send a Message</h3>
-
-                    <form class="trap-skeet-form" action="https://formsubmit.co/" method="POST">
-
-    <!-- FormSubmit settings -->
-    <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_template" value="table">
-    <input type="hidden" name="_next" value="https://windsorsportsmensclub.org/trap-skeet.html">
-    <input type="text" name="_honey" style="display:none">
-
-    <div class="field-row">
-        <label for="ts-name">Name</label>
-        <input type="text" id="ts-name" name="name" placeholder="Your Name" required>
-    </div>
-
-    <div class="field-row">
-        <label for="ts-email">Email</label>
-        <input type="email" id="ts-email" name="email" placeholder="Your Email" required>
-    </div>
-
-    <div class="field-row">
-        <label for="ts-phone">Phone Number</label>
-        <input type="text" id="ts-phone" name="phone" placeholder="Your Phone Number" required>
-    </div>
-
-    <div class="field-row">
-        <label for="ts-message">Message</label>
-        <textarea id="ts-message" name="message" rows="4" placeholder="Write your message here..." required></textarea>
-    </div>
-
-    <div class="field-row field-inline">
-        <label for="ts-captcha">3 + 4 = ?</label>
-        <input type="text" id="ts-captcha" name="captcha" placeholder="Your answer" required>
-    </div>
-
-    <div class="field-row field-checkbox">
-        <label>
-            <input type="checkbox" name="consent" required>
-            I agree that my information may be used to process this inquiry.
-        </label>
-    </div>
-
-    <button type="submit" class="ts-submit">Send Message</button>
-
-</form>
-
-
-                </div>
-            </div>
-
-        </div>
-
-    </div>
 </div>
 
+</div>
+</div>
 
 <!-- ⭐ FULL-WIDTH WEATHER WIDGET AT BOTTOM -->
 <div class="ts-weather">
@@ -711,6 +594,39 @@ document.querySelectorAll('.dropdown-sub > a').forEach(link => {
     });
 });
 </script>
+
+<!-- ⭐ UPDATED FORMSPREE SUBMISSION SCRIPT -->
+<script>
+document.querySelector('.wsc-contact-form').addEventListener('submit', async function(e) {
+    e.preventDefault();
+
+    const form = e.target;
+    const data = new FormData(form);
+
+    const response = await fetch(form.action, {
+        method: form.method,
+        body: data,
+        headers: { 'Accept': 'application/json' }
+    });
+
+    if (response.ok) {
+
+        /* Hide the form */
+        form.style.display = 'none';
+
+        /* Hide the Contact Us title + subtitle */
+        const title = document.querySelector('.mask-title');
+        const subtitle = document.querySelector('.mask-subtitle');
+
+        if (title) title.style.display = 'none';
+        if (subtitle) subtitle.style.display = 'none';
+
+        /* Show the thank-you card */
+        document.getElementById('thankyou-message').style.display = 'block';
+    }
+});
+</script>
+
 <script src="scripts.js"></script>
 </body>
 </html>
