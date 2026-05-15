@@ -5,18 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
 
     <title>Windsor Sportsmen’s Club</title>
+    
+    <!-- Air Rifle styles -->
+    <link rel="stylesheet" href="styles/airrifle.css">
 
-    <!-- Updated stylesheet version -->
-    <link rel="stylesheet" href="styles.css?v=9">
+    <!-- Footer styles -->
+    <link rel="stylesheet" href="styles/footer.css">
 </head>
 
 <body class="air-rifle-bg">
 
-<!-- ⭐ FULL NAV BAR -->
 <header>
     <nav class="main-nav">
 
-        <!-- Logo stays exactly where it was -->
         <div class="logo">
             <img src="images/WINDSOR SPORTSMANS REMAKE.png" alt="Windsor Sportsmen’s Club Logo">
         </div>
@@ -42,7 +43,6 @@
                 <a href="#">Groups ▾</a>
                 <ul class="dropdown-menu">
 
-                    <!-- ⭐ Two-line Trap & Skeet link -->
                     <li><a href="trap-skeet.html">Trap & Skeet</a></li>
 
                     <li><a href="archery.html">Archery</a></li>
@@ -71,132 +71,166 @@
     </nav>
 </header>
 
-<!-- ⭐ Correct spacer under fixed nav -->
 <section style="height: 140px;"></section>
 
-<!-- ⭐ PAGE CONTENT -->
 <main class="content-section">
 
-<section class="airrifle-wrapper">
+<div class="airrifle-desktop">
 
-    <!-- CARD 1 — Title + Intro -->
-    <div class="airrifle-card outer-card">
-        <div class="inner-card">
-            <h1 class="airrifle-title">Windsor Sportsmen's Air Rifle Range</h1>
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <h1 class="hero-title">Windsor Sportsmen's</h1>
+        <h2 class="hero-subtitle">Air Rifle Range</h2>
+        <p class="hero-tagline">Sharpen Your Skills, Have Some Fun!</p>
 
-            <p class="airrifle-text">
-                Sharpen Your Skills, Have Some Fun!<br>
-                Windsor Sportsmen's Club, 2401 Dougall, Windsor, Ontario.<br>
-                May 7th - September 10th.
-            </p>
+        <div class="hero-info-card">
+            <p class="hero-info">📍 2401 Dougall, Windsor, Ontario</p>
+            <p class="hero-info">📅 June 3rd – September 9th</p>
+        </div>
+    </section>
+
+    <!-- ABOUT THE RANGE — FULL WIDTH CARD -->
+<section class="wide-card about-range">
+    <h3 class="card-title">About the Range</h3>
+
+    <p class="card-text">
+        Experience our exciting outdoor air rifle range! We offer a variety of paper and mechanical steel targets set at distances ranging from 10 to 20 meters. Perfect for junior shooters (10 years and up).
+        <span class="green-highlight">Guardian must be present.</span>
+    </p>
+</section>
+
+<section class="two-cards">
+
+    <!-- LEFT CARD — SCHEDULE -->
+    <div class="schedule-card">
+        <h3 class="card-title">Schedule</h3>
+
+        <div class="schedule-inner">
+            <div class="schedule-top-card">
+                <p class="schedule-day">Wednesdays</p>
+                <p class="schedule-weather">(weather permitting)</p>
+            </div>
+
+            <div class="schedule-time-card">
+                <p class="schedule-time">5:30 PM – 7:00 PM</p>
+            </div>
         </div>
     </div>
 
-    <!-- CARD 2 — About the Range -->
-    <div class="airrifle-card outer-card">
-        <div class="inner-card">
-            <h2 class="airrifle-subheader">About the Range</h2>
-            <p class="airrifle-text">
-                Experience our exciting outdoor air rifle range! We offer a variety of paper and mechanical steel targets set at distances ranging from 10 to 20 meters. Perfect for junior shooters (10 years and up), Guardian must be present.
-            </p>
-        </div>
-    </div>
+    <!-- RIGHT CARD — WHAT TO EXPECT -->
+    <div class="expect-card">
+        <h3 class="card-title">What to Expect</h3>
 
-    <!-- CARD 3 — Schedule -->
-    <div class="airrifle-card outer-card">
-        <div class="inner-card">
-            <h2 class="airrifle-subheader">Schedule</h2>
-            <p class="airrifle-text">
-                Wednesdays (weather permitting)<br>
-                4:30 PM – 5:30 PM<br>
-                5:30 PM – 6:30 PM
-            </p>
-        </div>
-    </div>
+        <p class="card-text">
+            We provide a safe and fun environment for young shooters to learn and practice their skills.
+        </p>
 
-    <!-- CARD 4 — What to Expect -->
-    <div class="airrifle-card outer-card">
-        <div class="inner-card">
-            <h2 class="airrifle-subheader">What to Expect</h2>
-            <p class="airrifle-text">
-                We provide a safe and fun environment for young shooters to learn and practice their skills. The safety lessons learned here will ensure they enjoy shooting sports responsibly.
-            </p>
+        <p class="expect-italic-green">
+            The safety lessons learned here will ensure they enjoy shooting sports responsibly.
+        </p>
 
-            <p class="airrifle-text">
-                Participants take turns at the range. One round (20 shots) per turn.
-            </p>
-        </div>
-    </div>
+        <p class="card-text">
+            Participants take turns at the range.<br>
+            <span class="soft-white">One round (20 shots) per turn.</span>
+        </p>
 
-    <!-- CARD 5 — Pricing -->
-    <div class="airrifle-card outer-card">
-        <div class="inner-card">
-            <h2 class="airrifle-subheader">Pricing</h2>
-            <p class="airrifle-text">
-                <strong>Club Members:</strong> $3.00<br>
-                <strong>Non‑Club Members:</strong> $5.00
-            </p>
-        </div>
-    </div>
-
-    <!-- CARD 6 — Range Details (Paper Targets) -->
-    <div class="airrifle-card outer-card">
-        <div class="inner-card">
-            <h2 class="airrifle-subheader">Range Details</h2>
-            <p class="airrifle-text">
-                <strong>10m Paper Targets:</strong> Shoot from bench‑rest or unsupported positions. Analyze your results by comparing point of impact and group size.
-            </p>
-        </div>
-    </div>
-
-    <!-- CARD 7 — Range Details (Knock‑Down Targets) -->
-    <div class="airrifle-card outer-card">
-        <div class="inner-card">
-            <p class="airrifle-text">
-                <strong>10m‑20m Knock‑Down Targets:</strong> Steel targets with automatic reset. Practice from sitting, kneeling, prone, or standing positions. Develop core stability, controlled breathing, and target engagement skills. Challenge yourself to compensate for wind conditions!
-            </p>
-        </div>
-    </div>
-
-    <!-- CARD 8 — Experience the Difference -->
-    <div class="airrifle-card outer-card">
-        <div class="inner-card">
-            <p class="airrifle-text">
-                <strong>Experience the Difference:</strong> Our match‑grade air rifles provide an excellent platform for skill development. Learn while having fun at Windsor Sportsmen's Air Rifle Range!
-            </p>
-        </div>
     </div>
 
 </section>
 
-<!-- AIR RIFLE CALENDAR (now wrapped in card) -->
-<div class="airrifle-card outer-card calendar-card">
-    <div class="inner-card">
+    <!-- PRICING CARDS -->
+    <section class="pricing-wrapper">
+        <h3 class="pricing-title">Pricing</h3>
 
-        <h2 class="airrifle-calendar-title">Air Rifle Calendar 2026</h2>
+         <div class="pricing-inner">
+            <div class="price-card green">
+                <h3 class="card-title">Club Members</h3>
+                <p class="price">$3.00</p>
+                <p class="per">per 20 shots</p>
+            </div>
 
-        <iframe 
-            src="https://calendar.google.com/calendar/embed?src=f3b6f6b1111372d609000aec2b6287dc6f1d0ae44ccdaae4ce23d8dfacf1cb26%40group.calendar.google.com&ctz=America%2FToronto&showPrint=0&showTabs=0&showCalendars=0&showTz=0"
-            style="border:0"
-            frameborder="0"
-            scrolling="no">
-        </iframe>
+            <div class="price-card grey">
+                <h3 class="card-title">Non-Club Members</h3>
+                <p class="price">$5.00</p>
+                <p class="per">per 20 shots</p>
+            </div>
+        </div>
+    </section>
 
+    <!-- RANGE DETAILS -->
+    <section class="range-details">
+        <h3 class="card-title">Range Details</h3>
+
+    <!-- CARD 1 — 10m Paper Targets -->
+        <div class="detail-card detail-orange">
+            <h4 class="detail-title detail-title-orange">10m Paper Targets</h4>
+            <p class="card-text">
+            Shoot from bench-rest or unsupported positions. Analyze your results by comparing point of impact and group size.
+            </p>
+        </div>
+
+    <!-- CARD 2 — 10m–20m Knock-Down Targets -->
+        <div class="detail-card detail-blue">
+            <h4 class="detail-title detail-title-blue">10m–20m Knock-Down Targets</h4>
+            <p class="card-text">
+            Steel targets with automatic reset. Practice from sitting, kneeling, prone, or standing positions.
+            </p>
+
+            <ul class="bullet-list">
+                <li>Develop core stability</li>
+                <li>Controlled breathing techniques</li>
+                <li>Target engagement skills</li>
+                <li>Challenge yourself to compensate for wind conditions!</li>
+            </ul>
+        </div>
+
+    <!-- EXISTING GREEN EXPERIENCE BLOCK (unchanged) -->
+        <div class="experience-green">
+            <strong class="exp-green-title">Experience the Difference:</strong>
+            Our match-grade air rifles provide an excellent platform for skill development. 
+            Learn while having fun at Windsor Sportsmen's Air Rifle Range!
+        </div>
+
+    </section>
+
+    <!-- CANCELLATIONS + CALENDAR ROW -->
+<div class="cancel-calendar-row">
+
+    <!-- LEFT SIDE — RED CANCELLATIONS CARD -->
+    <div class="cancel-left">
+        <section class="cancellations">
+            <h2 class="cancel-title">Air Rifle Cancellations</h2>
+
+            <div class="cancel-card cancel-date-card">
+                <p class="cancel-date-text">July 1st, 2026</p>
+            </div>
+
+            <div class="cancel-card cancel-date-card">
+                <p class="cancel-date-text">July 8th, 2026</p>
+            </div>
+        </section>
     </div>
+
+    <!-- RIGHT SIDE — CALENDAR -->
+    <div class="calendar-right">
+        <div class="calendar-wrapper">
+            <iframe src="https://calendar.google.com/calendar/embed?src=f3b6f6b1111372d609000aec2b6287dc6f1d0ae44ccdaae4ce23d8dfacf1cb26%40group.calendar.google.com&ctz=America%2FToronto"></iframe>
+        </div>
+    </div>
+
 </div>
 
-<!-- CONTACT AIR-RIFLE (unchanged) -->
-<section class="airrifle-cancellations">
-    <h2 class="airrifle-cancel-title">Contact Air Rifle</h2>
-</section>
-
+    <!-- CONTACT AIR-RIFLE -->
 <section class="airrifle-cancel">
-  <h2>Contact Air Rifle</h2>
+
+  <!-- NEW TITLE (replaces the small one) -->
+  <h2 class="airrifle-contact-title">Contact Air Rifle</h2>
+
   <p class="airrifle-cancel-intro">
     Have a question about Air Rifle? Send us a message below and it will be delivered directly to the coordinator.
   </p>
 
-  <form class="airrifle-cancel-form" action="https://formsubmit.co/WSC-Air-Rifle@outlook.com" method="POST">
+  <form class="airrifle-contact-form" action="https://formsubmit.co/tom_the_elf@hotmail.com" method="POST">
     <div class="field-row">
       <label for="ar-name">Name</label>
       <input type="text" id="ar-name" name="name" placeholder="Your Name" required>
@@ -217,11 +251,6 @@
       <textarea id="ar-message" name="message" rows="4" placeholder="Type your message here..." required></textarea>
     </div>
 
-    <div class="field-row field-inline">
-      <label for="ar-captcha">3 + 4 = ?</label>
-      <input type="text" id="ar-captcha" name="captcha" placeholder="Your answer" required>
-    </div>
-
     <div class="field-row field-checkbox">
       <label>
         <input type="checkbox" name="consent" required>
@@ -232,13 +261,13 @@
     <button type="submit" class="ac-submit">Send Message</button>
   </form>
 </section>
-
+    
 </main>
 
-<!-- ⭐ FOOTER -->
 <footer class="site-footer">
     <p>©2024 Windsor Sportsmen's Club. All Rights Reserved.</p>
 </footer>
-<script src="scripts.js"></script>
+
+<script src="scripts/scripts.js"></script>
 </body>
 </html>
