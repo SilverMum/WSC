@@ -1,0 +1,1034 @@
+/* =========================================================
+   NAVIGATION
+========================================================= */
+.main-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+    background-color: #1a1a1a;
+    border-bottom: 1px solid #ddd;
+}
+
+.nav-spacer {
+    display: none;
+}
+
+.logo img {
+    height: 110px;
+    width: auto;
+    display: block;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    padding-right: 20px;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    padding: 10px 14px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.nav-links > li > a:hover {
+    background-color: #333 !important;
+    color: #fff !important;
+    transform: translateY(-2px);
+}
+
+.submenu-toggle {
+    color: #fff !important;
+}
+
+/* Trap & Skeet two-line item */
+.nav-trap-skeet a {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #fff;
+    padding: 10px 14px;
+    line-height: 1.1;
+    display: inline-block;
+    text-align: left !important;
+}
+
+.nav-trap-skeet a span {
+    font-size: 0.85em;
+    font-weight: 600;
+    display: block;
+    color: #fff;
+}
+
+/* Dropdown menus */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 220px;
+    padding: 8px 0;
+    list-style: none;
+    background-color: #1a1a1a !important;
+    border: none !important;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    z-index: 2100;
+}
+
+.dropdown:hover > .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px 18px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #fff !important;
+    white-space: normal;
+}
+
+.dropdown-menu a:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Right-side submenu */
+.dropdown-sub {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+}
+
+.submenu-right {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    min-width: 200px;
+    padding: 8px 0;
+    background-color: #1a1a1a !important;
+    border: none !important;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    z-index: 2200;
+}
+
+.dropdown-sub:hover > .submenu-right {
+    display: block;
+}
+
+.submenu-right a {
+    padding: 10px 18px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #fff !important;
+}
+
+
+/* =========================================================
+   PAGE BACKGROUND
+========================================================= */
+.air-rifle-bg {
+    position: relative;
+    min-height: 100vh;
+    background: url('../images/airriflebgnew.png') center top / cover no-repeat fixed;
+}
+
+.air-rifle-bg::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(60, 40, 25, 0.20);
+    z-index: -1;
+}
+
+
+/* =========================================================
+   PAGE WRAPPER
+========================================================= */
+.airrifle-desktop {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =========================================================
+   HERO SECTION
+========================================================= */
+.hero {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.hero-title {
+    font-size: 4.5rem; /* 72px */
+    font-weight: 700; /* bold */
+    color: white;
+    text-shadow: 2px 2px 12px rgba(0,0,0,0.8);
+    margin-bottom: 0;
+    letter-spacing: 0;
+}
+
+.hero-subtitle {
+    font-size: 4.5rem; /* match size for stacked title */
+    font-weight: 700;
+    color: white;
+    text-shadow: 2px 2px 12px rgba(0,0,0,0.8);
+    margin-top: 0;
+    letter-spacing: 0;
+}
+
+.hero-tagline {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: white;
+    margin-bottom: 25px;
+    text-shadow: 0 3px 8px rgba(0,0,0,0.45);
+}
+
+.hero-info-card {
+    display: inline-block;
+    background: rgba(60, 40, 25, 0.55);
+    padding: 15px 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.4);
+    backdrop-filter: blur(3px);
+    margin-top: 10px;
+}
+
+.hero-info {
+    font-size: 1.3rem;
+    color: white;
+    margin: 5px 0;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   ABOUT THE RANGE — FULL WIDTH CARD
+========================================================= */
+.about-range {
+    background: rgba(60, 40, 25, 0.65);
+    padding: 40px;
+    border-radius: 14px;
+    backdrop-filter: blur(4px);
+    box-shadow: 0 4px 14px rgba(0,0,0,0.4);
+    margin: 60px 0;
+    text-align: left;
+    border-left: 8px solid #7cd67c;
+}
+
+.card-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.card-text {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+/* Guardian text — green text only */
+.green-highlight {
+    color: #7cd67c;
+    font-weight: 700;
+    background: none;
+    padding: 0;
+    border-radius: 0;
+    display: inline;
+    margin-left: 6px;
+}
+
+
+/* =========================================================
+   TWO-CARD LAYOUT (Schedule + Expect)
+========================================================= */
+.two-cards {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 60px 0;
+}
+
+.schedule-card,
+.expect-card {
+    width: 45%;
+    background: rgba(60, 40, 25, 0.65);
+    padding: 30px;
+    border-radius: 14px;
+    backdrop-filter: blur(4px);
+    box-shadow: 0 4px 14px rgba(0,0,0,0.4);
+    text-align: center;
+}
+
+
+/* =========================================================
+   SCHEDULE — STACKED CARDS
+========================================================= */
+.schedule-inner {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.schedule-top-card {
+    background: rgba(60, 40, 25, 0.75);
+    padding: 15px 20px;
+    border-radius: 10px;
+    width: 85%;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.35);
+    border: 3px solid #7cd67c;
+}
+
+.schedule-day {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 2px;
+}
+
+/* Softer white for (weather permitting) */
+.schedule-weather {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.85);
+    margin: 0;
+}
+
+.schedule-time-card {
+    background: rgba(60, 120, 60, 0.30);
+    padding: 12px 20px;
+    border-radius: 10px;
+    width: 85%;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.35);
+    border: 3px solid #7cd67c;
+}
+
+.schedule-time {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: white;
+    margin: 0;
+}
+
+
+/* =========================================================
+   WHAT TO EXPECT — RIGHT CARD
+========================================================= */
+.expect-italic-green {
+    color: #7cd67c;
+    font-style: italic;
+    font-weight: 600;
+    margin: 15px 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.soft-white {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+
+/* =========================================================
+   PRICING SECTION
+========================================================= */
+.pricing-section {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 60px 0;
+}
+
+.price-card {
+    width: 45%;
+    padding: 30px;
+    border-radius: 14px;
+    backdrop-filter: blur(4px);
+    box-shadow: 0 4px 14px rgba(0,0,0,0.4);
+    text-align: center;
+}
+
+.price-card.green {
+    background: rgba(60, 120, 60, 0.30);
+    border: 3px solid #7cd67c;
+}
+
+.price-card.grey {
+    background: rgba(120, 120, 120, 0.30);
+    border: 3px solid #cfcfcf;
+}
+
+.price-card .card-title {
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.price {
+    font-size: 3rem;
+    font-weight: 800;
+    margin: 10px 0;
+    color: white;
+}
+
+.per {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    color: white;
+}
+
+
+/* -----------------------------------------
+   PRICING — FULL WIDTH WRAPPER CARD
+----------------------------------------- */
+.pricing-wrapper {
+    background: rgba(60, 40, 25, 0.65);
+    padding: 40px;
+    border-radius: 14px;
+    backdrop-filter: blur(4px);
+    box-shadow: 0 4px 14px rgba(0,0,0,0.4);
+    margin: 60px 0;
+    text-align: center;
+}
+
+.pricing-title {
+    font-size: 2rem;
+    font-weight: 800;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.pricing-inner {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+
+/* =========================================================
+   RANGE DETAILS
+========================================================= */
+.range-details {
+    background: rgba(60, 40, 25, 0.65);
+    padding: 40px;
+    border-radius: 14px;
+    backdrop-filter: blur(4px);
+    box-shadow: 0 4px 14px rgba(0,0,0,0.4);
+    margin: 60px 0;
+    text-align: left;
+}
+
+.range-details .card-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.card-subtitle {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.bullet-list {
+    margin: 20px 0;
+    padding-left: 20px;
+}
+
+.bullet-list li {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+}
+
+/* -----------------------------------------
+   RANGE DETAIL SUB-CARDS
+----------------------------------------- */
+.detail-card {
+    background: rgba(60, 40, 25, 0.55);
+    padding: 25px 30px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.35);
+    border-left: 8px solid transparent;
+}
+
+.detail-title {
+    font-size: 1.6rem;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.detail-title-orange {
+    color: #ffcc66;
+}
+
+.detail-orange {
+    border-left-color: #ffcc66;
+}
+
+.detail-title-blue {
+    color: #66b3ff;
+}
+
+.detail-blue {
+    border-left-color: #66b3ff;
+}
+
+
+/* =========================================================
+   EXPERIENCE BLOCK
+========================================================= */
+.experience-green {
+    background: rgba(46, 92, 46, 0.55);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 25px;
+    color: white;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    border-left: 8px solid #7cd67c;
+}
+
+.exp-green-title {
+    color: #7cd67c;
+}
+
+
+/* =========================================================
+   CANCELLATIONS
+========================================================= */
+.cancellations {
+    background: rgba(120, 0, 0, 0.35);
+    padding: 40px;
+    border-radius: 14px;
+    margin: 0 0 60px 0;
+    text-align: center;
+    border: 4px solid #ff3b3b;
+}
+
+.cancel-title {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.cancel-dates {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    color: white;
+}
+
+.cancel-card {
+    background: rgba(120, 0, 0, 0.55);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    width: 60%;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.35);
+    border-left: 8px solid #ff3b3b;
+}
+
+.cancel-date-text {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: white;
+    margin: 0;
+}
+
+.cancel-calendar-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+/* Left side */
+.cancel-left {
+    flex: 1;
+}
+
+/* Right side */
+.calendar-right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Responsive calendar */
+.calendar-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 75%;
+    height: 0;
+    overflow: hidden;
+}
+
+.calendar-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+
+/* =========================================================
+   CONTACT AIR RIFLE FORM
+========================================================= */
+.airrifle-contact {
+    text-align: center;
+    margin-top: 80px;
+}
+
+.airrifle-contact-title {
+    font-size: 2.4rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 15px;
+    color: white;
+}
+
+/* Main brown card */
+.airrifle-cancel {
+    background: rgba(90, 60, 30, 0.65);
+    padding: 40px;
+    border-radius: 14px;
+    margin: 40px auto;
+    width: 80%;
+    border: 3px solid #7cd67c;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.4);
+    text-align: center;
+}
+
+.airrifle-cancel-intro {
+    color: white;
+    font-size: 1.3rem;
+    margin-bottom: 25px;
+}
+
+/* Form fields */
+.airrifle-contact-form .field-row {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.airrifle-contact-form label {
+    display: block;
+    color: white;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.airrifle-contact-form input,
+.airrifle-contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 2px solid #7cd67c;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 1rem;
+}
+
+.airrifle-contact-form input::placeholder,
+.airrifle-contact-form textarea::placeholder {
+    color: #cccccc;
+}
+
+/* Checkbox row */
+.field-checkbox {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.field-checkbox label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25px; /* smaller than 1px */
+    color: white;
+    width: auto;
+    margin: 0 auto;
+}
+
+/* Submit button */
+.ac-submit {
+    background: #7cd67c;
+    color: black;
+    font-weight: 800;
+    padding: 14px 30px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+.ac-submit:hover {
+    background: #9af59a;
+}
+
+/* =========================================================
+   GLOBAL FONT OVERRIDE
+========================================================= */
+body, body * {
+    font-family: "Times New Roman", Times, serif !important;
+}
+
+/* =========================================================
+   MOBILE OPTIMIZATION — AIR RIFLE PAGE
+========================================================= */
+@media (max-width: 768px) {
+
+    /* 1. Move calendar UNDER cancellation dates */
+    .cancel-calendar-row {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 25px;
+    }
+
+    .calendar-right {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .cancel-left,
+    .calendar-right {
+        flex: unset;
+    }
+
+    /* 2. Pricing cards — green ABOVE grey */
+    .pricing-inner,
+    .pricing-section {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center;
+    }
+
+    .price-card.green {
+        order: 1;
+        width: 90%;
+    }
+
+    .price-card.grey {
+        order: 2;
+        width: 90%;
+    }
+
+    /* 3. Schedule ABOVE What to Expect */
+    .two-cards {
+        display: block !important;      /* override desktop flex */
+        padding: 0 !important;
+        gap: 20px !important;
+        width: 100% !important;
+        margin: 0 auto !important;
+    }
+
+    /* 3b. Fix width + padding of Schedule + Expect cards */
+    .schedule-card,
+    .expect-card {
+        width: 90% !important;
+        max-width: 500px !important;
+        margin: 0 auto !important;
+        display: block !important;
+
+        /* Mild padding restored */
+        padding-left: 12px !important;
+        padding-right: 12px !important;
+    }
+
+    /* Add space between the two cards */
+    .schedule-card { 
+        order: 1; 
+        margin-bottom: 20px !important;
+    }
+
+    .expect-card { 
+        order: 2; 
+    }
+
+    /* 4. Make page titles a little smaller */
+    .hero-title,
+    .hero-subtitle {
+        font-size: 3rem;
+    }
+}
+
+/* =========================================================
+   MOBILE NAVIGATION — FULL CLEANED + CONSOLIDATED VERSION
+   ========================================================= */
+
+/* =========================================================
+   1. MOBILE NAV — ALIGNMENT + TOGGLE BEHAVIOR
+   ========================================================= */
+@media (max-width: 900px) {
+
+    /* Disable hover behavior on mobile */
+    .dropdown:hover > .dropdown-menu {
+        display: none !important;
+    }
+
+    /* Normalize dropdown anchor width */
+    .nav-links li.dropdown {
+        width: auto !important;
+    }
+
+    .nav-links li.dropdown > a {
+        display: inline-block !important;
+    }
+
+    /* Left-align dropdowns */
+    .nav-links li.dropdown > .dropdown-menu {
+        left: 0 !important;
+        transform: translateX(0) !important;
+    }
+
+    /* JS-controlled open state */
+    .nav-links li.dropdown > .dropdown-menu.open {
+        display: block !important;
+    }
+}
+
+/* =========================================================
+   2. MOBILE LABEL FIX — TRAP & SKEET
+   ========================================================= */
+@media (max-width: 768px) {
+
+    .nav-links > li > a[href="trap-skeet.html"] {
+        font-size: 0 !important;
+        position: relative;
+    }
+
+    .nav-links > li > a[href="trap-skeet.html"]::after {
+        content: "Trap & Skeet";
+        font-size: 16px;
+        color: inherit;
+    }
+}
+
+/* =========================================================
+   3. MOBILE NAV — WRAPPED LAYOUT + TAP-TO-OPEN DROPDOWNS
+   ========================================================= */
+@media (max-width: 900px) {
+
+    /* NAV CONTAINER */
+    .main-nav {
+        justify-content: center !important;
+        padding: 12px 0 !important;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .logo {
+        order: 1;
+        text-align: center;
+        width: 100%;
+    }
+
+    .logo img {
+        height: 90px;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .nav-spacer {
+        display: none;
+    }
+
+    /* WRAPPED NAV — 3 OVER 3 */
+    .nav-links {
+        order: 2;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 6px 6px;
+        width: 100%;
+        padding: 0;
+        margin-top: 0;
+    }
+
+    .nav-links li {
+        flex: 0 0 calc(33.33% - 6px);
+        text-align: center;
+    }
+
+    .nav-links a {
+        font-size: 1.3rem;
+        padding: 4px 2px;
+        white-space: nowrap;
+    }
+
+    /* HOMEPAGE-SPECIFIC SPACING */
+    .home .nav-links {
+        gap: 4px 6px !important;
+    }
+
+    .home .nav-links li {
+        flex: 0 0 calc(33.33% - 4px) !important;
+    }
+
+    .home .nav-links a {
+        font-size: 1.3rem !important;
+        padding: 2px 0 !important;
+        font-weight: bold;
+    }
+
+    .home .main-nav {
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+        width: 100% !important;
+        max-width: none !important;
+        margin: 0 auto !important;
+    }
+
+    /* MOBILE DROPDOWN OVERLAY */
+    .dropdown-menu,
+    .submenu-right {
+        display: none;
+        position: absolute !important;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90% !important;
+        margin-top: 6px;
+        padding: 10px 0;
+        border: 1px solid #ddd;
+        background: white;
+        z-index: 9999;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    /* HOMEPAGE DROPDOWN TEXT SIZE */
+    .home .dropdown-menu a,
+    .home .submenu-right a {
+        font-size: 1.3rem !important;
+    }
+
+    /* HOMEPAGE DROPDOWN WIDTH */
+    .home .dropdown-menu,
+    .home .submenu-right {
+        max-width: 360px !important;
+    }
+
+    /* MEMBERS SUBMENU — MOBILE RIGHT OPEN */
+    .dropdown-sub {
+        position: relative;
+    }
+
+    .submenu-toggle {
+        display: inline-block !important;
+        vertical-align: middle !important;
+        margin-left: 6px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .dropdown-sub .submenu-right {
+        top: 0 !important;
+        left: 100% !important;
+        transform: none !important;
+        width: auto !important;
+        max-width: 240px !important;
+    }
+
+    .dropdown-sub.open > .submenu-right {
+        display: block;
+    }
+
+    .dropdown.open > .dropdown-menu {
+        display: block;
+    }
+
+    /* HOMEPAGE — KEEP MEMBERS + ARROW INLINE */
+    .home .dropdown-sub {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        white-space: nowrap !important;
+    }
+
+    .home .submenu-link {
+        display: inline-block !important;
+    }
+
+    .home .submenu-toggle {
+        display: inline-block !important;
+        margin-left: 6px !important;
+        vertical-align: middle !important;
+    }
+}
+
+/* =========================================================
+   MOBILE NAV — EXTRA RULES NEEDED FOR DROPDOWN VISIBILITY
+   (These were NOT in the unified block yet)
+   ========================================================= */
+@media (max-width: 900px) {
+
+    /* Ensure nav stays above all dropdowns + content */
+    .main-nav {
+        position: fixed !important;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 9999 !important;
+    }
+
+    header {
+        position: relative;
+        z-index: 9998;
+    }
+
+    /* WRAPPED NAV — 3 OVER 3 (structure only, no conflicts) */
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 6px 6px;
+        width: 100%;
+        padding: 0;
+        margin-top: 0;
+    }
+
+    .nav-links li {
+        flex: 0 0 calc(33.33% - 6px);
+        text-align: center;
+    }
+
+    .nav-links a {
+        font-size: 1.3rem;
+        padding: 4px 2px;
+        white-space: nowrap;
+    }
+}
