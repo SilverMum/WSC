@@ -1,0 +1,24 @@
+/* =========================================================
+   FOOTER
+========================================================= */
+.site-footer {
+    width: 100%;
+    background: #1a1a1a; /* match nav color */
+    color: white;
+    text-align: center;
+    padding: 40px 0;
+    margin: 0; /* remove all spacing above/below */
+    font-size: 1.1rem;
+    line-height: 1.5;
+    /* border-top removed to eliminate white line */
+}
+
+.site-footer p {
+    margin: 6px 0;
+}
+
+/* Ensure no body/html spacing pushes footer away from edges */
+html, body {
+    margin: 0;
+    padding: 0;
+}
