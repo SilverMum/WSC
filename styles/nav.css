@@ -1,0 +1,208 @@
+/* ------------------------------
+   NAVIGATION
+--------------------------------*/
+.main-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* centered nav */
+    padding: 10px 0;
+    background-color: #1a1a1a;
+    border-bottom: none;
+}
+
+.nav-spacer {
+    display: none;
+}
+
+.logo img {
+    height: 110px;
+    width: auto;
+    display: block;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    padding-right: 20px;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+/* Base nav link style */
+.nav-links a {
+    padding: 10px 14px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+/* Dark hover style for TOP NAV (matches dropdown) */
+.nav-links > li > a:hover {
+    background-color: #333 !important;
+    color: #fff !important;
+    box-shadow: none;
+    transform: translateY(-2px);
+}
+
+/* Make the Members submenu arrow white */
+.submenu-toggle {
+    color: #fff !important;
+}
+
+/* ------------------------------
+   TRAP & SKEET TWO-LINE ITEM
+--------------------------------*/
+.nav-trap-skeet a {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 14px;
+    line-height: 1.1;
+    display: inline-block;
+    text-align: left !important;
+}
+
+.nav-trap-skeet a span {
+    font-size: 0.85em;
+    font-weight: 600;
+    display: block;
+    color: #fff;
+}
+
+/* ------------------------------
+   DROPDOWN MENU (Unified Dark Theme)
+--------------------------------*/
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 220px;
+    padding: 8px 0;
+    list-style: none;
+    background-color: #1a1a1a !important;
+    border: none !important;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    z-index: 2100;
+}
+
+.dropdown:hover > .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px 18px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #fff !important;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    white-space: normal;
+}
+
+.dropdown-menu a:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+/* ------------------------------
+   RIGHT-SIDE SUBMENU (Members)
+--------------------------------*/
+.nav-links li.dropdown-sub {
+    position: relative;
+}
+
+.dropdown-sub > a {
+    padding-right: 18px;
+}
+
+.submenu-right {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    min-width: 200px;
+    padding: 8px 0;
+    list-style: none;
+    background-color: #1a1a1a !important;
+    border: none !important;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    z-index: 2200;
+}
+
+.dropdown-sub:hover > .submenu-right {
+    display: block;
+}
+
+.submenu-right a {
+    display: block;
+    padding: 10px 18px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #fff !important;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.submenu-right a:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Keep Members text + arrow aligned */
+.dropdown-sub {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+}
+
+.submenu-link,
+.submenu-toggle {
+    display: inline-block;
+}
+
+/* ------------------------------
+   KNIFE & AXE (Stacked Link)
+--------------------------------*/
+.knifeaxe-link {
+    display: block;
+    line-height: 1.1;
+    text-align: left; /* or center if you prefer */
+}
+
+.knifeaxe-sub {
+    font-size: 0.85em;
+    opacity: 0.85;
+    display: block;
+    margin-top: -2px;
+}
+
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
