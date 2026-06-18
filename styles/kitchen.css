@@ -111,11 +111,9 @@
 
 .kitchen-fb-button {
     position: absolute;
-    /* ⭐ ADD THIS LINE TO MOVE LEFT */
-    left: -400px;   /* move left; increase the negative number for more left */
-    margin-top: 290px;             /* move DOWN */
-    margin-bottom: 0.5px;           /* spacing above footer */
-    z-index: 50;       /* keep above background */
+    left: 280px;   /* was 240px → moved 40px more to the right */
+    top: 340px;    /* was 300px → moved 20px down */
+    z-index: 50;
 }
 
 .kitchen-fb-button img {
@@ -281,4 +279,19 @@
     .kitchen-description {
         margin-left: -17px;
     }
+}
+
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
