@@ -5,153 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
     <title>Kitchen – Windsor Sportsmen’s Club</title>
 
-    <link rel="stylesheet" href="styles.css?v=10">
+    <!-- =========================================================
+         PAGE STYLESHEETS
+    ========================================================== -->
+    <!-- Nav styles -->
+    <link rel="stylesheet" href="styles/nav.css">
+    <!-- Kitchen styles -->
+    <link rel="stylesheet" href="styles/kitchen.css">
+    <!-- global new styles not just styles all like before -->
+    <link rel="stylesheet" href="styles/globalStyles.css?v=1">
+    <!-- Footer styles -->
+    <link rel="stylesheet" href="styles/footer.css">
+    
 </head>
 
 <body class="kitchen-bg">
-    
-<!-- ⭐ FULL NAV BAR -->
-<header>
-    <nav class="main-nav">
 
-        <!-- Logo stays exactly where it was -->
-        <div class="logo">
-            <img src="images/WINDSOR SPORTSMANS REMAKE.png" alt="Windsor Sportsmen’s Club Logo">
-        </div>
-
-        <div class="nav-spacer"></div>
-
-        <ul class="nav-links">
-
-            <li><a href="index.html">Home</a></li>
-
-            <li class="dropdown">
-                <a href="#">Events ▾</a>
-                <ul class="dropdown-menu">
-                    <li><a href="calendar.html">Calendar</a></li>
-                    <li><a href="index.html#club-events">Club Events</a></li>
-                    <li><a href="private-events.html">Private Events</a></li>
-                </ul>
-            </li>
-
-            <li><a href="kitchen.html">Kitchen</a></li>
-
-            <li class="dropdown">
-                <a href="#">Groups ▾</a>
-                <ul class="dropdown-menu">
-
-                    <!-- ⭐ Two-line Trap & Skeet link -->
-                    <li><a href="trap-skeet.html">Trap & Skeet</a></li>
-
-                    <li><a href="archery.html">Archery</a></li>
-                    <li><a href="ofha.html">OFHA</a></li>
-                    <li><a href="cheese-cracker.html">Cheese & Cracker</a></li>
-                    <li><a href="air-rifle.html">Air Rifle</a></li>
-
-                    <li class="dropdown-sub">
-                        <a href="members.html" class="submenu-link">Members</a>
-                        <span class="submenu-toggle">▸</span>
-
-                        <ul class="submenu-right">
-                            <li><a href="staff-tv-info.html">Staff TV Info</a></li>
-                        </ul>
-                    </li>
-
-                </ul>
-            </li>
-
-            <li><a href="index.html#contact-title">Contact</a></li>
-
-            <li><a href="login.html">Login</a></li>
-
-        </ul>
-
-    </nav>
-</header>
-
-<!-- Spacer under fixed nav -->
-<section style="height: 90px;"></section>
+    <!-- =========================================================
+         NAVIGATION (LOADED FROM /components/nav.html)
+    ========================================================== -->
+    <div id="nav-placeholder"></div>
+    <script src="scripts/load-nav.js"></script>
 
 <main>
     <section class="content-section" id="kitchen-page" style="text-align:center;">
-        
-       <!-- Kitchen Title Image -->
-<img src="images/kitchentitle.png" 
-     alt="Kitchen Title" 
-     class="kitchen-title-img">
 
-<section class="home-kitchen-card outer-card">
-    <div class="inner-card">
-
-        <div class="kitchen-layout">
-
-            <img 
-                src="images/kitchen-badge.png" 
-                alt="Rob n Sons Kitchen badge" 
-                class="kitchen-badge"
-            >
-
-            <div class="kitchen-description">
-                <p>
-                    Rob n Sons Kitchen is proud to introduce ourselves!
-                    I am Rob Coyle, my sons Wyatt, Cooper, and aunt Joan.
-                    We plan to bring you a fresh new look to down-home cooking!
-                    Our first meal will be Mother's Day Brunch Buffet on May 11th
-                    (see the bar for tickets). Then we plan to open for regular
-                    hours starting Tuesday May 13th. Our regular hours will be
-                    11am–8pm Tuesday–Saturday. We value your input so feel free to come
-                    say hi and let us know how we are doing! We look forward to cooking
-                    for all of you soon!!
-                </p>
-            </div>
-
+        <!-- your kitchen content goes here -->
+        <div class="kitchen-fb-button">
+            <a href="https://www.facebook.com/rob.coyle.981018" target="_blank">
+                <img src="images/facebook-button.png" alt="Facebook Button">
+            </a>
         </div>
 
-    </div>
-</section>
-
-    <!-- ⭐ KITCHEN FACEBOOK FEED — MATCHED DOUBLE CARD -->
-<div class="home-kitchen-card outer-card">
-    <div class="inner-card">
-
-        <h2 class="kitchen-feed-title">Latest Updates from Facebook</h2>
-
-        <div class="kitchen-fb-scroll">
-
-            <!-- FIRST POST -->
-            <iframe 
-                src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3D122094987008817145%26id%3D61574514355825%26substory_index%3D2617677128632727&show_text=true&width=500" 
-                width="100%" 
-                height="533" 
-                style="border:none;overflow:hidden;" 
-                scrolling="yes" 
-                frameborder="0" 
-                allowfullscreen="true" 
-                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
-            </iframe>
-
-            <!-- SECOND POST -->
-            <iframe 
-                src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid02xG5qK47assBF9CRu9smDm6ZGPvugVuzJuGGz6HXp3aMGAfP6usGAMrRMQ2MUEg4Xl%26id%3D61574514355825&show_text=true&width=500" 
-                width="100%" 
-                height="609" 
-                style="border:none;overflow:hidden;" 
-                scrolling="yes" 
-                frameborder="0" 
-                allowfullscreen="true" 
-                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
-            </iframe>
-
-        </div>
-
-    </div>
-</div>
-
+    </section>
 </main>
 
-<footer class="site-footer">
-    <p>©2024 Windsor Sportsmen's Club. All Rights Reserved.</p>
-</footer>
+<!-- ⭐ FOOTER -->
+<div id="footer-placeholder"></div>
+<script src="scripts/load-footer.js"></script>
+    
 <script src="scripts.js"></script>
 </body>
 </html>
