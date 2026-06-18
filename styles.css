@@ -2436,6 +2436,177 @@ body.cheese-bg .content-section {
 }
 
 /* ------------------------------
+   KITCHEN PAGE TITLE
+--------------------------------*/
+#kitchen-page .section-title {
+    font-size: 3.2rem;
+    color: #000;
+    text-decoration: underline;
+    font-weight: 800;
+    margin-top: 25px; /* final chosen spacing */
+}
+
+/* Kitchen Title Image */
+.kitchen-title-img {
+    max-width: 50%;
+    margin: 45px auto 45px auto;
+    display: block;
+}
+
+/* ------------------------------
+   KITCHEN PAGE SPACING
+--------------------------------*/
+#kitchen-page {
+    padding-top: 40px !important;
+}
+
+#kitchen-page .content-section {
+    padding-top: 40px;
+}
+
+/* ------------------------------
+   KITCHEN PAGE — DESKTOP LAYOUT
+--------------------------------*/
+#kitchen-page .kitchen-layout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: nowrap;
+    margin-top: 20px;
+}
+
+#kitchen-page .kitchen-badge {
+    max-width: 350px;
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+#kitchen-page .kitchen-description {
+    flex: 1;
+    min-width: 260px;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: black;
+    font-weight: bold;
+    text-align: left;
+}
+
+/* ------------------------------
+   FACEBOOK EMBED BOX
+--------------------------------*/
+.fb-page-container {
+    width: calc(100% - 20px);
+    margin: 0 auto;
+    padding: 10px;
+    border: 3px solid red;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.fb-page {
+    width: 100% !important;
+    height: 800px !important;
+    overflow-y: scroll;
+}
+
+/* ------------------------------
+   KITCHEN FACEBOOK FEED CARD
+--------------------------------*/
+.kitchen-fb-scroll {
+    max-height: 800px;
+    overflow-y: auto;
+    padding-right: 12px;
+    margin-top: 20px;
+}
+
+/* Scrollbar styling */
+.kitchen-fb-scroll::-webkit-scrollbar {
+    width: 10px;
+}
+
+.kitchen-fb-scroll::-webkit-scrollbar-track {
+    background: rgba(255, 236, 220, 0.55);
+    border-radius: 10px;
+}
+
+.kitchen-fb-scroll::-webkit-scrollbar-thumb {
+    background: rgba(90, 45, 20, 0.55);
+    border-radius: 10px;
+}
+
+.kitchen-feed-title {
+    margin: 0 0 10px 0;
+    font-size: 1.6rem;
+    color: #5a2d14;
+}
+
+/* ------------------------------
+   KITCHEN PAGE BACKGROUND
+--------------------------------*/
+.kitchen-bg {
+    position: relative;
+    min-height: 100vh;
+    background: url('images/kitchen-background.png') center bottom / cover no-repeat fixed;
+    z-index: 0;
+}
+
+.kitchen-bg::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.3);
+    z-index: -1;
+}
+
+/* ------------------------------
+   KITCHEN — DOUBLE CARD STYLE
+--------------------------------*/
+.home-kitchen-card.outer-card {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    backdrop-filter: blur(4px);
+}
+
+.home-kitchen-card .inner-card {
+    background: rgba(255, 236, 220, 0.55);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow:
+        0 4px 14px rgba(90, 45, 20, 0.45),
+        0 8px 28px rgba(90, 45, 20, 0.35);
+}
+
+/* Layout inside card */
+.home-kitchen-card .kitchen-layout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.home-kitchen-card .kitchen-badge {
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.home-kitchen-card .kitchen-description {
+    max-width: 450px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: black;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* ------------------------------
    MOBILE FIXES
 --------------------------------*/
 @media (max-width: 768px) {
