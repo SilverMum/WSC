@@ -4161,3 +4161,7 @@ body.home main {
         max-width: 100% !important;
     }
 }
+
+html, body {
+    overflow-x: hidden;
+}
