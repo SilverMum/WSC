@@ -1,0 +1,4163 @@
+/* ------------------------------
+   GLOBAL RESET + BASE STYLES
+--------------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #222;
+    background-color: transparent;
+}
+
+/* A simple layout container for main content */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px 40px;
+}
+
+/* Homepage container */
+.home {
+    position: relative;
+    z-index: 0;
+}
+
+/* Full-page fixed background + overlay */
+.home::before {
+    content: "";
+    position: fixed; /* background stays still */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.30), rgba(255, 255, 255, 0.30)),
+        url("images/tree line bg.png");
+
+    background-size: cover;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Force dropdown menus above TV page cards */
+.dropdown-menu,
+.submenu-right {
+    position: absolute;
+    z-index: 99999; /* higher than nav, cards, shadows, everything */
+}
+
+/* ------------------------------
+   HERO SECTION
+--------------------------------*/
+.hero {
+    text-align: center;
+    padding: 40px 0 16px;
+    background-color: transparent;
+    color: white;
+    margin-top: 20px;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    margin-bottom: 35px;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.4);
+    white-space: nowrap;   /* desktop stays on one line */
+}
+
+/* Subtitle under homepage title — styled like the main title but smaller */
+.home-subtitle {
+    text-align: center;
+    font-size: clamp(1.8rem, 3vw, 2.4rem); /* 2 sizes bigger than before */
+    font-weight: 800; /* matches the main title weight */
+    color: inherit; /* same color as the title */
+    margin-top: -20px; /* pulls it closer to the title like your screenshot */
+    text-shadow: 0 2px 6px rgba(0,0,0,0.4); /* matches the title shadow */
+}
+
+@media (max-width: 900px) {
+    .hero-title {
+        white-space: normal;
+        font-size: 2rem;
+    }
+}
+
+/* ⭐ OPTION B — allow wrapping on medium screens too */
+@media (max-width: 1400px) {
+    .hero-title {
+        white-space: normal;   /* allow wrap on laptops + smaller desktops */
+    }
+}
+
+.header-underline {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.header-underline img {
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Home page title bigger */
+.home-hero-title {
+    font-size: clamp(2.2rem, 4vw, 4.0rem); /* 4 text sizes bigger */
+    font-weight: 800;
+    white-space: normal !important;
+    margin-top: -60px;
+}
+
+/* ------------------------------
+   PLEDGE TEXT
+--------------------------------*/
+.pledge-title-wrapper {
+    position: relative;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Increased title size */
+.pledge-title-gold,
+.pledge-title-green {
+    display: block;
+    font-size: 2.2rem;
+    font-weight: 700;
+    width: 100%;
+}
+
+/* gold behind green using subtle offset */
+.pledge-title-gold {
+    position: absolute;
+    top: 0.5px;
+    left: 0.5px;
+    color: #d4a017;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.pledge-title-green {
+    position: relative;
+    color: #e60000;
+    z-index: 2;
+}
+
+/* Wrapper now expands to fit larger text */
+.pledge-paragraph-wrapper {
+    position: relative;
+    max-width: 800px;
+    margin: 20px auto 0;
+    text-align: center;
+    padding-bottom: 1.4em;
+}
+
+/* Increased paragraph size */
+.pledge-paragraph-gold,
+.pledge-paragraph-green {
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1.7;
+}
+
+/* gold layer with subtle offset */
+.pledge-paragraph-gold {
+    position: absolute;
+    top: 0.5px;
+    left: 0.5px;
+    color: #d4a017;
+    width: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* green layer */
+.pledge-paragraph-green {
+    position: relative;
+    color: #32a852;
+    z-index: 2;
+}
+
+/* ------------------------------
+   HOMEPAGE — PLEDGE WHITE CARD
+--------------------------------*/
+.home-pledge-card.outer-card {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    backdrop-filter: blur(4px);
+    position: relative;
+}
+
+/* INNER CARD — updated to soft fog gray */
+.home-pledge-card .inner-card {
+    background: rgba(230, 235, 234, 0.55); /* soft fog gray */
+    padding: 30px;
+    border-radius: 12px;
+
+    box-shadow:
+       0 4px 14px rgba(47, 79, 62, 0.35),
+       0 8px 28px rgba(47, 79, 62, 0.25);
+
+    position: relative;
+    z-index: 1;
+}
+
+/* Giant decorative quote */
+.home-pledge-card.outer-card::before {
+    content: "“";
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 160px;
+    transform: translate(8px, 12px);
+    line-height: 1;
+    color: rgb(50, 168, 82); /* ← FULLY SOLID NOW */
+    pointer-events: none;
+    font-family: Georgia, serif;
+    z-index: 0;
+}
+
+/* ------------------------------
+   FACEBOOK BUTTON
+--------------------------------*/
+.facebook-button {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.facebook-button img {
+    width: 25%;
+    min-width: 180px;
+    max-width: 320px; 
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    transition: all 0.2s ease;
+}
+
+.facebook-button img:hover {
+    transform: translateY(-3px);
+    filter: brightness(1.1);
+}
+
+.facebook-note {
+    margin-top: 16px;
+    font-size: 1.4rem;
+    color: #3B8BFF;
+    font-weight: 600;
+    text-align: center;
+    white-space: normal;
+
+    text-shadow:
+        0 0 1px black,
+        0 0 2px black,
+        0 0 3px black;
+}
+
+/* ------------------------------
+   FACEBOOK CARD — OUTER WRAPPER
+--------------------------------*/
+.facebook-card.outer-card {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px; /* gap around inner card */
+    background: rgba(255, 255, 255, 0.3); /* 30% white */
+    border-radius: 12px;
+    backdrop-filter: blur(4px);
+    text-align: center;
+}
+
+/* ------------------------------
+   FACEBOOK CARD — INNER CARD
+--------------------------------*/
+.facebook-card .inner-card {
+    background: rgba(230, 235, 234, 0.55); /* soft fog gray */
+    padding: 30px;
+    border-radius: 12px;
+
+    box-shadow:
+       0 4px 14px rgba(47, 79, 62, 0.35),
+       0 8px 28px rgba(47, 79, 62, 0.25);
+}
+
+/* ------------------------------
+   CONTENT SECTIONS (GENERIC)
+--------------------------------*/
+.content-section {
+    padding: 50px 0;
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: transparent;
+    border-bottom: none;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.centered-text {
+    text-align: center;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* ------------------------------
+   HOMEPAGE — MEETING WHITE CARD
+--------------------------------*/
+/* OUTER CARD — standard */
+.outer-card {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    backdrop-filter: blur(4px);
+    text-align: center;
+    position: relative;
+}
+
+/* INNER CARD — standard */
+.inner-card {
+    background: rgba(220, 230, 239, 0.55); /* new blue-gray with same opacity */
+    padding: 30px;
+    border-radius: 12px;
+
+    box-shadow:
+        0 4px 14px rgba(47, 79, 62, 0.35),
+        0 8px 28px rgba(47, 79, 62, 0.25);
+}
+
+.membership-image {
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    display: block;
+    border-radius: 10px; /* optional */
+}
+
+/* ------------------------------
+   HOMEPAGE — RANGE WHITE CARD
+--------------------------------*/
+.home-range-card.outer-card {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    backdrop-filter: blur(4px);
+    text-align: center;
+}
+
+/* ------------------------------
+   TRAP & SKEET HOME CARD IMAGE
+--------------------------------*/
+.trap-skeet-home-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px; /* matches outer card corners */
+}
+
+/* ------------------------------
+   EARLY EVENT CARD
+--------------------------------*/
+.early-event-card.outer-card {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    backdrop-filter: blur(4px);
+    text-align: center;
+}
+
+.event-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+}
+
+/* ------------------------------
+   LATER EVENT CARD
+--------------------------------*/
+.later-event-card.outer-card {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    backdrop-filter: blur(4px);
+    text-align: center;
+}
+
+.later-event-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+}
+
+/* ------------------------------
+   ACTIVITIES IMAGE
+--------------------------------*/
+.activities-image {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 30px;
+    text-align: center;
+}
+
+.activities-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+@media (max-width: 600px) {
+    .ribchicken-img {
+        max-width: 90% !important;
+        height: auto !important;
+        display: block !important;
+        margin: 0 auto !important;
+    }
+}
+
+/* ------------------------------
+   PARTNERSHIP IMAGE
+--------------------------------*/
+#partnership {
+    border-bottom: none;
+}
+
+.section-divider img {
+    display: block;
+    margin: 10px auto;
+}
+
+.partnership-img {
+    display: block;
+    margin: 10px auto;
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* ------------------------------
+   PARTNERSHIP — OUTER CARD
+--------------------------------*/
+.partnership-card.outer-card {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px; /* gap around inner card */
+    background: rgba(255, 255, 255, 0.3); /* 30% white */
+    border-radius: 12px;
+    backdrop-filter: blur(4px);
+    text-align: center;
+}
+
+/* ------------------------------
+   PARTNERSHIP — INNER CARD
+--------------------------------*/
+.partnership-card .inner-card {
+    background: rgba(230, 235, 234, 0.55); /* soft fog gray */
+    padding: 30px;
+    border-radius: 12px;
+
+    box-shadow:
+       0 4px 14px rgba(47, 79, 62, 0.35),
+       0 8px 28px rgba(47, 79, 62, 0.25);
+}
+
+/* ------------------------------
+   PARTNERSHIP IMAGE
+--------------------------------*/
+.partnership-img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* ------------------------------
+   FOOTER — DARK THEME (GLOBAL)
+--------------------------------*/
+/* HOMEPAGE ONLY — allow full-width layout */
+body.home main {
+    max-width: none;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+#club-events {
+    scroll-margin-top: 92px; /* was 80px */
+}
+
+/* =========================================================
+   OTHER PAGES (RANGE, ARCHERY, OFHA, PRIVATE EVENTS, LOGIN)
+   — CLEANED BUT VISUALS PRESERVED
+   ========================================================= */
+
+/* ------------------------------
+   PRIVATE EVENTS — TEXT CARD
+--------------------------------*/
+
+/* Outer card (30% white + blur) */
+.private-events-text-card.outer-card {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    backdrop-filter: blur(4px);
+    text-align: center;
+}
+
+/* Inner card — soft sunrise cream + warm deep shadow */
+.private-events-text-card .inner-card {
+    background: rgba(255, 236, 220, 0.55); /* soft sunrise cream */
+    padding: 30px;
+    border-radius: 12px;
+
+    box-shadow:
+        0 4px 14px rgba(90, 45, 20, 0.45),
+        0 8px 28px rgba(90, 45, 20, 0.35);
+}
+
+/* Title text inside the card */
+.private-events-text {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #e60000;
+    line-height: 1.5;
+    margin: 0;
+
+    text-shadow:
+        0 0 1px black,
+        0 0 2px black,
+        0 0 3px black;
+}
+
+/* ------------------------------
+   PRIVATE EVENTS — PDF BUTTON
+--------------------------------*/
+.private-events-pdf {
+    width: 260px;
+    height: auto;
+    display: block;
+    margin: 20px auto 40px;
+}
+
+/* ------------------------------
+   PRIVATE EVENTS — HEADER IMAGE
+--------------------------------*/
+.private-events-header-image img {
+    display: block;
+    margin: 20px auto 40px;
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* ------------------------------
+   PRIVATE EVENTS — 2x2 IMAGE GRID
+--------------------------------*/
+.private-events-gallery {
+    width: 100%;
+    margin: 40px auto 60px;
+    padding: 0 20px;
+}
+
+.private-events-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.private-events-grid img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+}
+
+/* Mobile: stack images 1 per row */
+@media (max-width: 700px) {
+    .private-events-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ------------------------------
+   PRIVATE EVENTS PAGE BACKGROUND
+--------------------------------*/
+.private-events-bg {
+    position: relative;
+    min-height: 100vh;
+    background: url('images/private-events-background.jpg') center center / cover no-repeat fixed;
+}
+
+/* 30% white wash overlay */
+.private-events-bg::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.3);
+    z-index: -1;
+}
+
+/* ------------------------------
+   LOGIN PAGE
+--------------------------------*/
+
+/* Make the whole page a vertical layout so footer stays at bottom */
+body.login-bg {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Wrapper that controls spacing under the fixed nav */
+body.login-bg .login-page-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 120px !important; /* nav height (110px) + 10px gap */
+    margin-bottom: 20px; /* space before footer */
+    padding-bottom: 0;
+    flex: 1; /* pushes footer to bottom */
+}
+
+/* Login form card */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    max-width: 420px;
+    width: 100%;
+    padding: 40px 35px;
+    background: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.12);
+}
+
+/* Labels */
+.login-form label {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Inputs */
+.login-form input {
+    font-size: 1.1rem;
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    background: #fafafa;
+    transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.login-form input:focus {
+    border-color: #0077cc;
+    box-shadow: 0 0 4px rgba(0,119,204,0.4);
+    outline: none;
+}
+
+/* Login button */
+.login-btn {
+    padding: 12px 18px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    background: #0077cc;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.login-btn:hover {
+    background: #005fa3;
+    transform: translateY(-2px);
+}
+
+/* Forgot links */
+.login-links {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-top: 10px;
+}
+
+.login-links a {
+    color: #0077cc;
+    font-size: 0.95rem;
+    text-decoration: none;
+}
+
+.login-links a:hover {
+    text-decoration: underline;
+}
+
+/* ------------------------------
+   FIXED FOOTER — 20px below login box
+--------------------------------*/
+body.login-bg .site-footer {
+    margin-top: 20px !important;
+    position: relative;
+    bottom: 0;
+    z-index: 1;
+}
+
+/* ------------------------------
+   LOGIN PAGE BACKGROUND
+--------------------------------*/
+.login-bg {
+    position: relative;
+    background: url('images/login-background.jpg') center center / cover no-repeat fixed;
+}
+
+/* 30% white wash overlay — behind everything */
+.login-bg::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.3);
+    z-index: -1;
+}
+
+/* ------------------------------
+   TRAP & SKEET RANGE PAGE
+--------------------------------*/
+/* --------------------------------------------------
+   HEADER IMAGE
+-------------------------------------------------- */
+.page-header img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Add 20px space between nav and header image on Trap & Skeet page */
+.trap-skeet-bg .page-header {
+    margin-top: 20px;
+}
+
+/* --------------------------------------------------
+   ANNOUNCEMENT + CALENDAR SECTION
+-------------------------------------------------- */
+.ts-announcement {
+    max-width: 1200px;
+    margin: 40px auto;
+    display: flex;
+    gap: 40px;
+    padding: 0 20px;
+    justify-content: space-between;   /* keep spacing */
+    align-items: flex-start;          /* ⭐ STOP equal-height stretching */
+}
+
+.ts-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.ts-left,
+.ts-left h2,
+.ts-left h3,
+.ts-left p,
+.ts-left ul,
+.ts-left li,
+.ts-left strong,
+.ts-left em {
+    color: white !important;
+}
+
+.ts-left h2 {
+    font-size: 2.3rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.ts-left p strong {
+    font-size: 1.45rem;
+    font-weight: 700;
+}
+
+.ts-left p em {
+    font-size: 1.3rem;
+}
+
+.ts-left h3 {
+    font-size: 1.45rem;
+    font-weight: 700;
+    margin-top: 22px;
+    margin-bottom: 12px;
+}
+
+.ts-left ul {
+    margin-left: 20px;
+    margin-bottom: 20px;
+    line-height: 1.55;
+    font-size: 1.15rem;
+}
+
+.ts-left p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.ts-right {
+    flex: 1;
+    max-width: 900px;              /* match card grid */
+    display: flex;
+    justify-content: flex-start;   /* align left */
+}
+
+.ts-right iframe {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* ⭐ Orange card behind calendar */
+.calendar-card {
+    background: #ff9f43;
+    padding: 5px 5px 3px 5px;      /* top right bottom left */
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    width: 100%;
+    max-width: 900px;              /* match grid width */
+    margin-left: 0;
+    margin-right: auto;            /* push right edge left */
+}
+
+.calendar-card iframe {
+    width: 100%;
+    height: 600px;
+    border-radius: 10px;
+    border: none;
+}
+
+.fb-bottom-button {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.fb-bottom-button img {
+    width: 240px;
+    max-width: 240px;
+    height: auto;
+    display: block;
+    transition: all 0.2s ease;
+}
+
+.fb-bottom-button img:hover {
+    transform: translateY(-3px);
+    filter: brightness(1.1);
+}
+
+/* --------------------------------------------------
+   CARD GRID
+-------------------------------------------------- */
+.ts-card-grid {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.ts-card {
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 18px;
+    overflow: hidden;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    backdrop-filter: blur(6px);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ts-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+}
+
+.ts-card-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    object-position: top center;
+}
+
+.ts-card p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 15px 10px 20px 10px;
+}
+
+/* --------------------------------------------------
+   CARD GRID
+-------------------------------------------------- */
+.ts-card-grid {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.ts-card {
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 18px;
+    overflow: hidden;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    backdrop-filter: blur(6px);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ts-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+}
+
+.ts-card-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    object-position: top center;
+}
+
+.ts-card p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 15px 10px 20px 10px;
+}
+
+/* --------------------------------------------------
+   TEXT UTILITIES
+-------------------------------------------------- */
+.red-text {
+    color: #ff4d4d !important;
+}
+
+/* --------------------------------------------------
+   RANGE OPEN BUTTON
+-------------------------------------------------- */
+.range-open-button-img {
+    width: 52.5%;
+    max-width: 255px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* ⭐ Shotgun image fix */
+.range-restricted-image img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 20px auto;
+    object-fit: contain;
+}
+
+/* --------------------------------------------------
+   FIXED‑SIZE MODAL OVERLAY
+-------------------------------------------------- */
+.ts-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.75);
+    display: none;
+    justify-content: center;
+    z-index: 99999;
+}
+
+/* --------------------------------------------------
+   MODAL BOX
+-------------------------------------------------- */
+.ts-overlay-content {
+    width: 70vw;
+    height: 70vh;
+    margin-top: 12.5vh;
+    background: rgba(0,0,0,0.6);
+    border: 4px solid rgba(255,255,255,0.4);
+    border-radius: 12px;
+    position: relative;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    padding: 30px;
+    color: white;
+}
+
+/* --------------------------------------------------
+   FLOATING X BUTTON
+-------------------------------------------------- */
+.ts-close-wrapper {
+    position: fixed;
+    top: calc(12.5vh + 7px);
+    right: calc(15vw - 12px + 26px);
+    width: 38px;
+    height: 38px;
+    background: rgba(0,0,0,0.85);
+    border: 2px solid rgba(255,255,255,0.6);
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 200000;
+}
+
+.ts-close {
+    font-size: 1.6rem;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    line-height: 1;
+}
+
+/* --------------------------------------------------
+   MODAL TYPOGRAPHY
+-------------------------------------------------- */
+.ts-overlay-content p,
+.ts-overlay-content li,
+.ts-overlay-content strong,
+.ts-overlay-content em {
+    font-size: 1.25rem;
+    line-height: 1.6;
+}
+
+.ts-overlay-content h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.ts-overlay-content h3 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.ts-overlay-content .package-block p {
+    margin: 4px 0;
+}
+
+/* ⭐⭐⭐ CONTACT POPUP LEFT/RIGHT + ORANGE FORM CARD ⭐⭐⭐ */
+
+.ts-contact-flex {
+    display: flex;
+    gap: 10px; /* moved 10px closer */
+    margin-top: 20px;
+}
+
+.ts-contact-left {
+    flex: 0 0 40%;
+}
+
+.ts-contact-right {
+    flex: 0 0 60%;
+}
+
+.ts-contact-card {
+    background: #ff9f43;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+
+    /* ⭐ POSITION TWEAKS */
+    margin-top: 9px;      /* keeps the downward shift */
+    margin-left: -15px;   /* moved 10px more left than before */
+    margin-right: 4px;    /* keeps right edge visible */
+}
+
+.ts-contact-card input,
+.ts-contact-card textarea {
+    width: calc(100% - 10px); /* end 10px earlier on the right */
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+.ts-contact-card label {
+    font-weight: 600;
+}
+
+.ts-contact-card button {
+    width: 100%;
+    padding: 12px;
+    background: #1a1a1a;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.ts-contact-card button:hover {
+    background: #000;
+}
+
+/* --------------------------------------------------
+   PACKAGE TITLES (Card 4)
+-------------------------------------------------- */
+.package-title {
+    font-size: 2rem;          /* 4 text sizes bigger */
+    font-weight: 700;
+    text-decoration: underline;
+    margin-bottom: 8px;
+    text-align: center;       /* matches your layout */
+    color: white !important;  /* ensures visibility in modal */
+}
+
+/* --------------------------------------------------
+   BACKGROUND
+-------------------------------------------------- */
+body.trap-skeet-bg {
+    background: url('images/trap-skeet-background.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+body.trap-skeet-bg::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.05);
+    z-index: -1;
+}
+
+/* --------------------------------------------------
+   INFO 8 — FORM COLOR FIXES
+-------------------------------------------------- */
+
+/* Make all form text white */
+.ts-contact-card label,
+.ts-contact-card h3,
+.ts-contact-card .field-checkbox label {
+    color: white !important;
+}
+
+/* Make input + textarea backgrounds white, text black */
+.ts-contact-card input,
+.ts-contact-card textarea {
+    background: white !important;
+    color: black !important;
+}
+
+/* Placeholder text also black */
+.ts-contact-card input::placeholder,
+.ts-contact-card textarea::placeholder {
+    color: black !important;
+}
+
+/* ============================
+   Trap & Skeet – Weather at bottom
+   ============================ */
+
+.trap-skeet-bg .ts-weather {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 40px 0 0 0;
+    padding: 0;
+}
+
+.trap-skeet-bg .ts-weather > div {
+    width: 100% !important;
+}
+
+/* ⭐ Facebook button under LEFT TEXT only */
+.trap-skeet-bg .ts-left .fb-bottom-button img {
+    width: 240px;
+    max-width: 240px;
+    height: auto;
+    display: block;
+    margin: 10px auto 0 auto;
+    transition: all 0.2s ease;
+}
+
+.trap-skeet-bg .ts-left .fb-bottom-button img:hover {
+    transform: translateY(-3px);
+    filter: brightness(1.1);
+}
+
+/* --------------------------------------------------
+   FOOTER
+-------------------------------------------------- */
+footer {
+    margin-top: 0;
+    padding: 20px 0;
+    text-align: center;
+    background: #1a1a1a;
+    color: white;
+    font-size: 0.9rem;
+}
+
+/* --------------------------------------------------
+   MOBILE RESPONSIVE
+-------------------------------------------------- */
+@media (max-width: 992px) {
+    .ts-announcement {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .ts-right iframe {
+        height: 450px;
+    }
+
+    .ts-card-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .ts-card-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .ts-card img {
+        height: 160px;
+    }
+
+    .ts-overlay-content {
+        width: 90vw;
+        height: 75vh;
+        margin-top: 10vh;
+        overflow-x: hidden;
+    }
+}
+
+/* ------------------------------
+   ARCHERY HEADER IMAGE (MATCH OFHA)
+--------------------------------*/
+.archery-header {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.archery-header-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* ------------------------------
+   GLOBAL ARCHERY PAGE SPACING
+--------------------------------*/
+.archery-page {
+    padding-top: 140px; /* nav height + breathing room */
+}
+
+.archery-page section {
+    margin-bottom: 40px; /* ⭐ consistent spacing between all content */
+}
+
+/* ------------------------------
+   ARCHERY INFO (plain text inside cards)
+--------------------------------*/
+.archery-info {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.archery-info-text {
+    text-align: center;
+    line-height: 1.6;
+}
+
+.archery-title {
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.archery-season,
+.archery-subtitle,
+.archery-times,
+.archery-simple,
+.archery-pricing {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.archery-season {
+    margin-bottom: 25px;
+}
+
+.archery-subtitle {
+    font-weight: 600;
+}
+
+.archery-weather {
+    font-size: 1.4rem;
+    color: #8b0000;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.archery-private {
+    font-size: 1.8rem;
+    line-height: 1.5;
+    margin: 40px 0;
+    font-weight: 600;
+}
+
+/* ------------------------------
+   ARCHERY IMAGE TRIO
+--------------------------------*/
+.archery-image-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.archery-image-wrapper img {
+    height: 260px;
+    width: auto;
+    object-fit: cover;
+}
+
+/* WIDE CARD FOR IMAGE TRIO ONLY */
+.outer-card.wide-card {
+    max-width: 1200px; /* wider than normal cards */
+}
+
+.inner-card.green-card.wide-inner {
+    padding: 40px; /* more breathing room */
+}
+
+/* ------------------------------
+   GREEN DOUBLE-LAYER CARD SYSTEM
+--------------------------------*/
+.outer-card {
+    max-width: 900px;
+    margin: 0 auto; /* spacing handled globally */
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    backdrop-filter: blur(4px);
+    position: relative;
+}
+
+.inner-card.green-card {
+    background: rgba(220, 245, 230, 0.55);
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+
+    box-shadow:
+       0 6px 18px rgba(10, 50, 30, 0.55),
+       0 12px 32px rgba(10, 50, 30, 0.35);
+
+    position: relative;
+    z-index: 1;
+}
+
+.green-card h2,
+.green-card h3,
+.green-card p,
+.green-card li,
+.green-card a {
+    color: #063b1d;
+}
+
+/* ------------------------------
+   ARCHERY CANCELLATIONS
+--------------------------------*/
+.archery-cancellations {
+    text-align: center;
+}
+
+.archery-cancel-title {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.archery-dates {
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-align: center;
+    color: #000;
+}
+
+/* ------------------------------
+   ARCHERY CONTACT FORM (CLEAN + HORIZONTAL)
+--------------------------------*/
+.archery-cancel {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: #111;
+  border-radius: 10px;
+  box-shadow: 0 0 25px rgba(0,0,0,0.6);
+  color: #f5f5f5;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.archery-cancel h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.8rem;
+  letter-spacing: 0.04em;
+  color: #4cc26b;
+  text-transform: uppercase;
+}
+
+.archery-cancel-intro {
+  margin: 0 0 1.5rem;
+  font-size: 0.95rem;
+  color: #cccccc;
+}
+
+/* ------------------------------------
+   HORIZONTAL FORM LAYOUT
+------------------------------------ */
+.archery-cancel-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem 2rem;
+    align-items: start;
+}
+
+.field-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.field-row label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #bbbbbb;
+}
+
+.field-row input,
+.field-row textarea {
+  background: #000;
+  border: 1px solid #b3261e;
+  border-radius: 4px;
+  padding: 0.6rem 0.75rem;
+  color: #f5f5f5;
+  font-size: 0.95rem;
+}
+
+.field-row input::placeholder,
+.field-row textarea::placeholder {
+  color: #777777;
+}
+
+.field-row input:focus,
+.field-row textarea:focus {
+  outline: none;
+  border-color: #ff4b3a;
+  box-shadow: 0 0 0 1px #ff4b3a33;
+}
+
+/* Message field spans full width */
+.field-row:nth-child(4) {
+    grid-column: 1 / 3;
+}
+
+#ac-message {
+    height: 140px;
+}
+
+/* Captcha + checkbox full width */
+.field-inline,
+.field-checkbox {
+    grid-column: 1 / 3;
+}
+
+.field-inline {
+  flex-direction: row;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.field-inline label {
+  margin: 0;
+  white-space: nowrap;
+}
+
+.field-inline input {
+  flex: 1;
+}
+
+.field-checkbox {
+  font-size: 0.8rem;
+  color: #bbbbbb;
+}
+
+.field-checkbox input {
+  margin-right: 0.4rem;
+  accent-color: #b3261e;
+}
+
+/* Submit button full width row */
+.ac-submit {
+  grid-column: 1 / 3;
+  margin-top: 0.5rem;
+  align-self: flex-start;
+  background: #b3261e;
+  color: #ffffff;
+  border: none;
+  border-radius: 999px;
+  padding: 0.7rem 1.8rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.5);
+}
+
+.ac-submit:hover {
+  background: #e53930;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.6);
+}
+
+.ac-submit:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+/* Mobile layout */
+@media (max-width: 600px) {
+  .archery-cancel {
+    margin: 0 1rem;
+    padding: 1.5rem;
+  }
+
+  .archery-cancel-form {
+    grid-template-columns: 1fr;
+  }
+
+  .field-row:nth-child(4),
+  .field-inline,
+  .field-checkbox,
+  .ac-submit {
+    grid-column: 1 / 2;
+  }
+}
+
+/* ------------------------------
+   ARCHERY PAGE BACKGROUND
+--------------------------------*/
+.archery-page {
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.60), rgba(255, 255, 255, 0.60)),
+        url("images/archery-background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* ------------------------------
+   OFHA PAGE BACKGROUND
+--------------------------------*/
+.ofha-bg {
+    position: relative;
+    min-height: 100vh;
+    background: url('images/ofha-background.jpg') center center / cover no-repeat fixed;
+}
+
+/* 30% white wash overlay */
+.ofha-bg::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.3);
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* ------------------------------
+   OFHA HEADER IMAGE (breathing room)
+--------------------------------*/
+.ofha-header {
+    max-width: 1200px;
+    margin: 0 auto 30px;
+    padding: 0 40px;
+    text-align: center;
+}
+
+.ofha-header-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+}
+
+/* ------------------------------
+   CARD SYSTEM (GLOBAL FOR OFHA)
+--------------------------------*/
+.outer-card {
+    max-width: 900px;
+    margin: 0 auto 20px; /* 20px spacing between cards */
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.30);
+    border-radius: 16px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
+
+.inner-card.ofha-card {
+    background: rgba(150, 180, 220, 0.60);
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: inset 0 0 18px rgba(0, 0, 0, 0.25);
+}
+
+/* Darkened OFHA text */
+.ofha-card h2,
+.ofha-card h3,
+.ofha-card p,
+.ofha-card li,
+.ofha-card a {
+    color: #062a55;
+}
+
+/* ------------------------------
+   GLOBAL TEXT SIZE UPGRADE
+--------------------------------*/
+.ofha-card p,
+.ofha-card li {
+    font-size: 1.35rem;
+    line-height: 1.65;
+}
+
+.ofha-card h3 {
+    font-size: 1.9rem;
+    font-weight: 700;
+}
+
+.ofha-card h2 {
+    font-size: 2.4rem;
+    font-weight: 800;
+}
+
+/* ------------------------------
+   FIXED INTRO ROW (text left, logo right)
+--------------------------------*/
+.ofha-info-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.ofha-info-text {
+    flex: 1;
+}
+
+.ofha-info-text p {
+    font-size: 1.6rem;   /* UPDATED */
+    font-weight: 700;
+    text-align: center;
+}
+
+.ofha-info-logo {
+    flex: 0 0 auto;
+    text-align: right;
+}
+
+.ofha-info-logo img {
+    max-width: 160px;
+    height: auto;
+}
+
+/* Center the link text under the logo */
+.ofha-info-logo a.ofha-text-link {
+    text-align: center;
+    display: block;
+    width: 100%;
+}
+
+/* ------------------------------
+   MEMBERSHIP CARD (centered + bold)
+--------------------------------*/
+.ofha-membership p {
+    text-align: center;
+    font-size: 1.6rem;  /* MATCHES intro text */
+    font-weight: 700;
+    line-height: 1.65;
+}
+
+/* ------------------------------
+   REASONS SECTION
+--------------------------------*/
+.ofha-reasons h3 {
+    margin-bottom: 12px;
+}
+
+.ofha-reasons ol {
+    padding-left: 20px;
+    line-height: 1.6;
+}
+
+/* ------------------------------
+   ADVOCACY SECTION
+--------------------------------*/
+.ofah-advocacy h2 {
+    margin-top: 10px;
+    margin-bottom: 6px;
+}
+
+.ofah-advocacy h3 {
+    margin-top: 10px;
+    margin-bottom: 6px;
+}
+
+.ofah-advocacy p {
+    margin-bottom: 12px;
+    line-height: 1.6;
+}
+
+/* ------------------------------
+   CONSERVATION SECTION
+--------------------------------*/
+.ofah-conservation h2 {
+    margin-bottom: 12px;
+}
+
+.ofah-conservation h3 {
+    margin-top: 18px;
+    margin-bottom: 8px;
+}
+
+.ofah-conservation p {
+    margin-bottom: 12px;
+    line-height: 1.6;
+}
+
+/* ------------------------------
+   QUICK LINKS SECTION
+--------------------------------*/
+.quick-links-title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #062a55;
+}
+
+.ofha-links-row {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.ofha-links-row img {
+    width: 165px;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.2s ease;
+}
+
+.ofha-links-row img:hover {
+    transform: scale(1.05);
+}
+
+/* ------------------------------
+   PAGE BACKGROUND (WOOD)
+--------------------------------*/
+.members-bg {
+    position: relative;
+    min-height: 100vh;
+    background: url('images/members-background.jpg') center center / cover no-repeat fixed;
+    z-index: 0;
+}
+
+.members-bg::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.25);
+    z-index: -1;
+}
+
+/* ------------------------------
+   DARK WOOD BACKING BOARD (TILED)
+--------------------------------*/
+.wood-back-card {
+    position: relative;
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 40px;
+    border-radius: 18px;
+
+    background: url('images/dark-wood.jpg') repeat center;
+    background-size: 400px auto;
+
+    box-shadow:
+        0 12px 28px rgba(0, 0, 0, 0.45),
+        inset 0 2px 4px rgba(255,255,255,0.15),
+        inset 0 -3px 6px rgba(0,0,0,0.35);
+}
+
+/* Wood block screws */
+.wood-back-card .wood-screw {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, #f2d7a0 0%, #8a6f3a 50%, #4a3518 100%);
+    box-shadow:
+        inset 0 1px 2px rgba(255,255,255,0.4),
+        inset 0 -2px 3px rgba(0,0,0,0.5);
+}
+
+.wood-back-card .wood-screw.bl { bottom: 16px; left: 16px; }
+.wood-back-card .wood-screw.br { bottom: 16px; right: 16px; }
+.wood-back-card .wood-screw.tl { top: 16px; left: 16px; }
+.wood-back-card .wood-screw.tr { top: 16px; right: 16px; }
+
+/* ------------------------------
+   GOLD SECTION PLAQUE
+--------------------------------*/
+.top-card {
+    position: relative;
+
+    background-image:
+        linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.35) 0%,
+            rgba(255, 255, 255, 0.10) 15%,
+            rgba(203, 183, 122, 1) 50%,
+            rgba(180, 160, 100, 0.85) 85%,
+            rgba(255, 255, 255, 0.25) 100%
+        ),
+        linear-gradient(
+            135deg,
+            #e8d8a8 0%,
+            #dccb93 40%,
+            #cbb77a 100%
+        ),
+        url("data:image/svg+xml;utf8,\
+        <svg xmlns='http://www.w3.org/2000/svg' width='100' height='100'>\
+        <filter id='n'>\
+        <feTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3'/>\
+        </filter>\
+        <rect width='100' height='100' filter='url(%23n)' opacity='0.08'/>\
+        </svg>");
+
+    background-blend-mode: overlay;
+
+    padding: 40px 35px;
+    border-radius: 14px;
+
+    box-shadow:
+        0 0 22px rgba(255, 255, 200, 0.35),
+        0 10px 26px rgba(0, 0, 0, 0.40),
+        inset 0 2px 6px rgba(255, 255, 255, 0.45),
+        inset 0 -3px 8px rgba(0, 0, 0, 0.28);
+}
+
+/* Top screws */
+.top-card::before,
+.top-card::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(circle at 30% 30%, #ffffff 0%, #c0a86a 40%, #8a6f3a 100%);
+    border-radius: 50%;
+    box-shadow:
+        inset 0 1px 3px rgba(255,255,255,0.6),
+        inset 0 -2px 4px rgba(0,0,0,0.4);
+}
+
+.top-card::before { top: 12px; left: 12px; }
+.top-card::after { top: 12px; right: 12px; }
+
+/* Bottom screws */
+.top-card .card-screw {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, #ffffff 0%, #c0a86a 40%, #8a6f3a 100%);
+    box-shadow:
+        inset 0 1px 3px rgba(255,255,255,0.6),
+        inset 0 -2px 4px rgba(0,0,0,0.4);
+}
+
+.top-card .card-screw.bl { bottom: 12px; left: 12px; }
+.top-card .card-screw.br { bottom: 12px; right: 12px; }
+
+/* ------------------------------
+   SECTION TITLE (BIG "MEMBERS")
+--------------------------------*/
+/* Only the big MEMBERS title on the wood block */
+.wood-back-card > .section-title {
+    color: #e8c96a !important;
+    text-shadow:
+        1px 1px 1px rgba(255,255,255,0.28),
+        -1px -1px 1px rgba(0,0,0,0.50);
+}
+
+/* ------------------------------
+   MEMBERS TITLE (INSIDE GOLD CARDS)
+   — RESTORED TO ORIGINAL DARK ENGRAVED
+--------------------------------*/
+.members-title {
+    text-align: center;
+    font-size: 1.7rem;
+    font-weight: 900;
+    letter-spacing: 0.03em;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+
+    color: #3a1f0a;
+    text-shadow:
+        1px 1px 1px rgba(255,255,255,0.30),
+        -1px -1px 1px rgba(0,0,0,0.40);
+}
+
+/* ------------------------------
+   NAMEPLATE LIST
+--------------------------------*/
+.nameplate-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 10px;
+}
+
+/* ------------------------------
+   INDIVIDUAL NAMEPLATES
+--------------------------------*/
+.nameplate {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 10px;
+    border-radius: 6px;
+
+    background: linear-gradient(
+        135deg,
+        #f7e7a3 0%,
+        #e6d28c 40%,
+        #d4bd75 100%
+    );
+
+    box-shadow:
+        0 3px 8px rgba(0,0,0,0.25),
+        inset 0 1px 2px rgba(255,255,255,0.4),
+        inset 0 -2px 3px rgba(0,0,0,0.25);
+}
+
+/* Engraved text */
+.nameplate span {
+    font-weight: 800;
+    font-size: 1.05rem;
+    color: #3a1f0a;
+
+    text-shadow:
+        1px 1px 1px rgba(255,255,255,0.30),
+        -1px -1px 1px rgba(0,0,0,0.40);
+}
+
+/* Remove screws from nameplates */
+.nameplate .screw {
+    display: none !important;
+}
+
+/* ------------------------------
+   MEMBERS GRID
+--------------------------------*/
+.members-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 45px;
+    margin-top: 20px;
+}
+
+/* ------------------------------
+   NEW PLEDGE BLOCK
+--------------------------------*/
+.pledge-block {
+    max-width: 900px;
+    margin: 60px auto;
+}
+
+/* Wood base */
+.pledge-wood {
+    position: relative;
+    padding: 50px;
+    border-radius: 18px;
+
+    background: url('images/dark-wood.jpg') repeat center;
+    background-size: 420px auto;
+
+    box-shadow:
+        0 14px 30px rgba(0,0,0,0.45),
+        inset 0 2px 4px rgba(255,255,255,0.15),
+        inset 0 -3px 6px rgba(0,0,0,0.35);
+}
+
+/* Pledge screws */
+.pledge-screw {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+
+    background: radial-gradient(circle at 30% 30%, #f2d7a0 0%, #8a6f3a 50%, #4a3518 100%);
+    box-shadow:
+        inset 0 1px 2px rgba(255,255,255,0.4),
+        inset 0 -2px 3px rgba(0,0,0,0.5);
+}
+
+.pledge-screw.tl { top: 16px; left: 16px; }
+.pledge-screw.tr { top: 16px; right: 16px; }
+.pledge-screw.bl { bottom: 16px; left: 16px; }
+.pledge-screw.br { bottom: 16px; right: 16px; }
+
+/* Glass */
+.pledge-glass {
+    padding: 40px 35px;
+    border-radius: 16px;
+
+    background: rgba(255, 255, 255, 0.22);
+    backdrop-filter: blur(18px) saturate(160%);
+    -webkit-backdrop-filter: blur(18px) saturate(160%);
+
+    border: 2px solid rgba(255,255,255,0.35);
+
+    box-shadow:
+        0 8px 22px rgba(0,0,0,0.35),
+        inset 0 1px 4px rgba(255,255,255,0.5),
+        inset 0 -2px 6px rgba(0,0,0,0.25);
+}
+
+/* Pledge text (bright gold engraved) */
+.pledge-title,
+.pledge-text {
+    text-align: center;
+    color: #e8c96a;
+    text-shadow:
+        1px 1px 1px rgba(255,255,255,0.28),
+        -1px -1px 1px rgba(0,0,0,0.50);
+}
+
+.pledge-title {
+    font-size: 1.9rem;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+.pledge-text {
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.55;
+}
+
+/* ------------------------------
+   MOBILE SUPPORT
+--------------------------------*/
+@media (max-width: 800px) {
+    .members-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .nameplate {
+        display: block;
+        width: fit-content;
+        margin: 0 auto;
+    }
+}
+
+/* ------------------------------
+   CHEESE & CRACKER
+--------------------------------*/
+
+/* ⭐ PAGE-LEVEL CENTERING (must come BEFORE card rules) */
+.content-section {
+    max-width: 1200px;
+    margin: 0 auto;      /* ⭐ TRUE PAGE-LEVEL CENTERING */
+}
+
+/* ------------------------------
+   FIX PAGE PADDING FOR CENTERING
+--------------------------------*/
+body.cheese-bg .content-section {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+/* ------------------------------
+   CHEESE & CRACKER — DESKTOP SIDE-BY-SIDE
+--------------------------------*/
+.cheesecracker-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;      /* ⭐ centers vertically + horizontally */
+    gap: 40px;
+    flex-wrap: nowrap;
+    width: fit-content;       /* ⭐ shrink to exact combined image width */
+    margin: 0 auto;           /* ⭐ centers wrapper under title */
+}
+
+.cheesecracker-img {
+    display: block;           /* ⭐ centers each image individually */
+    margin: 0 auto;           /* ⭐ fixes visual drift from uneven PNGs */
+    height: 405px;            /* 10% smaller */
+    width: auto;
+    max-width: 34vw;          /* prevents overflow */
+}
+
+/* ------------------------------
+   CHEESE & CRACKER — MOBILE STACKED
+--------------------------------*/
+@media (max-width: 600px) {
+    .cheesecracker-wrapper {
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 20px;
+        width: 100%;          /* mobile safe */
+    }
+
+    .cheesecracker-img {
+        height: auto;
+        width: 90%;
+        max-width: 350px;
+        margin: 0 auto;
+    }
+}
+
+/* ------------------------------
+   CHEESE CARD — OUTER WRAPPER
+--------------------------------*/
+.cheese-card.outer-card {
+    width: fit-content;
+    max-width: 95vw;
+    display: block;
+    margin-left: auto;   /* ⭐ EXACT MATCH TO TITLE IMAGE */
+    margin-right: auto;  /* ⭐ EXACT MATCH TO TITLE IMAGE */
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.30);
+    border-radius: 12px;
+    backdrop-filter: blur(4px);
+    text-align: center;
+}
+
+/* ------------------------------
+   CHEESE CARD — INNER CARD
+--------------------------------*/
+.cheese-inner-card {
+    background: rgba(255, 245, 230, 0.55);
+    padding: 20px;
+    border-radius: 12px;
+
+    box-shadow:
+        0 4px 14px rgba(120, 80, 40, 0.35),
+        0 8px 28px rgba(120, 80, 40, 0.25);
+}
+
+/* ------------------------------
+   FULL-PAGE CHEESE BACKGROUND
+--------------------------------*/
+.cheese-bg {
+    position: relative;
+    min-height: 100vh;
+    background: url('images/cheese-background.jpg') center bottom / cover no-repeat fixed;
+    z-index: 0;
+}
+
+/* 30% white wash overlay */
+.cheese-bg::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.3);
+    z-index: -1;
+}
+
+/* ------------------------------
+   AIR RIFLE (SEPARATE PAGE)
+--------------------------------*/
+
+/* Air Rifle Page Styling */
+.airrifle-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px 20px 60px;
+    text-align: center;
+}
+
+/* Main white title */
+.airrifle-title {
+    font-size: 3.8rem;
+    font-weight: 800;
+    color: white;
+    margin-bottom: 25px;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.4);
+}
+
+/* Optional subtitle */
+.airrifle-subtitle {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 30px;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.4);
+}
+
+/* Section headers (now white) */
+.airrifle-subheader {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-top: 40px;
+    margin-bottom: 15px;
+    color: white;
+}
+
+/* Body text (now white) */
+.airrifle-text {
+    font-size: 1.3rem;
+    line-height: 1.6;
+    color: white;
+    margin-bottom: 20px;
+}
+
+/* ⭐ CALENDAR TITLE — underline white + centered */
+.airrifle-calendar-title {
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-decoration: underline;
+    text-decoration-color: white !important;
+    text-underline-offset: 6px;
+}
+
+/* ⭐ CALENDAR — centered + same width as white cards */
+iframe[src*="google.com/calendar"] {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 900px;
+    height: 600px;
+}
+
+/* AIR-RIFLE CANCELLATION TITLE — unchanged */
+.airrifle-cancel-title {
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    color: black;
+}
+
+/* Dark Oak contact card (was blue) */
+.airrifle-cancel {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 20px;
+    background: rgba(60, 40, 25, 1); /* solid dark oak */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    color: white;
+}
+
+.airrifle-cancel h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.airrifle-cancel-intro {
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.airrifle-cancel-form .field-row {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.airrifle-cancel-form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.airrifle-cancel-form input,
+.airrifle-cancel-form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    background: white;
+    color: black;
+}
+
+.airrifle-cancel-form .field-inline {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.airrifle-cancel-form .field-checkbox {
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+/* Submit button */
+.ac-submit {
+    width: 100%;
+    padding: 12px;
+    background: #b30000;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.ac-submit:hover {
+    background: #8a0000;
+}
+
+/* Make all text white EXCEPT the nav */
+.air-rifle-bg *:not(.main-nav):not(.main-nav *):not(.main-nav a) {
+    color: white !important;
+}
+
+/* AIR RIFLE PAGE BACKGROUND */
+.air-rifle-bg {
+    position: relative;
+    min-height: 100vh;
+    background: url('images/air-rifle-background.jpg') center center / cover no-repeat fixed;
+}
+
+/* 30% white wash overlay */
+.air-rifle-bg::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.3);
+    z-index: -1;
+}
+
+/* ------------------------------
+   AIR RIFLE — DARK OAK CARD STYLE
+--------------------------------*/
+.airrifle-card.outer-card {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+
+    /* Dark Oak overlay */
+    background: rgba(60, 40, 25, 0.40);
+
+    border-radius: 12px;
+    backdrop-filter: blur(4px);
+}
+
+.airrifle-card .inner-card {
+    /* Slightly lighter oak tint for inner layer */
+    background: rgba(80, 55, 35, 0.55);
+
+    padding: 30px;
+    border-radius: 12px;
+
+    /* Shadow tuned to brown tones */
+    box-shadow:
+        0 4px 14px rgba(40, 25, 15, 0.45),
+        0 8px 28px rgba(40, 25, 15, 0.35);
+}
+
+/* -----------------------------------------
+   AIR RIFLE — CALENDAR CARD (extra width)
+------------------------------------------*/
+.airrifle-card.outer-card.calendar-card {
+    max-width: 1050px;   /* wider than normal cards */
+    padding: 25px 30px;  /* a bit more breathing room */
+}
+
+.airrifle-card.outer-card.calendar-card .inner-card {
+    padding: 35px;       /* slightly larger inner padding */
+}
+
+/* ------------------------------
+   TV Page Wrapper
+------------------------------ */
+
+.tv-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 10px; /* tightened by 10px */
+    text-align: center;
+}
+
+/* ------------------------------
+   Titles & Text
+------------------------------ */
+
+.tv-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #002b45;
+    text-decoration: underline;
+    margin: 10px 0; /* tightened */
+}
+
+.tv-subtitle {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #002b45;
+    text-align: center;
+    margin-bottom: 10px; /* tightened */
+    text-decoration: underline;
+}
+
+.tv-link {
+    text-align: center;
+    margin-bottom: 15px; /* tightened */
+}
+
+.tv-link a {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #1877F2;
+    text-decoration: underline;
+    transition: color 0.2s ease;
+}
+
+.tv-link a:hover {
+    color: #0d5fcc;
+}
+
+/* ------------------------------
+   CARD STYLE (Blue Theme)
+------------------------------ */
+
+.style-card-outer {
+    background: rgba(255, 255, 255, 0.3);
+    padding: 15px; /* tightened */
+    border-radius: 12px;
+    backdrop-filter: blur(2px);
+    margin-bottom: 20px; /* consistent spacing */
+}
+
+.style-card-inner {
+    background: rgba(173, 216, 255, 0.5);
+    padding: 15px; /* tightened */
+    border-radius: 10px;
+    box-shadow:
+        0 4px 12px rgba(80, 140, 200, 0.35),
+        0 10px 28px rgba(80, 140, 200, 0.25);
+}
+
+/* ------------------------------
+   Info Blocks
+------------------------------ */
+
+.tv-info-block {
+    margin: 15px 0; /* tightened */
+}
+
+.tv-info-line {
+    background: rgba(255, 255, 255, 0.25);
+    padding: 10px 12px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+    color: #002b45;
+    line-height: 1.4;
+    font-weight: 600;
+}
+
+/* ------------------------------
+   WSC TV Info
+------------------------------ */
+
+.tv-info {
+    background: rgba(255, 255, 255, 0.25);
+    padding: 12px; /* tightened */
+    border-radius: 8px;
+    font-family: "Courier New", monospace;
+    font-size: 15px;
+    line-height: 1.45;
+    white-space: pre-wrap;
+    overflow-x: auto;
+    margin-top: 10px; /* tightened */
+    color: #002b45;
+}
+
+/* ------------------------------
+   TV Image Stack
+------------------------------ */
+
+.tv-grid-top,
+.tv-grid-bottom {
+    display: block; /* stack vertically */
+}
+
+.tv-grid-img,
+.tv-grid-img-wide {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    margin: 15px auto; /* tightened */
+    box-shadow: 0 4px 12px rgba(80, 140, 200, 0.35);
+}
+
+/* Make the top map image smaller */
+.tv-grid-top img:first-child {
+    max-width: 350px;
+    width: 100%;
+    margin: 10px auto;
+}
+
+/* ------------------------------
+   Antenna Box Image
+------------------------------ */
+
+.tv-antenna-img {
+    display: block;
+    margin: 15px auto; /* tightened */
+    width: 95%;
+    max-width: 900px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(80, 140, 200, 0.35);
+}
+
+/* Ensure dropdown menus appear ABOVE all cards */
+.dropdown-menu,
+.submenu-right {
+    position: absolute;
+    z-index: 10000; /* higher than nav + cards */
+}
+
+/* ------------------------------
+   TV Page Background
+------------------------------ */
+
+body.TV-bg {
+    position: relative;
+    min-height: 100vh;
+    background: url('images/TV-background.png') center bottom / cover no-repeat fixed;
+}
+
+body.TV-bg::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.3);
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* FIX — do NOT force TV page content above the nav */
+body.TV-bg > * {
+    position: relative;
+    z-index: auto; /* was 1 — this caused the dropdown to hide */
+}
+
+/* ------------------------------
+   NAV FIX — keeps nav ABOVE content
+------------------------------ */
+
+/* Keep nav fixed AND above all content */
+.main-nav {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999 !important;
+}
+
+header {
+    position: relative;
+    z-index: 9998; /* safe, but not overriding nav */
+}
+
+/* =========================================================
+   RESPONSIVE ADJUSTMENTS
+   ========================================================= */
+
+@media (max-width: 992px) {
+    .main-nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 10px 16px;
+    }
+
+    .logo img {
+        height: 70px;
+        margin-bottom: 8px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+        padding-right: 0;
+    }
+
+    .hero {
+        margin-top: 130px;
+    }
+
+    .hero-title {
+        font-size: 2.2rem;
+    }
+
+    .pledge-title-gold,
+    .pledge-title-green {
+        font-size: 1.5rem;
+    }
+
+    .pledge-paragraph-gold,
+    .pledge-paragraph-green {
+        font-size: 1rem;
+    }
+
+    .ofha-intro {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .range-status-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero-title {
+        font-size: 1.9rem;
+    }
+
+    .activities-text {
+        font-size: 1.1rem;
+    }
+
+    .facebook-button img {
+        width: 60%;
+    }
+
+    .archery-header-img,
+    .ofha-header-img {
+        height: 260px;
+    }
+
+    .archery-image-wrapper img {
+        height: 220px;
+    }
+
+    .ofha-intro-left {
+        font-size: 1.6rem;
+    }
+
+    .ofha-membership p,
+    .ofha-reasons ol,
+    .ofah-advocacy p,
+    .ofah-conservation p {
+        font-size: 1.3rem;
+    }
+}
+
+/* =========================================================
+   UNIVERSAL MOBILE LAYOUT — STACK EVERYTHING + TIGHT PADDING
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    /* Tight global padding */
+    body, main, .content-section, .contact-section,
+    .range-info-section, .range-rules-section,
+    .range-notice-section, .range-trapper-section,
+    .range-simple-section, .activities-section,
+    .private-events-section, .ofha-membership,
+    .ofha-reasons, .ofah-advocacy, .ofah-conservation,
+    .airrifle-wrapper, .tv-wrapper {
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+    }
+
+    /* Navigation */
+    .main-nav {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px 16px;
+    }
+
+    .logo img {
+        height: 70px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+        padding-right: 0;
+    }
+
+    /* Hero */
+    .hero {
+        margin-top: 130px;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+        white-space: normal;
+    }
+
+    /* Max Band */
+    .maxband-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .maxband-left img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Activities divider images */
+    .activities-image {
+        padding: 0 16px;
+        margin: 30px 0;
+    }
+
+    /* Private Events */
+    .private-events-info {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    /* OFHA intro */
+    .ofha-intro {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* Range status grid */
+    .range-status-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    /* TV page grid */
+    .tv-grid {
+        margin-left: 0;
+    }
+
+    .tv-grid-top {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .tv-grid-img,
+    .tv-grid-img-wide {
+        height: auto;
+        max-width: 100%;
+    }
+
+    /* Archery images */
+    .archery-image-wrapper img {
+        height: auto;
+        max-width: 100%;
+    }
+
+    /* Footer */
+    .site-footer {
+        padding: 20px 10px;
+    }
+}
+
+/* Even tighter adjustments for very small screens */
+@media (max-width: 480px) {
+
+    .hero-title {
+        font-size: 1.7rem;
+    }
+
+    .activities-text,
+    .range-notice-body,
+    .range-info-text,
+    .range-rules-text,
+    .archery-info-text,
+    .tv-info-line {
+        font-size: 1.05rem;
+    }
+
+    .facebook-button img {
+        width: 70%;
+    }
+
+    .tv-map {
+        width: 100%;
+    }
+}
+
+/* =========================================================
+   MOBILE NAV — WRAPPED + TAP-TO-OPEN DROPDOWNS
+   ========================================================= */
+@media (max-width: 900px) {
+
+    /* Mobile nav container */
+    .main-nav {
+        justify-content: center !important;
+        padding: 12px 0 !important;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .logo {
+        order: 1;
+        text-align: center;
+        width: 100%;
+    }
+
+    .logo img {
+        height: 90px;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .nav-spacer {
+        display: none;
+    }
+
+    /* WRAPPED NAV — 3 OVER 3 */
+    .nav-links {
+        order: 2;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 6px 6px;
+        width: 100%;
+        padding: 0;
+        margin-top: 0;
+    }
+
+    .nav-links li {
+        flex: 0 0 calc(33.33% - 6px);
+        text-align: center;
+    }
+
+    .nav-links a {
+        font-size: 1.3rem;
+        padding: 4px 2px;
+        white-space: nowrap;
+    }
+
+    /* ⭐ HOMEPAGE-ONLY TIGHTER NAV SPACING */
+    .home .nav-links {
+        gap: 4px 6px !important;
+    }
+
+    .home .nav-links li {
+        flex: 0 0 calc(33.33% - 4px) !important;
+    }
+
+    /* ⭐ HOMEPAGE NAV LINK FONT SIZE — MATCH OTHER PAGES */
+    .home .nav-links a {
+        font-size: 1.3rem !important;
+        padding: 2px 0 !important;
+        font-weight: bold;
+    }
+
+    /* ⭐ HOMEPAGE — AUTO-WIDTH NAV */
+    .home .main-nav {
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+        width: 100% !important;
+        max-width: none !important;
+        margin: 0 auto !important;
+    }
+
+    /* ⭐ MOBILE DROPDOWN — OVERLAY */
+    .dropdown-menu,
+    .submenu-right {
+        display: none;
+        position: absolute !important;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90% !important;
+        margin-top: 6px;
+        padding: 10px 0;
+        border: 1px solid #ddd;
+        background: white;
+        z-index: 9999;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    /* ⭐ FIX #1 — MATCH DROPDOWN TEXT SIZE ON HOMEPAGE */
+    .home .dropdown-menu a,
+    .home .submenu-right a {
+        font-size: 1.3rem !important;
+    }
+
+    /* ⭐ FIX #2 — MATCH DROPDOWN WIDTH TO KITCHEN */
+    .home .dropdown-menu,
+    .home .submenu-right {
+        max-width: 360px !important;
+    }
+
+    /* ⭐ MOBILE — MEMBERS SUBMENU OPENS TO THE RIGHT */
+    .dropdown-sub {
+        position: relative;
+    }
+
+    /* ⭐ ARROW FIX — KEEP BESIDE MEMBERS */
+    .submenu-toggle {
+        display: inline-block !important;
+        vertical-align: middle !important;
+        margin-left: 6px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    /* ⭐ TOP‑ALIGNED RIGHT‑OPENING SUBMENU (MOBILE) */
+    .dropdown-sub .submenu-right {
+        top: 0 !important;
+        left: 100% !important;
+        transform: none !important;
+        width: auto !important;
+        max-width: 240px !important;
+    }
+
+    .dropdown-sub.open > .submenu-right {
+        display: block;
+    }
+
+    .dropdown.open > .dropdown-menu {
+        display: block;
+    }
+
+    /* ⭐ HOMEPAGE FIX — KEEP MEMBERS + ARROW ON SAME LINE (MOBILE) */
+    .home .dropdown-sub {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        white-space: nowrap !important;
+    }
+
+    .home .submenu-link {
+        display: inline-block !important;
+    }
+
+    .home .submenu-toggle {
+        display: inline-block !important;
+        vertical-align: middle !important;
+        margin-left: 6px !important;
+    }
+}
+
+/* =========================================================
+   DESKTOP DROPDOWNS — DEFAULT HOVER BEHAVIOR
+   ========================================================= */
+@media (min-width: 901px) {
+
+    .dropdown-menu,
+    .submenu-right {
+        display: none;
+        position: absolute;
+        background: white;
+        border: 1px solid #ddd;
+        padding: 10px 0;
+        z-index: 999;
+    }
+
+    /* ⭐ DESKTOP — MEMBERS SUBMENU OPENS TO THE RIGHT */
+    .dropdown-sub {
+        position: relative;
+    }
+
+    /* ⭐ ARROW FIX — KEEP BESIDE MEMBERS */
+    .submenu-toggle {
+        display: inline-block !important;
+        vertical-align: middle !important;
+        margin-left: 6px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    /* ⭐ TOP‑ALIGNED RIGHT‑OPENING SUBMENU (DESKTOP) */
+    .dropdown-sub .submenu-right {
+        top: 0;
+        left: 100%;
+        transform: none;
+        min-width: 180px;
+    }
+
+    /* ⭐ HOMEPAGE DESKTOP FIX — KEEP MEMBERS + ARROW ON ONE LINE */
+    .home .dropdown-sub {
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        white-space: nowrap !important;
+    }
+
+    .home .submenu-link {
+        display: inline-block !important;
+    }
+
+    .home .submenu-toggle {
+        display: inline-block !important;
+        margin-left: 6px !important;
+        vertical-align: middle !important;
+    }
+
+    .dropdown:hover > .dropdown-menu,
+    .dropdown-sub:hover > .submenu-right {
+        display: block;
+    }
+}
+
+/* =========================================================
+   ----------ARCHERY------CALENDAR-------------
+   ========================================================= */
+
+.calendar-container {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.calendar-container iframe {
+    width: 100%;
+    height: 600px;
+    border: 0;
+}
+
+.archery-calendar-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    text-decoration: underline;
+    text-decoration-color: black;
+    text-underline-offset: 6px;
+}
+
+/* Inner container: padding only, no border */
+#archery-calendar .calendar-container {
+    padding: 15px;
+    border-radius: 6px;
+}
+
+/* =========================================================
+   ----------AIR-RIFLE-CALENDAR-------------
+   ========================================================= */
+
+.airrifle-calendar-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    text-decoration: underline;
+    text-decoration-color: black;
+    text-underline-offset: 6px;
+}
+
+.calendar-container {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.calendar-container iframe {
+    width: 100%;
+    height: 600px;
+    border: 0;
+}
+
+/* Inner container: padding only, no border */
+#airrifle-calendar .calendar-container {
+    padding: 15px;
+    border-radius: 6px;
+}
+
+/* Full blue card */
+#airrifle-calendar {
+    background-color: rgba(0, 51, 102, 0.12); /* soft translucent deep blue */
+    padding: 25px 35px; /* desktop padding */
+    border-radius: 10px;
+    margin: 0 auto 40px auto;
+    max-width: 900px;
+    border: 3px solid #003366;
+}
+
+/* =========================================================
+   MOBILE FIX FOR BOTH ARCHERY + AIR RIFLE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    /* ARCHERY — show green on sides, remove squeeze */
+    #archery-calendar {
+        padding-left: 6% !important;
+        padding-right: 6% !important;
+        border-left-width: 0;
+        border-right-width: 0;
+        max-width: 100% !important;
+    }
+
+    #archery-calendar .calendar-container {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    /* AIR RIFLE — show blue on sides, remove squeeze */
+    #airrifle-calendar {
+        padding-left: 6% !important;
+        padding-right: 6% !important;
+        border-left-width: 0;
+        border-right-width: 0;
+        max-width: 100% !important;
+    }
+
+    #airrifle-calendar .calendar-container {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    /* Shared wrapper behavior */
+    .calendar-wrapper {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+    }
+
+    .calendar-wrapper iframe {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        display: block;
+        border: 0;
+    }
+}
+
+/* =========================================================
+   ----------- CALENDAR PAGE -------------
+   ========================================================= */
+
+/* Header image inside wrapper */
+.calendar-header-img {
+    display: block;
+    margin: 0 auto 20px auto;
+    height: auto;
+}
+
+/* Wrapper that matches the red card width */
+.calendar-header-wrapper {
+    max-width: 900px;
+    margin: 0 auto 20px auto;
+    text-align: center;
+}
+
+/* FORCE image to match wrapper width */
+.calendar-header-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Title styling */
+.calendar-title {
+    text-align: center;
+    font-size: 2.6rem;
+    font-weight: bold;
+    color: black;
+    display: inline-block;
+    border-bottom: none;
+    padding-bottom: 6px;
+    margin: 70px auto 30px auto;
+}
+
+#wsc-calendar {
+    padding: 0;
+    margin: 0 auto 40px auto;
+    max-width: 900px;
+    border: none;
+    background: none;
+}
+
+/* Inner container: padding only, no border */
+#wsc-calendar .calendar-container {
+    padding: 15px;
+    border-radius: 6px;
+}
+
+/* Calendar container sizing */
+.calendar-container {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Calendar iframe */
+.calendar-container iframe {
+    width: 100%;
+    height: 600px;
+    border: 0;
+}
+
+/* Page wrapper */
+.calendar-page {
+    text-align: center;
+    padding: 20px;
+}
+
+.calendar-bg {
+    background-image: url("images/calendar-page-background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* White overlay over the entire background */
+.calendar-bg::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.20);
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* =========================================================
+   RESPONSIVE GOOGLE CALENDAR FIX (MOBILE)
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    /* NEW: Move header image down so nav doesn't cover it */
+    .calendar-header-img {
+        margin-top: 60px; /* about 1 inch on most phones */
+    }
+
+    #wsc-calendar {
+        padding-left: 6% !important;
+        padding-right: 6% !important;
+        border-left-width: 0;
+        border-right-width: 0;
+        max-width: 100% !important;
+    }
+
+    #wsc-calendar .calendar-container {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    .calendar-wrapper {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+    }
+
+    .calendar-wrapper iframe {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        display: block;
+        border: 0;
+    }
+}
+
+/* GLOBAL DARK FOOTER — must be last */
+footer {
+    margin-top: 0;
+    padding: 20px 0;
+    text-align: center;
+    background: #1a1a1a;
+    color: white;
+    font-size: 0.9rem;
+}
+
+/* Make ALL text on the entire site use Image 1's font */
+body, body * {
+    font-family: "Times New Roman", Times, serif !important;
+}
+
+/* =========================================================
+   TRAP & SKEET — ANNOUNCEMENT (IMAGE 1 EXACT STYLE)
+   ========================================================= */
+
+/* Base announcement block */
+.trap-skeet-bg .ts-announcement .ts-left {
+    margin-left: 20px !important;   /* aligned with card grid */
+    margin-right: 40px !important;
+    text-align: left !important;
+    line-height: 1.7 !important;
+    font-style: normal !important;  /* reset everything */
+}
+
+/* Headings */
+.trap-skeet-bg .ts-announcement .ts-left h2,
+.trap-skeet-bg .ts-announcement .ts-left h3 {
+    font-style: normal !important;
+    margin-left: 0 !important;
+}
+
+.trap-skeet-bg .ts-announcement .ts-left h3 {
+    font-weight: 800 !important; /* Important Notes */
+}
+
+/* Paragraphs */
+.trap-skeet-bg .ts-announcement .ts-left p {
+    font-style: normal !important;
+    font-size: 1.6rem !important;
+    margin-left: 0 !important;
+}
+
+/* ONLY the italic line */
+.trap-skeet-bg .ts-announcement .ts-left p em {
+    font-style: italic !important; /* Repairs are complete */
+}
+
+/* Ensure “The club reopens…” is NOT italic */
+.trap-skeet-bg .ts-announcement .ts-left p strong {
+    font-style: normal !important;
+    font-weight: 800 !important;
+}
+
+/* Bullet list */
+.trap-skeet-bg .ts-announcement .ts-left ul {
+    margin-left: 60px !important;
+    line-height: 1.7 !important;
+    font-size: 1.1rem !important;
+    font-style: normal !important;
+}
+
+.trap-skeet-bg .ts-announcement .ts-left li {
+    margin-bottom: 8px !important;
+    font-style: normal !important;
+}
+
+/* =========================================================
+   TRAP & SKEET — PAGE HORIZONTAL SPACING REDUCTION
+   ========================================================= */
+
+.trap-skeet-bg .ts-announcement {
+    padding-left: 0 !important;   /* aligns with card grid */
+    padding-right: 5px !important;
+}
+
+.trap-skeet-bg .ts-card-grid {
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+}
+
+.trap-skeet-bg main {
+    padding-left: 1px !important;
+    padding-right: 1px !important;
+}
+
+/* =========================================================
+   TRAP & SKEET — CALENDAR EXPANSION (20PX LEFT + 20PX DOWN)
+   ========================================================= */
+
+.trap-skeet-bg .calendar-card {
+    margin-left: -40px !important;   /* expand left */
+}
+
+.trap-skeet-bg .calendar-card iframe {
+    height: 640px !important;        /* expand down */
+}
+
+/* =========================================================
+   TRAP & SKEET — FORCE 40/60 LAYOUT FOR ANNOUNCEMENT + CALENDAR
+   ========================================================= */
+
+.trap-skeet-bg .ts-announcement {
+    display: flex !important;
+}
+
+.trap-skeet-bg .ts-announcement .ts-left {
+    flex: 0 0 40% !important;   /* text column */
+}
+
+.trap-skeet-bg .ts-announcement .ts-right {
+    flex: 0 0 60% !important;   /* calendar column */
+}
+
+/* =========================================================
+   TRAP & SKEET — FIX CALENDAR RIGHT-SIDE ALIGNMENT
+   ========================================================= */
+
+.trap-skeet-bg .ts-announcement .ts-right {
+    padding-right: 5px !important;   /* matches card grid right padding */
+}
+
+/* =========================================================
+   HOME PAGE — FACEBOOK SECTION (MATCH IMAGE STYLE)
+   ========================================================= */
+
+.facebook-section {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.facebook-button img {
+    width: 260px;
+    max-width: 90%;
+    height: auto;
+    display: block;
+    margin: 0 auto 15px auto;
+}
+
+.facebook-text p {
+    margin: 4px 0;
+    font-size: 1.4rem;
+    line-height: 1.4;
+}
+
+.facebook-text p:first-child {
+    font-weight: 800;
+}
+
+.facebook-text p:nth-child(2) {
+    font-style: italic;
+}
+/* MEMBERSHIP CARD WIDTH — MATCH ALL OTHER HOMEPAGE CARDS */
+.home-meeting-card.outer-card {
+    max-width: 900px !important;
+}
+
+body.home main {
+    padding-top: 160px;
+}
+
+/* =========================================================
+   MOBILE NAVIGATION FIXES — ALIGNMENT + TOGGLE BEHAVIOR
+   ========================================================= */
+@media (max-width: 900px) {
+
+    /* Disable hover behavior on mobile so JS is in full control */
+    .dropdown:hover > .dropdown-menu {
+        display: none !important;
+    }
+
+    /* Normalize dropdown anchor width so alignment matches */
+    .nav-links li.dropdown {
+        width: auto !important;
+    }
+
+    .nav-links li.dropdown > a {
+        display: inline-block !important;
+    }
+
+    /* Perfect left alignment for all dropdowns */
+    .nav-links li.dropdown > .dropdown-menu {
+        left: 0 !important;
+        transform: translateX(0) !important;
+    }
+
+    /* ⭐ This is the missing piece: show menu when JS adds .open */
+    .nav-links li.dropdown > .dropdown-menu.open {
+        display: block !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links > li > a[href="trap-skeet.html"] {
+        font-size: 0 !important;
+        position: relative;
+    }
+
+    .nav-links > li > a[href="trap-skeet.html"]::after {
+        content: "Trap & Skeet";
+        font-size: 16px;
+        color: inherit;
+    }
+}
+
+@media (max-width: 900px) {
+
+    /* -----------------------------------------
+       GLOBAL MOBILE CARD FIXES
+    ----------------------------------------- */
+
+    /* Prevent content from sticking out of inner cards */
+    .inner-card {
+        overflow-wrap: break-word;
+        word-break: break-word;
+        max-width: 100%;
+        box-sizing: border-box;
+        padding-left: 2px;   /* your final padding choice */
+        padding-right: 2px;
+    }
+
+    /* Ensure images inside cards never overflow */
+    .inner-card img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    /* Prevent long links or long titles from pushing the card wider */
+    .inner-card a {
+        word-break: break-word;
+    }
+
+    /* Outer card spacing (your chosen minimal margins) */
+    .outer-card {
+        margin-left: 5px;
+        margin-right: 5px;
+    }/* =========================================================
+   KITCHEN PAGE — BASE STYLES (NOT MOBILE-ONLY)
+========================================================= */
+
+.kitchen-title-img {
+    max-width: 70%;
+    height: auto;
+    display: block;
+    margin: 110px auto 0;
+}
+
+.kitchen-layout {
+    display: block;
+    text-align: center;
+}
+
+.kitchen-badge {
+    max-width: 60%;
+    height: auto;
+    margin: 0 auto 20px;
+    display: block;
+}
+
+.kitchen-description p {
+    font-size: 0.95rem;
+    line-height: 1.35;
+    padding: 0 10px;
+    word-break: break-word;
+}
+
+.kitchen-fb-scroll iframe {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto;
+}
+
+/* =========================================================
+   MOBILE-ONLY — PRIVATE EVENTS PAGE
+========================================================= */
+
+@media (max-width: 900px) {
+    .private-events-text {
+        font-size: 1.4rem;
+        line-height: 1.3;
+    }
+}
+
+/* =========================================================
+   MOBILE-ONLY — LOGIN PAGE
+========================================================= */
+
+@media (max-width: 900px) {
+    body.login-bg .login-form {
+        margin-top: 100px !important;
+    }
+}
+
+@media (max-width: 900px) {
+    body.cheese-bg main img[alt="Cheese and Cracker Club Title"] {
+        margin-top: 50px !important;
+    }
+}
+
+@media (max-width: 900px) {
+    body.TV-bg main {
+        margin-top: 80px !important;
+    }
+}
+
+@media (max-width: 900px) {
+    body.members-bg .pledge-title {
+        font-size: 1.5rem !important;
+        line-height: 1.15;
+        text-align: center;
+        white-space: normal !important; /* allow wrapping */
+    }
+
+    /* Force PLEDGE onto its own line */
+    body.members-bg .pledge-title::after {
+        content: "";
+        display: block; /* creates the line break */
+    }
+}
+
+/* =========================================================
+   MOBILE-ONLY — ARCHERY PAGE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    /* ---------------------------------------------
+       1) MOBILE TITLE (Windsor Sportsmen's / Air Rifle Range)
+       --------------------------------------------- */
+    body.archery-page .archery-title {
+        font-size: 1.7rem !important;
+        line-height: 1.15;
+        text-align: center;
+        white-space: normal !important; /* allow wrapping */
+    }
+
+    /* Force second part onto its own line */
+    body.archery-page .archery-title::after {
+        content: "";
+        display: block;
+    }
+
+
+    /* ---------------------------------------------
+       2) TIMES + PRIVATE EVENTS TEXT
+       --------------------------------------------- */
+
+    /* Replace times block with mobile-stacked version */
+    .archery-times {
+        text-align: center !important;
+        line-height: 1.6;
+        font-size: 0 !important; /* hide original */
+    }
+
+    .archery-times br {
+        display: none;
+    }
+
+    .archery-times::before {
+        content:
+            "5:30 - 6:30 pm"
+            "(17 and under)"
+            "6:30 - 7:30 pm"
+            "(17 and under)"
+            "7:30 - 8:30 pm"
+            "(Age 18+)";
+        white-space: pre-line;
+        display: block;
+        font-size: 1.3rem;
+        text-align: center;
+    }
+
+    /* Smaller private events text */
+    .archery-private {
+        font-size: 1rem !important;
+        line-height: 1.4;
+    }
+
+
+    /* ---------------------------------------------
+       3) HEADER IMAGE REMOVAL + MOBILE PAGE TITLE
+       --------------------------------------------- */
+
+    /* Remove header image */
+    .archery-header {
+        display: none !important;
+    }
+
+    /* Add ARCHERY title above content */
+    body.archery-page::before {
+        content: "ARCHERY";
+        display: block;
+        text-align: center;
+        font-size: 2.2rem;
+        font-weight: 700;
+        margin-top: 120px;
+        margin-bottom: 20px;
+        color: #ffffff;
+    }
+
+
+    /* ---------------------------------------------
+       4) CANCELATIONS TITLE FIX
+       --------------------------------------------- */
+
+    /* Fix spelling + size */
+    .archery-cancel-title {
+        font-size: 0 !important; /* hide original */
+        letter-spacing: 0.5px;
+    }
+
+    .archery-cancel-title::after {
+        content: "Archery Cancelations";
+        display: block;
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: inherit;
+    }
+}
+
+/* MOBILE ONLY — Air Rifle Title */
+@media (max-width: 900px) {
+    body.air-rifle-bg .airrifle-title {
+        display: block;
+        text-align: center;
+        font-size: 1.6rem;
+        line-height: 1.2;
+
+        /* Wrapping behavior */
+        white-space: normal !important;   /* allow natural wrapping */
+        overflow-wrap: break-word;        /* wrap long words only if needed */
+        word-break: normal;               /* avoid breaking words */
+    }
+}
+
+/* =========================================================
+   MOBILE-ONLY — OFHA PAGE (clean title only)
+========================================================= */
+@media (max-width: 900px) {
+
+    /* Remove the 160px spacer ONLY on mobile */
+    body.ofha-bg section[style*="height: 160px"] {
+        display: none !important;
+    }
+
+    /* Remove header image */
+    .ofha-header {
+        display: none !important;
+    }
+
+    /* Keep ALL content pushed down below the nav */
+    body.ofha-bg {
+        padding-top: 300px !important;
+    }
+
+    /* Mobile-only OFHA title — CLEAN, NO CARD */
+    body.ofha-bg::before {
+        content: "OFHA";
+        display: block;
+        text-align: center;
+        font-size: 2.4rem;
+        font-weight: 700;
+
+        /* Position title exactly where you want it */
+        margin-top: -40px;   /* adjust until perfect */
+        margin-bottom: 15px; /* 15px above first card */
+
+        /* Make white text readable on water background */
+        color: #ffffff;
+        text-shadow: 0 0 8px rgba(0,0,0,0.6);
+
+        /* Ensure title sits ABOVE background */
+        position: relative;
+        z-index: 5;
+    }
+
+    /* First card stays where it is */
+    body.ofha-bg .outer-card:first-of-type {
+        margin-top: 0 !important;
+    }
+
+    /* First card fixes */
+    .ofha-info-logo img.ofha-logo {
+        width: 50% !important;
+        height: auto;
+    }
+
+    .ofha-info-text p {
+        font-size: 1rem !important;
+        line-height: 1.4;
+    }
+
+    .ofha-info-row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .ofha-info-logo {
+        text-align: center;
+    }
+}
+   
+/* ============================================
+   MOBILE — Trap & Skeet Section
+   ============================================ */
+@media (max-width: 600px) {
+
+    /* Push page down under nav */
+    body {
+        padding-top: 50px;
+    }
+
+    /* Stack announcement + calendar vertically */
+    .ts-announcement {
+        display: block !important;   /* ⭐ FORCE STACKING ON MOBILE */
+        flex-direction: column;
+        gap: 50px;
+        padding: 0 15px;
+    }
+
+    /* Left column full width */
+    .ts-left {
+        width: 100%;
+        text-align: center;
+    }
+
+    .ts-left h2 {
+        font-size: 1.6rem;
+        line-height: 1.2;
+    }
+
+    /* Default list styling */
+    .ts-left ul {
+        text-align: left;
+        margin: 0 auto;
+        max-width: 320px;
+    }
+
+    /* ⭐ FIX: Important Notes list — remove indent + center block */
+    .ts-left ul {
+        max-width: none !important;
+        margin: 0 !important;
+        padding-left: 20px !important;
+        text-align: left !important;
+    }
+
+    /* Facebook + Instagram stacked + centered */
+    .fb-bottom-button {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        margin-top: 20px;
+    }
+
+    .fb-bottom-button img {
+        width: 120px;
+        height: auto;
+    }
+
+    /* Calendar wrapper */
+    .ts-right {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        /* ⭐ SHIFT ENTIRE CALENDAR RIGHT 47PX */
+        margin-left: 47px;
+    }
+
+    .calendar-card {
+        /* 5px space from screen edges */
+        width: calc(100% - 10px);
+        margin: 0 auto;
+
+        /* thin orange border around calendar */
+        padding: 2px;
+        background: #f9a825;
+
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+        box-sizing: border-box;
+    }
+
+    .calendar-card iframe {
+        width: 100% !important;
+        height: 600px !important;
+        border: none;
+        display: block;
+
+        /* ensure it fills the inner area */
+        min-width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    /* Header image responsive */
+    .page-header img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+}
+
+/* ============================================================
+   MOBILE — Trap & Skeet Info Card Overlays (INFO1–INFO8)
+   ============================================================ */
+@media (max-width: 600px) {
+
+    /* Fullscreen overlay container */
+    .ts-overlay {
+        position: fixed !important;
+        top: 0;
+        left: 0;
+        width: 100vw !important;
+        height: 100vh !important;
+        background: rgba(0,0,0,0.55);
+        display: none;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        overflow-y: auto;
+        padding: 0;
+        margin: 0;
+        z-index: 9999;
+    }
+
+    /* Sticky close button */
+    .ts-close-wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        padding: 15px 15px 0 0;
+        position: sticky;
+        top: 0;
+        z-index: 10000;
+        background: rgba(0,0,0,0.55);
+    }
+
+    .ts-close {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: #fff;
+        text-decoration: none;
+        padding: 5px 10px;
+    }
+
+    /* ⭐ FIX: Main content box scrolls internally */
+    .ts-overlay-content {
+        width: 92%;
+        max-width: 500px;
+        max-height: 85vh;          /* NEW */
+        overflow-y: auto;          /* NEW */
+        background: rgba(0,0,0,0.80) !important;
+        color: #fff !important;
+        padding: 22px 18px 40px 18px;
+        border-radius: 10px;
+        margin-bottom: 40px;
+        box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    }
+
+    /* Typography — all white */
+    .ts-overlay-content h2,
+    .ts-overlay-content h3,
+    .ts-overlay-content p,
+    .ts-overlay-content li,
+    .ts-overlay-content strong {
+        color: #fff !important;
+    }
+
+    /* Lists */
+    .ts-overlay-content ul,
+    .ts-overlay-content ol {
+        padding-left: 20px;
+        color: #fff !important;
+    }
+
+    /* Nested lists (INFO7 rules) */
+    .ts-overlay-content ul ul,
+    .ts-overlay-content ol ul {
+        padding-left: 25px;
+        margin-top: 8px;
+    }
+
+    /* Restricted firearms image (INFO7) */
+    .range-restricted-image img {
+        width: 100%;
+        height: auto;
+        display: block;
+        margin: 15px auto;
+    }
+
+    .restricted-firearms-wrapper {
+        text-align: center;
+    }
+
+    .range-revised-date {
+        margin-top: 10px;
+        font-size: 0.9rem;
+        text-align: center;
+        color: #fff !important;
+    }
+
+    /* Package blocks (INFO4) */
+    .package-block {
+        padding: 15px;
+        border-radius: 8px;
+        background: rgba(255,255,255,0.10);
+        margin-bottom: 25px;
+        text-align: left;
+        color: #fff !important;
+    }
+
+    .package-title {
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin-bottom: 8px;
+        color: #fff !important;
+    }
+
+    /* Range Open button (INFO2) */
+    .range-open-button-img {
+        width: 80%;
+        max-width: 260px;
+        height: auto;
+    }
+
+    /* ============================================================
+       INFO 8 — CONTACT FORM OVERLAY (LEFT/RIGHT FLEX FIX)
+       ============================================================ */
+
+    .ts-contact-flex {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .ts-contact-left,
+    .ts-contact-right {
+        width: 100%;
+        color: #fff !important;
+    }
+
+    .ts-contact-card {
+        background: #f9a825;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    .trap-skeet-form input,
+    .trap-skeet-form textarea {
+        width: 100%;
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    .field-row {
+        margin-bottom: 15px;
+    }
+
+    .ts-submit {
+        width: 100%;
+        padding: 12px;
+        font-size: 1.1rem;
+        border-radius: 8px;
+    }
+}
+
+/* ⭐ Desktop: 3 cards side-by-side */
+.club-events-row {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: stretch !important;
+    gap: 10px !important;
+    padding: 0 0.2rem !important; /* tiny edge spacing */
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+/* ⭐ Each card takes equal width */
+.club-events-row .club-event-card {
+    flex: 1 1 33% !important;
+    max-width: 33.33% !important;
+    display: flex !important;
+    margin: 0 !important;
+}
+
+/* ⭐ Inner card must stretch */
+.club-events-row .inner-card {
+    width: 100% !important;
+}
+
+/* ⭐ Images scale properly */
+.club-events-row .event-image {
+    width: 100% !important;
+    height: auto !important;
+    display: block !important;
+    object-fit: cover !important;
+    border-radius: 8px;
+}
+
+/* ⭐ Mobile: stack vertically */
+@media (max-width: 700px) {
+    .club-events-row {
+        flex-direction: column !important;
+        gap: 30px !important;
+        padding: 0 1rem !important;
+    }
+
+    .club-events-row .club-event-card {
+        max-width: 100% !important;
+    }
+}
