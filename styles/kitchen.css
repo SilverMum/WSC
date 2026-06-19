@@ -442,3 +442,249 @@ img {
     max-width: 100%;
     height: auto;
 }
+
+/* =========================================================
+   MOBILE NAVIGATION — FULL CLEANED + CONSOLIDATED VERSION
+   ========================================================= */
+
+/* =========================================================
+   1. MOBILE NAV — ALIGNMENT + TOGGLE BEHAVIOR
+   ========================================================= */
+@media (max-width: 900px) {
+
+    /* Disable hover behavior on mobile */
+    .dropdown:hover > .dropdown-menu {
+        display: none !important;
+    }
+
+    /* Normalize dropdown anchor width */
+    .nav-links li.dropdown {
+        width: auto !important;
+    }
+
+    .nav-links li.dropdown > a {
+        display: inline-block !important;
+    }
+
+    /* Left-align dropdowns */
+    .nav-links li.dropdown > .dropdown-menu {
+        left: 0 !important;
+        transform: translateX(0) !important;
+    }
+
+    /* JS-controlled open state */
+    .nav-links li.dropdown > .dropdown-menu.open {
+        display: block !important;
+    }
+}
+
+/* =========================================================
+   2. MOBILE LABEL FIX — TRAP & SKEET
+   ========================================================= */
+@media (max-width: 768px) {
+
+    .nav-links > li > a[href="trap-skeet.html"] {
+        font-size: 0 !important;
+        position: relative;
+    }
+
+    .nav-links > li > a[href="trap-skeet.html"]::after {
+        content: "Trap & Skeet";
+        font-size: 16px;
+        color: inherit;
+    }
+}
+
+/* =========================================================
+   3. MOBILE NAV — WRAPPED LAYOUT + TAP-TO-OPEN DROPDOWNS
+   ========================================================= */
+@media (max-width: 900px) {
+
+    /* NAV CONTAINER */
+    .main-nav {
+        justify-content: center !important;
+        padding: 12px 0 !important;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .logo {
+        order: 1;
+        text-align: center;
+        width: 100%;
+    }
+
+    .logo img {
+        height: 90px;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .nav-spacer {
+        display: none;
+    }
+
+    /* WRAPPED NAV — 3 OVER 3 */
+    .nav-links {
+        order: 2;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 6px 6px;
+        width: 100%;
+        padding: 0;
+        margin-top: 0;
+    }
+
+    .nav-links li {
+        flex: 0 0 calc(33.33% - 6px);
+        text-align: center;
+    }
+
+    .nav-links a {
+        font-size: 1.3rem;
+        padding: 4px 2px;
+        white-space: nowrap;
+    }
+
+    /* HOMEPAGE-SPECIFIC SPACING */
+    .home .nav-links {
+        gap: 4px 6px !important;
+    }
+
+    .home .nav-links li {
+        flex: 0 0 calc(33.33% - 4px) !important;
+    }
+
+    .home .nav-links a {
+        font-size: 1.3rem !important;
+        padding: 2px 0 !important;
+        font-weight: bold;
+    }
+
+    .home .main-nav {
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+        width: 100% !important;
+        max-width: none !important;
+        margin: 0 auto !important;
+    }
+
+    /* MOBILE DROPDOWN OVERLAY */
+    .dropdown-menu,
+    .submenu-right {
+        display: none;
+        position: absolute !important;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90% !important;
+        margin-top: 6px;
+        padding: 10px 0;
+        border: 1px solid #ddd;
+        background: white;
+        z-index: 9999;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    /* HOMEPAGE DROPDOWN TEXT SIZE */
+    .home .dropdown-menu a,
+    .home .submenu-right a {
+        font-size: 1.3rem !important;
+    }
+
+    /* HOMEPAGE DROPDOWN WIDTH */
+    .home .dropdown-menu,
+    .home .submenu-right {
+        max-width: 360px !important;
+    }
+
+    /* MEMBERS SUBMENU — MOBILE RIGHT OPEN */
+    .dropdown-sub {
+        position: relative;
+    }
+
+    .submenu-toggle {
+        display: inline-block !important;
+        vertical-align: middle !important;
+        margin-left: 6px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .dropdown-sub .submenu-right {
+        top: 0 !important;
+        left: 100% !important;
+        transform: none !important;
+        width: auto !important;
+        max-width: 240px !important;
+    }
+
+    .dropdown-sub.open > .submenu-right {
+        display: block;
+    }
+
+    .dropdown.open > .dropdown-menu {
+        display: block;
+    }
+
+    /* HOMEPAGE — KEEP MEMBERS + ARROW INLINE */
+    .home .dropdown-sub {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        white-space: nowrap !important;
+    }
+
+    .home .submenu-link {
+        display: inline-block !important;
+    }
+
+    .home .submenu-toggle {
+        display: inline-block !important;
+        margin-left: 6px !important;
+        vertical-align: middle !important;
+    }
+}
+
+/* =========================================================
+   MOBILE NAV — EXTRA RULES NEEDED FOR DROPDOWN VISIBILITY
+   (These were NOT in the unified block yet)
+   ========================================================= */
+@media (max-width: 900px) {
+
+    /* Ensure nav stays above all dropdowns + content */
+    .main-nav {
+        position: fixed !important;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 9999 !important;
+    }
+
+    header {
+        position: relative;
+        z-index: 9998;
+    }
+
+    /* WRAPPED NAV — 3 OVER 3 (structure only, no conflicts) */
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 6px 6px;
+        width: 100%;
+        padding: 0;
+        margin-top: 0;
+    }
+
+    .nav-links li {
+        flex: 0 0 calc(33.33% - 6px);
+        text-align: center;
+    }
+
+    .nav-links a {
+        font-size: 1.3rem;
+        padding: 4px 2px;
+        white-space: nowrap;
+    }
+}
