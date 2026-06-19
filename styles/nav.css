@@ -206,3 +206,18 @@ html, body {
 main {
     flex: 1;
 }
+
+.dropdown.open > .dropdown-menu {
+    display: block !important;
+}
+
+.dropdown-sub.open > .submenu-right {
+    display: block !important;
+}
+
+@media (min-width: 901px) {
+    .dropdown:hover > .dropdown-menu,
+    .dropdown-sub:hover > .submenu-right {
+        display: block;
+    }
+}
