@@ -1,6 +1,6 @@
-/* ------------------------------
-   NAVIGATION
---------------------------------*/
+/* =========================================================
+   NAVIGATION — DESKTOP BASE
+========================================================= */
 .main-nav {
     position: fixed;
     top: 0;
@@ -9,10 +9,10 @@
     z-index: 2000;
     display: flex;
     align-items: center;
-    justify-content: center; /* centered nav */
+    justify-content: center;
     padding: 10px 0;
     background-color: #1a1a1a;
-    border-bottom: none;
+    border-bottom: 1px solid #ddd;
 }
 
 .nav-spacer {
@@ -37,7 +37,6 @@
     position: relative;
 }
 
-/* Base nav link style */
 .nav-links a {
     padding: 10px 14px;
     font-size: 1.2rem;
@@ -49,27 +48,23 @@
     white-space: nowrap;
 }
 
-/* Dark hover style for TOP NAV (matches dropdown) */
 .nav-links > li > a:hover {
     background-color: #333 !important;
     color: #fff !important;
-    box-shadow: none;
     transform: translateY(-2px);
 }
 
-/* Make the Members submenu arrow white */
 .submenu-toggle {
     color: #fff !important;
 }
 
-/* ------------------------------
+/* =========================================================
    TRAP & SKEET TWO-LINE ITEM
---------------------------------*/
+========================================================= */
 .nav-trap-skeet a {
     font-size: 1.2rem;
     font-weight: 600;
     color: #fff;
-    text-decoration: none;
     padding: 10px 14px;
     line-height: 1.1;
     display: inline-block;
@@ -83,9 +78,9 @@
     color: #fff;
 }
 
-/* ------------------------------
-   DROPDOWN MENU (Unified Dark Theme)
---------------------------------*/
+/* =========================================================
+   DROPDOWN — DESKTOP
+========================================================= */
 .dropdown {
     position: relative;
 }
@@ -114,8 +109,6 @@
     font-size: 1.5rem;
     font-weight: 600;
     color: #fff !important;
-    text-decoration: none;
-    transition: all 0.2s ease;
     white-space: normal;
 }
 
@@ -124,15 +117,14 @@
     color: #fff;
 }
 
-/* ------------------------------
+/* =========================================================
    RIGHT-SIDE SUBMENU (Members)
---------------------------------*/
-.nav-links li.dropdown-sub {
-    position: relative;
-}
-
-.dropdown-sub > a {
-    padding-right: 18px;
+========================================================= */
+.dropdown-sub {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
 }
 
 .submenu-right {
@@ -142,7 +134,6 @@
     left: 100%;
     min-width: 200px;
     padding: 8px 0;
-    list-style: none;
     background-color: #1a1a1a !important;
     border: none !important;
     box-shadow: 0 4px 8px rgba(0,0,0,0.15);
@@ -153,71 +144,97 @@
     display: block;
 }
 
-.submenu-right a {
-    display: block;
-    padding: 10px 18px;
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: #fff !important;
-    text-decoration: none;
-    white-space: nowrap;
+/* =========================================================
+   MOBILE — HOVER DISABLE + JS OPEN SUPPORT
+========================================================= */
+@media (max-width: 900px) {
+
+    .dropdown:hover > .dropdown-menu {
+        display: none !important;
+    }
+
+    .nav-links li.dropdown > .dropdown-menu.open {
+        display: block !important;
+    }
+
+    .dropdown-sub.open > .submenu-right {
+        display: block !important;
+    }
 }
 
-.submenu-right a:hover {
-    background-color: #333;
-    color: #fff;
+/* =========================================================
+   MOBILE — WRAPPED LAYOUT (3 OVER 3)
+========================================================= */
+@media (max-width: 900px) {
+
+    .main-nav {
+        justify-content: center !important;
+        padding: 12px 0 !important;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        z-index: 9999 !important;
+    }
+
+    .logo img {
+        height: 90px;
+        margin: 0 auto;
+    }
+
+    .nav-links {
+        order: 2;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 6px 6px;
+        width: 100%;
+        padding: 0;
+    }
+
+    .nav-links li {
+        flex: 0 0 calc(33.33% - 6px);
+        text-align: center;
+    }
+
+    .nav-links a {
+        font-size: 1.3rem;
+        padding: 4px 2px;
+    }
 }
 
-/* Keep Members text + arrow aligned */
-.dropdown-sub {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    white-space: nowrap;
+/* =========================================================
+   MOBILE — DROPDOWN OVERLAY
+========================================================= */
+@media (max-width: 900px) {
+
+    .dropdown-menu,
+    .submenu-right {
+        display: none;
+        position: absolute !important;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90% !important;
+        margin-top: 6px;
+        padding: 10px 0;
+        border: 1px solid #ddd;
+        background: white;
+        z-index: 9999;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
 }
 
-.submenu-link,
-.submenu-toggle {
-    display: inline-block;
-}
+/* =========================================================
+   MOBILE — TRAP & SKEET LABEL FIX
+========================================================= */
+@media (max-width: 768px) {
+    .nav-links > li > a[href="trap-skeet.html"] {
+        font-size: 0 !important;
+        position: relative;
+    }
 
-/* ------------------------------
-   KNIFE & AXE (Stacked Link)
---------------------------------*/
-.knifeaxe-link {
-    display: block;
-    line-height: 1.1;
-    text-align: left; /* or center if you prefer */
-}
-
-.knifeaxe-sub {
-    font-size: 0.85em;
-    opacity: 0.85;
-    display: block;
-    margin-top: -2px;
-}
-
-html, body {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-main {
-    flex: 1;
-}
-
-.dropdown.open > .dropdown-menu {
-    display: block !important;
-}
-
-.dropdown-sub.open > .submenu-right {
-    display: block !important;
-}
-
-@media (min-width: 901px) {
-    .dropdown:hover > .dropdown-menu,
-    .dropdown-sub:hover > .submenu-right {
-        display: block;
+    .nav-links > li > a[href="trap-skeet.html"]::after {
+        content: "Trap & Skeet";
+        font-size: 16px;
+        color: inherit;
     }
 }
