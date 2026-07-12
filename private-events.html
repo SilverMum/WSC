@@ -2,113 +2,84 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <!-- Correct viewport tag -->
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
 
     <title>Private Events – Windsor Sportsmen’s Club</title>
 
-    <!-- Your stylesheet -->
-    <link rel="stylesheet" href="styles.css?v=10">
+    <!-- =========================================================
+         PAGE STYLESHEETS
+    ========================================================== -->
+    <link rel="stylesheet" href="styles/nav.css">
+    <link rel="stylesheet" href="styles.css?v=7">
+    <link rel="stylesheet" href="styles/party.css?v=7">
+    <link rel="stylesheet" href="styles/footer.css">
 </head>
 
 <body class="private-events-bg">
 
-<!-- ⭐ FULL NAV BAR -->
 <header>
     <nav class="main-nav">
 
-        <!-- Logo -->
         <div class="logo">
-            <img src="images/WINDSOR SPORTSMANS REMAKE.png" alt="Windsor Sportsmen’s Club Logo">
+            <img src="images/WINDSOR SPORTSMANS REMAKE.png"
+                 alt="Windsor Sportsmen’s Club Logo">
         </div>
 
-        <!-- Spacer (kept for desktop layout) -->
         <div class="nav-spacer"></div>
 
-        <!-- Nav Links -->
         <ul class="nav-links">
-
             <li><a href="index.html">Home</a></li>
-
-            <li class="dropdown">
-                <a href="#">Events ▾</a>
-                <ul class="dropdown-menu">
-                    <li><a href="calendar.html">Calendar</a></li>
-                    <li><a href="#club-events">Club Events</a></li>
-                    <li><a href="private-events.html">Private Events</a></li>
-                </ul>
-            </li>
-
+            <li><a href="calendar.html">Calendar</a></li>
+            <li><a href="private-events.html">Rentals</a></li>
             <li><a href="kitchen.html">Kitchen</a></li>
 
             <li class="dropdown">
-                <a href="#">Groups ▾</a>
+                <a href="#">Activities ▾</a>
                 <ul class="dropdown-menu">
-
                     <li><a href="trap-skeet.html">Trap & Skeet</a></li>
-
                     <li><a href="archery.html">Archery</a></li>
-                    <li><a href="ofha.html">OFHA</a></li>
-                    <li><a href="cheese-cracker.html">Cheese & Cracker</a></li>
                     <li><a href="air-rifle.html">Air Rifle</a></li>
-                    <li><a href="members.html">Members</a>
-
                 </ul>
             </li>
 
-            <li><a href="#contact-title">Contact</a></li>
-
-            <li><a href="login.html">Login</a></li>
-
+            <li class="dropdown">
+                <a href="#">More ▾</a>
+                <ul class="dropdown-menu">
+                    <li><a href="ofha.html">OFHA</a></li>
+                    <li><a href="cheese-cracker.html">Cheese & Cracker</a></li>
+                    <li><a href="members.html">Members</a></li>
+                </ul>
+            </li>
         </ul>
-
     </nav>
 </header>
-    
-<!-- SPACER BELOW NAV -->
+
 <section style="height: 160px;"></section>
 
 <main>
 
-<!-- EXTRA SPACER -->
-<section style="height: 60px;"></section>
+<section style="height: 100px;"></section>
 
-<!-- ⭐ PRIVATE EVENTS Party Image -->
-    <div class="private-events-header-image">
-    <img src="images/party.png" alt="Private Event Party Image">
-</div>
+<h2 class="private-events-title">Planning A Party?!</h2>
 
-<!-- ⭐ PRIVATE EVENTS CONTENT -->
-<section class="private-events-text-card outer-card">
-    <div class="inner-card">
+<p class="private-events-text">
+    Host your next event at the <span class="blue-word">Windsor Sportsmen’s Club</span>.<br>
+    Whether you're planning a party, group dinner, meeting, or special function,<br>
+    • Multiple indoor rooms suitable for groups of 25, 40, and up to 200 guests<br>
+    • Large‑capacity hall available for meetings and events of 30, 50, and up to 800 attendees.<br>
+    • Main hall stage for presentations, speakers, or entertainment<br>
+    • Catering by <span class="red-word">Rob n Sons</span><br>
+    • Outdoor licensed pavilion with BBQ pit for seasonal gatherings<br>
+    For full rental details, pricing, and booking information, view our printable guide below.
+</p>
 
-        <p class="private-events-text">
-            Planning a Party, group dinner or function?<br>
-            Consider the Windsor Sportsmen's Club.<br>
-            Inside dinner seating for 25, 40 and 200 people.<br>
-            Meetings for 30, 50 or 800 people.<br>
-            Stage in main room.<br>
-            Catering by Rob n Sons Kitchen.<br>
-            Back area with Licensed pavilion and BBQ pit.
-        </p>
-
-    </div>
-</section>
-
-        <!-- PDF IMAGE BELOW -->
-        <a href="documents/rental.pdf" target="_blank" class="private-events-left">
-            <img src="images/pdf-icon.png" alt="Rental PDF" class="private-events-pdf">
-        </a>
-
-    </div>
-
-</section>
+<a href="documents/rental.pdf" target="_blank" class="private-events-left">
+    <img src="images/pdf-icon.png" alt="Rental PDF" class="private-events-pdf">
+</a>
 
 </main>
 
-<!-- ⭐ 4‑IMAGE GALLERY (UPDATED TO 2×2 GRID) -->
 <section class="private-events-gallery">
-
     <div class="private-events-grid">
         <a href="images/Building-Layout.png" target="_blank">
             <img src="images/Building-Layout.png" alt="Building Layout">
@@ -126,15 +97,11 @@
             <img src="images/Outdoor-BBQ.png" alt="Outdoor BBQ">
         </a>
     </div>
-
 </section>
 
-<!-- FOOTER -->
-<footer class="site-footer">
-    <p>©2024 Windsor Sportsmen's Club. All Rights Reserved.</p>
-</footer>
+<div id="footer-placeholder"></div>
+<script src="scripts/load-footer.js"></script>
 
-<!-- ⭐ CAROUSEL SCRIPT -->
 <script>
 document.addEventListener("DOMContentLoaded", function () {
     const slides = document.querySelectorAll(".private-events-header-carousel .carousel-slide");
@@ -149,6 +116,8 @@ document.addEventListener("DOMContentLoaded", function () {
     setInterval(showNextSlide, 4000);
 });
 </script>
+
 <script src="scripts.js"></script>
+
 </body>
 </html>
