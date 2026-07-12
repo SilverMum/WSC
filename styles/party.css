@@ -1,0 +1,130 @@
+/* ------------------------------
+   PRIVATE EVENTS — TEXT CARD
+--------------------------------*/
+
+/* TITLE for Private Events – white text, dark blue outline */
+.private-events-title {
+    font-size: 3.2rem;
+    font-weight: 900;
+    color: #ffffff; /* white fill */
+    text-align: center;
+    margin: 0 0 35px 0;
+
+    text-shadow:
+        -3px -3px 0 #0a1a3a,
+         3px -3px 0 #0a1a3a,
+        -3px  3px 0 #0a1a3a,
+         3px  3px 0 #0a1a3a,
+        -3px  0px 0 #0a1a3a,
+         3px  0px 0 #0a1a3a,
+         0px -3px 0 #0a1a3a,
+         0px  3px 0 #0a1a3a;
+}
+
+/* Private Events Text – white text, dark blue outline */
+.private-events-text {
+    font-size: 2.0rem;
+    font-weight: 700;
+    color: #ffffff; /* white fill */
+    line-height: 1.4;
+    margin: 0;
+
+    text-shadow:
+        -2px -2px 0 #0a1a3a,
+         2px -2px 0 #0a1a3a,
+        -2px  2px 0 #0a1a3a,
+         2px  2px 0 #0a1a3a,
+        -2px  0px 0 #0a1a3a,
+         2px  0px 0 #0a1a3a,
+         0px -2px 0 #0a1a3a,
+         0px  2px 0 #0a1a3a;
+}
+
+/* Blue word – blue fill, dark blue outline */
+.blue-word {
+    color: #4a8cff; /* keep the bright blue */
+    text-shadow:
+        -2px -2px 0 #0a1a3a,
+         2px -2px 0 #0a1a3a,
+        -2px  2px 0 #0a1a3a,
+         2px  2px 0 #0a1a3a,
+        -2px  0px 0 #0a1a3a,
+         2px  0px 0 #0a1a3a,
+         0px -2px 0 #0a1a3a,
+         0px  2px 0 #0a1a3a;
+}
+
+/* Red word – red fill, dark blue outline */
+.red-word {
+    color: #ff0000; /* keep the bright red */
+    text-shadow:
+        -2px -2px 0 #0a1a3a,
+         2px -2px 0 #0a1a3a,
+        -2px  2px 0 #0a1a3a,
+         2px  2px 0 #0a1a3a,
+        -2px  0px 0 #0a1a3a,
+         2px  0px 0 #0a1a3a,
+         0px -2px 0 #0a1a3a,
+         0px  2px 0 #0a1a3a;
+}
+
+/* ------------------------------
+   PRIVATE EVENTS — PDF BUTTON
+--------------------------------*/
+.private-events-pdf {
+    width: 260px;
+    height: auto;
+    display: block;
+    margin: 20px auto 40px;
+}
+
+/* ------------------------------
+   PRIVATE EVENTS — 2x2 IMAGE GRID
+--------------------------------*/
+.private-events-gallery {
+    width: 100%;
+    margin: 40px auto 60px;
+    padding: 0 20px;
+}
+
+.private-events-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.private-events-grid img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+}
+
+/* Mobile: stack images 1 per row */
+@media (max-width: 700px) {
+    .private-events-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ------------------------------
+   PRIVATE EVENTS PAGE BACKGROUND
+--------------------------------*/
+.private-events-bg {
+    position: relative;
+    z-index: 0; /* ⭐ REQUIRED so overlay stays behind content */
+    min-height: 100vh;
+    background: url('../images/partybg.png') center center / cover no-repeat fixed;
+}
+
+/* 30% white wash overlay */
+.private-events-bg::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.3);
+    z-index: -1;
+}
