@@ -1,0 +1,224 @@
+/* =========================================================
+   ARCHERY PAGE — CLEAN, STANDALONE CSS
+   ========================================================= */
+
+/* ------------------------------
+   PAGE BACKGROUND
+--------------------------------*/
+body.archery-page {
+    background: url("images/tree line bg.png") bottom center / cover no-repeat fixed;
+    color: #222;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+/* ------------------------------
+   HEADER IMAGE
+--------------------------------*/
+.archery-header-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-top: 120px; /* space under fixed nav */
+}
+
+/* ------------------------------
+   CARD WRAPPERS
+--------------------------------*/
+.outer-card {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    backdrop-filter: blur(4px);
+    text-align: center;
+}
+
+.inner-card {
+    background: rgba(220, 230, 239, 0.55);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow:
+        0 4px 14px rgba(47, 79, 62, 0.35),
+        0 8px 28px rgba(47, 79, 62, 0.25);
+}
+
+/* Green variant used on Archery */
+.green-card {
+    background: rgba(200, 230, 200, 0.55);
+}
+
+/* ------------------------------
+   TITLES + TEXT
+--------------------------------*/
+.archery-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.archery-season,
+.archery-subtitle,
+.archery-times,
+.archery-simple,
+.archery-pricing,
+.archery-weather,
+.archery-private {
+    font-size: 1.3rem;
+    line-height: 1.6;
+    margin: 12px 0;
+}
+
+/* ------------------------------
+   ARCHERY TIMES — FIXED FOR MOBILE
+--------------------------------*/
+@media (max-width: 900px) {
+    .archery-times {
+        font-size: 1.3rem !important;
+        line-height: 1.6 !important;
+        text-align: center !important;
+    }
+
+    /* Remove any old cached pseudo-element text */
+    .archery-times::before {
+        content: none !important;
+    }
+}
+
+/* ------------------------------
+   IMAGE STRIP
+--------------------------------*/
+.archery-image-wrapper {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.archery-image-wrapper img {
+    width: 30%;
+    min-width: 200px;
+    border-radius: 10px;
+}
+
+/* ------------------------------
+   CALENDAR
+--------------------------------*/
+.archery-calendar-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.calendar-container {
+    display: flex;
+    justify-content: center;
+}
+
+.calendar-wrapper iframe {
+    width: 100%;
+    max-width: 900px;
+    height: 600px;
+    border-radius: 10px;
+    border: none;
+}
+
+/* Mobile calendar height */
+@media (max-width: 900px) {
+    .calendar-wrapper iframe {
+        height: 450px;
+    }
+}
+
+/* ------------------------------
+   CONTACT FORM
+--------------------------------*/
+.archery-cancel {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    backdrop-filter: blur(4px);
+}
+
+.archery-cancel h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.archery-cancel-intro {
+    font-size: 1.3rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.archery-cancel-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.field-row {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.field-row label {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.field-row input,
+.field-row textarea {
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 1.1rem;
+}
+
+.field-inline {
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.field-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.ac-submit {
+    padding: 12px;
+    background: #1a1a1a;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.ac-submit:hover {
+    background: #000;
+}
+
+/* ------------------------------
+   FOOTER
+--------------------------------*/
+.site-footer {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    text-align: center;
+    padding: 25px 10px;
+    margin-top: 40px;
+}
+
+.site-footer p {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
