@@ -131,6 +131,19 @@ body.archery-page {
     }
 }
 
+/* FIX — Force mobile to use the HTML text for archery times */
+@media (max-width: 900px) {
+    .archery-times {
+        font-size: 1.3rem !important;
+        line-height: 1.6 !important;
+        text-align: center !important;
+    }
+
+    /* Remove old cached pseudo-element text */
+    .archery-times::before {
+        content: none !important;
+    }
+}
 /* ------------------------------
    CONTACT FORM
 --------------------------------*/
