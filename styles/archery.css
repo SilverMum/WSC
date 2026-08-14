@@ -2,6 +2,153 @@
    ARCHERY PAGE — CLEAN, STANDALONE CSS
    ========================================================= */
 
+/* =========================================================
+   NAVIGATION
+========================================================= */
+.main-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+    background-color: #1a1a1a;
+    border-bottom: 1px solid #ddd;
+}
+
+.nav-spacer {
+    display: none;
+}
+
+.logo img {
+    height: 110px;
+    width: auto;
+    display: block;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    padding-right: 20px;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    padding: 10px 14px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.nav-links > li > a:hover {
+    background-color: #333 !important;
+    color: #fff !important;
+    transform: translateY(-2px);
+}
+
+.submenu-toggle {
+    color: #fff !important;
+}
+
+/* Trap & Skeet two-line item */
+.nav-trap-skeet a {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #fff;
+    padding: 10px 14px;
+    line-height: 1.1;
+    display: inline-block;
+    text-align: left !important;
+}
+
+.nav-trap-skeet a span {
+    font-size: 0.85em;
+    font-weight: 600;
+    display: block;
+    color: #fff;
+}
+
+/* Dropdown menus */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 220px;
+    padding: 8px 0;
+    list-style: none;
+    background-color: #1a1a1a !important;
+    border: none !important;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    z-index: 2100;
+}
+
+.dropdown:hover > .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px 18px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #fff !important;
+    white-space: normal;
+}
+
+.dropdown-menu a:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Right-side submenu */
+.dropdown-sub {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+}
+
+.submenu-right {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    min-width: 200px;
+    padding: 8px 0;
+    background-color: #1a1a1a !important;
+    border: none !important;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    z-index: 2200;
+}
+
+.dropdown-sub:hover > .submenu-right {
+    display: block;
+}
+
+.submenu-right a {
+    padding: 10px 18px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #fff !important;
+}
+
 /* ------------------------------
    PAGE BACKGROUND
 --------------------------------*/
