@@ -341,16 +341,51 @@ body.knifeaxe-bg {
 }
 
 @media (max-width: 600px) {
-    .contact-form input,
-    .contact-form textarea {
-        width: 100% !important;
-        max-width: 100% !important;
+
+    /* Fix Program Details overflow */
+    .knifeaxe-details-card {
+        padding: 20px !important;
         box-sizing: border-box;
     }
 
-    .contact-form {
+    .details-grid {
+        grid-template-columns: 1fr !important; /* collapse to 1 column */
+        gap: 20px !important;
         width: 100% !important;
-        padding: 10px !important;
+    }
+
+    .detail-item {
+        width: 100% !important;
+        overflow-wrap: break-word;
         box-sizing: border-box;
+    }
+}
+
+@media (max-width: 600px) {
+
+    /* Stack coordinator + form vertically */
+    .knifeaxe-card {
+        flex-direction: column !important;
+        padding: 20px !important;
+        box-sizing: border-box;
+    }
+
+    .knifeaxe-left,
+    .knifeaxe-right {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    /* Fix form fields overflowing */
+    .knifeaxe-form .field-row {
+        width: 100% !important;
+        display: block !important;
+    }
+
+    .knifeaxe-form input,
+    .knifeaxe-form textarea {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
     }
 }
