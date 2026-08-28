@@ -25,5 +25,5 @@
 }
 
 .event-space {
-    line-height: 1.2rem; /* one line of text */
+    height: 1.2rem; /* one line of text worth of space */
 }
