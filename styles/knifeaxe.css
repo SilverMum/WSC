@@ -339,3 +339,18 @@ body.knifeaxe-bg {
 .knifeaxe-form input {
     color: black !important;
 }
+
+@media (max-width: 600px) {
+    .contact-form input,
+    .contact-form textarea {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box;
+    }
+
+    .contact-form {
+        width: 100% !important;
+        padding: 10px !important;
+        box-sizing: border-box;
+    }
+}
