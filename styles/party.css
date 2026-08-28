@@ -122,3 +122,17 @@
 .private-events-bg::before {
     content: none !important;
 }
+
+.private-events-header-image {
+    width: 100%;
+    max-width: 1200px;
+    margin: 40px auto 20px;
+    padding: 0 20px;
+}
+
+.private-events-header-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px; /* optional */
+}
