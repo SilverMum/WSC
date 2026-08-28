@@ -23,3 +23,7 @@
         gap: 25px;
     }
 }
+
+.event-space {
+    line-height: 1.2rem; /* one line of text */
+}
