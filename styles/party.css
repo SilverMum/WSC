@@ -180,3 +180,38 @@
         font-size: 1rem;
     }
 }
+
+.event-card h2 {
+    margin-top: 0;
+    text-align: center;
+    color: #c8ffb0;
+    font-size: 2rem;        /* Larger title */
+    font-weight: 700;
+}
+
+.event-card h3 {
+    text-align: center;
+    margin-top: 10px;
+    color: #e6ffd9;
+    font-size: 1.5rem;      /* Slightly smaller than h2 */
+    font-weight: 600;
+}
+
+.event-card p {
+    font-size: 1.25rem;     /* Just under the size of the titles */
+    line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+    .event-card h2 {
+        font-size: 1.7rem;
+    }
+
+    .event-card h3 {
+        font-size: 1.35rem;
+    }
+
+    .event-card p {
+        font-size: 1.15rem;
+    }
+}
