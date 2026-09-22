@@ -394,34 +394,16 @@ body.knifeaxe-bg {
 CANCELLATIONS SECTION
 ========================================== */
  
-.knifeaxe-cancellations-card {
-border-radius: 10px;
-}
- 
-.cancel-date-text {
-margin: 0;
-text-align: center;
-font-size: 1.1rem;
-font-weight: 600;
-color: #8b1e1e;
-}
- 
 @media (min-width: 1024px) {
- 
 .knifeaxe-cancellations-card {
 width: 50%;
 margin: 20px auto;
- 
-border: 3px solid #d62828;
+border: 3px solid red;
 border-radius: 10px;
- 
 text-align: center;
 padding: 1rem;
- 
 box-sizing: border-box;
  
-/* Red background with 20% opacity */
-background: rgba(214, 40, 40, 0.20) !important;
+background: #330000;
 }
- 
 }
