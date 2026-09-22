@@ -425,7 +425,7 @@ text-align: center;
 padding: 1rem;
 box-sizing: border-box;
  
-background: rgba(255, 0, 0, 0.8) !important;
+background: rgba(255, 0, 0, 0.2) !important;
  
 min-height: 200px; /* temporary test */
 }
