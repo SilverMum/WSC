@@ -423,5 +423,7 @@ border-radius: 10px;
 text-align: center;
 padding: 1rem;
 box-sizing: border-box;
+ 
+background-color: rgba(255, 0, 0, 0.2);
 }
 }
