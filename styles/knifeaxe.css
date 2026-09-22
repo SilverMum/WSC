@@ -395,6 +395,7 @@ CANCELLATIONS SECTION
 ========================================== */
  
 @media (min-width: 1024px) {
+ 
 .knifeaxe-cancellations-card {
 width: 50%;
 margin: 20px auto;
@@ -403,7 +404,13 @@ border-radius: 10px;
 text-align: center;
 padding: 1rem;
 box-sizing: border-box;
- 
-background: #330000;
 }
+ 
+.cancel-date-card {
+background: rgba(255, 0, 0, 0.2);
+border-radius: 6px;
+padding: 10px;
+margin: 10px 0;
+}
+ 
 }
