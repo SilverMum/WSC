@@ -415,10 +415,13 @@ color: #8b1e1e;
 }
 
 @media (min-width: 1024px) {
-.cancellations-card {
-border: 3px solid red;
-text-align: center;
+.knifeaxe-cancellations-card {
 width: 50%;
 margin: 20px auto;
+border: 3px solid red;
+border-radius: 10px;
+text-align: center;
+padding: 1rem;
+box-sizing: border-box;
 }
 }
