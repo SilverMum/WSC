@@ -112,8 +112,19 @@
 display: flex;
 align-items: center;
 justify-content: center;
-gap: 20px;
+gap: 40px;
 margin-bottom: 20px;
+}
+ 
+.event-text {
+width: 450px;
+text-align: center;
+}
+ 
+.clickable-vertical-img {
+width: 250px;
+height: auto;
+display: block;
 }
  
 .event-text {
