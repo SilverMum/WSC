@@ -1,5 +1,5 @@
 /* =========================================================
-   ⭐ EVENTS HEADER / MAIN EVENTS CARD
+   ⭐ EVENTS HEADER / MAIN BEIGE CARD
    ========================================================= */
 
 .events-header {
@@ -16,19 +16,18 @@
     border-radius: 12px;
     border: 2px solid #d8d2c8;
 
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 
     box-sizing: border-box;
 }
 
 
 /* =========================================================
-   ⭐ SUBTITLE WITH LINES
+   ⭐ MARK YOUR CALENDAR
    ========================================================= */
 
 .events-subtitle {
     display: flex;
-
     align-items: center;
     justify-content: center;
 
@@ -47,12 +46,11 @@
 }
 
 
-/* Lines beside "MARK YOUR CALENDAR" */
-
 .events-subtitle .line {
-    flex: 0 0 60px;
-
+    width: 60px;
     height: 2px;
+
+    flex: 0 0 60px;
 
     background-color: #6b5e4a;
 
@@ -63,7 +61,7 @@
 
 
 /* =========================================================
-   ⭐ MAIN TITLE
+   ⭐ OCTOBER 2026 EVENTS TITLE
    ========================================================= */
 
 .events-title {
@@ -72,57 +70,49 @@
     font-size: 36px;
     font-weight: 800;
 
-    letter-spacing: 1px;
-
     color: #3a3328;
+
+    letter-spacing: 1px;
 }
 
 
 /* =========================================================
-   ⭐ EVENT ROW
+   ⭐ INDIVIDUAL EVENT ROW
+   =========================================================
+
+   DESKTOP:
+
+   ┌─────────────────────┬───────────────┐
+   │                     │               │
+   │     EVENT TEXT      │     IMAGE     │
+   │                     │               │
+   └─────────────────────┴───────────────┘
+
    ========================================================= */
 
-/*
-   DESKTOP LAYOUT:
-
-   ┌──────────────────────┬──────────────────────┐
-   │                      │                      │
-   │      EVENT TEXT      │        IMAGE         │
-   │       CENTERED       │       CENTERED       │
-   │                      │                      │
-   └──────────────────────┴──────────────────────┘
-
-   The columns are invisible.
-*/
-
 .event-row {
-    display: grid !important;
+    display: grid;
 
-    grid-template-columns: 1fr 1fr !important;
+    grid-template-columns: minmax(0, 1fr) 250px;
 
     align-items: center;
 
-    gap: 30px;
+    column-gap: 40px;
 
     width: 100%;
 
-    margin-bottom: 35px;
+    margin: 0 0 40px 0;
 
     box-sizing: border-box;
 }
 
 
 /* =========================================================
-   ⭐ LEFT COLUMN — EVENT TEXT
+   ⭐ EVENT TEXT
    ========================================================= */
 
 .event-text {
     width: 100%;
-
-    display: flex;
-
-    justify-content: center;
-    align-items: center;
 
     text-align: center;
 
@@ -130,10 +120,10 @@
 }
 
 
-/* Event paragraph */
-
 .event-text p {
     margin: 0;
+
+    padding: 0;
 
     line-height: 1.6;
 
@@ -142,18 +132,18 @@
 
 
 /* =========================================================
-   ⭐ RIGHT COLUMN — EVENT IMAGE
+   ⭐ EVENT IMAGE
    ========================================================= */
 
 .clickable-vertical-img {
-    width: 250px !important;
+    display: block;
 
-    max-width: 100%;
+    width: 250px;
+
+    max-width: 250px;
     max-height: 350px;
 
     height: auto;
-
-    display: block;
 
     margin: 0 auto;
 
@@ -180,7 +170,7 @@
     width: 100vw;
     height: 100vh;
 
-    background: rgba(0, 0, 0, 0.9);
+    background: rgba(0,0,0,0.9);
 
     display: none;
 
@@ -193,7 +183,9 @@
 }
 
 
-/* Fullscreen image */
+/* =========================================================
+   ⭐ FULLSCREEN IMAGE
+   ========================================================= */
 
 .fullscreen-overlay img {
     width: auto;
@@ -209,7 +201,7 @@
 
 
 /* =========================================================
-   ⭐ FULLSCREEN CLOSE BUTTON
+   ⭐ CLOSE BUTTON
    ========================================================= */
 
 .close-btn {
@@ -234,10 +226,6 @@
 
 @media (max-width: 700px) {
 
-    /* -----------------------------------------
-       MAIN EVENTS CARD
-       ----------------------------------------- */
-
     .events-header {
         width: calc(100% - 20px);
 
@@ -247,10 +235,6 @@
     }
 
 
-    /* -----------------------------------------
-       TITLE
-       ----------------------------------------- */
-
     .events-title {
         font-size: 28px;
 
@@ -259,35 +243,38 @@
 
 
     /* -----------------------------------------
-       EVENT ROW
+       PHONE LAYOUT
+
+       TEXT
+       ↓
+       IMAGE
        ----------------------------------------- */
 
     .event-row {
-        display: grid !important;
+        display: grid;
 
-        grid-template-columns: 1fr !important;
+        grid-template-columns: 1fr;
 
-        gap: 15px;
+        row-gap: 15px;
 
         margin-bottom: 40px;
     }
 
 
-    /* -----------------------------------------
-       TEXT
-       ----------------------------------------- */
-
     .event-text {
         width: 100%;
+
+        text-align: center;
     }
 
 
-    /* -----------------------------------------
-       IMAGE
-       ----------------------------------------- */
+    .event-text p {
+        text-align: center;
+    }
+
 
     .clickable-vertical-img {
-        width: 250px !important;
+        width: 250px;
 
         max-width: 80%;
 
@@ -296,10 +283,6 @@
         margin: 0 auto;
     }
 
-
-    /* -----------------------------------------
-       SUBTITLE
-       ----------------------------------------- */
 
     .events-subtitle {
         font-size: 14px;
@@ -310,11 +293,9 @@
     }
 
 
-    /* -----------------------------------------
-       SUBTITLE LINES
-       ----------------------------------------- */
-
     .events-subtitle .line {
+        width: 35px;
+
         flex: 0 0 35px;
     }
 }
