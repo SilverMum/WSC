@@ -3,14 +3,16 @@
    ========================================================= */
 
 .events-header {
-
+    width: 100%;
     max-width: 900px;
+
     margin: 40px auto 20px auto;
     padding: 30px 20px;
 
     text-align: center;
 
     background: #f3eee6;
+
     border-radius: 12px;
     border: 2px solid #d8d2c8;
 
@@ -26,6 +28,7 @@
 
 .events-subtitle {
     display: flex;
+
     align-items: center;
     justify-content: center;
 
@@ -35,14 +38,16 @@
 
     font-size: 16px;
     font-weight: 700;
+
     letter-spacing: 2px;
 
     color: #6b5e4a;
+
     text-transform: uppercase;
 }
 
 
-/* Lines on either side of "MARK YOUR CALENDAR" */
+/* Lines beside "MARK YOUR CALENDAR" */
 
 .events-subtitle .line {
     flex: 0 0 60px;
@@ -66,20 +71,28 @@
 
     font-size: 36px;
     font-weight: 800;
+
     letter-spacing: 1px;
 
     color: #3a3328;
 }
+
 
 /* =========================================================
    ⭐ EVENT ROW
    ========================================================= */
 
 /*
-   EVERY EVENT gets two invisible columns:
+   DESKTOP LAYOUT:
 
-   LEFT  = Text
-   RIGHT = Image
+   ┌──────────────────────┬──────────────────────┐
+   │                      │                      │
+   │      EVENT TEXT      │        IMAGE         │
+   │       CENTERED       │       CENTERED       │
+   │                      │                      │
+   └──────────────────────┴──────────────────────┘
+
+   The columns are invisible.
 */
 
 .event-row {
@@ -89,9 +102,9 @@
 
     align-items: center;
 
-    width: 100%;
-
     gap: 30px;
+
+    width: 100%;
 
     margin-bottom: 35px;
 
@@ -100,25 +113,24 @@
 
 
 /* =========================================================
-   ⭐ LEFT SIDE — EVENT TEXT
+   ⭐ LEFT COLUMN — EVENT TEXT
    ========================================================= */
 
 .event-text {
     width: 100%;
 
-    text-align: center;
-
     display: flex;
 
     justify-content: center;
-
     align-items: center;
+
+    text-align: center;
 
     box-sizing: border-box;
 }
 
 
-/* Keep the text centered inside its column */
+/* Event paragraph */
 
 .event-text p {
     margin: 0;
@@ -130,14 +142,13 @@
 
 
 /* =========================================================
-   ⭐ RIGHT SIDE — EVENT IMAGE
+   ⭐ RIGHT COLUMN — EVENT IMAGE
    ========================================================= */
 
 .clickable-vertical-img {
     width: 250px !important;
 
     max-width: 100%;
-
     max-height: 350px;
 
     height: auto;
@@ -155,37 +166,6 @@
     box-sizing: border-box;
 }
 
-
-/* =========================================================
-   ⭐ MOBILE
-   ========================================================= */
-
-@media (max-width: 700px) {
-
-    .event-row {
-        display: grid !important;
-
-        grid-template-columns: 1fr !important;
-
-        gap: 15px;
-
-        margin-bottom: 40px;
-    }
-
-    .event-text {
-        width: 100%;
-    }
-
-    .clickable-vertical-img {
-        width: 250px !important;
-
-        max-width: 80%;
-
-        max-height: 350px;
-
-        margin: 0 auto;
-    }
-}
 
 /* =========================================================
    ⭐ FULLSCREEN IMAGE OVERLAY
@@ -249,21 +229,27 @@
 
 
 /* =========================================================
-   ⭐ MOBILE VERSION
+   ⭐ MOBILE
    ========================================================= */
 
 @media (max-width: 700px) {
 
-    /* Main events card */
+    /* -----------------------------------------
+       MAIN EVENTS CARD
+       ----------------------------------------- */
 
     .events-header {
-        margin: 25px 10px 20px 10px;
+        width: calc(100% - 20px);
 
-        padding: 25px 15px;
+        margin: 25px auto 20px auto;
+
+        padding: 25px 15px 30px 15px;
     }
 
 
-    /* Smaller title on phones */
+    /* -----------------------------------------
+       TITLE
+       ----------------------------------------- */
 
     .events-title {
         font-size: 28px;
@@ -272,10 +258,14 @@
     }
 
 
-    /* Make the two columns become one column */
+    /* -----------------------------------------
+       EVENT ROW
+       ----------------------------------------- */
 
     .event-row {
-        grid-template-columns: 1fr;
+        display: grid !important;
+
+        grid-template-columns: 1fr !important;
 
         gap: 15px;
 
@@ -283,26 +273,33 @@
     }
 
 
-    /* Text takes full width */
+    /* -----------------------------------------
+       TEXT
+       ----------------------------------------- */
 
     .event-text {
         width: 100%;
     }
 
 
-    /* Mobile images */
+    /* -----------------------------------------
+       IMAGE
+       ----------------------------------------- */
 
     .clickable-vertical-img {
-        width: 250px;
+        width: 250px !important;
 
         max-width: 80%;
+
         max-height: 350px;
 
         margin: 0 auto;
     }
 
 
-    /* Slightly smaller subtitle */
+    /* -----------------------------------------
+       SUBTITLE
+       ----------------------------------------- */
 
     .events-subtitle {
         font-size: 14px;
@@ -313,7 +310,9 @@
     }
 
 
-    /* Shorter decorative lines */
+    /* -----------------------------------------
+       SUBTITLE LINES
+       ----------------------------------------- */
 
     .events-subtitle .line {
         flex: 0 0 35px;
