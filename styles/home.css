@@ -1,24 +1,31 @@
 /* =========================================================
-   ⭐ EVENTS HEADER / MAIN BEIGE CARD
+   ⭐ EVENTS HEADER / BEIGE EVENT CARD
    ========================================================= */
 
 .events-header {
-    width: 100%;
-    max-width: 900px;
+    display: block !important;
 
-    margin: 40px auto 20px auto;
-    padding: 30px 20px;
+    width: 100% !important;
+    max-width: 900px !important;
 
-    text-align: center;
+    margin: 40px auto 20px auto !important;
+    padding: 30px 20px !important;
 
-    background: #f3eee6;
+    position: relative !important;
+    left: auto !important;
+    right: auto !important;
+    transform: none !important;
 
-    border-radius: 12px;
-    border: 2px solid #d8d2c8;
+    text-align: center !important;
 
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    background: #f3eee6 !important;
 
-    box-sizing: border-box;
+    border-radius: 12px !important;
+    border: 2px solid #d8d2c8 !important;
+
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08) !important;
+
+    box-sizing: border-box !important;
 }
 
 
@@ -26,37 +33,53 @@
    ⭐ MARK YOUR CALENDAR
    ========================================================= */
 
-.events-subtitle {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.events-header > .events-subtitle {
+    display: flex !important;
 
-    gap: 10px;
+    width: 100% !important;
 
-    margin-bottom: 8px;
+    align-items: center !important;
+    justify-content: center !important;
 
-    font-size: 16px;
-    font-weight: 700;
+    gap: 10px !important;
 
-    letter-spacing: 2px;
+    margin: 0 0 8px 0 !important;
+    padding: 0 !important;
 
-    color: #6b5e4a;
+    font-size: 16px !important;
+    font-weight: 700 !important;
 
-    text-transform: uppercase;
+    letter-spacing: 2px !important;
+
+    color: #6b5e4a !important;
+
+    text-transform: uppercase !important;
+
+    box-sizing: border-box !important;
 }
 
 
-.events-subtitle .line {
-    width: 60px;
-    height: 2px;
+.events-header > .events-subtitle .line {
+    display: block !important;
 
-    flex: 0 0 60px;
+    width: 60px !important;
+    min-width: 60px !important;
+    max-width: 60px !important;
 
-    background-color: #6b5e4a;
+    height: 2px !important;
 
-    opacity: 0.7;
+    flex: 0 0 60px !important;
 
-    border-radius: 2px;
+    margin: 0 !important;
+    padding: 0 !important;
+
+    background-color: #6b5e4a !important;
+
+    opacity: 0.7 !important;
+
+    border-radius: 2px !important;
+
+    box-sizing: border-box !important;
 }
 
 
@@ -64,139 +87,210 @@
    ⭐ OCTOBER 2026 EVENTS TITLE
    ========================================================= */
 
-.events-title {
-    margin-bottom: 30px;
+.events-header > .events-title {
+    display: block !important;
 
-    font-size: 36px;
-    font-weight: 800;
+    width: 100% !important;
 
-    color: #3a3328;
+    margin: 0 0 30px 0 !important;
+    padding: 0 !important;
 
-    letter-spacing: 1px;
+    font-size: 36px !important;
+    font-weight: 800 !important;
+
+    color: #3a3328 !important;
+
+    letter-spacing: 1px !important;
+
+    text-align: center !important;
+
+    box-sizing: border-box !important;
 }
 
 
 /* =========================================================
-   ⭐ INDIVIDUAL EVENT ROW
+   ⭐ OCTOBER EVENT ROW
    =========================================================
 
-   DESKTOP:
+   THIS IS THE IMPORTANT PART.
 
-   ┌─────────────────────┬───────────────┐
-   │                     │               │
-   │     EVENT TEXT      │     IMAGE     │
-   │                     │               │
-   └─────────────────────┴───────────────┘
+   LEFT COLUMN  = EVENT TEXT
+   RIGHT COLUMN = EVENT IMAGE
+
+   The HTML is:
+
+   <div class="event-row">
+
+       <div class="event-text">
+           ...
+       </div>
+
+       <img ...>
+
+   </div>
 
    ========================================================= */
 
-.event-row {
-    display: grid;
+.events-header > .event-row {
+    display: grid !important;
 
-    grid-template-columns: minmax(0, 1fr) 250px;
+    grid-template-columns: minmax(0, 1fr) 250px !important;
 
-    align-items: center;
+    grid-template-rows: auto !important;
 
-    column-gap: 40px;
+    align-items: center !important;
 
-    width: 100%;
+    justify-content: center !important;
 
-    margin: 0 0 40px 0;
+    column-gap: 40px !important;
+    row-gap: 0 !important;
 
-    box-sizing: border-box;
+    width: 100% !important;
+    min-width: 0 !important;
+
+    height: auto !important;
+    min-height: 0 !important;
+
+    margin: 0 0 40px 0 !important;
+    padding: 0 !important;
+
+    position: relative !important;
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+
+    float: none !important;
+    clear: both !important;
+
+    box-sizing: border-box !important;
 }
 
 
 /* =========================================================
-   ⭐ EVENT TEXT
+   ⭐ EVENT TEXT — LEFT COLUMN
    ========================================================= */
 
-.event-text {
-    width: 100%;
+.events-header > .event-row > .event-text {
+    display: block !important;
 
-    text-align: center;
+    grid-column: 1 !important;
+    grid-row: 1 !important;
 
-    box-sizing: border-box;
+    width: 100% !important;
+    min-width: 0 !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    position: static !important;
+
+    float: none !important;
+    clear: none !important;
+
+    text-align: center !important;
+
+    box-sizing: border-box !important;
 }
 
 
-.event-text p {
-    margin: 0;
+.events-header > .event-row > .event-text p {
+    display: block !important;
 
-    padding: 0;
+    width: 100% !important;
 
-    line-height: 1.6;
+    margin: 0 !important;
+    padding: 0 !important;
 
-    text-align: center;
+    line-height: 1.6 !important;
+
+    text-align: center !important;
+
+    box-sizing: border-box !important;
 }
 
 
 /* =========================================================
-   ⭐ EVENT IMAGE
+   ⭐ EVENT IMAGE — RIGHT COLUMN
    ========================================================= */
 
-.clickable-vertical-img {
-    display: block;
+.events-header > .event-row > .clickable-vertical-img {
+    display: block !important;
 
-    width: 250px;
+    grid-column: 2 !important;
+    grid-row: 1 !important;
 
-    max-width: 250px;
-    max-height: 350px;
+    width: 250px !important;
 
-    height: auto;
+    min-width: 250px !important;
+    max-width: 250px !important;
 
-    margin: 0 auto;
+    height: auto !important;
 
-    object-fit: contain;
+    max-height: 350px !important;
 
-    cursor: pointer;
+    margin: 0 auto !important;
+    padding: 0 !important;
 
-    border-radius: 6px;
+    position: static !important;
 
-    box-sizing: border-box;
+    float: none !important;
+    clear: none !important;
+
+    object-fit: contain !important;
+
+    cursor: pointer !important;
+
+    border-radius: 6px !important;
+
+    box-sizing: border-box !important;
 }
 
 
 /* =========================================================
-   ⭐ FULLSCREEN IMAGE OVERLAY
+   ⭐ MAKE SURE THE THREE OCTOBER ROWS ARE INDEPENDENT
+   ========================================================= */
+
+.events-header > .event-row + .event-row {
+    margin-top: 0 !important;
+}
+
+
+/* =========================================================
+   ⭐ FULLSCREEN OVERLAY
    ========================================================= */
 
 .fullscreen-overlay {
-    position: fixed;
+    position: fixed !important;
 
-    top: 0;
-    left: 0;
+    top: 0 !important;
+    left: 0 !important;
 
-    width: 100vw;
-    height: 100vh;
+    width: 100vw !important;
+    height: 100vh !important;
 
-    background: rgba(0,0,0,0.9);
+    background: rgba(0,0,0,0.9) !important;
 
     display: none;
 
-    justify-content: center;
-    align-items: center;
+    justify-content: center !important;
+    align-items: center !important;
 
-    z-index: 99999;
+    z-index: 99999 !important;
 
-    overflow: hidden;
+    overflow: hidden !important;
 }
 
 
-/* =========================================================
-   ⭐ FULLSCREEN IMAGE
-   ========================================================= */
-
 .fullscreen-overlay img {
-    width: auto;
-    height: auto;
+    width: auto !important;
+    height: auto !important;
 
-    max-width: 95vw;
-    max-height: 95vh;
+    max-width: 95vw !important;
+    max-height: 95vh !important;
 
-    object-fit: contain;
+    object-fit: contain !important;
 
-    border-radius: 8px;
+    border-radius: 8px !important;
 }
 
 
@@ -205,18 +299,18 @@
    ========================================================= */
 
 .close-btn {
-    position: absolute;
+    position: absolute !important;
 
-    top: 20px;
-    right: 25px;
+    top: 20px !important;
+    right: 25px !important;
 
-    font-size: 40px;
+    font-size: 40px !important;
 
-    color: white;
+    color: white !important;
 
-    cursor: pointer;
+    cursor: pointer !important;
 
-    z-index: 100000;
+    z-index: 100000 !important;
 }
 
 
@@ -227,75 +321,94 @@
 @media (max-width: 700px) {
 
     .events-header {
-        width: calc(100% - 20px);
+        width: calc(100% - 20px) !important;
 
-        margin: 25px auto 20px auto;
+        max-width: 900px !important;
 
-        padding: 25px 15px 30px 15px;
+        margin: 25px auto 20px auto !important;
+
+        padding: 25px 15px 30px 15px !important;
     }
 
 
-    .events-title {
-        font-size: 28px;
+    .events-header > .events-title {
+        font-size: 28px !important;
 
-        margin-bottom: 25px;
+        margin-bottom: 25px !important;
     }
 
 
     /* -----------------------------------------
-       PHONE LAYOUT
+       PHONE:
 
        TEXT
        ↓
        IMAGE
        ----------------------------------------- */
 
-    .event-row {
-        display: grid;
+    .events-header > .event-row {
+        display: grid !important;
 
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important;
 
-        row-gap: 15px;
+        grid-template-rows: auto auto !important;
 
-        margin-bottom: 40px;
+        row-gap: 15px !important;
+
+        column-gap: 0 !important;
+
+        margin-bottom: 40px !important;
     }
 
 
-    .event-text {
-        width: 100%;
+    .events-header > .event-row > .event-text {
+        grid-column: 1 !important;
+        grid-row: 1 !important;
 
-        text-align: center;
+        width: 100% !important;
+
+        text-align: center !important;
     }
 
 
-    .event-text p {
-        text-align: center;
+    .events-header > .event-row > .event-text p {
+        text-align: center !important;
     }
 
 
-    .clickable-vertical-img {
-        width: 250px;
+    .events-header > .event-row > .clickable-vertical-img {
+        grid-column: 1 !important;
+        grid-row: 2 !important;
 
-        max-width: 80%;
+        width: 250px !important;
 
-        max-height: 350px;
+        max-width: 80% !important;
 
-        margin: 0 auto;
+        min-width: 0 !important;
+
+        max-height: 350px !important;
+
+        margin: 0 auto !important;
     }
 
 
-    .events-subtitle {
-        font-size: 14px;
+    .events-header > .events-subtitle {
+        font-size: 14px !important;
 
-        letter-spacing: 1.5px;
+        letter-spacing: 1.5px !important;
 
-        gap: 7px;
+        gap: 7px !important;
     }
 
 
-    .events-subtitle .line {
-        width: 35px;
+    .events-header > .events-subtitle .line {
+        width: 35px !important;
 
-        flex: 0 0 35px;
+        min-width: 35px !important;
+        max-width: 35px !important;
+
+        flex: 0 0 35px !important;
     }
 }
+
+
