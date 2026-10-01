@@ -71,82 +71,73 @@
     color: #3a3328;
 }
 
-
 /* =========================================================
-   ⭐ INDIVIDUAL EVENT ROW
+   ⭐ EVENT ROW
    ========================================================= */
 
 /*
-   Each event has two invisible columns:
+   EVERY EVENT gets two invisible columns:
 
-   LEFT COLUMN  = Event text
-   RIGHT COLUMN = Event image
-
-   Both columns are the same width.
+   LEFT  = Text
+   RIGHT = Image
 */
 
 .event-row {
-    display: grid;
+    display: grid !important;
 
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr !important;
 
     align-items: center;
+
+    width: 100%;
 
     gap: 30px;
 
     margin-bottom: 35px;
 
-    width: 100%;
+    box-sizing: border-box;
 }
 
 
 /* =========================================================
-   ⭐ LEFT TEXT COLUMN
+   ⭐ LEFT SIDE — EVENT TEXT
    ========================================================= */
 
 .event-text {
     width: 100%;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
     text-align: center;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
 
     box-sizing: border-box;
 }
 
 
-/* Event text formatting */
+/* Keep the text centered inside its column */
 
 .event-text p {
     margin: 0;
 
     line-height: 1.6;
+
+    text-align: center;
 }
 
 
 /* =========================================================
-   ⭐ RIGHT IMAGE COLUMN
+   ⭐ RIGHT SIDE — EVENT IMAGE
    ========================================================= */
 
-/*
-   Images are kept at a controlled size.
-
-   width: 250px
-   = normal image width
-
-   max-height: 350px
-   = prevents tall images from becoming enormous
-
-   margin: 0 auto
-   = centers image inside the right column
-*/
-
 .clickable-vertical-img {
-    width: 250px;
+    width: 250px !important;
 
     max-width: 100%;
+
     max-height: 350px;
 
     height: auto;
@@ -164,6 +155,37 @@
     box-sizing: border-box;
 }
 
+
+/* =========================================================
+   ⭐ MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .event-row {
+        display: grid !important;
+
+        grid-template-columns: 1fr !important;
+
+        gap: 15px;
+
+        margin-bottom: 40px;
+    }
+
+    .event-text {
+        width: 100%;
+    }
+
+    .clickable-vertical-img {
+        width: 250px !important;
+
+        max-width: 80%;
+
+        max-height: 350px;
+
+        margin: 0 auto;
+    }
+}
 
 /* =========================================================
    ⭐ FULLSCREEN IMAGE OVERLAY
