@@ -108,25 +108,15 @@
     }
 }
 
+/* October/November Event Rows */
 .event-row {
 display: flex;
 align-items: center;
 justify-content: center;
-gap: 40px;
-margin-bottom: 20px;
+margin-bottom: 30px;
 }
  
-.event-text {
-width: 450px;
-text-align: center;
-}
- 
-.clickable-vertical-img {
-width: 250px;
-height: auto;
-display: block;
-}
- 
+/* Left text column */
 .event-text {
 width: 500px;
 text-align: center;
@@ -138,10 +128,32 @@ margin: 0;
 line-height: 1.6;
 }
  
+/* Right image column */
 .clickable-vertical-img {
 width: 250px;
-height: auto;
+height: 350px;
+object-fit: contain;
 display: block;
 flex-shrink: 0;
-margin-left: 0px;
+margin-left: 40px;
+cursor: pointer;
+border-radius: 6px;
+}
+ 
+/* Mobile */
+@media (max-width: 700px) {
+.event-row {
+flex-direction: column;
+}
+ 
+.event-text {
+width: 100%;
+}
+ 
+.clickable-vertical-img {
+width: 70%;
+height: auto;
+margin-left: 0;
+margin-top: 15px;
+}
 }
