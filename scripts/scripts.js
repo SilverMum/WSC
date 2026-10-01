@@ -58,3 +58,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
+
+<script>
+function openFullscreenImage(imageSrc) {
+window.open(imageSrc, '_blank');
+}
+</script>
