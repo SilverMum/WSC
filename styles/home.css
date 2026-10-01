@@ -107,3 +107,28 @@
         max-width: 70%;
     }
 }
+
+.event-row {
+display: flex;
+align-items: center; /* centers text vertically beside image */
+justify-content: space-between;
+gap: 30px;
+margin-bottom: 40px;
+}
+ 
+.event-text {
+flex: 1;
+text-align: center; /* centers text horizontally */
+}
+ 
+.event-text p {
+margin: 0;
+line-height: 1.6;
+}
+ 
+.clickable-vertical-img {
+width: 250px;
+height: auto;
+flex-shrink: 0;
+display: block;
+}
