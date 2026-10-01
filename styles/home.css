@@ -130,6 +130,7 @@ line-height: 1.6;
 .clickable-vertical-img {
 width: 250px;
 height: auto;
-flex-shrink: 0;
 display: block;
+flex-shrink: 0;
+margin-left: 30px;
 }
