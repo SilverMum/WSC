@@ -9,7 +9,9 @@
     max-width: 900px !important;
 
     margin: 40px auto 20px auto !important;
-    padding: 30px 20px !important;
+
+    /* ⭐ CHANGED: horizontal padding 20px → 40px */
+    padding: 30px 40px !important;
 
     position: relative !important;
     left: auto !important;
@@ -109,14 +111,13 @@
 
 
 /* =========================================================
-   ⭐ OCTOBER EVENT ROW
+   ⭐ OCTOBER 2026 EVENT ROW
    =========================================================
 
    LEFT  = EVENT TEXT
    RIGHT = EVENT IMAGE
 
-   October images are now 20% larger:
-   250px → 300px
+   IMAGE SIZE = 300px
 
    ========================================================= */
 
@@ -199,7 +200,7 @@
 
 
 /* =========================================================
-   ⭐ OCTOBER EVENT IMAGE — 20% LARGER
+   ⭐ OCTOBER EVENT IMAGE
    ========================================================= */
 
 .events-header > .event-row > .clickable-vertical-img {
@@ -208,6 +209,7 @@
     grid-column: 2 !important;
     grid-row: 1 !important;
 
+    /* ⭐ 300px */
     width: 300px !important;
 
     min-width: 300px !important;
@@ -304,7 +306,7 @@
 
 
 /* =========================================================
-   ⭐ OCTOBER MOBILE
+   ⭐ MOBILE
    ========================================================= */
 
 @media (max-width: 700px) {
@@ -316,6 +318,7 @@
 
         margin: 25px auto 20px auto !important;
 
+        /* Keep mobile padding comfortable */
         padding: 25px 15px 30px 15px !important;
     }
 
@@ -328,7 +331,7 @@
 
 
     /* -----------------------------------------
-       PHONE:
+       OCTOBER PHONE:
 
        TEXT
        ↓
@@ -365,17 +368,15 @@
     }
 
 
-    /* October mobile image — 20% larger */
-
     .events-header > .event-row > .clickable-vertical-img {
         grid-column: 1 !important;
         grid-row: 2 !important;
 
         width: 300px !important;
 
-        min-width: 0 !important;
-
         max-width: 80% !important;
+
+        min-width: 0 !important;
 
         max-height: 420px !important;
 
@@ -407,15 +408,13 @@
    ⭐ NOVEMBER 2026 EVENTS
    =========================================================
 
-   November currently uses:
+   November uses:
 
    <div class="events-row">
 
-   instead of:
+   November now uses the SAME image size as October.
 
-   <div class="event-row">
-
-   November remains at the original 250px image size.
+   IMAGE SIZE = 300px
 
    LEFT  = TEXT
    RIGHT = IMAGE
@@ -430,7 +429,7 @@
 .events-header > .events-row {
     display: grid !important;
 
-    grid-template-columns: minmax(0, 1fr) 250px !important;
+    grid-template-columns: minmax(0, 1fr) 300px !important;
 
     grid-template-rows: auto !important;
 
@@ -507,7 +506,7 @@
 
 
 /* ---------------------------------------------------------
-   NOVEMBER EVENT IMAGE — ORIGINAL SIZE
+   NOVEMBER EVENT IMAGE — 300px
    --------------------------------------------------------- */
 
 .events-header > .events-row > .clickable-vertical-img {
@@ -516,14 +515,15 @@
     grid-column: 2 !important;
     grid-row: 1 !important;
 
-    width: 250px !important;
+    /* ⭐ SAME SIZE AS OCTOBER */
+    width: 300px !important;
 
-    min-width: 250px !important;
-    max-width: 250px !important;
+    min-width: 300px !important;
+    max-width: 300px !important;
 
     height: auto !important;
 
-    max-height: 350px !important;
+    max-height: 420px !important;
 
     margin: 0 auto !important;
     padding: 0 !important;
@@ -583,13 +583,14 @@
         grid-column: 1 !important;
         grid-row: 2 !important;
 
-        width: 250px !important;
+        /* ⭐ SAME SIZE AS OCTOBER */
+        width: 300px !important;
 
         max-width: 80% !important;
 
         min-width: 0 !important;
 
-        max-height: 350px !important;
+        max-height: 420px !important;
 
         margin: 0 auto !important;
     }
