@@ -110,31 +110,47 @@
 
 /* October/November Event Rows */
 .event-row {
-display: flex;
+display: grid;
+grid-template-columns: 1fr 1fr;
 align-items: center;
 margin-bottom: 30px;
 }
  
+/* Left half */
 .event-text {
-width: 500px;
-text-align: center;
- 
 display: flex;
 justify-content: center;
 align-items: center;
+text-align: center;
 }
  
 .event-text p {
 margin: 0;
 line-height: 1.6;
+max-width: 90%;
 }
  
+/* Right half */
 .clickable-vertical-img {
 width: 250px;
 height: auto;
 display: block;
-margin-left: auto;
-margin-right: 10px;
+justify-self: center;
 cursor: pointer;
 border-radius: 6px;
+}
+ 
+/* Mobile */
+@media (max-width: 700px) {
+.event-row {
+grid-template-columns: 1fr;
+}
+ 
+.event-text {
+margin-bottom: 15px;
+}
+ 
+.clickable-vertical-img {
+width: 70%;
+}
 }
