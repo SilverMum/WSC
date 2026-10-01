@@ -116,8 +116,12 @@ margin-bottom: 30px;
 }
  
 .event-text {
-width: 65%;
+width: 500px;
 text-align: center;
+ 
+display: flex;
+justify-content: center;
+align-items: center;
 }
  
 .event-text p {
