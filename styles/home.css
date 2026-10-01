@@ -411,4 +411,193 @@
     }
 }
 
+/* =========================================================
+   ⭐ NOVEMBER 2026 EVENTS
+   =========================================================
 
+   November currently uses:
+
+   <div class="events-row">
+
+   instead of:
+
+   <div class="event-row">
+
+   This gives November the SAME layout as October.
+
+   LEFT  = TEXT
+   RIGHT = IMAGE
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   NOVEMBER EVENT ROW
+   --------------------------------------------------------- */
+
+.events-header > .events-row {
+    display: grid !important;
+
+    grid-template-columns: minmax(0, 1fr) 250px !important;
+
+    grid-template-rows: auto !important;
+
+    align-items: center !important;
+
+    justify-content: center !important;
+
+    column-gap: 40px !important;
+    row-gap: 0 !important;
+
+    width: 100% !important;
+    min-width: 0 !important;
+
+    height: auto !important;
+    min-height: 0 !important;
+
+    margin: 0 0 40px 0 !important;
+    padding: 0 !important;
+
+    position: relative !important;
+
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+
+    float: none !important;
+    clear: both !important;
+
+    box-sizing: border-box !important;
+}
+
+
+/* ---------------------------------------------------------
+   NOVEMBER EVENT TEXT — LEFT COLUMN
+   --------------------------------------------------------- */
+
+.events-header > .events-row > .event-text {
+    display: block !important;
+
+    grid-column: 1 !important;
+    grid-row: 1 !important;
+
+    width: 100% !important;
+    min-width: 0 !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    position: static !important;
+
+    float: none !important;
+    clear: none !important;
+
+    text-align: center !important;
+
+    box-sizing: border-box !important;
+}
+
+
+.events-header > .events-row > .event-text p {
+    display: block !important;
+
+    width: 100% !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    line-height: 1.6 !important;
+
+    text-align: center !important;
+
+    box-sizing: border-box !important;
+}
+
+
+/* ---------------------------------------------------------
+   NOVEMBER EVENT IMAGE — RIGHT COLUMN
+   --------------------------------------------------------- */
+
+.events-header > .events-row > .clickable-vertical-img {
+    display: block !important;
+
+    grid-column: 2 !important;
+    grid-row: 1 !important;
+
+    width: 250px !important;
+
+    min-width: 250px !important;
+    max-width: 250px !important;
+
+    height: auto !important;
+
+    max-height: 350px !important;
+
+    margin: 0 auto !important;
+    padding: 0 !important;
+
+    position: static !important;
+
+    float: none !important;
+    clear: none !important;
+
+    object-fit: contain !important;
+
+    cursor: pointer !important;
+
+    border-radius: 6px !important;
+
+    box-sizing: border-box !important;
+}
+
+
+/* =========================================================
+   ⭐ NOVEMBER MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .events-header > .events-row {
+        display: grid !important;
+
+        grid-template-columns: 1fr !important;
+
+        grid-template-rows: auto auto !important;
+
+        row-gap: 15px !important;
+
+        column-gap: 0 !important;
+
+        margin-bottom: 40px !important;
+    }
+
+
+    .events-header > .events-row > .event-text {
+        grid-column: 1 !important;
+        grid-row: 1 !important;
+
+        width: 100% !important;
+
+        text-align: center !important;
+    }
+
+
+    .events-header > .events-row > .event-text p {
+        text-align: center !important;
+    }
+
+
+    .events-header > .events-row > .clickable-vertical-img {
+        grid-column: 1 !important;
+        grid-row: 2 !important;
+
+        width: 250px !important;
+
+        max-width: 80% !important;
+
+        min-width: 0 !important;
+
+        max-height: 350px !important;
+
+        margin: 0 auto !important;
+    }
+}
