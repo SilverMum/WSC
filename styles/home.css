@@ -1,140 +1,301 @@
-/* ⭐ Events Header Block (now wraps title + images) */
+```css
+/* =========================================================
+   ⭐ EVENTS HEADER / MAIN EVENTS CARD
+   ========================================================= */
+
 .events-header {
-    max-width: 900px;              
-    margin: 40px auto 20px auto;   
-    text-align: center;
+
+    max-width: 900px;
+    margin: 40px auto 20px auto;
     padding: 30px 20px;
-    background: #f3eee6;           
+
+    text-align: center;
+
+    background: #f3eee6;
     border-radius: 12px;
-    border: 2px solid #d8d2c8;     
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    border: 2px solid #d8d2c8;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+
+    box-sizing: border-box;
 }
 
-/* ⭐ Subtitle with lines */
+
+/* =========================================================
+   ⭐ SUBTITLE WITH LINES
+   ========================================================= */
+
 .events-subtitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    margin-bottom: 8px;
+
     font-size: 16px;
     font-weight: 700;
     letter-spacing: 2px;
+
     color: #6b5e4a;
     text-transform: uppercase;
-    margin-bottom: 8px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
 }
 
+
+/* Lines on either side of "MARK YOUR CALENDAR" */
+
 .events-subtitle .line {
-    flex: 0 0 60px;                
+    flex: 0 0 60px;
+
     height: 2px;
+
     background-color: #6b5e4a;
+
     opacity: 0.7;
+
     border-radius: 2px;
 }
 
-/* ⭐ Main title */
+
+/* =========================================================
+   ⭐ MAIN TITLE
+   ========================================================= */
+
 .events-title {
+    margin-bottom: 30px;
+
     font-size: 36px;
     font-weight: 800;
-    color: #3a3328;
     letter-spacing: 1px;
-    margin-bottom: 25px;
+
+    color: #3a3328;
 }
 
-/* ⭐ Image row INSIDE beige card */
-.events-row {
+
+/* =========================================================
+   ⭐ INDIVIDUAL EVENT ROW
+   ========================================================= */
+
+/*
+   Each event has two invisible columns:
+
+   LEFT COLUMN  = Event text
+   RIGHT COLUMN = Event image
+
+   Both columns are the same width.
+*/
+
+.event-row {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+
+    gap: 30px;
+
+    margin-bottom: 35px;
+
+    width: 100%;
+}
+
+
+/* =========================================================
+   ⭐ LEFT TEXT COLUMN
+   ========================================================= */
+
+.event-text {
+    width: 100%;
+
     display: flex;
-    justify-content: space-between;
-    gap: 20px;
-}
-
-/* ⭐ Fullscreen overlay */
-.fullscreen-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(0,0,0,0.9);
-    display: none;
     justify-content: center;
     align-items: center;
+
+    text-align: center;
+
+    box-sizing: border-box;
+}
+
+
+/* Event text formatting */
+
+.event-text p {
+    margin: 0;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   ⭐ RIGHT IMAGE COLUMN
+   ========================================================= */
+
+/*
+   Images are kept at a controlled size.
+
+   width: 250px
+   = normal image width
+
+   max-height: 350px
+   = prevents tall images from becoming enormous
+
+   margin: 0 auto
+   = centers image inside the right column
+*/
+
+.clickable-vertical-img {
+    width: 250px;
+
+    max-width: 100%;
+    max-height: 350px;
+
+    height: auto;
+
+    display: block;
+
+    margin: 0 auto;
+
+    object-fit: contain;
+
+    cursor: pointer;
+
+    border-radius: 6px;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   ⭐ FULLSCREEN IMAGE OVERLAY
+   ========================================================= */
+
+.fullscreen-overlay {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    background: rgba(0, 0, 0, 0.9);
+
+    display: none;
+
+    justify-content: center;
+    align-items: center;
+
     z-index: 99999;
+
     overflow: hidden;
 }
 
+
+/* Fullscreen image */
+
 .fullscreen-overlay img {
+    width: auto;
+    height: auto;
+
     max-width: 95vw;
     max-height: 95vh;
+
     object-fit: contain;
+
     border-radius: 8px;
 }
 
-/* ⭐ Close button */
+
+/* =========================================================
+   ⭐ FULLSCREEN CLOSE BUTTON
+   ========================================================= */
+
 .close-btn {
     position: absolute;
+
     top: 20px;
     right: 25px;
+
     font-size: 40px;
+
     color: white;
+
     cursor: pointer;
+
     z-index: 100000;
 }
 
-/* ⭐ Mobile */
+
+/* =========================================================
+   ⭐ MOBILE VERSION
+   ========================================================= */
+
 @media (max-width: 700px) {
-    .events-row {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
+
+    /* Main events card */
+
+    .events-header {
+        margin: 25px 10px 20px 10px;
+
+        padding: 25px 15px;
     }
+
+
+    /* Smaller title on phones */
+
+    .events-title {
+        font-size: 28px;
+
+        margin-bottom: 25px;
+    }
+
+
+    /* Make the two columns become one column */
+
+    .event-row {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+
+        margin-bottom: 40px;
+    }
+
+
+    /* Text takes full width */
+
+    .event-text {
+        width: 100%;
+    }
+
+
+    /* Mobile images */
 
     .clickable-vertical-img {
-        max-width: 70%;
+        width: 250px;
+
+        max-width: 80%;
+        max-height: 350px;
+
+        margin: 0 auto;
+    }
+
+
+    /* Slightly smaller subtitle */
+
+    .events-subtitle {
+        font-size: 14px;
+
+        letter-spacing: 1.5px;
+
+        gap: 7px;
+    }
+
+
+    /* Shorter decorative lines */
+
+    .events-subtitle .line {
+        flex: 0 0 35px;
     }
 }
-
-/* October/November Event Rows */
-.event-row {
-display: flex;
-align-items: center;
-justify-content: space-between;
-margin-bottom: 30px;
-}
- 
-/* Left Column */
-.event-text {
-flex: 1;
-text-align: center;
-}
- 
-/* Text Formatting */
-.event-text p {
-margin: 0;
-line-height: 1.6;
-}
- 
-/* Right Column */
-.clickable-vertical-img {
-width: 250px;
-height: auto;
-display: block;
-cursor: pointer;
-border-radius: 6px;
-margin-left: 40px;
-flex-shrink: 0;
-}
- 
-/* Mobile */
-@media (max-width: 700px) {
-.event-row {
-flex-direction: column;
-}
- 
-.clickable-vertical-img {
-width: 70%;
-margin-left: 0;
-margin-top: 15px;
-}
-}
+```
