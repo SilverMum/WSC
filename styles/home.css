@@ -100,7 +100,7 @@
     .events-row {
         flex-direction: column;
         align-items: center;
-        gap: 25px;
+        gap: 20px;
     }
 
     .clickable-vertical-img {
@@ -112,8 +112,8 @@
 display: flex;
 align-items: center; /* centers text vertically beside image */
 justify-content: space-between;
-gap: 30px;
-margin-bottom: 40px;
+gap: 10px;
+margin-bottom: 20px;
 }
  
 .event-text {
