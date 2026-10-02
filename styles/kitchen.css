@@ -111,8 +111,8 @@
 
 .kitchen-fb-button {
     position: absolute;
-    left: 280px;   /* was 240px → moved 40px more to the right */
-    top: 340px;    /* was 300px → moved 20px down */
+    left: 370px;
+    top: 270px;
     z-index: 50;
 }
 
@@ -136,7 +136,7 @@
 --------------------------------*/
 
 .kitchen-bg {
-    background-image: url('../images/robnsonsbg.png');
+    background-image: url('../images/robnsonsbg1.png');
     background-size: cover;          /* full width, fills horizontally */
     background-repeat: no-repeat;
     background-position: top center; /* starts right under nav */
@@ -708,14 +708,14 @@ main {
 @media (max-width: 900px) {
     .kitchen-fb-button {
         position: absolute !important;
-        left: 15px !important;     /* stays left */
-        bottom: -280px !important;   /* moves DOWN */
+        left: 15px !important;
+        bottom: -153px !important;
         top: auto !important;
         z-index: 99999 !important;
     }
 
     .kitchen-fb-button img {
-        width: 150px !important;    /* correct mobile size */
+        width: 150px !important;
         height: auto !important;
     }
 }
