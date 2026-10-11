@@ -6,12 +6,13 @@
     <title>Windsor Sportsmen’s Club</title>
     <link rel="stylesheet" href="styles.css?v=10">
     <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="styles/index.css">
 </head>
 
 <body class="home">
 
 <!-- =========================================================
-     NAVIGATION (DIRECTLY INCLUDED)
+     NAVIGATION (DIRECTLY INCLUDED) — UNCHANGED
 ========================================================= -->
 <header>
     <nav class="main-nav">
@@ -32,26 +33,6 @@
             <li><a href="private-events.html">Rentals</a></li>
             <li><a href="kitchen.html">Kitchen</a></li>
 
-            <!-- ACTIVITIES DROPDOWN -->
-            <li class="dropdown">
-                <a href="#">Activities ▾</a>
-
-                <ul class="dropdown-menu">
-
-                    <li><a href="trap-skeet.html">Trap & Skeet</a></li>
-                    <li><a href="archery.html">Archery</a></li>
-                    <li><a href="air-rifle.html">Air Rifle</a></li>
-                    
-                    <li>
-                        <a href="KnifeAxe.html" class="knifeaxe-link">
-                            Knife & Axe<br>
-                            <span class="knifeaxe-sub">Throwing</span>
-                        </a>
-                    </li>
-
-                </ul>
-            </li>
-
              <!-- MORE DROPDOWN -->
             <li class="dropdown">
                 <a href="#">More ▾</a>
@@ -59,7 +40,7 @@
                 <ul class="dropdown-menu">
 
                     <li><a href="ofha.html">OFHA</a></li>
-                    <li><a href="cheese-cracker.html">Cheese & Cracker</a></li>                
+                    <li><a href="cheese-cracker.html">Cheese & Cracker</a></li>
                     <li><a href="members.html">Members</a></li>
 
                 </ul>
@@ -68,495 +49,329 @@
         </ul>
     </nav>
 </header>
-    
+
 <main>
 
-    <section style="height: 90px;"></section>
-    
+    <!-- Spacer under fixed nav -->
+    <section style="height: -20px;"></section>
+
+<!-- =========================================================
+     HERO SECTION
+========================================================= -->
 <section class="hero" id="hero">
 
-    <h1 class="hero-title home-hero-title">Welcome to the Windsor Sportsmen’s Club</h1>
+    <h1 class="hero-title home-hero-title">
+        Windsor<br>Sportsmen’s Club
+    </h1>
 
-    <!-- New subtitle under the title -->
-    <h2 class="home-subtitle">2401 Dougall Ave, Windsor ON N8X 1T3</h2>
+    <p class="hero-address">📍 2401 Dougall Ave • Windsor, Ontario</p>
+
+    <div class="hero-buttons">
+        <a href="#" class="btn btn-solid">Explore the Club →</a>
+        <a href="calendar.html" class="btn btn-outline">Upcoming Events →</a>
+    </div>
 
 </section>
 
-    <!-- Spacer under fixed nav -->
-<section style="height: 90px;"></section>
-    
-<!-- ⭐ MEMBERSHIP — UPDATED TO YOUR DOUBLE CARD STYLE -->
-<section class="home-meeting-card outer-card wide-card">
-    <img src="images/WSC Membership Meeting.png" alt="Membership Information" class="membership-image">
+<!-- =========================================================
+     ACTIVITY CARDS
+========================================================= -->
+<section class="activities">
+
+    <div class="activity-card"
+     onclick="location.href='trap-skeet.html';">
+        <img src="images/trapskeet.png" alt="Trap & Skeet">
+        <div class="activity-body">
+            <h3>Trap & Skeet</h3>
+            <span class="line"></span>
+            <p>Tradition. Focus. Camaraderie.</p>
+        </div>
+    </div>
+
+    <div class="activity-card"
+     onclick="location.href='archery.html';">
+        <img src="images/archery.jpg" alt="Archery">
+        <div class="activity-body">
+            <h3>Archery</h3>
+            <span class="line"></span>
+            <p>Accuracy. Concentration. Fun.</p>
+        </div>
+    </div>
+
+    <div class="activity-card"
+     onclick="location.href='air-rifle.html';">
+        <img src="images/airrifle.png" alt="Air Rifle">
+        <div class="activity-body">
+            <h3>Air Rifle</h3>
+            <span class="line"></span>
+            <p>Steady. Skilled. Sharpshooting.</p>
+        </div>
+    </div>
+
+    <div class="activity-card"
+     onclick="location.href='KnifeAxe.html';">
+        <img src="images/axethrowing.png" alt="Knife & Axe Throwing">
+        <div class="activity-body">
+            <h3>Knife & Axe Throwing</h3>
+            <span class="line"></span>
+            <p>Test your skill. Great fun.</p>
+        </div>
+    </div>
+
 </section>
 
-    <section class="facebook-card outer-card">
-    <div class="inner-card">
+<!-- =========================================================
+     EVENTS SECTION
+========================================================= -->
+<section class="events-section">
 
-        <div class="facebook-section">
+    <h2 class="events-heading">
+        <span class="line"></span>
+        What’s Happening at the Club
+        <span class="line"></span>
+    </h2>
 
-            <!-- Text under the button -->
-            <div class="facebook-text">
-                <p style="font-size: 2em;"><strong>Important Info Trap &amp; Skeet</strong></p>
-                    
-                <span class="line"></span>
-                <p>We are looking for Trappers</p>
-                <p>We also need Club Members to Volunteer and assist with Trap & Skeet</p>
-                <p>Contact Domenic for details 519-791-8164</p>
-            </div>
+    <!-- EVENT 1 -->
+    <div class="event-row">
 
+        <img src="images/facebook_1791176441052_75127385114109693631.jpg"
+             alt="Motor City Drive Band"
+             class="clickable-vertical-img"
+             onclick="openFullscreenImage('images/facebook_1791176441052_7512738511410969363.jpg')">
+
+        <div class="event-date">
+            <span class="event-month">OCT</span>
+            <span class="event-day">10</span>
+            <span class="event-weekday">Saturday</span>
         </div>
 
-    </div>
-</section>
-
-      <section class="facebook-card outer-card">
-    <div class="inner-card">
-
-        <div class="facebook-section">
-
-            <!-- Text under the button -->
-            <div class="facebook-text" style="text-align: left;">
-                <p style="font-size: 2em; text-align: center;"><strong>About Us</strong></p>
-                    
-                <span class="line"></span>
-                <p>Originally the Essex County Sportsmen (1928), it was renamed the Windsor Sportsmen's Club (WSC) in 1932.
-                We are a non-profit organization incorporated under the laws of the province of Ontario to establish a
-                group of Sportsmen interested in sponsoring and promoting laws governing the conservation of lands, forest,
-                game and fish and the prevention of pollution of streams, rivers, lakes, and air to promote the propagation
-                of game and fish. The WSC is affiliated with the Ontario Federation of Anglers and Hunters (OFAH) and 
-                Multi-Lakes Conservation Association (Michigan).</p>
-            </div>
-
+        <div class="event-details">
+            <h3>Motor City Drive Band – Charity Concert</h3>
+            <p>Sponsored By Unifor Local 200 · Night of Live Music</p>
+            <p>🕖 Doors 6:00 PM · Until 10:00 PM · Free Entry</p>
+            <p>📍 Windsor Sportsmen’s Club</p>
         </div>
 
+        <a href="calendar.html" class="btn btn-solid btn-small">View Event</a>
+
     </div>
-</section>
-    
-<section class="facebook-card outer-card">
-    <div class="inner-card">
 
-        <div class="facebook-section">
+    <!-- EVENT 2 -->
+    <div class="event-row">
 
-            <!-- Facebook Button -->
-            <div class="facebook-button">
-                <a href="https://www.facebook.com/groups/100671860008159/" target="_blank">
-                    <img src="images/facebook-button.png" alt="Find us on Facebook">
-                </a>
-            </div>
+        <img src="images/groove.jpg"
+             alt="Ghouls, Guitars & Grooves"
+             class="clickable-vertical-img"
+             onclick="openFullscreenImage('images/775419803_122127026126817145_9159565317812014841_n.jpg')">
 
-            <!-- Text under the button -->
-            <div class="facebook-text">
-                <p></strong>Follow us on Facebook</strong></p>
-                <p>for Up Coming Events and Restaurant Menu</p>
-            </div>
-
+        <div class="event-date">
+            <span class="event-month">OCT</span>
+            <span class="event-day">31</span>
+            <span class="event-weekday">Saturday</span>
         </div>
 
+        <div class="event-details">
+            <h3>Ghouls, Guitars & Grooves</h3>
+            <p>J#MAJOR · Special Guest Motor City Drive · Costume Party</p>
+            <p>🕖 Doors 6:00 PM · Show 7:00 PM · $10 adv / $15 door</p>
+            <p>📍 Windsor Sportsmen’s Club</p>
+        </div>
+
+        <a href="calendar.html" class="btn btn-solid btn-small">View Event</a>
+
     </div>
+
+    <!-- EVENT 3 -->
+    <div class="event-row">
+
+        <img src="images/crimestoppersfundnov20.jpg"
+             alt="Crime Stoppers Fundraiser"
+             class="clickable-vertical-img"
+             onclick="openFullscreenImage('images/crimestoppersfundnov201.jpg')">
+
+        <div class="event-date">
+            <span class="event-month">NOV</span>
+            <span class="event-day">20</span>
+            <span class="event-weekday">Friday</span>
+        </div>
+
+        <div class="event-details">
+            <h3>Crime Stoppers – Music & Dinner Fundraiser</h3>
+            <p>519 Band · Dinner @ 5:30 PM · Band @ 6:00 PM</p>
+            <p>🕖 Tickets $15.00 per person</p>
+            <p>📍 Windsor Sportsmen’s Club</p>
+            For Tickets - Call 519-966-1600 OR<br>
+            Crime Stoppers website<br>
+            <a href="https://www.catchcrooks.com">WWW.CATCHCROOKS.COM</a>
+        </div>
+
+        <a href="calendar.html" class="btn btn-solid btn-small">View Event</a>
+
+    </div>
+
+    <!-- EVENT 4 -->
+    <div class="event-row">
+
+        <img src="images/Ceili_Flyer_Editable.jpg"
+             alt="Ceili – Irish Night"
+             class="clickable-vertical-img"
+             onclick="openFullscreenImage('images/Ceili_Flyer_Editable1.jpg')">
+
+        <div class="event-date">
+            <span class="event-month">NOV</span>
+            <span class="event-day">21</span>
+            <span class="event-weekday">Saturday</span>
+        </div>
+
+        <div class="event-details">
+            <h3>Ceili [KAY-lee] – Irish Night</h3>
+            <p>Folk Around N’ Find Out · Emerald Isle Dance Society</p>
+            <p>🕖 Doors 6:00 PM · $10 adv / $15 door · 19+</p>
+            <p>📍 Windsor Sportsmen’s Club</p>
+            Tickets Online Here<br>
+            <a href="https://www.showpass.com/ceili-at-the-club/?no-cache=1">WWW.SHOWPASS.COM</a>
+        </div>
+
+        <a href="calendar.html" class="btn btn-solid btn-small">View Event</a>
+
+    </div>
+
+    <div class="events-footer">
+        <a href="calendar.html" class="btn btn-outline btn-small">📅 View Full Calendar</a>
+    </div>
+
 </section>
 
-<!-- ⭐ Event Card 2 -->
-<div class="events-header">
- 
-<div class="events-subtitle">
-<span class="line"></span>
-MARK YOUR CALENDAR
-<span class="line"></span>
-</div>
- 
-<div class="events-title">October 2026 Events</div>
+<!-- =========================================================
+     MEMBERSHIP + FACEBOOK SECTION
+========================================================= -->
+<section class="membership-section">
+
+    <!-- LEFT: PHOTO -->
+    <img src="images/meeting1.png"
+         alt="Club members at the club"
+         class="membership-image">
+
+    <!-- MIDDLE: TEXT -->
+    <div class="membership-text">
+        <h2>Be Part of Something Great</h2>
+        <span class="line"></span>
+
+        <p>Windsor Sportsmen’s Club has been a gathering place for outdoor
+        enthusiasts and families since 1945. Whether you’re here to shoot,
+        compete, volunteer or just enjoy great company, there’s a place for
+        you at the club.</p>
+
+        <p>Originally the Essex County Sportsmen (1928), it was renamed the
+           Windsor Sportsmen's Club (WSC) in 1932. We are a non-profit 
+           organization incorporated under the laws of the province of 
+           Ontario to establish a group of Sportsmen interested in sponsoring
+           and promoting laws governing the conservation of lands, forest, 
+           game and fish and the prevention of pollution of streams, rivers,
+           lakes, and air to promote the propagation of game and fish. 
+           The WSC is affiliated with the Ontario Federation of Anglers and
+           Hunters (OFAH) and Multi-Lakes Conservation Association (Michigan).</p>
+
+        <a href="documents/WSC MEMBERSHIP.pdf" target="_blank" class="btn btn-solid"> 👤 Become a Member </a>
+    </div>
     
-<!-- Event 1 -->
-<div class="event-row">
- 
-<div class="event-text">
-<p>
-<strong>October 31st, Saturday</strong><br>
-<strong>Ghouls Guitars &amp; Grooves</strong><br>
-Concert and Costume Party<br>
-J#MAJOR<br>
-Tickets $10 in Advance $15 at the Door<br>
-Doors Open 6PM Show Starts 7PM<br>
-Special Guest Motor City Drive<br>
-Creepy Halloween Themed Food and Drink will be available<br>
-$150 For Best Costume<br>
-$100 Best Rock Costume<br>
-$50 For Funniest Costume<br>
-Door Prize Draw Packed with Product and Merchant Swag<br>
-Come For the Boos Stay for the Grooves
-</p>
-</div>
- 
-<img
-src="images/775419803_122127026126817145_9159565317812014841_n.jpg"
-class="clickable-vertical-img"
-onclick="openFullscreenImage('images/775419803_122127026126817145_9159565317812014841_n.jpg')"
->
- 
-</div>
- 
-</div>
-    
-<!-- ⭐ Event Card 2 -->
-<div class="events-header">
- 
-<div class="events-subtitle">
-<span class="line"></span>
-MARK YOUR CALENDAR
-<span class="line"></span>
-</div>
- 
-<div class="events-title">November 2026 Events</div>
+<!-- RIGHT: FACEBOOK CARD -->
+<div class="facebook-card">
 
-<!-- Event 1 -->
-<div class="events-row">
- 
-<div class="event-text">
-<p>
-<strong>November 20th, Friday</strong><br>
-<strong>Crime Stoppers</strong><br>
-Music/Dinner Fundraiser<br>
-519 Band<br>
-Ticket Price $15.00 per person<br>
-Dinner @ 5:30<br>
-Band starts @ 6:00 PM<br>
-For Tickets - Call Sportsmens Club<br>
-519-966-1600 OR<br>
-Crime Stoppers website<br>
-<a href="https://www.catchcrooks.com">WWW.CATCHCROOKS.COM</a>
-</p>
-</div>
- 
-<img
-src="images/crimestoppersfundnov20.jpg"
-class="clickable-vertical-img"
-onclick="openFullscreenImage('images/crimestoppersfundnov20.jpg')"
->
- 
-</div>
+    <!-- Facebook heading -->
+    <div class="facebook-card-heading">
 
-<!-- Event 2 -->
-<div class="events-row">
- 
-<div class="event-text">
-<p>
-<strong>November 21st Saturday</strong><br>
-<strong>Ceili [KAY-lee]</strong><br>
-Irish night of music, dancing &amp; good company<br>
-Doors open 6PM<br>
-Opener 7PM<br>
-Headliner 8PM<br>
-Featuring Folk Around N'Find Out<br>
-Special Guests Emerald Isle Dance Society<br>
-$10 (Advanced, Digital)<br>
-$15 (At the Door Cash)<br>
-19+ - Cash Bar - Irish Kitchen<br>
-Tickets Online Here<br>
-<a href="https://www.showpass.com/ceili-at-the-club/?no-cache=1">WWW.SHOWPASS.COM</a>
-</p>
-</div>
- 
-<img
-src="images/Ceili_Flyer_Editable.jpg"
-class="clickable-vertical-img"
-onclick="openFullscreenImage('images/Ceili_Flyer_Editable.jpg')"
->
- 
-</div>
+        <div class="facebook-logo" aria-label="Facebook">
+            f
+        </div>
+
+        <h3>
+            FOLLOW US
+            <span>ON FACEBOOK</span>
+        </h3>
+
+    </div>
+
+    <!-- Description -->
+    <p>
+        Stay up to date on events,
+        menus and club news!
+    </p>
+
+    <!-- Join group button -->
+    <a
+        href="https://www.facebook.com/groups/100671860008159/"
+        class="facebook-join-btn"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        JOIN OUR GROUP
+        <span class="facebook-external-icon">↗</span>
+    </a>
 
 </div>
-  <!-- ⭐ Event Card 4 -->
-<!--<div class="events-header">
- 
-<div class="events-subtitle">
-<span class="line"></span>
-MARK YOUR CALENDAR
-<span class="line"></span>
-</div>
- 
-<div class="events-title">September 2026 Events</div>
- 
-<div class="events-row">
- 
-<div class="event-text">
-<p>
-This is sample text for your July event.
-Club members enjoyed a great day of riding,
-followed by food, photos, and socializing.
-Replace this text with your actual event details.
-</p>
-</div>
- 
-<img
-src="images/719715873_1531959388342751_5102874712689476730_n.jpg"
-class="clickable-vertical-img"
-onclick="openFullscreenImage('images/719715873_1531959388342751_5102874712689476730_n.jpg')"
->
- 
-</div>
- 
-</div>
 
-    <!-- ⭐ Event Card 5 -->
-<!--<div class="events-header">
- 
-<div class="events-subtitle">
-<span class="line"></span>
-MARK YOUR CALENDAR
-<span class="line"></span>
-</div>
- 
-<div class="events-title">August 2026 Events</div>
- 
-<div class="events-row">
- 
-<div class="event-text">
-<p>
-This is sample text for your July event.
-Club members enjoyed a great day of riding,
-followed by food, photos, and socializing.
-Replace this text with your actual event details.
-</p>
-</div>
+</section>
 
-    <img
-src="images/717680449_974326608907714_9049331685038849753_n.jpg"
-class="clickable-vertical-img"
-onclick="openFullscreenImage('images/717680449_974326608907714_9049331685038849753_n.jpg')"
->
- 
-</div>
- 
-</div>
-
-    <!-- ⭐ Event Card 6 -->
-<!--<div class="events-header">
- 
-<div class="events-subtitle">
-<span class="line"></span>
-MARK YOUR CALENDAR
-<span class="line"></span>
-</div>
- 
-<div class="events-title">July 2026 Events</div>
- 
-<div class="events-row">
- 
-<div class="event-text">
-<p>
-This is sample text for your July event.
-Club members enjoyed a great day of riding,
-followed by food, photos, and socializing.
-Replace this text with your actual event details.
-</p>
-</div>
- 
-<img
-src="images/FB_IMG_1780866308035.jpg"
-class="clickable-vertical-img"
-onclick="openFullscreenImage('images/FB_IMG_1780866308035.jpg')"
->
- 
-</div>
- 
-</div>
-
-    <!-- ⭐ Event Card 7 -->
-<!--<div class="events-header">
- 
-<div class="events-subtitle">
-<span class="line"></span>
-MARK YOUR CALENDAR
-<span class="line"></span>
-</div>
- 
-<div class="events-title">June 2026 Events</div>
- 
-<div class="events-row">
- 
-<div class="event-text">
-<p>
-This is sample text for your July event.
-Club members enjoyed a great day of riding,
-followed by food, photos, and socializing.
-Replace this text with your actual event details.
-</p>
-</div>
- 
-<img
-src="images/FB_IMG_1780866308035.jpg"
-class="clickable-vertical-img"
-onclick="openFullscreenImage('images/FB_IMG_1780866308035.jpg')"
->
- 
-</div>
- 
-</div>
-
-    <!-- ⭐ Event Card 8 -->
-<!--<div class="events-header">
- 
-<div class="events-subtitle">
-<span class="line"></span>
-MARK YOUR CALENDAR
-<span class="line"></span>
-</div>
- 
-<div class="events-title">May 2026 Events</div>
- 
-<div class="events-row">
- 
-<div class="event-text">
-<p>
-This is sample text for your July event.
-Club members enjoyed a great day of riding,
-followed by food, photos, and socializing.
-Replace this text with your actual event details.
-</p>
-</div>
- 
-<img
-src="images/FB_IMG_1780866308035.jpg"
-class="clickable-vertical-img"
-onclick="openFullscreenImage('images/FB_IMG_1780866308035.jpg')"
->
- 
-</div>
- 
-</div>
-
-    <!-- ⭐ Event Card 9 -->
-<!--<div class="events-header">
- 
-<div class="events-subtitle">
-<span class="line"></span>
-MARK YOUR CALENDAR
-<span class="line"></span>
-</div>
- 
-<div class="events-title">April 2026 Events</div>
- 
-<div class="events-row">
- 
-<div class="event-text">
-<p>
-This is sample text for your July event.
-Club members enjoyed a great day of riding,
-followed by food, photos, and socializing.
-Replace this text with your actual event details.
-</p>
-</div>
- 
-<img
-src="images/FB_IMG_1780866308035.jpg"
-class="clickable-vertical-img"
-onclick="openFullscreenImage('images/FB_IMG_1780866308035.jpg')"
->
- 
-</div>
- 
-</div>
-
-    <!-- ⭐ Event Card 10 -->
-<!--<div class="events-header">
- 
-<div class="events-subtitle">
-<span class="line"></span>
-MARK YOUR CALENDAR
-<span class="line"></span>
-</div>
- 
-<div class="events-title">March 2026 Events</div>
- 
-<div class="events-row">
- 
-<div class="event-text">
-<p>
-This is sample text for your July event.
-Club members enjoyed a great day of riding,
-followed by food, photos, and socializing.
-Replace this text with your actual event details.
-</p>
-</div>
- 
-<img
-src="images/FB_IMG_1780866308035.jpg"
-class="clickable-vertical-img"
-onclick="openFullscreenImage('images/FB_IMG_1780866308035.jpg')"
->
- 
-</div>
- 
-</div>
-
-    <!-- ⭐ Event Card 11 -->
-<!--<div class="events-header">
- 
-<div class="events-subtitle">
-<span class="line"></span>
-MARK YOUR CALENDAR
-<span class="line"></span>
-</div>
- 
-<div class="events-title">February 2026 Events</div>
- 
-<div class="events-row">
- 
-<div class="event-text">
-<p>
-This is sample text for your July event.
-Club members enjoyed a great day of riding,
-followed by food, photos, and socializing.
-Replace this text with your actual event details.
-</p>
-</div>
- 
-<img
-src="images/FB_IMG_1780866308035.jpg"
-class="clickable-vertical-img"
-onclick="openFullscreenImage('images/FB_IMG_1780866308035.jpg')"
->
- 
-</div>
- 
-</div>
-
-    <!-- ⭐ Event Card 12 -->
-<!--<div class="events-header">
- 
-<div class="events-subtitle">
-<span class="line"></span>
-MARK YOUR CALENDAR
-<span class="line"></span>
-</div>
- 
-<div class="events-title">January 2026 Events</div>
- 
-<div class="events-row">
- 
-<div class="event-text">
-<p>
-This is sample text for your July event.
-Club members enjoyed a great day of riding,
-followed by food, photos, and socializing.
-Replace this text with your actual event details.
-</p>
-</div>
- 
-<img
-src="images/FB_IMG_1780866308035.jpg"
-class="clickable-vertical-img"
-onclick="openFullscreenImage('images/FB_IMG_1780866308035.jpg')"
->
- 
-</div>
- 
-</div>-->
-    
 </main>
-<footer class="site-footer">
-    <p>©2024 Windsor Sportsmen's Club. All Rights Reserved.</p>
+
+<footer class="footer">
+    <div class="footer-container">
+
+        <div class="footer-column">
+            <h3>WINDSOR SPORTSMEN'S CLUB</h3>
+
+            <div class="footer-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>
+                    2401 Dougall Ave<br>
+                    Windsor, Ontario N8X 1T3
+                </span>
+            </div>
+
+            <div class="footer-item">
+                <i class="fas fa-phone"></i>
+                <span>(519) 966-1243</span>
+            </div>
+
+            <div class="footer-item">
+                <i class="fas fa-envelope"></i>
+                <span>info@windsorsportsmensclub.org</span>
+            </div>
+        </div>
+
+        <div class="footer-column">
+    <h3>QUICK LINKS</h3>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="calendar.html">Calendar</a></li>
+        <li><a href="private-events.html">Rentals</a></li>
+        <li><a href="kitchen.html">Kitchen</a></li>
+    </ul>
+</div>
+
+<div class="footer-column">
+    <h3>MORE</h3>
+    <ul>
+        <li><a href="ofha.html">OFHA</a></li>
+        <li><a href="cheese-cracker.html">Cheese &amp; Cracker</a></li>
+        <li><a href="members.html">Members</a></li>
+    </ul>
+</div>
+
+        <div class="footer-column">
+            <h3>HOURS</h3>
+            <p>Tuesday - Friday: 12 PM - 11 PM</p>
+            <p>Saturday: 10 AM - 11 PM</p>
+            <p>Sunday: 10 AM - 8 PM</p>
+            <p>Monday: Closed</p>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2026 Windsor Sportsmen's Club. All Rights Reserved.
+    </div>
 </footer>
 
 <!-- ⭐ JS MOVED HERE SO NAV WORKS PROPERLY -->
@@ -585,7 +400,7 @@ function openFullscreenImage(imageSrc) {
 window.open(imageSrc, '_blank');
 }
 </script>
-    
+
 <!-- ⭐ YOUR MAIN NAVIGATION SCRIPT -->
 <script src="scripts.js"></script>
 
