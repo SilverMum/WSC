@@ -73,7 +73,7 @@ main {
     justify-content: center; /* centered nav */
     padding: 10px 0;
     background-color: #1a1a1a;
-    border-bottom: 1px solid #ddd;
+    border-bottom: none;
 }
 
 .nav-spacer {
@@ -722,126 +722,6 @@ body.home main {
    OTHER PAGES (RANGE, ARCHERY, OFHA, PRIVATE EVENTS, LOGIN)
    — CLEANED BUT VISUALS PRESERVED
    ========================================================= */
-
-/* ------------------------------
-   LOGIN PAGE
---------------------------------*/
-
-/* Make the whole page a vertical layout so footer stays at bottom */
-body.login-bg {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-/* Wrapper that controls spacing under the fixed nav */
-body.login-bg .login-page-wrapper {
-    display: flex;
-    justify-content: center;
-    margin-top: 120px !important; /* nav height (110px) + 10px gap */
-    margin-bottom: 20px; /* space before footer */
-    padding-bottom: 0;
-    flex: 1; /* pushes footer to bottom */
-}
-
-/* Login form card */
-.login-form {
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-    max-width: 420px;
-    width: 100%;
-    padding: 40px 35px;
-    background: #ffffff;
-    border-radius: 14px;
-    box-shadow: 0 4px 18px rgba(0,0,0,0.12);
-}
-
-/* Labels */
-.login-form label {
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: #333;
-}
-
-/* Inputs */
-.login-form input {
-    font-size: 1.1rem;
-    padding: 12px 14px;
-    border-radius: 10px;
-    border: 1px solid #ccc;
-    background: #fafafa;
-    transition: border 0.2s ease, box-shadow 0.2s ease;
-}
-
-.login-form input:focus {
-    border-color: #0077cc;
-    box-shadow: 0 0 4px rgba(0,119,204,0.4);
-    outline: none;
-}
-
-/* Login button */
-.login-btn {
-    padding: 12px 18px;
-    font-size: 1.1rem;
-    font-weight: 700;
-    background: #0077cc;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: background 0.2s ease, transform 0.15s ease;
-}
-
-.login-btn:hover {
-    background: #005fa3;
-    transform: translateY(-2px);
-}
-
-/* Forgot links */
-.login-links {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    margin-top: 10px;
-}
-
-.login-links a {
-    color: #0077cc;
-    font-size: 0.95rem;
-    text-decoration: none;
-}
-
-.login-links a:hover {
-    text-decoration: underline;
-}
-
-/* ------------------------------
-   FIXED FOOTER — 20px below login box
---------------------------------*/
-body.login-bg .site-footer {
-    margin-top: 20px !important;
-    position: relative;
-    bottom: 0;
-    z-index: 1;
-}
-
-/* ------------------------------
-   LOGIN PAGE BACKGROUND
---------------------------------*/
-.login-bg {
-    position: relative;
-    background: url('images/login-background.jpg') center center / cover no-repeat fixed;
-}
-
-/* 30% white wash overlay — behind everything */
-.login-bg::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    background: rgba(255, 255, 255, 0.3);
-    z-index: -1;
-}
 
 /* ------------------------------
    TRAP & SKEET RANGE PAGE
@@ -3400,7 +3280,7 @@ header {
 }
 
 .calendar-bg {
-    background-image: url("images/calendar page background.jpg");
+    background-image: url("images/calbg.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -3620,7 +3500,7 @@ body, body * {
 }
 
 body.home main {
-    padding-top: 160px;
+    padding-top: 100px;
 }
 
 /* =========================================================
