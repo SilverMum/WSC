@@ -719,3 +719,1133 @@ main {
         height: auto !important;
     }
 }
+
+/* ==========================================
+   NEW KITCHEN PAGE CSS
+========================================== */
+
+/* ==========================================
+   ROB N SONS KITCHEN PAGE
+========================================== */
+
+#kitchen-page {
+    --kitchen-green: #102719;
+    --kitchen-green-dark: #07180f;
+    --kitchen-cream: #f7f0e4;
+    --kitchen-cream-dark: #e9ddc8;
+    --kitchen-gold: #b99a60;
+    --kitchen-burgundy: #741f1f;
+    --kitchen-text: #17251a;
+
+    width: 100%;
+    margin: 0 auto;
+    color: var(--kitchen-text);
+    background: #fffdf8;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#kitchen-page *,
+#kitchen-page *::before,
+#kitchen-page *::after {
+    box-sizing: border-box;
+}
+
+#kitchen-page img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#kitchen-page a {
+    text-decoration: none;
+}
+
+
+/* ==========================================
+   HERO BANNER
+========================================== */
+
+#kitchen-page .kitchen-hero {
+    display: grid;
+    grid-template-columns: 47% 53%;
+    min-height: 390px;
+    background: var(--kitchen-cream);
+    overflow: hidden;
+}
+
+#kitchen-page .kitchen-hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 35px 35px 30px;
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(185, 154, 96, 0.12),
+            transparent 45%
+        ),
+        var(--kitchen-cream);
+}
+
+#kitchen-page .kitchen-welcome {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    margin-bottom: 12px;
+
+    color: #8b7040;
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+#kitchen-page .kitchen-divider {
+    display: block;
+    width: 45px;
+    height: 1px;
+    background: var(--kitchen-gold);
+}
+
+#kitchen-page .kitchen-hero h1 {
+    margin: 0;
+
+    color: var(--kitchen-green);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2.5rem, 4.3vw, 4.5rem);
+    font-weight: 900;
+    line-height: 0.98;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+#kitchen-page .kitchen-hero h1 span {
+    display: block;
+    margin-top: 8px;
+}
+
+#kitchen-page .kitchen-tagline {
+    margin: 16px 0 5px;
+
+    color: var(--kitchen-burgundy);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.25rem, 2vw, 1.9rem);
+    font-style: italic;
+    font-weight: 700;
+}
+
+#kitchen-page .kitchen-decorative-line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    margin: 5px 0 12px;
+
+    color: #927641;
+    font-size: 20px;
+}
+
+#kitchen-page .kitchen-decorative-line span {
+    width: 60px;
+    height: 1px;
+    background: var(--kitchen-gold);
+}
+
+#kitchen-page .kitchen-intro {
+    max-width: 420px;
+    margin: 0;
+
+    color: #252525;
+    font-size: 15px;
+    line-height: 1.65;
+}
+
+#kitchen-page .kitchen-hero-image {
+    min-height: 390px;
+    overflow: hidden;
+}
+
+#kitchen-page .kitchen-hero-image img {
+    transition: transform 0.5s ease;
+}
+
+#kitchen-page .kitchen-hero-image:hover img {
+    transform: scale(1.025);
+}
+
+
+/* ==========================================
+   BUTTONS
+========================================== */
+
+#kitchen-page .kitchen-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    min-height: 40px;
+    padding: 11px 20px;
+
+    border: 1px solid var(--kitchen-green);
+    border-radius: 4px;
+
+    background: var(--kitchen-green);
+    color: #ffffff;
+
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    line-height: 1.3;
+    text-align: center;
+
+    cursor: pointer;
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+#kitchen-page .kitchen-button:hover {
+    background: var(--kitchen-burgundy);
+    border-color: var(--kitchen-burgundy);
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+#kitchen-page .kitchen-button span {
+    font-size: 17px;
+    line-height: 1;
+}
+
+
+/* ==========================================
+   KITCHEN HOURS NOTICE
+========================================== */
+
+#kitchen-page .kitchen-hours-notice {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    width: calc(100% - 80px);
+    max-width: 1300px;
+    min-height: 108px;
+
+    margin: -1px auto 20px;
+    padding: 18px 28px;
+
+    border: 1px solid #d5bd91;
+    border-radius: 8px;
+    outline: 1px solid rgba(185, 154, 96, 0.35);
+    outline-offset: -6px;
+
+    background: var(--kitchen-cream);
+}
+
+#kitchen-page .kitchen-hours-icon {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+
+    width: 64px;
+    height: 64px;
+
+    border-radius: 50%;
+    background: var(--kitchen-burgundy);
+    color: #ffffff;
+
+    font-size: 45px;
+    font-weight: 400;
+}
+
+#kitchen-page .kitchen-hours-text {
+    flex: 1;
+}
+
+#kitchen-page .kitchen-hours-text h2 {
+    margin: 0 0 7px;
+
+    color: var(--kitchen-green);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 21px;
+    font-weight: 800;
+}
+
+#kitchen-page .kitchen-hours-text p {
+    margin: 3px 0;
+
+    color: #292929;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+#kitchen-page .kitchen-hours-button {
+    flex-shrink: 0;
+    min-width: 200px;
+}
+
+
+/* ==========================================
+   FEATURE CARDS
+========================================== */
+
+#kitchen-page .kitchen-feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+
+    width: calc(100% - 100px);
+    max-width: 1250px;
+
+    margin: 20px auto 35px;
+}
+
+#kitchen-page .kitchen-feature-card {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    min-width: 0;
+    overflow: hidden;
+
+    border: 1px solid #d8c6a6;
+    border-radius: 5px;
+
+    background: #fffdf8;
+
+    transition:
+        box-shadow 0.25s ease,
+        transform 0.25s ease;
+}
+
+#kitchen-page .kitchen-feature-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+#kitchen-page .kitchen-card-image {
+    height: 155px;
+    overflow: hidden;
+    background: var(--kitchen-cream-dark);
+}
+
+#kitchen-page .kitchen-card-image img {
+    transition: transform 0.4s ease;
+}
+
+#kitchen-page .kitchen-feature-card:hover .kitchen-card-image img {
+    transform: scale(1.04);
+}
+
+#kitchen-page .kitchen-card-icon {
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 66px;
+    height: 66px;
+
+    margin: -31px auto 0;
+
+    border: 4px solid #fffdf8;
+    border-radius: 50%;
+
+    background: var(--kitchen-burgundy);
+    color: #ffffff;
+
+    font-size: 30px;
+    font-weight: 700;
+}
+
+#kitchen-page .kitchen-card-content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 10px 22px 18px;
+    text-align: center;
+}
+
+#kitchen-page .kitchen-card-content h2 {
+    min-height: 30px;
+    margin: 0;
+
+    color: var(--kitchen-green);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.05rem, 1.7vw, 1.35rem);
+    font-weight: 800;
+    line-height: 1.3;
+}
+
+#kitchen-page .kitchen-card-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    margin: 10px 0;
+    color: var(--kitchen-burgundy);
+}
+
+#kitchen-page .kitchen-card-divider span {
+    width: 45px;
+    height: 1px;
+    background: #b9a17c;
+}
+
+#kitchen-page .kitchen-card-content p {
+    flex: 1;
+
+    max-width: 300px;
+    min-height: 48px;
+
+    margin: 0 0 15px;
+
+    color: #292929;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+#kitchen-page .kitchen-card-content .kitchen-button {
+    width: 100%;
+    max-width: 245px;
+}
+
+
+/* ==========================================
+   UPCOMING EVENTS SECTION
+========================================== */
+
+#kitchen-page .kitchen-upcoming-events {
+    width: calc(100% - 100px);
+    max-width: 1250px;
+
+    margin: 25px auto 30px;
+}
+
+#kitchen-page .kitchen-section-heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+    text-align: center;
+}
+
+#kitchen-page .kitchen-section-heading h2 {
+    margin: 0;
+
+    color: var(--kitchen-green);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.25rem, 2.2vw, 1.8rem);
+    font-weight: 900;
+    line-height: 1.3;
+}
+
+#kitchen-page .kitchen-heading-line {
+    width: 65px;
+    height: 1px;
+    flex-shrink: 1;
+
+    background: var(--kitchen-gold);
+}
+
+#kitchen-page .kitchen-heading-decoration {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    margin: 7px 0 15px;
+
+    color: var(--kitchen-burgundy);
+    font-size: 18px;
+}
+
+#kitchen-page .kitchen-heading-decoration span {
+    width: 45px;
+    height: 1px;
+    background: #b9a17c;
+}
+
+#kitchen-page .kitchen-event-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+}
+
+#kitchen-page .kitchen-event-card {
+    display: flex;
+    align-items: stretch;
+    gap: 12px;
+
+    min-width: 0;
+    padding: 10px;
+
+    border: 1px solid #d8c6a6;
+    border-radius: 5px;
+
+    background: #fffdf8;
+}
+
+#kitchen-page .kitchen-event-poster {
+    flex: 0 0 38%;
+    min-width: 0;
+    min-height: 160px;
+    overflow: hidden;
+
+    background: var(--kitchen-cream-dark);
+}
+
+#kitchen-page .kitchen-event-poster img {
+    min-height: 160px;
+    object-fit: cover;
+}
+
+#kitchen-page .kitchen-event-details {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-start;
+
+    min-width: 0;
+}
+
+#kitchen-page .kitchen-event-date {
+    margin: 0 0 8px;
+
+    color: var(--kitchen-burgundy);
+    font-size: 10px;
+    font-weight: 800;
+    line-height: 1.5;
+}
+
+#kitchen-page .kitchen-event-date span {
+    margin-right: 4px;
+    font-size: 13px;
+}
+
+#kitchen-page .kitchen-event-details h3 {
+    margin: 0 0 8px;
+
+    color: var(--kitchen-green);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+#kitchen-page .kitchen-event-details > p:not(.kitchen-event-date) {
+    flex: 1;
+
+    margin: 0 0 10px;
+
+    color: #292929;
+    font-size: 12px;
+    line-height: 1.55;
+}
+
+#kitchen-page .kitchen-event-button {
+    align-self: flex-start;
+    min-height: 34px;
+    padding: 8px 14px;
+
+    font-size: 10px;
+}
+
+#kitchen-page .kitchen-calendar-link {
+    display: flex;
+    justify-content: center;
+
+    margin: 10px 0 0;
+}
+
+#kitchen-page .kitchen-calendar-link .kitchen-button {
+    background: var(--kitchen-burgundy);
+    border-color: var(--kitchen-burgundy);
+}
+
+#kitchen-page .kitchen-calendar-link .kitchen-button:hover {
+    background: var(--kitchen-green);
+    border-color: var(--kitchen-green);
+}
+
+
+/* ==========================================
+   FACEBOOK UPDATES STRIP
+========================================== */
+
+#kitchen-page .kitchen-facebook-strip {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    width: calc(100% - 100px);
+    max-width: 1250px;
+    min-height: 100px;
+
+    margin: 25px auto 12px;
+    padding: 18px 28px;
+
+    border: 1px solid #d8c6a6;
+    border-radius: 6px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(240, 229, 208, 0.96),
+            rgba(240, 229, 208, 0.88)
+        );
+}
+
+#kitchen-page .kitchen-facebook-icon {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+
+    width: 62px;
+    height: 62px;
+
+    border-radius: 50%;
+    background: var(--kitchen-green);
+    color: #ffffff;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 1;
+}
+
+#kitchen-page .kitchen-facebook-text {
+    flex: 1;
+}
+
+#kitchen-page .kitchen-facebook-text h2 {
+    margin: 0 0 6px;
+
+    color: var(--kitchen-green);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 21px;
+    font-weight: 800;
+}
+
+#kitchen-page .kitchen-facebook-text p {
+    max-width: 520px;
+    margin: 0;
+
+    color: #292929;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+#kitchen-page .kitchen-facebook-button {
+    flex-shrink: 0;
+    min-width: 225px;
+}
+
+
+/* ==========================================
+   TABLETS
+========================================== */
+
+@media (max-width: 1000px) {
+
+    #kitchen-page .kitchen-hero {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #kitchen-page .kitchen-hero-content {
+        padding: 25px 20px;
+    }
+
+    #kitchen-page .kitchen-feature-grid,
+    #kitchen-page .kitchen-upcoming-events,
+    #kitchen-page .kitchen-facebook-strip {
+        width: calc(100% - 40px);
+    }
+
+    #kitchen-page .kitchen-feature-grid {
+        gap: 14px;
+    }
+
+    #kitchen-page .kitchen-card-content {
+        padding-right: 12px;
+        padding-left: 12px;
+    }
+
+    #kitchen-page .kitchen-event-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #kitchen-page .kitchen-event-poster {
+        flex-basis: 150px;
+        max-width: 150px;
+    }
+
+    #kitchen-page .kitchen-event-poster img {
+        height: 180px;
+    }
+
+    #kitchen-page .kitchen-event-card {
+        min-height: 180px;
+    }
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 650px) {
+
+    #kitchen-page .kitchen-hero {
+        grid-template-columns: 1fr;
+    }
+
+    #kitchen-page .kitchen-hero-content {
+        padding: 35px 22px;
+    }
+
+    #kitchen-page .kitchen-hero h1 {
+        font-size: clamp(2.6rem, 10vw, 3.7rem);
+    }
+
+    #kitchen-page .kitchen-hero-image {
+        min-height: 260px;
+        height: 260px;
+    }
+
+    #kitchen-page .kitchen-hours-notice {
+        flex-wrap: wrap;
+        gap: 14px;
+
+        width: calc(100% - 28px);
+        margin: 14px auto 20px;
+        padding: 20px;
+    }
+
+    #kitchen-page .kitchen-hours-icon {
+        width: 52px;
+        height: 52px;
+        font-size: 36px;
+    }
+
+    #kitchen-page .kitchen-hours-text {
+        flex: 1 1 calc(100% - 70px);
+    }
+
+    #kitchen-page .kitchen-hours-text h2 {
+        font-size: 18px;
+    }
+
+    #kitchen-page .kitchen-hours-button {
+        width: 100%;
+    }
+
+    #kitchen-page .kitchen-feature-grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+
+        width: calc(100% - 32px);
+        max-width: 420px;
+    }
+
+    #kitchen-page .kitchen-card-image {
+        height: 200px;
+    }
+
+    #kitchen-page .kitchen-card-content {
+        padding: 12px 22px 22px;
+    }
+
+    #kitchen-page .kitchen-card-content h2 {
+        font-size: 1.35rem;
+    }
+
+    #kitchen-page .kitchen-card-content p {
+        min-height: auto;
+    }
+
+    #kitchen-page .kitchen-card-content .kitchen-button {
+        max-width: 280px;
+    }
+
+    #kitchen-page .kitchen-upcoming-events {
+        width: calc(100% - 32px);
+        margin-top: 35px;
+    }
+
+    #kitchen-page .kitchen-section-heading {
+        gap: 8px;
+    }
+
+    #kitchen-page .kitchen-section-heading h2 {
+        font-size: 1.3rem;
+    }
+
+    #kitchen-page .kitchen-heading-line {
+        width: 20px;
+    }
+
+    #kitchen-page .kitchen-event-grid {
+        gap: 14px;
+    }
+
+    #kitchen-page .kitchen-event-card {
+        gap: 12px;
+        padding: 10px;
+    }
+
+    #kitchen-page .kitchen-event-poster {
+        flex: 0 0 36%;
+        max-width: 150px;
+        min-height: 150px;
+    }
+
+    #kitchen-page .kitchen-event-poster img {
+        min-height: 150px;
+        height: 100%;
+    }
+
+    #kitchen-page .kitchen-event-details h3 {
+        font-size: 16px;
+    }
+
+    #kitchen-page .kitchen-event-details > p:not(.kitchen-event-date) {
+        font-size: 12px;
+    }
+
+    #kitchen-page .kitchen-facebook-strip {
+        flex-wrap: wrap;
+        gap: 14px;
+
+        width: calc(100% - 32px);
+        padding: 20px;
+    }
+
+    #kitchen-page .kitchen-facebook-icon {
+        width: 52px;
+        height: 52px;
+        font-size: 40px;
+    }
+
+    #kitchen-page .kitchen-facebook-text {
+        flex: 1 1 calc(100% - 70px);
+    }
+
+    #kitchen-page .kitchen-facebook-text h2 {
+        font-size: 19px;
+    }
+
+    #kitchen-page .kitchen-facebook-button {
+        width: 100%;
+        min-width: 0;
+    }
+}
+
+#kitchen-page {
+    margin-top: 130px;
+}
+
+/* FACEBOOK BAR — KEEP THE FULL-WIDTH NOTICE STYLE */
+
+#kitchen-page .kitchen-facebook-notice {
+    width: calc(100% - 80px);
+    max-width: 1300px;
+    min-height: 108px;
+    margin: -1px auto 20px;
+    padding: 18px 28px;
+}
+
+/* Facebook icon */
+#kitchen-page .kitchen-facebook-notice .kitchen-facebook-icon {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+
+    width: 64px;
+    height: 64px;
+
+    border-radius: 50%;
+    background: var(--kitchen-green);
+    color: #ffffff;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 1;
+}
+
+/* Mobile adjustments */
+@media (max-width: 650px) {
+    #kitchen-page .kitchen-facebook-notice {
+        width: calc(100% - 28px);
+        margin: 14px auto 20px;
+        padding: 20px;
+    }
+
+    #kitchen-page .kitchen-facebook-notice .kitchen-hours-button {
+        width: 100%;
+    }
+}
+
+/* =========================================
+   FACEBOOK BAR — LONG, WIDE NOTICE STYLE
+========================================= */
+
+#kitchen-page .kitchen-facebook-notice {
+    width: calc(100% - 80px);
+    max-width: 1300px;
+    min-height: 108px;
+    margin: 30px auto;
+    padding: 18px 28px;
+    box-sizing: border-box;
+}
+
+/* Facebook icon */
+#kitchen-page .kitchen-facebook-notice .kitchen-facebook-icon {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: var(--kitchen-green);
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 1;
+}
+
+/* Mobile adjustments */
+@media (max-width: 650px) {
+    #kitchen-page .kitchen-facebook-notice {
+        width: calc(100% - 28px);
+        margin: 20px auto;
+        padding: 20px;
+    }
+
+    #kitchen-page .kitchen-facebook-notice .kitchen-hours-button {
+        width: 100%;
+    }
+}
+
+/* =========================================================
+   WINDSOR SPORTSMEN'S CLUB — FOOTER
+========================================================= */
+
+/* MAIN FOOTER */
+.footer {
+    width: 100%;
+    background: #102719;
+    color: #f7f0e4;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+.footer *,
+.footer *::before,
+.footer *::after {
+    box-sizing: border-box;
+}
+
+/* FOOTER CONTENT CONTAINER */
+.footer-container {
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 55px 35px 45px;
+    display: grid;
+    grid-template-columns: 1.4fr 0.8fr 0.9fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+/* FOOTER COLUMNS */
+.footer-column {
+    min-width: 0;
+}
+
+/* COLUMN HEADINGS */
+.footer-column h3 {
+    color: #c6a568;
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    line-height: 1.5;
+    margin: 0 0 25px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid rgba(198, 165, 104, 0.55);
+}
+
+/* ADDRESS, PHONE AND EMAIL ITEMS */
+.footer-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 13px;
+    margin-bottom: 19px;
+    color: #f7f0e4;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* CONTACT ICONS */
+.footer-item i {
+    color: #c6a568;
+    font-size: 17px;
+    width: 20px;
+    min-width: 20px;
+    text-align: center;
+    margin-top: 4px;
+}
+
+/* FOOTER PARAGRAPHS */
+.footer-column p {
+    color: #f7f0e4;
+    font-size: 14px;
+    line-height: 1.8;
+    margin: 0 0 10px;
+}
+
+/* FOOTER LISTS */
+.footer-column ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 13px;
+}
+
+/* FOOTER LINKS */
+.footer-column a {
+    display: inline-block;
+    color: #f7f0e4;
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 1.6;
+    transition: color 0.25s ease, transform 0.25s ease;
+}
+
+/* LINK HOVER EFFECT */
+.footer-column a:hover {
+    color: #c6a568;
+    transform: translateX(4px);
+}
+
+/* FOOTER BOTTOM COPYRIGHT BAR */
+.footer-bottom {
+    width: 100%;
+    background: #07180f;
+    color: #cfc7b8;
+    text-align: center;
+    padding: 20px 15px;
+    font-size: 13px;
+    line-height: 1.7;
+    border-top: 1px solid rgba(198, 165, 104, 0.35);
+}
+
+/* =========================================================
+   TABLETS
+========================================================= */
+
+@media (max-width: 950px) {
+
+    .footer-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 40px 35px;
+        padding: 45px 30px 35px;
+    }
+
+}
+
+/* =========================================================
+   MOBILE PHONES
+========================================================= */
+
+@media (max-width: 550px) {
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 35px 24px 30px;
+    }
+
+    .footer-column h3 {
+        font-size: 16px;
+        margin-bottom: 18px;
+    }
+
+    .footer-item {
+        font-size: 14px;
+        gap: 12px;
+        margin-bottom: 15px;
+    }
+
+    .footer-column p,
+    .footer-column a {
+        font-size: 14px;
+    }
+
+    .footer-column ul li {
+        margin-bottom: 10px;
+    }
+
+    .footer-bottom {
+        padding: 18px 15px;
+        font-size: 12px;
+    }
+
+}
+
+/* ==========================================
+   SMALL MOBILE SCREENS
+========================================== */
+
+@media (max-width: 380px) {
+
+    #kitchen-page .kitchen-event-card {
+        flex-direction: column;
+    }
+
+    #kitchen-page .kitchen-event-poster {
+        width: 100%;
+        max-width: none;
+        height: 190px;
+        flex-basis: auto;
+    }
+
+    #kitchen-page .kitchen-event-poster img {
+        height: 190px;
+    }
+
+    #kitchen-page .kitchen-event-button {
+        align-self: stretch;
+    }
+
+    #kitchen-page .kitchen-section-heading h2 {
+        font-size: 1.1rem;
+    }
+}
