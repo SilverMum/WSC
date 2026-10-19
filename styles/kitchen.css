@@ -1849,3 +1849,14 @@ main {
         font-size: 1.1rem;
     }
 }
+
+
+/* ==========================================
+   KITCHEN PAGE — MOBILE TOP SPACING FIX
+========================================== */
+
+@media screen and (max-width: 768px) {
+    #kitchen-page {
+        margin-top: 60px;
+    }
+}
