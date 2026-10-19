@@ -107,12 +107,17 @@
 
         <div class="rentals-hero-image">
 
-            <!-- Replace this placeholder with your banquet hall image -->
+            <!-- HERO IMAGE -->
 
-            <div class="rentals-image-placeholder">
-                <span>HERO IMAGE</span>
-                <p>Banquet Hall / Main Rental Space</p>
-            </div>
+        <div class="rentals-hero-image">
+
+        <img
+            src="images/banq hall hero 1200 x 600 px.png"
+            alt="Banquet Hall at Windsor Sportsmen's Club"
+            style="width: 100%; height: 100%; object-fit: cover; display: block;"
+        >
+
+</div>
 
         </div>
 
@@ -154,12 +159,21 @@
 
                 <div class="rentals-card-image">
 
-                    <!-- IMAGE PLACEHOLDER -->
+                    <div class="rentals-card-image indoor-room-slideshow">
 
-                    <div class="rentals-image-placeholder">
-                        <span>IMAGE 01</span>
-                        <p>Indoor Rooms</p>
-                    </div>
+    <img
+        src="images/indoorroom1.png"
+        alt="Indoor Room at Windsor Sportsmen's Club"
+        class="indoor-room-slide active"
+    >
+
+    <img
+        src="images/indoorroom2.png"
+        alt="Another view of the Indoor Room at Windsor Sportsmen's Club"
+        class="indoor-room-slide"
+    >
+
+</div>
 
                 </div>
 
@@ -190,12 +204,39 @@
 
                 <div class="rentals-card-image">
 
-                    <!-- IMAGE PLACEHOLDER -->
+                   <div class="rentals-card-image large-event-hall-slideshow">
 
-                    <div class="rentals-image-placeholder">
-                        <span>IMAGE 02</span>
-                        <p>Large Event Hall</p>
-                    </div>
+    <img
+        src="images/largeeventhall2.png"
+        alt="Large Event Hall at Windsor Sportsmen's Club"
+        class="large-event-hall-slide active"
+    >
+
+    <img
+        src="images/largeeventhall3.png"
+        alt="Large Event Hall at Windsor Sportsmen's Club"
+        class="large-event-hall-slide"
+    >
+
+    <img
+        src="images/largeeventhall6.png"
+        alt="Large Event Hall at Windsor Sportsmen's Club"
+        class="large-event-hall-slide"
+    >
+
+    <img
+        src="images/largeeventhall4.png"
+        alt="Large Event Hall at Windsor Sportsmen's Club"
+        class="large-event-hall-slide"
+    >
+
+    <img
+        src="images/largeeventhall1.png"
+        alt="Large Event Hall at Windsor Sportsmen's Club"
+        class="large-event-hall-slide"
+    >
+
+</div>
 
                 </div>
 
@@ -215,7 +256,6 @@
             </article>
 
 
-
             <!-- CARD 3: STAGE & ENTERTAINMENT -->
 
             <article class="rentals-card">
@@ -226,12 +266,15 @@
 
                 <div class="rentals-card-image">
 
-                    <!-- IMAGE PLACEHOLDER -->
+                    <div class="rentals-card-image">
 
-                    <div class="rentals-image-placeholder">
-                        <span>IMAGE 03</span>
-                        <p>Stage & Entertainment</p>
-                    </div>
+    <img
+        src="images/stage1.png"
+        alt="Stage and Entertainment at Windsor Sportsmen's Club"
+        style="width: 100%; height: 100%; object-fit: cover; display: block;"
+    >
+
+</div>
 
                 </div>
 
@@ -465,19 +508,40 @@
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-    const slides = document.querySelectorAll(".private-events-header-carousel .carousel-slide");
-    let index = 0;
 
-    function showNextSlide() {
-        slides[index].classList.remove("active");
-        index = (index + 1) % slides.length;
-        slides[index].classList.add("active");
+    function startSlideshow(selector) {
+
+        const slides = document.querySelectorAll(selector);
+
+        if (slides.length < 2) return;
+
+        let index = 0;
+
+        setInterval(function () {
+
+            slides[index].classList.remove("active");
+
+            index = (index + 1) % slides.length;
+
+            slides[index].classList.add("active");
+
+        }, 7000);
+
     }
 
-    setInterval(showNextSlide, 4000);
+    // CARD 1: INDOOR ROOMS
+    startSlideshow(
+        "#private-events-page .indoor-room-slide"
+    );
+
+    // CARD 2: LARGE EVENT HALL
+    startSlideshow(
+        "#private-events-page .large-event-hall-slide"
+    );
+
 });
 </script>
-
+    
 <script src="scripts.js"></script>
 
 </body>
