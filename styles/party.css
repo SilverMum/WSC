@@ -823,6 +823,54 @@
 
 }
 
+/* =========================================
+   INDOOR ROOM IMAGE SLIDESHOW
+========================================= */
+
+#private-events-page .indoor-room-slideshow {
+    position: relative;
+    overflow: hidden;
+}
+
+#private-events-page .indoor-room-slide {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+#private-events-page .indoor-room-slide.active {
+    opacity: 1;
+}
+
+/* =========================================
+   LARGE EVENT HALL IMAGE SLIDESHOW
+========================================= */
+
+#private-events-page .large-event-hall-slideshow {
+    position: relative;
+    overflow: hidden;
+}
+
+#private-events-page .large-event-hall-slide {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+#private-events-page .large-event-hall-slide.active {
+    opacity: 1;
+}
+
 /* =========================================================
    WINDSOR SPORTSMEN'S CLUB — FOOTER
 ========================================================= */
