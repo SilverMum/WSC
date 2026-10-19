@@ -544,129 +544,187 @@
     padding-bottom: 0;
 }
 
-.home .site-footer {
-    margin-top: 0;
+#whats-happening {
+    scroll-margin-top: 120px;
 }
 
-.footer {
-    position: relative;
-    overflow: hidden;
-
-    background: linear-gradient(
-        135deg,
-        #001428 0%,
-        #00264f 40%,
-        #003768 60%,
-        #001428 100%
-    );
-
-    color: white;
-    margin-top: 0;
-}
-
-/* Maple leaf overlay */
-.footer::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-
-    background: url("images/maple-leaf.png") center center no-repeat;
-    background-size: 280px;
-
-    opacity: 0.06;
-
-    pointer-events: none;
-    z-index: 1;
-}
-
-.footer-container {
-    position: relative;
-    z-index: 2;
-
-    max-width: 1400px;
-    margin: 0 auto;
-
-    padding: 65px 50px;
-
-    display: grid;
-    grid-template-columns: 1.6fr 1.15fr 1fr 1.15fr;
-    gap: 50px;
-}
-
-.footer-column:not(:last-child) {
-    border-right: 1px solid rgba(255,255,255,0.15);
-    padding-right: 50px;
-}
-
-.footer-column h3 {
-    font-size: 1.8rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-
-    color: #ffffff;
-
-    margin-bottom: 25px;
-}
-
-.footer-column ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.footer-column li {
-    margin-bottom: 12px;
-}
-
-.footer-column p,
-.footer-column li,
-.footer-column a,
-.footer-item span {
-    color: rgba(255,255,255,0.92);
-    font-size: 1.15rem;
-    line-height: 1.6;
-}
-
-.footer-column a {
+/* Clickable event titles */
+.event-title-link {
+    color: inherit;
     text-decoration: none;
-    transition: all 0.3s ease;
+    cursor: pointer;
 }
 
-.footer-column a:hover {
-    color: #d5a021;
-    padding-left: 4px;
+.event-title-link:hover {
+    text-decoration: underline;
 }
 
+/* =========================================================
+   WINDSOR SPORTSMEN'S CLUB — FOOTER
+========================================================= */
+
+/* MAIN FOOTER */
+.footer {
+    width: 100%;
+    background: #102719;
+    color: #f7f0e4;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+.footer *,
+.footer *::before,
+.footer *::after {
+    box-sizing: border-box;
+}
+
+/* FOOTER CONTENT CONTAINER */
+.footer-container {
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 55px 35px 45px;
+    display: grid;
+    grid-template-columns: 1.4fr 0.8fr 0.9fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+/* FOOTER COLUMNS */
+.footer-column {
+    min-width: 0;
+}
+
+/* COLUMN HEADINGS */
+.footer-column h3 {
+    color: #c6a568;
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    line-height: 1.5;
+    margin: 0 0 25px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid rgba(198, 165, 104, 0.55);
+}
+
+/* ADDRESS, PHONE AND EMAIL ITEMS */
 .footer-item {
     display: flex;
     align-items: flex-start;
-    gap: 15px;
-    margin-bottom: 24px;
+    gap: 13px;
+    margin-bottom: 19px;
+    color: #f7f0e4;
+    font-size: 14px;
+    line-height: 1.8;
 }
 
+/* CONTACT ICONS */
 .footer-item i {
-    font-size: 22px;
-    color: #ffffff;
+    color: #c6a568;
+    font-size: 17px;
+    width: 20px;
+    min-width: 20px;
+    text-align: center;
     margin-top: 4px;
-    min-width: 24px;
 }
 
-.footer-bottom {
-    position: relative;
-    z-index: 2;
+/* FOOTER PARAGRAPHS */
+.footer-column p {
+    color: #f7f0e4;
+    font-size: 14px;
+    line-height: 1.8;
+    margin: 0 0 10px;
+}
 
-    background: rgba(0,0,0,0.35);
-
-    border-top: 1px solid rgba(255,255,255,0.08);
-
-    text-align: center;
-
-    padding: 16px 0;
-
+/* FOOTER LISTS */
+.footer-column ul {
+    list-style: none;
     margin: 0;
+    padding: 0;
+}
 
-    font-size: 1rem;
+.footer-column ul li {
+    margin-bottom: 13px;
+}
 
-    color: rgba(255,255,255,0.9);
+/* FOOTER LINKS */
+.footer-column a {
+    display: inline-block;
+    color: #f7f0e4;
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 1.6;
+    transition: color 0.25s ease, transform 0.25s ease;
+}
+
+/* LINK HOVER EFFECT */
+.footer-column a:hover {
+    color: #c6a568;
+    transform: translateX(4px);
+}
+
+/* FOOTER BOTTOM COPYRIGHT BAR */
+.footer-bottom {
+    width: 100%;
+    background: #07180f;
+    color: #cfc7b8;
+    text-align: center;
+    padding: 20px 15px;
+    font-size: 13px;
+    line-height: 1.7;
+    border-top: 1px solid rgba(198, 165, 104, 0.35);
+}
+
+/* =========================================================
+   TABLETS
+========================================================= */
+
+@media (max-width: 950px) {
+
+    .footer-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 40px 35px;
+        padding: 45px 30px 35px;
+    }
+
+}
+
+/* =========================================================
+   MOBILE PHONES
+========================================================= */
+
+@media (max-width: 550px) {
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 35px 24px 30px;
+    }
+
+    .footer-column h3 {
+        font-size: 16px;
+        margin-bottom: 18px;
+    }
+
+    .footer-item {
+        font-size: 14px;
+        gap: 12px;
+        margin-bottom: 15px;
+    }
+
+    .footer-column p,
+    .footer-column a {
+        font-size: 14px;
+    }
+
+    .footer-column ul li {
+        margin-bottom: 10px;
+    }
+
+    .footer-bottom {
+        padding: 18px 15px;
+        font-size: 12px;
+    }
+
 }
