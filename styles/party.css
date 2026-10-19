@@ -1040,3 +1040,15 @@
     }
 
 }
+
+/* ==========================================
+   RENTALS PAGE — MOBILE NAVIGATION SPACING
+========================================== */
+
+@media screen and (max-width: 768px) {
+
+    #private-events-page {
+        margin-top: 60px;
+    }
+
+}
