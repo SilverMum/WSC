@@ -1800,3 +1800,13 @@ header {
     }
 
 }
+
+/* =========================================
+   OFAH BANNER — MOBILE SPACING FIX
+========================================= */
+
+@media (max-width: 768px) {
+    #ofha-page .ofha-hero {
+        margin-top: 20px;
+    }
+}
