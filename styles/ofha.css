@@ -1,0 +1,1801 @@
+/* ==================================================
+   WINDSOR SPORTSMEN'S CLUB — OFAH PAGE STYLES
+   OFAH page styling followed by the existing nav/footer CSS.
+================================================== */
+
+
+/* ==================================================
+   PAGE VARIABLES
+================================================== */
+
+#ofha-page {
+    --ofha-cream: #f7f3eb;
+    --ofha-cream-dark: #eee5d7;
+    --ofha-burgundy: #781e18;
+    --ofha-burgundy-dark: #5e1712;
+    --ofha-charcoal: #252525;
+    --ofha-text: #292522;
+    --ofha-muted: #6b6258;
+    --ofha-border: #ded3c2;
+    --ofha-white: #ffffff;
+
+    color: var(--ofha-text);
+    background: var(--ofha-cream);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.7;
+    overflow-wrap: break-word;
+}
+
+#ofha-page *,
+#ofha-page *::before,
+#ofha-page *::after {
+    box-sizing: border-box;
+}
+
+#ofha-page img {
+    display: block;
+    max-width: 100%;
+}
+
+#ofha-page a {
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+#ofha-page h1,
+#ofha-page h2,
+#ofha-page h3,
+#ofha-page h4,
+#ofha-page p {
+    margin-top: 0;
+}
+
+#ofha-page h1,
+#ofha-page h2,
+#ofha-page h3 {
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+#ofha-page p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* ==================================================
+   HERO SECTION
+================================================== */
+
+#ofha-page .ofha-hero {
+    position: relative;
+    isolation: isolate;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 420px;
+    padding: 65px 24px;
+
+    background-color: #d8cbb6;
+
+    background-image:
+        linear-gradient(
+            rgba(247, 243, 235, 0.79),
+            rgba(247, 243, 235, 0.79)
+        ),
+        url("../images/Misty Sepia Lake Wilderness.png");
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    border-bottom: 4px solid var(--ofha-burgundy);
+    text-align: center;
+}
+
+#ofha-page .ofha-hero-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(120, 30, 24, 0.06),
+            transparent 35%,
+            transparent 65%,
+            rgba(120, 30, 24, 0.06)
+        );
+}
+
+#ofha-page .ofha-hero-content {
+    position: relative;
+    z-index: 1;
+
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+#ofha-page .ofha-hero-logo {
+    width: 118px;
+    height: 118px;
+    object-fit: contain;
+    margin: 0 auto 20px;
+}
+
+#ofha-page .ofha-eyebrow {
+    margin-bottom: 10px;
+
+    color: var(--ofha-burgundy);
+
+    font-size: 0.82rem;
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+#ofha-page .ofha-hero h1 {
+    margin-bottom: 18px;
+
+    color: var(--ofha-charcoal);
+
+    font-size: clamp(2rem, 4.5vw, 3.5rem);
+    font-weight: 800;
+    line-height: 1.12;
+    text-transform: uppercase;
+
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.5);
+}
+
+#ofha-page .ofha-hero-subtitle {
+    max-width: 650px;
+    margin: 0 auto 28px;
+
+    color: var(--ofha-burgundy-dark);
+
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    font-style: italic;
+    font-weight: 600;
+}
+
+
+/* ==================================================
+   BUTTONS
+================================================== */
+
+#ofha-page .ofha-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    min-height: 48px;
+    padding: 13px 25px;
+
+    border: 2px solid transparent;
+    border-radius: 6px;
+
+    font-size: 0.9rem;
+    font-weight: 800;
+    letter-spacing: 0.4px;
+    line-height: 1.35;
+    text-align: center;
+    text-decoration: none;
+
+    cursor: pointer;
+}
+
+#ofha-page .ofha-button-primary {
+    color: var(--ofha-white);
+    background: var(--ofha-burgundy);
+    border-color: var(--ofha-burgundy);
+    box-shadow: 0 4px 10px rgba(70, 20, 15, 0.16);
+}
+
+#ofha-page .ofha-button-primary:hover {
+    color: var(--ofha-white);
+    background: var(--ofha-burgundy-dark);
+    border-color: var(--ofha-burgundy-dark);
+    box-shadow: 0 6px 15px rgba(70, 20, 15, 0.22);
+    transform: translateY(-2px);
+}
+
+#ofha-page .ofha-button-light {
+    color: var(--ofha-burgundy);
+    background: var(--ofha-white);
+    border-color: var(--ofha-white);
+}
+
+#ofha-page .ofha-button-light:hover {
+    color: var(--ofha-white);
+    background: transparent;
+    border-color: var(--ofha-white);
+    transform: translateY(-2px);
+}
+
+#ofha-page .ofha-button:focus-visible,
+#ofha-page .ofha-text-link:focus-visible {
+    outline: 3px solid #b88947;
+    outline-offset: 4px;
+}
+
+
+/* ==================================================
+   MAIN CONTAINER
+================================================== */
+
+#ofha-page .ofha-container {
+    width: 100%;
+    max-width: 1240px;
+
+    margin: 0 auto;
+    padding: 34px 30px 50px;
+}
+
+
+/* ==================================================
+   SECTION HEADINGS
+================================================== */
+
+#ofha-page .ofha-section {
+    margin-top: 48px;
+}
+
+#ofha-page .ofha-section-heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+
+    margin: 0 auto 26px;
+    text-align: center;
+}
+
+#ofha-page .ofha-section-heading > div {
+    flex: 0 1 auto;
+}
+
+#ofha-page .ofha-heading-line {
+    flex: 1 1 50px;
+
+    max-width: 85px;
+    height: 2px;
+
+    background: var(--ofha-burgundy);
+    opacity: 0.7;
+}
+
+#ofha-page .ofha-small-label {
+    margin-bottom: 5px;
+
+    color: var(--ofha-burgundy);
+
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    line-height: 1.5;
+    text-transform: uppercase;
+}
+
+#ofha-page .ofha-section-heading h2 {
+    margin-bottom: 0;
+
+    color: var(--ofha-burgundy-dark);
+
+    font-size: clamp(1.55rem, 2.8vw, 2rem);
+    font-weight: 800;
+    line-height: 1.25;
+}
+
+
+/* ==================================================
+   MEETING CARD
+================================================== */
+
+#ofha-page .ofha-meeting-card {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+
+    position: relative;
+    overflow: hidden;
+
+    min-height: 140px;
+    padding: 26px 30px;
+
+    background:
+        linear-gradient(
+            110deg,
+            #fbf8f1,
+            #f1e8da
+        );
+
+    border: 1px solid #cdbb9e;
+    border-radius: 12px;
+
+    box-shadow: 0 4px 12px rgba(40, 30, 20, 0.07);
+}
+
+#ofha-page .ofha-meeting-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex: 0 0 76px;
+
+    width: 76px;
+    height: 76px;
+
+    color: var(--ofha-white);
+    background: var(--ofha-burgundy);
+
+    border-radius: 50%;
+    font-size: 2.4rem;
+    line-height: 1;
+}
+
+#ofha-page .ofha-meeting-content {
+    position: relative;
+    z-index: 1;
+
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+#ofha-page .ofha-meeting-content .ofha-small-label {
+    margin-bottom: 3px;
+}
+
+#ofha-page .ofha-meeting-content h2 {
+    margin-bottom: 7px;
+
+    color: var(--ofha-burgundy-dark);
+    font-size: 1.65rem;
+    line-height: 1.25;
+}
+
+#ofha-page .ofha-meeting-time {
+    margin-bottom: 6px;
+
+    color: var(--ofha-charcoal);
+    font-size: 1.08rem;
+    font-weight: 800;
+}
+
+#ofha-page .ofha-meeting-note {
+    color: var(--ofha-muted);
+    font-size: 0.9rem;
+}
+
+#ofha-page .ofha-meeting-decoration {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 7px;
+
+    flex: 0 0 150px;
+    min-width: 0;
+    padding: 20px 10px;
+
+    color: var(--ofha-burgundy);
+    border-left: 1px solid var(--ofha-border);
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-align: center;
+
+    opacity: 0.75;
+}
+
+
+/* ==================================================
+   MEMBERSHIP CARD
+================================================== */
+
+#ofha-page .ofha-membership-card {
+    display: grid;
+    grid-template-columns: 100px minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 25px;
+
+    padding: 30px;
+
+    background: var(--ofha-white);
+    border: 1px solid #e5ded4;
+    border-radius: 12px;
+
+    box-shadow: 0 4px 12px rgba(40, 30, 20, 0.08);
+}
+
+#ofha-page .ofha-membership-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 94px;
+    height: 94px;
+
+    color: var(--ofha-white);
+    background: var(--ofha-burgundy);
+
+    border-radius: 50%;
+    font-size: 3.4rem;
+    line-height: 1;
+}
+
+#ofha-page .ofha-membership-content {
+    min-width: 0;
+}
+
+#ofha-page .ofha-membership-content h3 {
+    margin-bottom: 10px;
+
+    color: var(--ofha-burgundy-dark);
+
+    font-size: clamp(1.25rem, 2.2vw, 1.7rem);
+    line-height: 1.3;
+}
+
+#ofha-page .ofha-price {
+    display: inline-block;
+    margin-left: 5px;
+
+    color: var(--ofha-burgundy);
+    font-weight: 800;
+}
+
+#ofha-page .ofha-standard-price {
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+#ofha-page .ofha-membership-content > p:not(.ofha-small-label) {
+    font-size: 0.95rem;
+}
+
+#ofha-page .ofha-membership-requirement {
+    margin-top: 12px;
+    padding-left: 12px;
+
+    border-left: 3px solid var(--ofha-burgundy);
+}
+
+#ofha-page .ofha-membership-action {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+    max-width: 230px;
+    text-align: center;
+}
+
+#ofha-page .ofha-membership-action .ofha-button {
+    width: 100%;
+}
+
+#ofha-page .ofha-membership-action p {
+    color: var(--ofha-muted);
+    font-size: 0.78rem;
+    line-height: 1.5;
+}
+
+
+/* ==================================================
+   MEMBERSHIP BENEFITS GRID
+================================================== */
+
+#ofha-page .ofha-benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+}
+
+#ofha-page .ofha-benefit-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    min-width: 0;
+    min-height: 205px;
+    padding: 24px 18px;
+
+    background: var(--ofha-white);
+    border: 1px solid #e5ded4;
+    border-radius: 10px;
+
+    box-shadow: 0 3px 9px rgba(40, 30, 20, 0.07);
+
+    text-align: center;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+#ofha-page .ofha-benefit-card:hover {
+    transform: translateY(-4px);
+    border-color: #cbb7a0;
+    box-shadow: 0 7px 16px rgba(40, 30, 20, 0.12);
+}
+
+#ofha-page .ofha-benefit-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 58px;
+    margin-bottom: 13px;
+
+    color: var(--ofha-burgundy);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 2.7rem;
+    line-height: 1;
+}
+
+#ofha-page .ofha-benefit-card h3 {
+    margin-bottom: 9px;
+
+    color: var(--ofha-burgundy-dark);
+
+    font-size: 1.05rem;
+    line-height: 1.35;
+}
+
+#ofha-page .ofha-benefit-card p {
+    margin-bottom: 0;
+
+    color: var(--ofha-text);
+    font-size: 0.87rem;
+    line-height: 1.55;
+}
+
+#ofha-page .ofha-benefit-detail {
+    display: block;
+    margin-top: 7px;
+
+    color: var(--ofha-burgundy);
+    font-size: 0.8rem;
+    font-weight: 800;
+}
+
+
+/* ==================================================
+   ADVOCACY INTRODUCTION
+================================================== */
+
+#ofha-page .ofha-section-intro {
+    max-width: 850px;
+
+    margin: -8px auto 30px;
+
+    color: var(--ofha-muted);
+    font-size: 1rem;
+    line-height: 1.8;
+    text-align: center;
+}
+
+
+/* ==================================================
+   ADVOCACY CARDS
+================================================== */
+
+#ofha-page .ofha-advocacy-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 22px;
+}
+
+#ofha-page .ofha-advocacy-card {
+    display: flex;
+    flex-direction: column;
+
+    min-width: 0;
+    overflow: hidden;
+
+    background: var(--ofha-white);
+    border: 1px solid #e1d8cb;
+    border-radius: 12px;
+
+    box-shadow: 0 4px 12px rgba(40, 30, 20, 0.08);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+#ofha-page .ofha-advocacy-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(40, 30, 20, 0.13);
+}
+
+#ofha-page .ofha-advocacy-image {
+    position: relative;
+    overflow: hidden;
+
+    height: 220px;
+
+    background: var(--ofha-cream-dark);
+}
+
+#ofha-page .ofha-advocacy-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    transition: transform 0.4s ease;
+}
+
+#ofha-page .ofha-advocacy-card:hover .ofha-advocacy-image img {
+    transform: scale(1.04);
+}
+
+#ofha-page .ofha-image-label {
+    position: absolute;
+    left: 15px;
+    bottom: 15px;
+
+    padding: 7px 12px;
+
+    color: var(--ofha-white);
+    background: var(--ofha-burgundy);
+
+    border-radius: 4px;
+
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+#ofha-page .ofha-advocacy-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    flex: 1 1 auto;
+    padding: 25px 22px;
+}
+
+#ofha-page .ofha-advocacy-content .ofha-small-label {
+    margin-bottom: 9px;
+    font-size: 0.66rem;
+}
+
+#ofha-page .ofha-advocacy-content h3 {
+    margin-bottom: 12px;
+
+    color: var(--ofha-burgundy-dark);
+
+    font-size: 1.55rem;
+    line-height: 1.3;
+}
+
+#ofha-page .ofha-advocacy-content h4 {
+    margin-bottom: 15px;
+
+    color: var(--ofha-burgundy);
+    font-size: 0.96rem;
+    font-style: italic;
+    line-height: 1.5;
+}
+
+#ofha-page .ofha-advocacy-content h4.ofha-subheading {
+    margin-top: 15px;
+    margin-bottom: 8px;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.1rem;
+    font-style: normal;
+    font-weight: 800;
+}
+
+#ofha-page .ofha-advocacy-content p:not(.ofha-small-label) {
+    margin-bottom: 14px;
+
+    color: var(--ofha-text);
+    font-size: 0.9rem;
+    line-height: 1.75;
+}
+
+#ofha-page .ofha-text-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    margin-top: auto;
+    padding-top: 12px;
+
+    color: var(--ofha-burgundy);
+
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 0.7px;
+    text-decoration: none;
+}
+
+#ofha-page .ofha-text-link:hover {
+    color: var(--ofha-burgundy-dark);
+    text-decoration: underline;
+}
+
+
+/* ==================================================
+   CLOSING CALL TO ACTION
+================================================== */
+
+#ofha-page .ofha-closing-card {
+    position: relative;
+    overflow: hidden;
+
+    margin-top: 50px;
+    padding: 48px 30px;
+
+    color: var(--ofha-white);
+    background:
+        linear-gradient(
+            115deg,
+            rgba(94, 23, 18, 0.98),
+            rgba(120, 30, 24, 0.94)
+        );
+
+    border-radius: 12px;
+    box-shadow: 0 5px 16px rgba(40, 20, 15, 0.15);
+
+    text-align: center;
+}
+
+#ofha-page .ofha-closing-content {
+    position: relative;
+    z-index: 1;
+
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+#ofha-page .ofha-closing-content .ofha-small-label {
+    color: #f0d8bd;
+}
+
+#ofha-page .ofha-closing-content h2 {
+    margin-bottom: 15px;
+
+    color: var(--ofha-white);
+
+    font-size: clamp(1.7rem, 3vw, 2.4rem);
+    line-height: 1.25;
+}
+
+#ofha-page .ofha-closing-content > p:not(.ofha-small-label) {
+    margin-bottom: 25px;
+
+    color: #f8eee6;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+
+/* ==================================================
+   TABLET LAYOUT
+================================================== */
+
+@media (max-width: 1000px) {
+
+    #ofha-page .ofha-container {
+        padding-right: 22px;
+        padding-left: 22px;
+    }
+
+    #ofha-page .ofha-membership-card {
+        grid-template-columns: 80px minmax(0, 1fr);
+        gap: 20px;
+    }
+
+    #ofha-page .ofha-membership-icon {
+        width: 78px;
+        height: 78px;
+        font-size: 2.8rem;
+    }
+
+    #ofha-page .ofha-membership-action {
+        grid-column: 2;
+        align-items: flex-start;
+        max-width: 300px;
+        text-align: left;
+    }
+
+    #ofha-page .ofha-membership-action .ofha-button {
+        width: auto;
+    }
+
+    #ofha-page .ofha-benefits-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    #ofha-page .ofha-advocacy-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    #ofha-page .ofha-advocacy-card:last-child {
+        grid-column: 1 / -1;
+    }
+
+    #ofha-page .ofha-advocacy-card:last-child .ofha-advocacy-image {
+        height: 280px;
+    }
+
+}
+
+
+/* ==================================================
+   MOBILE LAYOUT
+================================================== */
+
+@media (max-width: 600px) {
+
+    #ofha-page .ofha-hero {
+        min-height: 360px;
+        padding: 45px 18px;
+    }
+
+    #ofha-page .ofha-hero-logo {
+        width: 90px;
+        height: 90px;
+        margin-bottom: 15px;
+    }
+
+    #ofha-page .ofha-eyebrow {
+        font-size: 0.7rem;
+        letter-spacing: 2px;
+    }
+
+    #ofha-page .ofha-hero h1 {
+        font-size: clamp(1.8rem, 8vw, 2.6rem);
+    }
+
+    #ofha-page .ofha-hero-subtitle {
+        font-size: 1rem;
+    }
+
+    #ofha-page .ofha-button {
+        width: 100%;
+        padding: 13px 16px;
+    }
+
+    #ofha-page .ofha-container {
+        padding: 24px 15px 35px;
+    }
+
+    #ofha-page .ofha-section {
+        margin-top: 36px;
+    }
+
+    #ofha-page .ofha-section-heading {
+        gap: 10px;
+        margin-bottom: 22px;
+    }
+
+    #ofha-page .ofha-heading-line {
+        max-width: 28px;
+    }
+
+    #ofha-page .ofha-section-heading h2 {
+        font-size: 1.45rem;
+    }
+
+    #ofha-page .ofha-small-label {
+        font-size: 0.65rem;
+        letter-spacing: 1px;
+    }
+
+
+    /* Meeting */
+
+    #ofha-page .ofha-meeting-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+
+        padding: 22px 18px;
+    }
+
+    #ofha-page .ofha-meeting-icon {
+        flex-basis: 60px;
+        width: 60px;
+        height: 60px;
+        font-size: 1.9rem;
+    }
+
+    #ofha-page .ofha-meeting-content h2 {
+        font-size: 1.45rem;
+    }
+
+    #ofha-page .ofha-meeting-time {
+        font-size: 1rem;
+    }
+
+    #ofha-page .ofha-meeting-decoration {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+
+        width: 100%;
+        padding: 12px 0 0;
+
+        border-top: 1px solid var(--ofha-border);
+        border-left: 0;
+
+        font-size: 0.62rem;
+        text-align: left;
+    }
+
+
+    /* Membership */
+
+    #ofha-page .ofha-membership-card {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 18px;
+
+        padding: 24px 20px;
+    }
+
+    #ofha-page .ofha-membership-icon {
+        width: 72px;
+        height: 72px;
+        font-size: 2.6rem;
+    }
+
+    #ofha-page .ofha-membership-content h3 {
+        font-size: 1.45rem;
+    }
+
+    #ofha-page .ofha-price {
+        margin-left: 0;
+    }
+
+    #ofha-page .ofha-membership-action {
+        grid-column: auto;
+        align-items: stretch;
+        max-width: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    #ofha-page .ofha-membership-action .ofha-button {
+        width: 100%;
+    }
+
+
+    /* Benefits */
+
+    #ofha-page .ofha-benefits-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    #ofha-page .ofha-benefit-card {
+        min-height: 190px;
+        padding: 20px 12px;
+    }
+
+    #ofha-page .ofha-benefit-icon {
+        min-height: 45px;
+        margin-bottom: 10px;
+        font-size: 2.1rem;
+    }
+
+    #ofha-page .ofha-benefit-card h3 {
+        font-size: 0.95rem;
+    }
+
+    #ofha-page .ofha-benefit-card p {
+        font-size: 0.82rem;
+    }
+
+
+    /* Advocacy */
+
+    #ofha-page .ofha-section-intro {
+        font-size: 0.92rem;
+    }
+
+    #ofha-page .ofha-advocacy-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 20px;
+    }
+
+    #ofha-page .ofha-advocacy-card:last-child {
+        grid-column: auto;
+    }
+
+    #ofha-page .ofha-advocacy-image {
+        height: 220px;
+    }
+
+    #ofha-page .ofha-advocacy-card:last-child .ofha-advocacy-image {
+        height: 220px;
+    }
+
+    #ofha-page .ofha-advocacy-content {
+        padding: 22px 18px;
+    }
+
+    #ofha-page .ofha-advocacy-content h3 {
+        font-size: 1.4rem;
+    }
+
+
+    /* Closing */
+
+    #ofha-page .ofha-closing-card {
+        margin-top: 35px;
+        padding: 34px 20px;
+    }
+
+}
+
+
+/* ==================================================
+   REDUCED MOTION ACCESSIBILITY
+================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    #ofha-page *,
+    #ofha-page *::before,
+    #ofha-page *::after {
+        scroll-behavior: auto !important;
+        transition: none !important;
+        animation: none !important;
+    }
+
+
+/* ------------------------------
+   NAV FIX — keeps nav ABOVE content
+------------------------------ */
+
+/* Keep nav fixed AND above all content */
+.main-nav {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999 !important;
+}
+
+header {
+    position: relative;
+    z-index: 9998; /* safe, but not overriding nav */
+}
+
+/* =========================================================
+   RESPONSIVE ADJUSTMENTS
+   ========================================================= */
+
+@media (max-width: 992px) {
+    .main-nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 10px 16px;
+    }
+
+    .logo img {
+        height: 70px;
+        margin-bottom: 8px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+        padding-right: 0;
+    }
+
+    .hero {
+        margin-top: 130px;
+    }
+
+    .hero-title {
+        font-size: 2.2rem;
+    }
+
+    .pledge-title-gold,
+    .pledge-title-green {
+        font-size: 1.5rem;
+    }
+
+    .pledge-paragraph-gold,
+    .pledge-paragraph-green {
+        font-size: 1rem;
+    }
+
+    .kitchen-layout {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .kitchen-description {
+        text-align: left;
+        max-width: 100%;
+    }
+
+    .ofha-intro {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .range-status-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero-title {
+        font-size: 1.9rem;
+    }
+
+    .activities-text {
+        font-size: 1.1rem;
+    }
+
+    .facebook-button img {
+        width: 60%;
+    }
+
+    .archery-header-img,
+    .ofha-header-img {
+        height: 260px;
+    }
+
+    .archery-image-wrapper img {
+        height: 220px;
+    }
+
+    .ofha-intro-left {
+        font-size: 1.6rem;
+    }
+
+    .ofha-membership p,
+    .ofha-reasons ol,
+    .ofah-advocacy p,
+    .ofah-conservation p {
+        font-size: 1.3rem;
+    }
+}
+
+/* =========================================================
+   UNIVERSAL MOBILE LAYOUT — STACK EVERYTHING + TIGHT PADDING
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    /* Tight global padding */
+    body, main, .content-section, .contact-section,
+    .range-info-section, .range-rules-section,
+    .range-notice-section, .range-trapper-section,
+    .range-simple-section, .activities-section,
+    .private-events-section, .ofha-membership,
+    .ofha-reasons, .ofah-advocacy, .ofah-conservation,
+    .airrifle-wrapper, .tv-wrapper {
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+    }
+
+    /* Navigation */
+    .main-nav {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px 16px;
+    }
+
+    .logo img {
+        height: 70px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+        padding-right: 0;
+    }
+
+    /* Hero */
+    .hero {
+        margin-top: 130px;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+        white-space: normal;
+    }
+
+    /* Kitchen section */
+    .kitchen-layout {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .kitchen-description {
+        text-align: center;
+        max-width: 100%;
+    }
+
+    /* Max Band */
+    .maxband-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .maxband-left img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Activities divider images */
+    .activities-image {
+        padding: 0 16px;
+        margin: 30px 0;
+    }
+
+    /* Private Events */
+    .private-events-info {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    /* OFHA intro */
+    .ofha-intro {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* Range status grid */
+    .range-status-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    /* Archery images */
+    .archery-image-wrapper img {
+        height: auto;
+        max-width: 100%;
+    }
+
+    /* Footer */
+    .site-footer {
+        padding: 20px 10px;
+    }
+}
+
+/* Even tighter adjustments for very small screens */
+@media (max-width: 480px) {
+
+    .hero-title {
+        font-size: 1.7rem;
+    }
+
+    .activities-text,
+    .range-notice-body,
+    .range-info-text,
+    .range-rules-text,
+    .archery-info-text,
+    .tv-info-line {
+        font-size: 1.05rem;
+    }
+
+    .facebook-button img {
+        width: 70%;
+    }
+
+}
+
+/* =========================================================
+   MOBILE NAV — WRAPPED + TAP-TO-OPEN DROPDOWNS
+   ========================================================= */
+@media (max-width: 900px) {
+
+    /* Mobile nav container */
+    .main-nav {
+        justify-content: center !important;
+        padding: 12px 0 !important;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .logo {
+        order: 1;
+        text-align: center;
+        width: 100%;
+    }
+
+    .logo img {
+        height: 90px;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .nav-spacer {
+        display: none;
+    }
+
+    /* WRAPPED NAV — 3 OVER 3 */
+    .nav-links {
+        order: 2;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 6px 6px;
+        width: 100%;
+        padding: 0;
+        margin-top: 0;
+    }
+
+    .nav-links li {
+        flex: 0 0 calc(33.33% - 6px);
+        text-align: center;
+    }
+
+    .nav-links a {
+        font-size: 1.3rem;
+        padding: 4px 2px;
+        white-space: nowrap;
+    }
+
+    /* ⭐ HOMEPAGE-ONLY TIGHTER NAV SPACING */
+    .home .nav-links {
+        gap: 4px 6px !important;
+    }
+
+    .home .nav-links li {
+        flex: 0 0 calc(33.33% - 4px) !important;
+    }
+
+    /* ⭐ HOMEPAGE NAV LINK FONT SIZE — MATCH OTHER PAGES */
+    .home .nav-links a {
+        font-size: 1.3rem !important;
+        padding: 2px 0 !important;
+        font-weight: bold;
+    }
+
+    /* ⭐ HOMEPAGE — AUTO-WIDTH NAV */
+    .home .main-nav {
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+        width: 100% !important;
+        max-width: none !important;
+        margin: 0 auto !important;
+    }
+
+    /* ⭐ MOBILE DROPDOWN — OVERLAY */
+    .dropdown-menu,
+    .submenu-right {
+        display: none;
+        position: absolute !important;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90% !important;
+        margin-top: 6px;
+        padding: 10px 0;
+        border: 1px solid #ddd;
+        background: white;
+        z-index: 9999;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    /* ⭐ FIX #1 — MATCH DROPDOWN TEXT SIZE ON HOMEPAGE */
+    .home .dropdown-menu a,
+    .home .submenu-right a {
+        font-size: 1.3rem !important;
+    }
+
+    /* ⭐ FIX #2 — MATCH DROPDOWN WIDTH TO KITCHEN */
+    .home .dropdown-menu,
+    .home .submenu-right {
+        max-width: 360px !important;
+    }
+
+    /* ⭐ MOBILE — MEMBERS SUBMENU OPENS TO THE RIGHT */
+    .dropdown-sub {
+        position: relative;
+    }
+
+    /* ⭐ ARROW FIX — KEEP BESIDE MEMBERS */
+    .submenu-toggle {
+        display: inline-block !important;
+        vertical-align: middle !important;
+        margin-left: 6px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    /* ⭐ TOP‑ALIGNED RIGHT‑OPENING SUBMENU (MOBILE) */
+    .dropdown-sub .submenu-right {
+        top: 0 !important;
+        left: 100% !important;
+        transform: none !important;
+        width: auto !important;
+        max-width: 240px !important;
+    }
+
+    .dropdown-sub.open > .submenu-right {
+        display: block;
+    }
+
+    .dropdown.open > .dropdown-menu {
+        display: block;
+    }
+
+    /* ⭐ HOMEPAGE FIX — KEEP MEMBERS + ARROW ON SAME LINE (MOBILE) */
+    .home .dropdown-sub {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        white-space: nowrap !important;
+    }
+
+    .home .submenu-link {
+        display: inline-block !important;
+    }
+
+    .home .submenu-toggle {
+        display: inline-block !important;
+        vertical-align: middle !important;
+        margin-left: 6px !important;
+    }
+}
+
+/* =========================================================
+   DESKTOP DROPDOWNS — DEFAULT HOVER BEHAVIOR
+   ========================================================= */
+@media (min-width: 901px) {
+
+    .dropdown-menu,
+    .submenu-right {
+        display: none;
+        position: absolute;
+        background: white;
+        border: 1px solid #ddd;
+        padding: 10px 0;
+        z-index: 999;
+    }
+
+    /* ⭐ DESKTOP — MEMBERS SUBMENU OPENS TO THE RIGHT */
+    .dropdown-sub {
+        position: relative;
+    }
+
+    /* ⭐ ARROW FIX — KEEP BESIDE MEMBERS */
+    .submenu-toggle {
+        display: inline-block !important;
+        vertical-align: middle !important;
+        margin-left: 6px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    /* ⭐ TOP‑ALIGNED RIGHT‑OPENING SUBMENU (DESKTOP) */
+    .dropdown-sub .submenu-right {
+        top: 0;
+        left: 100%;
+        transform: none;
+        min-width: 180px;
+    }
+
+    /* ⭐ HOMEPAGE DESKTOP FIX — KEEP MEMBERS + ARROW ON ONE LINE */
+    .home .dropdown-sub {
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        white-space: nowrap !important;
+    }
+
+    .home .submenu-link {
+        display: inline-block !important;
+    }
+
+    .home .submenu-toggle {
+        display: inline-block !important;
+        margin-left: 6px !important;
+        vertical-align: middle !important;
+    }
+
+    .dropdown:hover > .dropdown-menu,
+    .dropdown-sub:hover > .submenu-right {
+        display: block;
+    }
+
+/* ==================================================
+   OFAH QUICK LINKS — HORIZONTAL LAYOUT
+================================================== */
+
+#ofha-page .ofha-links-row {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    align-items: center;
+    gap: 22px;
+
+    width: 100%;
+    margin: 0 auto;
+}
+
+#ofha-page .ofha-links-row a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 0;
+    width: 100%;
+}
+
+#ofha-page .ofha-links-row img {
+    display: block;
+
+    width: 100%;
+    max-width: 240px;
+    height: auto;
+    object-fit: contain;
+
+    margin: 0 auto;
+}
+
+/* TABLET */
+@media (max-width: 900px) {
+    #ofha-page .ofha-links-row {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    #ofha-page .ofha-links-row {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+    }
+
+    #ofha-page .ofha-links-row img {
+        max-width: 100%;
+    }
+}
+
+
+/* ==================================================
+   OFAH QUICK LINKS — IMAGE-ONLY HOVER EFFECT
+================================================== */
+
+/* Keep the clickable link free of shadows and effects */
+#ofha-page .ofha-links-row a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 0;
+    border-radius: 0;
+    box-shadow: none;
+    background: transparent;
+
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* Apply movement and shadow ONLY to the image */
+#ofha-page .ofha-links-row a img {
+    display: block;
+
+    transition:
+        transform 0.3s ease,
+        filter 0.3s ease;
+
+    filter: drop-shadow(0 0 0 transparent);
+}
+
+/* Image lifts slightly and gains a shadow on hover */
+#ofha-page .ofha-links-row a:hover img {
+    transform: translateY(-6px) scale(1.03);
+
+    filter:
+        drop-shadow(0 5px 5px rgba(40, 30, 20, 0.18))
+        brightness(1.04);
+}
+
+/* Keyboard accessibility */
+#ofha-page .ofha-links-row a:focus-visible {
+    outline: 3px solid #781e18;
+    outline-offset: 5px;
+    border-radius: 4px;
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    #ofha-page .ofha-links-row a img {
+        transition: none;
+    }
+
+    #ofha-page .ofha-links-row a:hover img {
+        transform: none;
+    }
+}
+
+/* =========================================================
+   WINDSOR SPORTSMEN'S CLUB — FOOTER
+========================================================= */
+
+/* MAIN FOOTER */
+.footer {
+    width: 100%;
+    background: #102719;
+    color: #f7f0e4;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+.footer *,
+.footer *::before,
+.footer *::after {
+    box-sizing: border-box;
+}
+
+/* FOOTER CONTENT CONTAINER */
+.footer-container {
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 55px 35px 45px;
+    display: grid;
+    grid-template-columns: 1.4fr 0.8fr 0.9fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+/* FOOTER COLUMNS */
+.footer-column {
+    min-width: 0;
+}
+
+/* COLUMN HEADINGS */
+.footer-column h3 {
+    color: #c6a568;
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    line-height: 1.5;
+    margin: 0 0 25px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid rgba(198, 165, 104, 0.55);
+}
+
+/* ADDRESS, PHONE AND EMAIL ITEMS */
+.footer-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 13px;
+    margin-bottom: 19px;
+    color: #f7f0e4;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* CONTACT ICONS */
+.footer-item i {
+    color: #c6a568;
+    font-size: 17px;
+    width: 20px;
+    min-width: 20px;
+    text-align: center;
+    margin-top: 4px;
+}
+
+/* FOOTER PARAGRAPHS */
+.footer-column p {
+    color: #f7f0e4;
+    font-size: 14px;
+    line-height: 1.8;
+    margin: 0 0 10px;
+}
+
+/* FOOTER LISTS */
+.footer-column ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 13px;
+}
+
+/* FOOTER LINKS */
+.footer-column a {
+    display: inline-block;
+    color: #f7f0e4;
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 1.6;
+    transition: color 0.25s ease, transform 0.25s ease;
+}
+
+/* LINK HOVER EFFECT */
+.footer-column a:hover {
+    color: #c6a568;
+    transform: translateX(4px);
+}
+
+/* FOOTER BOTTOM COPYRIGHT BAR */
+.footer-bottom {
+    width: 100%;
+    background: #07180f;
+    color: #cfc7b8;
+    text-align: center;
+    padding: 20px 15px;
+    font-size: 13px;
+    line-height: 1.7;
+    border-top: 1px solid rgba(198, 165, 104, 0.35);
+}
+
+/* =========================================================
+   TABLETS
+========================================================= */
+
+@media (max-width: 950px) {
+
+    .footer-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 40px 35px;
+        padding: 45px 30px 35px;
+    }
+
+}
+
+/* =========================================================
+   MOBILE PHONES
+========================================================= */
+
+@media (max-width: 550px) {
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 35px 24px 30px;
+    }
+
+    .footer-column h3 {
+        font-size: 16px;
+        margin-bottom: 18px;
+    }
+
+    .footer-item {
+        font-size: 14px;
+        gap: 12px;
+        margin-bottom: 15px;
+    }
+
+    .footer-column p,
+    .footer-column a {
+        font-size: 14px;
+    }
+
+    .footer-column ul li {
+        margin-bottom: 10px;
+    }
+
+    .footer-bottom {
+        padding: 18px 15px;
+        font-size: 12px;
+    }
+
+}
