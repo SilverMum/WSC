@@ -1,0 +1,731 @@
+/* =========================================================
+   1. GLOBAL RESET AND BASE STYLES
+========================================================= */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #222;
+    background-color: transparent;
+}
+
+body.cheese-bg {
+    position: relative;
+    z-index: 0;
+    min-height: 100vh;
+}
+
+/* =========================================================
+   2. FULL-PAGE CHEESE BACKGROUND
+========================================================= */
+
+.cheese-bg {
+    background-image: url("../images/cheese-background.jpg");
+    background-position: center bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.cheese-bg::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+
+    background: rgba(255, 255, 255, 0.30);
+
+    pointer-events: none;
+}
+
+/* =========================================================
+   3. NAVIGATION — DESKTOP
+========================================================= */
+
+header {
+    position: relative;
+    z-index: 9998;
+}
+
+.main-nav {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999 !important;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px 0;
+    background-color: #1a1a1a;
+    border-bottom: none;
+}
+
+.nav-spacer {
+    display: none;
+}
+
+.logo {
+    flex-shrink: 0;
+}
+
+.logo img {
+    display: block;
+    width: auto;
+    height: 110px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    padding-right: 20px;
+    list-style: none;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    display: inline-block;
+    padding: 10px 14px;
+
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 1.35;
+    text-decoration: none;
+    white-space: nowrap;
+
+    border-radius: 4px;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.nav-links > li > a:hover {
+    background-color: #333 !important;
+    color: #fff !important;
+    box-shadow: none;
+    transform: translateY(-2px);
+}
+
+/* =========================================================
+   4. NAVIGATION DROPDOWNS
+========================================================= */
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu,
+.submenu-right {
+    position: absolute;
+    z-index: 99999;
+
+    display: none;
+    min-width: 220px;
+    padding: 8px 0;
+
+    list-style: none;
+    background-color: #1a1a1a !important;
+    border: none !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.dropdown-menu {
+    top: 100%;
+    left: 0;
+}
+
+.dropdown:hover > .dropdown-menu,
+.dropdown-sub:hover > .submenu-right {
+    display: block;
+}
+
+.dropdown-menu a,
+.submenu-right a {
+    display: block;
+    padding: 10px 18px;
+
+    color: #fff !important;
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 1.4;
+    text-decoration: none;
+    white-space: normal;
+
+    transition: background-color 0.2s ease;
+}
+
+.dropdown-menu a:hover,
+.submenu-right a:hover {
+    background-color: #333 !important;
+    color: #fff !important;
+}
+
+.nav-links li.dropdown-sub {
+    position: relative;
+}
+
+.dropdown-sub > a {
+    padding-right: 18px;
+}
+
+.submenu-right {
+    top: 0;
+    left: 100%;
+    min-width: 200px;
+}
+
+.dropdown-sub {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+}
+
+.submenu-link,
+.submenu-toggle {
+    display: inline-block;
+}
+
+.submenu-toggle {
+    color: #fff !important;
+}
+
+/* =========================================================
+   5. MAIN PAGE LAYOUT
+========================================================= */
+
+main.content-section {
+    width: 100%;
+    max-width: 1200px;
+    margin: -40px auto 0 !important;
+    padding: 50px 0 40px;
+
+    background: transparent;
+    border-bottom: none;
+}
+
+/* =========================================================
+   6. CHEESE & CRACKER TITLE IMAGE
+========================================================= */
+
+body.cheese-bg main img[alt="Cheese and Cracker Club Title"] {
+    display: block;
+    width: 68%;
+    max-width: 100%;
+    height: auto;
+
+    margin: 0 auto 40px;
+}
+
+/* =========================================================
+   7. CHEESE CARD — OUTER WRAPPER
+========================================================= */
+
+.cheese-card.outer-card {
+    display: block;
+    width: fit-content;
+    max-width: 95vw;
+
+    margin: 40px auto;
+    padding: 20px;
+
+    background: rgba(255, 255, 255, 0.30);
+    border-radius: 12px;
+    backdrop-filter: blur(4px);
+
+    text-align: center;
+}
+
+/* =========================================================
+   8. CHEESE CARD — INNER CARD
+========================================================= */
+
+.cheese-inner-card {
+    padding: 20px;
+
+    background: rgba(255, 245, 230, 0.55);
+    border-radius: 12px;
+
+    box-shadow:
+        0 4px 14px rgba(120, 80, 40, 0.35),
+        0 8px 28px rgba(120, 80, 40, 0.25);
+}
+
+/* =========================================================
+   9. CHEESE & CRACKER FLYERS — DESKTOP
+========================================================= */
+
+.cheesecracker-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+
+    width: fit-content;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.cheesecracker-img {
+    display: block;
+
+    width: auto;
+    height: 405px;
+    max-width: 34vw;
+
+    margin: 0 auto;
+    object-fit: contain;
+}
+
+/* =========================================================
+   10. TABLET LAYOUT
+========================================================= */
+
+@media (max-width: 900px) {
+
+    /* Navigation */
+
+    .main-nav {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center !important;
+        gap: 10px;
+
+        padding: 12px 8px !important;
+    }
+
+    .logo {
+        order: 1;
+        width: 100%;
+        text-align: center;
+    }
+
+    .logo img {
+        width: auto;
+        height: 90px;
+        margin: 0 auto;
+    }
+
+    .nav-spacer {
+        display: none;
+    }
+
+    .nav-links {
+        order: 2;
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        gap: 6px;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-links > li {
+        flex: 0 0 calc(33.333% - 6px);
+        min-width: 0;
+        text-align: center;
+    }
+
+    .nav-links > li > a {
+        display: inline-block;
+        padding: 4px 2px;
+
+        font-size: 1.1rem;
+        white-space: normal;
+    }
+
+    /* Dropdown menus controlled by scripts.js */
+
+    .dropdown:hover > .dropdown-menu,
+    .dropdown-sub:hover > .submenu-right {
+        display: none !important;
+    }
+
+    .dropdown-menu,
+    .submenu-right {
+        position: absolute !important;
+        top: 100%;
+        left: 0 !important;
+
+        width: max-content !important;
+        min-width: 180px;
+        max-width: min(88vw, 320px);
+
+        margin-top: 6px;
+        padding: 8px 0;
+
+        background: #1a1a1a !important;
+        border: 1px solid #444 !important;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+    }
+
+    .dropdown-menu a,
+    .submenu-right a {
+        display: block;
+        padding: 9px 14px;
+
+        font-size: 1rem;
+        line-height: 1.4;
+        text-align: left;
+        white-space: normal;
+    }
+
+    .dropdown.open > .dropdown-menu,
+    .dropdown-sub.open > .submenu-right,
+    .nav-links li.dropdown > .dropdown-menu.open {
+        display: block !important;
+    }
+
+    .dropdown-sub {
+        position: relative;
+    }
+
+    .dropdown-sub .submenu-right {
+        top: 0 !important;
+        left: 100% !important;
+
+        width: auto !important;
+        max-width: min(75vw, 240px);
+        margin-top: 0;
+    }
+
+    /* Page title */
+
+    body.cheese-bg main img[alt="Cheese and Cracker Club Title"] {
+        width: 80%;
+        margin-top: 50px !important;
+        margin-bottom: 30px;
+    }
+
+    /* Card sizing */
+
+    .cheese-card.outer-card {
+        width: calc(100% - 20px);
+        max-width: 95vw;
+
+        margin: 30px auto;
+        padding: 12px;
+    }
+
+    .cheese-inner-card {
+        padding: 12px;
+    }
+
+    .cheesecracker-wrapper {
+        max-width: 100%;
+        gap: 20px;
+    }
+
+    .cheesecracker-img {
+        max-width: 40vw;
+        height: auto;
+    }
+}
+
+/* =========================================================
+   11. MOBILE LAYOUT — STACK FLYERS
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .main-nav {
+        padding-left: 8px !important;
+        padding-right: 8px !important;
+    }
+
+    .logo img {
+        height: 76px;
+    }
+
+    .nav-links {
+        gap: 4px;
+    }
+
+    .nav-links > li {
+        flex-basis: calc(33.333% - 4px);
+    }
+
+    .nav-links > li > a {
+        padding: 4px 1px;
+        font-size: 1rem;
+    }
+
+    /* Title image */
+
+    body.cheese-bg main img[alt="Cheese and Cracker Club Title"] {
+        width: 90%;
+        max-width: 100%;
+        margin-top: 50px !important;
+        margin-bottom: 25px;
+    }
+
+    /* Main content */
+
+    main.content-section {
+        padding-top: 30px;
+        padding-bottom: 25px;
+    }
+
+    /* Outer and inner cards */
+
+    .cheese-card.outer-card {
+        width: calc(100% - 16px);
+        max-width: 95vw;
+
+        margin: 25px auto;
+        padding: 8px;
+    }
+
+    .cheese-inner-card {
+        padding: 10px 6px;
+    }
+
+    /* Stack the two flyer images */
+
+    .cheesecracker-wrapper {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .cheesecracker-img {
+        display: block;
+
+        width: 90%;
+        max-width: 350px;
+        height: auto;
+
+        margin: 0 auto;
+        object-fit: contain;
+    }
+}
+
+/* =========================================================
+   12. FOOTER — MAIN STYLING
+========================================================= */
+
+.footer {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+    background: #102719;
+    color: #f7f0e4;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.footer *,
+.footer *::before,
+.footer *::after {
+    box-sizing: border-box;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: 1.4fr 0.8fr 0.9fr 1fr;
+    align-items: start;
+
+    gap: 40px;
+    width: 100%;
+    max-width: 1250px;
+
+    margin: 0 auto;
+    padding: 55px 35px 45px;
+}
+
+.footer-column {
+    min-width: 0;
+}
+
+.footer-column h3 {
+    margin: 0 0 25px;
+    padding-bottom: 12px;
+
+    color: #c6a568;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: 1.5px;
+
+    border-bottom: 2px solid rgba(198, 165, 104, 0.55);
+}
+
+/* =========================================================
+   13. FOOTER CONTACT DETAILS
+========================================================= */
+
+.footer-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 13px;
+
+    margin-bottom: 19px;
+
+    color: #f7f0e4;
+    font-size: 14px;
+    line-height: 1.8;
+    overflow-wrap: anywhere;
+}
+
+.footer-item i {
+    flex: 0 0 20px;
+    width: 20px;
+    min-width: 20px;
+
+    margin-top: 4px;
+
+    color: #c6a568;
+    font-size: 17px;
+    text-align: center;
+}
+
+/* =========================================================
+   14. FOOTER TEXT AND LINKS
+========================================================= */
+
+.footer-column p {
+    margin: 0 0 10px;
+
+    color: #f7f0e4;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.footer-column ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.footer-column ul li {
+    margin-bottom: 13px;
+}
+
+.footer-column a {
+    display: inline-block;
+
+    color: #f7f0e4;
+    font-size: 14px;
+    line-height: 1.6;
+    text-decoration: none;
+
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.footer-column a:hover {
+    color: #c6a568;
+    transform: translateX(4px);
+}
+
+/* =========================================================
+   15. FOOTER COPYRIGHT BAR
+========================================================= */
+
+.footer-bottom {
+    width: 100%;
+    padding: 20px 15px;
+
+    background: #07180f;
+    color: #cfc7b8;
+
+    border-top: 1px solid rgba(198, 165, 104, 0.35);
+
+    font-size: 13px;
+    line-height: 1.7;
+    text-align: center;
+}
+
+/* =========================================================
+   16. FOOTER — TABLETS
+========================================================= */
+
+@media (max-width: 950px) {
+
+    .footer-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        gap: 40px 35px;
+        padding: 45px 30px 35px;
+    }
+}
+
+/* =========================================================
+   17. FOOTER — MOBILE PHONES
+========================================================= */
+
+@media (max-width: 550px) {
+
+    .footer-container {
+        grid-template-columns: minmax(0, 1fr);
+
+        gap: 30px;
+        padding: 35px 24px 30px;
+    }
+
+    .footer-column h3 {
+        margin-bottom: 18px;
+        font-size: 16px;
+    }
+
+    .footer-item {
+        gap: 12px;
+        margin-bottom: 15px;
+        font-size: 14px;
+    }
+
+    .footer-column p,
+    .footer-column a {
+        font-size: 14px;
+    }
+
+    .footer-column ul li {
+        margin-bottom: 10px;
+    }
+
+    .footer-bottom {
+        padding: 18px 15px;
+        font-size: 12px;
+    }
+}
