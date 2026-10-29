@@ -3,582 +3,940 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trap & Skeet</title>
-    <link rel="stylesheet" href="styles.css">
-     <!-- Your new Trap & Skeet overlay + form styles -->
+
+    <title>Trap &amp; Skeet | Windsor Sportsmen's Club</title>
+    <meta name="description" content="Trap and Skeet at Windsor Sportsmen's Club. View range hours, fees, member packages, safety requirements, range rules and contact information.">
+
+    <!-- SHARED WEBSITE STYLES -->
+    <link rel="stylesheet" href="styles/nav.css">
+    <link rel="stylesheet" href="styles/footer.css">
+
+    <!-- TRAP & SKEET PAGE STYLES -->
     <link rel="stylesheet" href="styles/range.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Roboto+Slab:wght@500;600;700;800&display=swap" rel="stylesheet">
 </head>
 
 <body class="trap-skeet-bg">
 
-<!-- =========================================================
-     NAVIGATION (DIRECTLY INCLUDED)
-========================================================= -->
+<!-- =====================================================
+     NAVIGATION — SHARED SITE NAV
+====================================================== -->
+
 <header>
     <nav class="main-nav">
 
-        <!-- LOGO -->
         <div class="logo">
             <img src="images/WINDSOR SPORTSMANS REMAKE.png"
-                 alt="Windsor Sportsmen’s Club Logo">
+                 alt="Windsor Sportsmen's Club Logo">
         </div>
 
         <div class="nav-spacer"></div>
 
-        <!-- NAV LINKS -->
         <ul class="nav-links">
-
             <li><a href="index.html">Home</a></li>
             <li><a href="calendar.html">Calendar</a></li>
             <li><a href="private-events.html">Rentals</a></li>
             <li><a href="kitchen.html">Kitchen</a></li>
 
-            <!-- ACTIVITIES DROPDOWN -->
             <li class="dropdown">
                 <a href="#">Activities ▾</a>
-
                 <ul class="dropdown-menu">
-
-                    <li><a href="trap-skeet.html">Trap & Skeet</a></li>
+                    <li><a href="trap-skeet.html">Trap &amp; Skeet</a></li>
                     <li><a href="archery.html">Archery</a></li>
                     <li><a href="air-rifle.html">Air Rifle</a></li>
-                    
                     <li>
                         <a href="KnifeAxe.html" class="knifeaxe-link">
-                            Knife & Axe<br>
+                            Knife &amp; Axe<br>
                             <span class="knifeaxe-sub">Throwing</span>
                         </a>
                     </li>
-
                 </ul>
             </li>
 
-             <!-- MORE DROPDOWN -->
             <li class="dropdown">
                 <a href="#">More ▾</a>
-
                 <ul class="dropdown-menu">
-
                     <li><a href="ofha.html">OFHA</a></li>
-                    <li><a href="cheese-cracker.html">Cheese & Cracker</a></li>                
+                    <li><a href="cheese-cracker.html">Cheese &amp; Cracker</a></li>
                     <li><a href="members.html">Members</a></li>
-
                 </ul>
             </li>
-
         </ul>
     </nav>
 </header>
 
-<!-- SPACER TO PREVENT NAV OVERLAP -->
-<div class="nav-spacer"></div>
+<main id="trap-skeet-page">
 
-<!-- TRAP & SKEET HEADER IMAGE -->
-<section class="page-header">
-    <img src="images/Range-Header.png" alt="Range Header">
-</section>
+    <!-- =================================================
+         HERO BANNER
+    ================================================== -->
 
-<!-- ANNOUNCEMENT + CALENDAR -->
-<section class="ts-announcement">
-    <div class="ts-left">
-        <h2>2026 Trap & Skeet Season</h2>
+    <section class="ts-hero"
+             aria-label="Trap and Skeet"
+             style="margin-top: 85px;">
 
-        <h3>Important Notes:</h3>
-        <ul>
-            <li>We are looking for Trappers</li>
-            <li>We also need Club Members to Volunteer and assist with Trap & Skeet</strong></li>
-            <li>Contact Domenic for details 519-791-8164</li>
-        </ul>
+        <img src="images/trapskeetnewheadernowords.png"
+             alt="Windsor Sportsmen's Club Trap and Skeet Range">
 
-        <p>Please check the live calendar for range status.</p>
-
-        <!-- ⭐ FACEBOOK BUTTON centered to LEFT COLUMN -->
-        <div class="fb-bottom-button">
-            <a href="https://www.facebook.com/profile.php?id=61575199292154" target="_blank">
-                <img src="images/facebook-button.png" alt="Facebook Button">
-            </a>
-
-            <a href="https://www.instagram.com/wsc_trapandskeet" target="_blank">
-                <img src="images/instagram-button.png" alt="Instagram Button">
-            </a>
+        <div class="ts-hero-overlay">
+            <p>WINDSOR SPORTSMEN'S CLUB</p>
+            <h1>TRAP &amp; SKEET</h1>
+            <span>SPORTSMANSHIP • SAFETY • COMMUNITY</span>
         </div>
+    </section>
 
-    </div>
+    <div class="ts-container">
 
-    <div class="ts-right">
-        <div class="calendar-card">
-            <iframe 
-                src="https://teamup.com/ksqefxnfm1tv8mriaq?tz=Calendar%20default&showProfileAndInfo=0&showSidepanel=1&showViewHeader=1&showAgendaDetails=0&showDateControls=1&showDateRange=1" 
-                loading="lazy"
-                frameborder="0">
-            </iframe>
-        </div>
-    </div>
+        <!-- =============================================
+             ANNOUNCEMENT + LIVE CALENDAR
+        ============================================== -->
 
-</section>
+        <section class="ts-top-grid" aria-label="Season information and range schedule">
 
-<!-- CARD GRID -->
-<section class="ts-card-grid">
+            <div class="ts-announcement">
+                <div class="ts-section-kicker">RANGE NEWS &amp; UPDATES</div>
 
-    <a href="#info1" class="ts-card">
-        <img src="images/ginfo.png" alt="General Info" class="ts-card-image">
-        <p>General Information</p>
-    </a>
+                <h2>2026 Trap &amp; Skeet Season</h2>
 
-    <a href="#info2" class="ts-card">
-        <img src="images/hours.png" alt="Hours" class="ts-card-image">
-        <p>Hours of Operation</p>
-    </a>
+                <div class="ts-gold-rule"></div>
 
-    <a href="#info3" class="ts-card">
-        <img src="images/feesmember.png" alt="Fees & Memberships" class="ts-card-image">
-        <p>Fees & Memberships</p>
-    </a>
+                <h3>Important Notes</h3>
 
-    <a href="#info4" class="ts-card">
-        <img src="images/packages.png" alt="Packages" class="ts-card-image">
-        <p>2026 Member Pre‑Shot Packages</p>
-    </a>
-
-    <a href="#info5" class="ts-card">
-        <img src="images/requirements.png" alt="Requirements" class="ts-card-image">
-        <p>Shooter Requirements</p>
-    </a>
-
-    <a href="#info6" class="ts-card">
-        <img src="images/ammunition.png" alt="Ammunition Types" class="ts-card-image">
-        <p>Ammunition Types</p>
-    </a>
-
-    <a href="#info7" class="ts-card">
-        <img src="images/rules.png" alt="Rules" class="ts-card-image">
-        <p>Range Rules</p>
-    </a>
-
-    <a href="#info8" class="ts-card">
-        <img src="images/contact.png" alt="Contact Trap & Skeet" class="ts-card-image">
-        <p>Contact Trap & Skeet</p>
-    </a>
-
-</section>
-
-<!-- INFO 1 -->
-<div id="info1" class="ts-overlay">
-    <div class="ts-close-wrapper">
-        <a href="javascript:void(0)" class="ts-close" onclick="closeOverlay()">X</a>
-    </div>
-    <div class="ts-overlay-content">
-        <h2 style="text-align:center;">Trap &amp; Skeet – General Information</h2>
-        <p style="text-align:left; font-weight:700;">
-            Shooters wishing to shoot at WSC must complete the following (Non‑members welcome):
-        </p>
-        <ol style="text-align:left; padding-left:20px; line-height:1.6;">
-            <li>Familiarize themselves with the WSC Range Safety Rules.</li>
-            <li>Review &amp; sign the WSC Range Waiver Form annually.</li>
-            <li>Register and sign‑in at the range shack prior to shooting.</li>
-            <li>New members must attend a WSC Range Orientation and Safety Course at the earliest opportunity (a nominal one‑time fee applies).</li>
-            <li>Beginner &amp; novice shooters welcome — instruction available by appointment.</li>
-            <li>Range reservations available for private functions, stags, hunting clubs, meet &amp; greets, etc.</li>
-        </ol>
-    </div>
-</div>
-
-<!-- INFO 2 -->
-<div id="info2" class="ts-overlay">
-    <div class="ts-close-wrapper">
-        <a href="javascript:void(0)" class="ts-close" onclick="closeOverlay()">X</a>
-    </div>
-    <div class="ts-overlay-content">
-        <h2 style="text-align:center;">Hours of Operation</h2>
-        <p style="text-align:center;">For up‑to‑date information check the “Range Schedule”</p>
-
-        <div class="range-open-button-wrapper">
-            <a href="https://teamup.com/ksqefxnfm1tv8mriaq" target="_blank">
-                <img src="images/Range-Open.png" alt="Range Open Button" class="range-open-button-img">
-            </a>
-        </div>
-
-        <p style="text-align:center;"><strong>Note:</strong> All scheduled hours are weather permitting.</p>
-
-        <br>
-
-        <h3>Summer Hours (April to October)</h3>
-
-        <ul class="range-indent">
-            <li><strong>Saturday: 9am to 2pm — Skeet & Trap Open (Last Squad 1:30pm)</strong></li>
-            <li><strong>Sunday: 9am to 2pm — Skeet & Trap Open (Last Squad 1:30pm)</strong></li>
-            <li><strong>Tuesday: 4pm to 7pm - Skeet & Trap Open (Last Squad 6:30pm)</strong></li>
-            <li><strong>Holidays: 9am to 2pm — Skeet & Trap Open (Last Squad 1:30pm)</strong></li>
-            <li><strong>Last Sunday of the month: 9am to 12pm — Skeet & Trap Open (Last Squad 11:30pm)</strong></li>
-        </ul>
-
-        <br>
-
-        <h3>Winter Hours (November to March)</h3>
-
-        <ul class="range-indent">
-            <li><strong>Saturday: 10:30am–2:30pm — Skeet & Trap Open (Last Squad 2:00pm)</strong></li>
-            <li>Sunday: Not scheduled at this time</li>
-            <li>Tuesday: Not scheduled at this time</li>
-            <li>Last Sunday of the month — <strong>Range Closed</strong></li>
-        </ul>
-
-        <br>
-
-        <p class="range-indent"><strong>Please arrive 30 minutes prior to Last Squad time to check available space.</strong></p>
-        <p class="range-indent">The range closes after the last squad finishes shooting.</p>
-
-        <p class="range-indent red-text">
-            <strong>Extended hours available for groups, events, and private parties. Use the Contact Trap & Skeet card below.</strong>
-        </p>
-
-        <br>
-
-        <p style="text-align: left;">Summer: May to end of October (approx.)</p>
-        <p style="text-align: left;">Summer season may extend if temperatures stay above freezing</p>
-        <p style="text-align: left;">Winter: Still in planning phase</p>
-
-    </div>
-</div>
-
-<!-- INFO 3 -->
-<div id="info3" class="ts-overlay">
-    <div class="ts-close-wrapper">
-        <a href="javascript:void(0)" class="ts-close" onclick="closeOverlay()">X</a>
-    </div>
-    <div class="ts-overlay-content">    
-        <h2>Fees & Memberships</h2>
-
-<p>(Per round of 25 clay targets)</p>
-
-<ul>
-    <li><strong>WSC Members:</strong> $9.00 per round with a Trap & Skeet Associate Membership</li>
-    <li><strong>Trap & Skeet Associate Membership:</strong> $100.00 annually (Available at Range Shack)</li>
-    <li><strong>Non‑members:</strong> $11.00 per round + $10.00 Day Fee (Valid PAL required)</li>
-    <li><strong>Note:</strong> Non‑member rates also apply to WSC Members without an Associate Membership</li>
-    <li><strong>WSC General Membership</strong> available at the Range Shack</li>
-    <li><strong>Bulk shooting packages</strong> (see pre shot information section)</li>
-    <li><strong>Youth/Student (18 or younger):</strong> $5.00 per round (Day fee not applicable)</li>
-</ul>
-    </div>
-</div>
-
-<!-- INFO 4 -->
-<div id="info4" class="ts-overlay">
-    <div class="ts-close-wrapper">
-        <a href="javascript:void(0)" class="ts-close" onclick="closeOverlay()">X</a>
-    </div>
-
-    <div class="ts-overlay-content">
-        <h2 style="text-align:center;">Member Pre‑Shot Packages</h2>
-
-        <p style="text-align:center; font-size:1.3rem; margin-top:20px;">
-            <strong>Bronze</strong><br>
-            $90.00 for 10 rounds (0 bonus)<br><br>
-
-            <strong>Silver</strong><br>
-            $180.00 for 23 rounds (3 bonus)<br><br>
-
-            <strong>Gold</strong><br>
-            $270.00 for 36 rounds (6 bonus)
-        </p>
-
-    </div>
-</div>
-
-<!-- INFO 5 -->
-<div id="info5" class="ts-overlay">
-    <div class="ts-close-wrapper">
-        <a href="javascript:void(0)" class="ts-close" onclick="closeOverlay()">X</a>
-    </div>
-    <div class="ts-overlay-content">
-
-        <h2 style="text-align:center;">Shooter Requirements</h2>
-
-        <p style="text-align:left; font-weight:700;">
-            All shooters must show proof of a <strong>Valid PAL</strong>
-        </p>
-
-        <p style="text-align:left;">
-            Non‑PAL holders must be accompanied &amp; supervised by a Valid PAL holder
-        </p>
-
-        <p style="text-align:left; font-weight:700;">
-            Ear &amp; eye protection is <strong>mandatory</strong> (Limited loaners available)
-        </p>
-
-    </div>
-</div>
-
-<!-- INFO 6 -->
-<div id="info6" class="ts-overlay">
-    <div class="ts-close-wrapper">
-        <a href="javascript:void(0)" class="ts-close" onclick="closeOverlay()">X</a>
-    </div>
-    <div class="ts-overlay-content">
-
-        <h2 style="text-align:center;">Ammunition Types</h2>
-
-        <p style="text-align:center; font-weight:700;">
-            Skeet Range: #9 shot (Target Loads)
-        </p>
-
-        <p style="text-align:center; font-weight:700;">
-            Trap Range: #7½ or #8 shot (Target Loads)
-        </p>
-
-    </div>
-</div>
-
-<!-- INFO 7 -->
-<div id="info7" class="ts-overlay">
-
-    <!-- CLOSE BUTTON -->
-    <div class="ts-close-wrapper">
-        <a href="javascript:void(0)" class="ts-close" onclick="closeOverlay()">X</a>
-    </div>
-
-    <div class="ts-overlay-content">
-
-        <h2>Range Rules</h2>
-
-        <ol style="text-align: left;">
-
-            <li>Safety glasses & hearing protection required.</li>
-            <li>All shooters must have a valid PAL or be supervised by a PAL holder.</li>
-            <li>No drugs or alcohol in the vicinity of the ranges.</li>
-
-            <!-- ⭐ RULE 4 — UPDATED -->
-            <li><strong>Skeet Range:</strong>
-                <ul style="list-style: none; padding-left: 25px;">
-                    <li>- Max 12‑gauge, min barrel 26"</li>
-                    <li>- Only 2¾" shells, #9 shot</li>
-                    <li>- Two shells allowed on Stations 1–7; one on Station 8</li>
-                    <li>- Actions open until in position</li>
-                    <li>- Tactical shotguns not permitted</li>
+                <ul class="ts-announcement-list">
+                    <li>We are looking for Trappers.</li>
+                    <li>We also need Club Members to volunteer and assist with Trap &amp; Skeet.</li>
+                    <li>Contact Domenic for details: <a href="tel:5197918164">519-791-8164</a>.</li>
                 </ul>
-            </li>
 
-            <!-- ⭐ RULE 5 — UPDATED -->
-            <li><strong>Trap Range:</strong>
-                <ul style="list-style: none; padding-left: 25px;">
-                    <li>- Max 12‑gauge, min barrel 26"</li>
-                    <li>- Only 2¾" shells, #7½ shot or smaller</li>
-                    <li>- One shell loaded for singles</li>
-                    <li>- Tactical shotguns not permitted</li>
-                </ul>
-            </li>
-
-            <li>Maintain safe muzzle direction at all times.</li>
-            <li>Misfire/hang‑fire: keep action closed 60 seconds, then inspect barrel.</li>
-            <li>Transporting firearms: PROVED safe, action open, barrel up.</li>
-            <li>Obey all RSO commands.</li>
-            <li>Firearms unloaded with actions open when moving between stations.</li>
-            <li>Pick up spent hulls only after firearm is in the rack.</li>
-            <li>Remove slings & accessories before attending firing lines.</li>
-
-        </ol>
-
-        <p style="text-align: center; font-weight: 700; margin-top: 20px;">
-            SAFETY AND COMMON SENSE ARE IMPORTANT
-        </p>
-
-        <p style="text-align: center; font-weight: 700;">
-            When in doubt, ask questions and check it out.
-        </p>
-
-        <div class="restricted-firearms-wrapper">
-            <h3 class="red-text">Firearms similar to the shotguns shown below are not permitted on the range:</h3>
-
-            <div class="range-restricted-image">
-                <img src="images/shotguns.png" alt="Restricted Shotgun Example">
-            </div>
-
-            <p class="range-revised-date">
-                Revised and in effect as of – May 2026
-            </p>
-        </div>
-
-    </div>
-</div>
-
-<!-- INFO 8 -->
-<div id="info8" class="ts-overlay">
-    <div class="ts-close-wrapper">
-        <a href="javascript:void(0)" class="ts-close" onclick="closeOverlay()">X</a>
-    </div>
-
-    <div class="ts-overlay-content">
-
-        <h2 style="text-align:center;">Contact Trap & Skeet</h2>
-
-        <!-- ⭐ LEFT / RIGHT FLEX WRAPPER -->
-        <div class="ts-contact-flex">
-
-            <!-- ⭐ LEFT SIDE (40%) -->
-            <div class="ts-contact-left">
-
-                <h2 class="clubhouse-title">Club House</h2>
-
-                <p class="clubhouse-sub">Restaurant & bar (Hours vary)</p>
-                <p class="clubhouse-sub">
-                    Check WSC website<br>
-                    or call for current hours
+                <p class="ts-calendar-reminder">
+                    Please check the live calendar for range status.
                 </p>
-                <p class="clubhouse-sub">Phone: 519.966.1600</p>
+           
+            <div class="ts-social-buttons">
 
-                <h2>Range Facilities</h2>
+                <a href="https://www.facebook.com/profile.php?id=61575199292154"
+                   class="ts-social-button ts-facebook"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Follow us on Facebook
+                </a>
 
-                <p><strong>1 × Trap Field</strong></p>
-                <p><strong>1 × Skeet Field</strong></p>
-                <p><strong>1 × Pattern Board</strong></p>
-
-                <br>
-
-                <p><strong>We do not sell shotgun shells</strong></p>
-                <p><strong>We do not rent firearms</strong></p>
+                <a href="https://www.instagram.com/wsc_trapandskeet"
+                   class="ts-social-button ts-instagram"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Follow us on Instagram
+                </a>
 
             </div>
 
-           <!-- ⭐ RIGHT SIDE (60%) — ORANGE CARD WITH NEW FORM -->
-<div class="ts-contact-right">
-    <div class="ts-contact-card">
+            </div>
 
-        <!-- ⭐ NEW FORMSPREE FORM -->
-        <div class="form-wrapper">
+            <div class="ts-calendar-panel">
+                <div class="ts-panel-heading">
+                    <span class="ts-heading-icon" aria-hidden="true">▦</span>
+                    <div>
+                        <p>CHECK BEFORE YOU VISIT</p>
+                        <h2>Range Schedule</h2>
+                    </div>
+                </div>
 
-            <h2 class="mask-title" style="text-align:center;">Contact Us</h2>
-            <p class="mask-subtitle" style="text-align:center;">Please fill in your information and we’ll get back to you shortly.</p>
+                <div class="ts-calendar-frame">
+                    <iframe
+                        src="https://teamup.com/ksqefxnfm1tv8mriaq?tz=Calendar%20default&amp;showProfileAndInfo=0&amp;showSidepanel=1&amp;showViewHeader=1&amp;showAgendaDetails=0&amp;showDateControls=1&amp;showDateRange=1"
+                        title="Live Trap and Skeet Range Schedule"
+                        loading="lazy">
+                    </iframe>
+                </div>
 
-            <form action="https://formspree.io/f/xdabjenw" method="POST" class="wsc-contact-form" style="margin-top:40px;">
+                <a class="ts-text-link"
+                   href="https://teamup.com/ksqefxnfm1tv8mriaq"
+                   target="_blank" rel="noopener noreferrer">
+                    Open full range schedule ↗
+                </a>
+            </div>
 
-                <label>Name *</label>
-                <input type="text" name="name" required>
+        </section>
 
-                <label>Email *</label>
-                <input type="email" name="email" required>
+        <!-- =============================================
+             INFORMATION CARD NAVIGATION
+        ============================================== -->
 
-                <label>Message *</label>
-                <textarea name="message" rows="5" required></textarea>
+        <section class="ts-information" aria-labelledby="ts-information-title">
 
-                <button type="submit">Send Message</button>
-            </form>
+            <div class="ts-section-title">
+                <p>PLAN YOUR VISIT</p>
+                <h2 id="ts-information-title">Trap &amp; Skeet Information</h2>
+                <span>Everything you need to know before heading to the range.</span>
+            </div>
 
-            <!-- ⭐ THANK YOU MESSAGE -->
-            <div id="thankyou-message" style="display:none; text-align:center; padding:40px;">
-                <div class="thankyou-card" style="
-                    background:#ff9f43;
-                    padding:40px;
-                    border-radius:12px;
-                    color:white;
-                    font-size:1.4rem;
-                ">
-                    <h2>Thank You!</h2>
-                    <p>We will get back to you as soon as we can!</p>
+            <nav class="ts-card-grid" aria-label="Trap and Skeet information sections">
+
+                <button type="button" class="ts-card" data-target="info1" aria-controls="ts-expanded-content" aria-expanded="false">
+                    <span class="ts-card-icon" aria-hidden="true">i</span>
+                    <span class="ts-card-copy">
+                        <strong>General Information</strong>
+                        <span>Getting started at our range.</span>
+                        <span class="ts-card-link">Explore details →</span>
+                    </span>
+                </button>
+
+                <button type="button" class="ts-card" data-target="info2" aria-controls="ts-expanded-content" aria-expanded="false">
+                    <span class="ts-card-icon" aria-hidden="true">◷</span>
+                    <span class="ts-card-copy">
+                        <strong>Hours of Operation</strong>
+                        <span>Summer and winter schedules.</span>
+                        <span class="ts-card-link">View hours →</span>
+                    </span>
+                </button>
+
+                <button type="button" class="ts-card" data-target="info3" aria-controls="ts-expanded-content" aria-expanded="false">
+                    <span class="ts-card-icon" aria-hidden="true">$</span>
+                    <span class="ts-card-copy">
+                        <strong>Fees &amp; Memberships</strong>
+                        <span>Rates and membership options.</span>
+                        <span class="ts-card-link">View pricing →</span>
+                    </span>
+                </button>
+
+                <button type="button" class="ts-card" data-target="info4" aria-controls="ts-expanded-content" aria-expanded="false">
+                    <span class="ts-card-icon" aria-hidden="true">▤</span>
+                    <span class="ts-card-copy">
+                        <strong>2026 Member Pre-Shot Packages</strong>
+                        <span>Bronze, Silver and Gold packages.</span>
+                        <span class="ts-card-link">Compare packages →</span>
+                    </span>
+                </button>
+
+                <button type="button" class="ts-card" data-target="info5" aria-controls="ts-expanded-content" aria-expanded="false">
+                    <span class="ts-card-icon" aria-hidden="true">✓</span>
+                    <span class="ts-card-copy">
+                        <strong>Shooter Requirements</strong>
+                        <span>Licensing and protective equipment.</span>
+                        <span class="ts-card-link">Review requirements →</span>
+                    </span>
+                </button>
+
+                <button type="button" class="ts-card" data-target="info6" aria-controls="ts-expanded-content" aria-expanded="false">
+                    <span class="ts-card-icon" aria-hidden="true">▰</span>
+                    <span class="ts-card-copy">
+                        <strong>Ammunition Types</strong>
+                        <span>Approved target loads for each range.</span>
+                        <span class="ts-card-link">Check ammunition →</span>
+                    </span>
+                </button>
+
+                <button type="button" class="ts-card" data-target="info7" aria-controls="ts-expanded-content" aria-expanded="false">
+                    <span class="ts-card-icon" aria-hidden="true">☷</span>
+                    <span class="ts-card-copy">
+                        <strong>Range Rules</strong>
+                        <span>Safety rules and range procedures.</span>
+                        <span class="ts-card-link">Read the rules →</span>
+                    </span>
+                </button>
+
+                <button type="button" class="ts-card" data-target="info8" aria-controls="ts-expanded-content" aria-expanded="false">
+                    <span class="ts-card-icon" aria-hidden="true">☎</span>
+                    <span class="ts-card-copy">
+                        <strong>Contact Trap &amp; Skeet</strong>
+                        <span>Facilities, questions and enquiries.</span>
+                        <span class="ts-card-link">Contact us →</span>
+                    </span>
+                </button>
+
+            </nav>
+
+            <!-- EXPANDED INFORMATION PANEL -->
+            <div
+                class="ts-expanded-info"
+                id="ts-expanded-info"
+                aria-live="polite"
+                hidden>
+
+                <div class="ts-expanded-toolbar">
+                    <span class="ts-expanded-label">RANGE INFORMATION</span>
+
+                    <button
+                        type="button"
+                        class="ts-close-details"
+                        id="ts-close-details">
+                        Close Details ×
+                    </button>
+                </div>
+
+                <div id="ts-expanded-content"></div>
+            </div>
+
+        </section>
+
+        <!-- ORIGINAL INFORMATION SECTIONS -->
+        <div id="ts-detail-source" hidden>
+
+        <!-- =============================================
+             GENERAL INFORMATION
+        ============================================== -->
+
+        <section id="info1" class="ts-detail-section">
+            <div class="ts-detail-heading">
+                <span class="ts-detail-number">01</span>
+                <div>
+                    <p>WELCOME TO THE RANGE</p>
+                    <h2>General Information</h2>
                 </div>
             </div>
 
+            <p class="ts-intro">
+                Shooters wishing to shoot at WSC must complete the following.
+                Non-members are welcome.
+            </p>
+
+            <ol class="ts-numbered-list">
+                <li>Familiarize themselves with the WSC Range Safety Rules.</li>
+                <li>Review and sign the WSC Range Waiver Form annually.</li>
+                <li>Register and sign in at the range shack prior to shooting.</li>
+                <li>New members must attend a WSC Range Orientation and Safety Course at the earliest opportunity. A nominal one-time fee applies.</li>
+                <li>Beginner and novice shooters are welcome — instruction is available by appointment.</li>
+                <li>Range reservations are available for private functions, stags, hunting clubs, meet and greets, and more.</li>
+            </ol>
+        </section>
+
+        <!-- =============================================
+             HOURS OF OPERATION
+        ============================================== -->
+
+        <section id="info2" class="ts-detail-section">
+            <div class="ts-detail-heading">
+                <span class="ts-detail-number">02</span>
+                <div>
+                    <p>WHEN TO VISIT</p>
+                    <h2>Hours of Operation</h2>
+                </div>
+            </div>
+
+            <p class="ts-intro">
+                For up-to-date information, check the live Range Schedule.
+            </p>
+
+            <div class="ts-center-action">
+                <a href="https://teamup.com/ksqefxnfm1tv8mriaq"
+                   target="_blank" rel="noopener noreferrer"
+                   class="ts-primary-button">
+                    View Live Range Schedule ↗
+                </a>
+                <p><strong>Note:</strong> All scheduled hours are weather permitting.</p>
+            </div>
+
+            <div class="ts-hours-grid">
+                <div class="ts-hours-card">
+                    <div class="ts-hours-heading">
+                        <span>APRIL – OCTOBER</span>
+                        <h3>Summer Hours</h3>
+                    </div>
+
+                    <ul class="ts-hours-list">
+                        <li>
+                            <strong>Saturday</strong>
+                            <span>9am–2pm</span>
+                            <small>Skeet &amp; Trap Open · Last squad 1:30pm</small>
+                        </li>
+                        <li>
+                            <strong>Sunday</strong>
+                            <span>9am–2pm</span>
+                            <small>Skeet &amp; Trap Open · Last squad 1:30pm</small>
+                        </li>
+                        <li>
+                            <strong>Tuesday</strong>
+                            <span>4pm–7pm</span>
+                            <small>Skeet &amp; Trap Open · Last squad 6:30pm</small>
+                        </li>
+                        <li>
+                            <strong>Holidays</strong>
+                            <span>9am–2pm</span>
+                            <small>Skeet &amp; Trap Open · Last squad 1:30pm</small>
+                        </li>
+                        <li>
+                            <strong>Last Sunday of the month</strong>
+                            <span>9am–12pm</span>
+                            <small>Skeet &amp; Trap Open · Last squad 11:30am</small>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="ts-hours-card ts-winter-card">
+                    <div class="ts-hours-heading">
+                        <span>NOVEMBER – MARCH</span>
+                        <h3>Winter Hours</h3>
+                    </div>
+
+                    <ul class="ts-hours-list">
+                        <li>
+                            <strong>Saturday</strong>
+                            <span>10:30am–2:30pm</span>
+                            <small>Skeet &amp; Trap Open · Last squad 2:00pm</small>
+                        </li>
+                        <li>
+                            <strong>Sunday</strong>
+                            <span>Not scheduled</span>
+                        </li>
+                        <li>
+                            <strong>Tuesday</strong>
+                            <span>Not scheduled</span>
+                        </li>
+                        <li>
+                            <strong>Last Sunday of the month</strong>
+                            <span class="ts-closed-label">Range closed</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="ts-notice">
+                <strong>Please arrive 30 minutes before the last-squad time</strong>
+                to check available space. The range closes after the last squad
+                finishes shooting.
+            </div>
+
+            <p class="ts-important-note">
+                Extended hours are available for groups, events and private
+                parties. Use the Contact Trap &amp; Skeet section below.
+            </p>
+
+            <div class="ts-season-notes">
+                <h3>Seasonal Schedule Notes</h3>
+                <ul>
+                    <li>Summer: May to the end of October (approximately).</li>
+                    <li>The summer season may extend if temperatures stay above freezing.</li>
+                    <li>Winter scheduling is still in the planning phase.</li>
+                </ul>
+                <p class="ts-small-note">
+                    Seasonal dates and hours are subject to the live range schedule.
+                </p>
+            </div>
+        </section>
+
+        <!-- =============================================
+             FEES AND MEMBERSHIPS
+        ============================================== -->
+
+        <section id="info3" class="ts-detail-section">
+            <div class="ts-detail-heading">
+                <span class="ts-detail-number">03</span>
+                <div>
+                    <p>RANGE PRICING</p>
+                    <h2>Fees &amp; Memberships</h2>
+                </div>
+            </div>
+
+            <p class="ts-intro">Pricing per round of 25 clay targets.</p>
+
+            <div class="ts-pricing-grid">
+                <article class="ts-price-card">
+                    <span class="ts-price-label">WSC MEMBERS</span>
+                    <div class="ts-price">$9.00</div>
+                    <p>Per round with a Trap &amp; Skeet Associate Membership.</p>
+                </article>
+
+                <article class="ts-price-card ts-price-featured">
+                    <span class="ts-price-label">ASSOCIATE MEMBERSHIP</span>
+                    <div class="ts-price">$100</div>
+                    <p>Annual membership, available at the Range Shack.</p>
+                </article>
+
+                <article class="ts-price-card">
+                    <span class="ts-price-label">NON-MEMBERS</span>
+                    <div class="ts-price">$11.00</div>
+                    <p>Per round, plus a $10.00 day fee. Valid PAL required.</p>
+                </article>
+
+                <article class="ts-price-card">
+                    <span class="ts-price-label">YOUTH / STUDENT</span>
+                    <div class="ts-price">$5.00</div>
+                    <p>Per round for ages 18 or younger. Day fee does not apply.</p>
+                </article>
+            </div>
+
+            <div class="ts-notice">
+                <strong>Important pricing information</strong>
+                <ul>
+                    <li>Non-member rates also apply to WSC Members without an Associate Membership.</li>
+                    <li>WSC General Membership is available at the Range Shack.</li>
+                    <li>Bulk shooting packages are available. See the Member Pre-Shot Packages section.</li>
+                </ul>
+            </div>
+        </section>
+
+                    <!-- =============================================
+             MEMBER PRE-SHOT PACKAGES
+        ============================================== -->
+
+        <section id="info4" class="ts-detail-section">
+            <div class="ts-detail-heading">
+                <span class="ts-detail-number">04</span>
+                <div>
+                    <p>MEMBER SAVINGS</p>
+                    <h2>2026 Member Pre-Shot Packages</h2>
+                </div>
+            </div>
+
+            <p class="ts-intro">
+                Choose the package that best suits your shooting plans.
+            </p>
+
+            <div class="ts-package-grid">
+                <article class="ts-package-card">
+                    <span class="ts-package-tier">BRONZE</span>
+                    <div class="ts-package-price">$90</div>
+                    <p class="ts-package-rounds">10 rounds</p>
+                    <div class="ts-package-divider"></div>
+                    <p>No bonus rounds</p>
+                </article>
+
+                <article class="ts-package-card ts-package-silver">
+                    <span class="ts-package-tier">SILVER</span>
+                    <div class="ts-package-price">$180</div>
+                    <p class="ts-package-rounds">23 rounds</p>
+                    <div class="ts-package-divider"></div>
+                    <p>Includes 3 bonus rounds</p>
+                </article>
+
+                <article class="ts-package-card ts-package-gold">
+                    <span class="ts-package-tier">GOLD</span>
+                    <div class="ts-package-price">$270</div>
+                    <p class="ts-package-rounds">36 rounds</p>
+                    <div class="ts-package-divider"></div>
+                    <p>Includes 6 bonus rounds</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- =============================================
+             SHOOTER REQUIREMENTS
+        ============================================== -->
+
+        <section id="info5" class="ts-detail-section">
+            <div class="ts-detail-heading">
+                <span class="ts-detail-number">05</span>
+                <div>
+                    <p>BEFORE YOU SHOOT</p>
+                    <h2>Shooter Requirements</h2>
+                </div>
+            </div>
+
+            <div class="ts-requirements-grid">
+                <article class="ts-requirement">
+                    <span class="ts-requirement-symbol">PAL</span>
+                    <div>
+                        <h3>Valid PAL</h3>
+                        <p>All shooters must show proof of a valid PAL.</p>
+                    </div>
+                </article>
+
+                <article class="ts-requirement">
+                    <span class="ts-requirement-symbol">!</span>
+                    <div>
+                        <h3>Supervision</h3>
+                        <p>Non-PAL holders must be accompanied and supervised by a valid PAL holder.</p>
+                    </div>
+                </article>
+
+                <article class="ts-requirement">
+                    <span class="ts-requirement-symbol">✓</span>
+                    <div>
+                        <h3>Eye &amp; Ear Protection</h3>
+                        <p>Eye and ear protection are mandatory. Limited loaner equipment is available.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- =============================================
+             AMMUNITION TYPES
+        ============================================== -->
+
+        <section id="info6" class="ts-detail-section">
+            <div class="ts-detail-heading">
+                <span class="ts-detail-number">06</span>
+                <div>
+                    <p>APPROVED TARGET LOADS</p>
+                    <h2>Ammunition Types</h2>
+                </div>
+            </div>
+
+            <div class="ts-ammunition-grid">
+                <article class="ts-ammunition-card">
+                    <span class="ts-ammunition-label">SKEET RANGE</span>
+                    <h3>#9 Shot</h3>
+                    <p>Target loads</p>
+                </article>
+
+                <article class="ts-ammunition-card">
+                    <span class="ts-ammunition-label">TRAP RANGE</span>
+                    <h3>#7½ or #8 Shot</h3>
+                    <p>Target loads</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- =============================================
+             RANGE RULES
+        ============================================== -->
+
+        <section id="info7" class="ts-detail-section ts-rules-section">
+            <div class="ts-detail-heading">
+                <span class="ts-detail-number">07</span>
+                <div>
+                    <p>SAFETY COMES FIRST</p>
+                    <h2>Range Rules</h2>
+                </div>
+            </div>
+
+            <div class="ts-safety-banner">
+                <strong>SAFETY AND COMMON SENSE ARE IMPORTANT</strong>
+                <span>When in doubt, ask questions and check it out.</span>
+            </div>
+
+            <ol class="ts-rules-list">
+                <li>Safety glasses and hearing protection are required.</li>
+                <li>All shooters must have a valid PAL or be supervised by a PAL holder.</li>
+                <li>No drugs or alcohol in the vicinity of the ranges.</li>
+                <li>
+                    <strong>Skeet Range</strong>
+                    <ul>
+                        <li>Maximum 12-gauge; minimum barrel length 26 inches.</li>
+                        <li>Only 2¾-inch shells, #9 shot.</li>
+                        <li>Two shells allowed on Stations 1–7; one on Station 8.</li>
+                        <li>Actions open until in position.</li>
+                        <li>Tactical shotguns are not permitted.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Trap Range</strong>
+                    <ul>
+                        <li>Maximum 12-gauge; minimum barrel length 26 inches.</li>
+                        <li>Only 2¾-inch shells, #7½ shot or smaller.</li>
+                        <li>One shell loaded for singles.</li>
+                        <li>Tactical shotguns are not permitted.</li>
+                    </ul>
+                </li>
+                <li>Maintain safe muzzle direction at all times.</li>
+                <li>For a misfire or hang-fire, keep the action closed for 60 seconds, then inspect the barrel.</li>
+                <li>When transporting firearms: prove safe, action open, barrel up.</li>
+                <li>Obey all RSO commands.</li>
+                <li>Firearms must be unloaded with actions open when moving between stations.</li>
+                <li>Pick up spent hulls only after the firearm is in the rack.</li>
+                <li>Remove slings and accessories before attending firing lines.</li>
+            </ol>
+
+            <div class="ts-restricted-warning">
+                <h3>Restricted Firearms</h3>
+                <p>
+                    Firearms similar to the shotguns shown below are not permitted
+                    on the range.
+                </p>
+
+                <div class="ts-restricted-image">
+                    <img src="images/shotguns.png"
+                         alt="Examples of shotguns not permitted on the range"
+                         loading="lazy">
+                </div>
+
+                <p class="ts-revised-date">
+                    Revised and in effect as of May 2026
+                </p>
+            </div>
+        </section>
+
+        <!-- =============================================
+             CONTACT AND FACILITIES
+        ============================================== -->
+
+        <section id="info8" class="ts-detail-section ts-contact-section">
+            <div class="ts-detail-heading">
+                <span class="ts-detail-number">08</span>
+                <div>
+                    <p>GET IN TOUCH</p>
+                    <h2>Contact Trap &amp; Skeet</h2>
+                </div>
+            </div>
+
+            <div class="ts-contact-grid">
+
+                <div class="ts-facilities">
+
+                    <div class="ts-facility-block">
+                        <p class="ts-section-kicker">VISIT THE CLUB</p>
+                        <h3>Club House</h3>
+                        <p>Restaurant &amp; bar (hours vary).</p>
+                        <p>Check the WSC website or call for current hours.</p>
+                        <a href="tel:5199661600" class="ts-phone-link">
+                            519.966.1600
+                        </a>
+                    </div>
+
+                    <div class="ts-facility-block">
+                        <p class="ts-section-kicker">OUR RANGE</p>
+                        <h3>Range Facilities</h3>
+                        <ul class="ts-facility-list">
+                            <li>1 × Trap Field</li>
+                            <li>1 × Skeet Field</li>
+                            <li>1 × Pattern Board</li>
+                        </ul>
+                    </div>
+
+                    <div class="ts-equipment-notice">
+                        <p>We do not sell shotgun shells.</p>
+                        <p>We do not rent firearms.</p>
+                    </div>
+                </div>
+
+                <div class="ts-contact-form-card">
+                    <p class="ts-section-kicker">QUESTIONS OR GROUP BOOKINGS?</p>
+                    <h3>Contact Us</h3>
+                    <p class="ts-form-intro">
+                        Please fill in your information and we'll get back to you shortly.
+                    </p>
+
+                    <form action="https://formspree.io/f/xdabjenw"
+                          method="POST"
+                          class="wsc-contact-form">
+
+                        <label for="ts-name">Name *</label>
+                        <input id="ts-name" type="text" name="name" autocomplete="name" required>
+
+                        <label for="ts-email">Email *</label>
+                        <input id="ts-email" type="email" name="email" autocomplete="email" required>
+
+                        <label for="ts-message">Message *</label>
+                        <textarea id="ts-message" name="message" rows="5" required></textarea>
+
+                        <button type="submit">Send Message →</button>
+                        <p class="ts-form-status" role="status" aria-live="polite"></p>
+                    </form>
+
+                    <div class="ts-thankyou-message" hidden>
+                        <span class="ts-thankyou-icon">✓</span>
+                        <h3>Thank You!</h3>
+                        <p>We will get back to you as soon as we can!</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        </div>
+        <!-- END ORIGINAL INFORMATION SECTIONS -->
+
+        <!-- =============================================
+             WEATHER
+        ============================================== -->
+
+        <section class="ts-weather-section" aria-label="Weather forecast">
+            <div class="ts-weather-widget">
+                <div id="ww_41794d68d185f"
+                     v="1.3"
+                     loc="id"
+                     a='{"t":"responsive","lang":"en","sl_lpl":1,"ids":["wl4747"],"font":"Arial","sl_ics":"one_a","sl_sot":"celsius","cl_bkg":"image","cl_font":"#FFFFFF","cl_cloud":"#FFFFFF","cl_persp":"#81D4FA","cl_sun":"#FFC107","cl_moon":"#FFC107","cl_thund":"#FF5722"}'>
+                    More forecasts:
+                    <a href="https://oneweather.org/calgary/30_days/"
+                       id="ww_41794d68d185f_u"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Weather forecast Calgary 30 days
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </div>
+</main>
+
+    <!-- WEATHER WIDGET SCRIPT -->
+<script async src="https://app3.weatherwidget.org/js/?id=ww_41794d68d185f"></script>
+
+<!-- =====================================================
+     FOOTER — SHARED SITE FOOTER
+====================================================== -->
+
+<footer class="footer">
+    <div class="footer-container">
+
+        <div class="footer-column">
+            <h3>WINDSOR SPORTSMEN'S CLUB</h3>
+
+            <div class="footer-item">
+                <span>2401 Dougall Ave<br>Windsor, Ontario N8X 1T3</span>
+            </div>
+
+            <div class="footer-item">
+                <a href="tel:5199661243">(519) 966-1243</a>
+            </div>
+
+            <div class="footer-item">
+                <a href="mailto:info@windsorsportsmensclub.org">
+                    info@windsorsportsmensclub.org
+                </a>
+            </div>
+        </div>
+
+        <div class="footer-column">
+            <h3>QUICK LINKS</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="calendar.html">Calendar</a></li>
+                <li><a href="private-events.html">Rentals</a></li>
+                <li><a href="kitchen.html">Kitchen</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h3>MORE</h3>
+            <ul>
+                <li><a href="ofha.html">OFHA</a></li>
+                <li><a href="cheese-cracker.html">Cheese &amp; Cracker</a></li>
+                <li><a href="members.html">Members</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h3>HOURS</h3>
+            <p>Monday–Friday: Coming Soon!</p>
+            <p>Saturday: Coming Soon!</p>
+            <p>Sunday: Coming Soon!</p>
         </div>
 
     </div>
-</div>
 
-</div>
-
-</div>
-</div>
-
-<!-- ⭐ FULL-WIDTH WEATHER WIDGET AT BOTTOM -->
-<div class="ts-weather">
-    <div id="ww_41794d68d185f" v='1.3' loc='id'
-         a='{"t":"responsive","lang":"en","sl_lpl":1,"ids":["wl4747"],"font":"Arial","sl_ics":"one_a","sl_sot":"celsius","cl_bkg":"image","cl_font":"#FFFFFF","cl_cloud":"#FFFFFF","cl_persp":"#81D4FA","cl_sun":"#FFC107","cl_moon":"#FFC107","cl_thund":"#FF5722"}'>
-        More forecasts:
-        <a href="https://oneweather.org/calgary/30_days/"
-           id="ww_41794d68d185f_u" target="_blank">
-           Weather forecast Calgary 30 days
-        </a>
+    <div class="footer-bottom">
+        © 2026 Windsor Sportsmen's Club. All Rights Reserved.
     </div>
-</div>
-
-<!-- ⭐ REQUIRED SCRIPT FOR WEATHER WIDGET -->
-<script async src="https://app3.weatherwidget.org/js/?id=ww_41794d68d185f"></script>
-
-<!-- ⭐ FOOTER -->
-<footer>
-    <p>©2024 Windsor Sportsmen's Club. All Rights Reserved.</p>
 </footer>
 
-<!-- ⭐ OVERLAY SCRIPT -->
+<!-- MOBILE DROPDOWN NAVIGATION -->
 <script>
-document.querySelectorAll('.ts-card').forEach(card => {
-    card.addEventListener('click', function(e) {
-        e.preventDefault();
-        const target = this.getAttribute('href');
-        const overlay = document.querySelector(target);
-        overlay.style.display = 'flex';
-        document.body.style.overflow = 'hidden';
+document.querySelectorAll('.dropdown > a').forEach(link => {
+    link.addEventListener('click', function(event) {
+        if (window.innerWidth <= 900) {
+            event.preventDefault();
+            this.parentElement.classList.toggle('open');
+        }
     });
 });
+</script>
 
-function closeOverlay() {
-    document.querySelectorAll('.ts-overlay').forEach(o => o.style.display = 'none');
-    document.body.style.overflow = 'auto';
+<!-- TRAP & SKEET INFORMATION CARD INTERACTION -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const cards = document.querySelectorAll(
+        '#trap-skeet-page .ts-card[data-target]'
+    );
+
+    const source = document.getElementById('ts-detail-source');
+    const panel = document.getElementById('ts-expanded-info');
+    const content = document.getElementById('ts-expanded-content');
+    const closeButton = document.getElementById('ts-close-details');
+
+    if (!cards.length || !source || !panel || !content || !closeButton) {
+        return;
+    }
+
+    let activeCard = null;
+    let activeSection = null;
+
+    function returnSectionToSource(section) {
+        if (section && section.parentElement === content) {
+            source.appendChild(section);
+        }
+    }
+
+    function closeDetails() {
+        returnSectionToSource(activeSection);
+        activeSection = null;
+
+        if (activeCard) {
+            activeCard.classList.remove('is-active');
+            activeCard.setAttribute('aria-expanded', 'false');
+        }
+
+        activeCard = null;
+        panel.hidden = true;
+    }
+
+    cards.forEach(function (card) {
+        card.addEventListener('click', function () {
+            const targetId = card.dataset.target;
+            const targetSection = document.getElementById(targetId);
+
+            if (!targetSection) {
+                return;
+            }
+
+            if (activeCard === card) {
+                closeDetails();
+                return;
+            }
+
+            returnSectionToSource(activeSection);
+
+            if (activeCard) {
+                activeCard.classList.remove('is-active');
+                activeCard.setAttribute('aria-expanded', 'false');
+            }
+
+            content.appendChild(targetSection);
+            activeSection = targetSection;
+            activeCard = card;
+
+            card.classList.add('is-active');
+            card.setAttribute('aria-expanded', 'true');
+            panel.hidden = false;
+        });
+    });
+
+    closeButton.addEventListener('click', closeDetails);
+});
+</script>
+
+<!-- CONTACT FORM SUBMISSION -->
+<script>
+const tsForm = document.querySelector('.wsc-contact-form');
+
+if (tsForm) {
+    tsForm.addEventListener('submit', async function(event) {
+        event.preventDefault();
+
+        const button = tsForm.querySelector('button[type="submit"]');
+        const status = tsForm.querySelector('.ts-form-status');
+        const originalText = button.textContent;
+
+        button.disabled = true;
+        button.textContent = 'Sending...';
+        status.textContent = '';
+
+        try {
+            const response = await fetch(tsForm.action, {
+                method: 'POST',
+                body: new FormData(tsForm),
+                headers: { 'Accept': 'application/json' }
+            });
+
+            if (!response.ok) {
+                throw new Error('Form submission failed');
+            }
+
+            tsForm.hidden = true;
+            tsForm.parentElement.querySelector('.ts-thankyou-message').hidden = false;
+        } catch (error) {
+            status.textContent =
+                'Sorry, your message could not be sent. Please try again or contact the club by phone.';
+            button.disabled = false;
+            button.textContent = originalText;
+        }
+    });
 }
 </script>
 
-<!-- ⭐ MOBILE NAV SCRIPT -->
-<script>
-document.querySelectorAll('.dropdown > a').forEach(link => {
-    link.addEventListener('click', function(e) {
-        if (window.innerWidth <= 900) {
-            e.preventDefault();
-            this.parentElement.classList.toggle('open');
-        }
-    });
-});
-
-document.querySelectorAll('.dropdown-sub > a').forEach(link => {
-    link.addEventListener('click', function(e) {
-        if (window.innerWidth <= 900) {
-            e.preventDefault();
-            this.parentElement.classList.toggle('open');
-        }
-    });
-});
-</script>
-
-<!-- ⭐ UPDATED FORMSPREE SUBMISSION SCRIPT -->
-<script>
-document.querySelector('.wsc-contact-form').addEventListener('submit', async function(e) {
-    e.preventDefault();
-
-    const form = e.target;
-    const data = new FormData(form);
-
-    const response = await fetch(form.action, {
-        method: form.method,
-        body: data,
-        headers: { 'Accept': 'application/json' }
-    });
-
-    if (response.ok) {
-
-        /* Hide the form */
-        form.style.display = 'none';
-
-        /* Hide the Contact Us title + subtitle */
-        const title = document.querySelector('.mask-title');
-        const subtitle = document.querySelector('.mask-subtitle');
-
-        if (title) title.style.display = 'none';
-        if (subtitle) subtitle.style.display = 'none';
-
-        /* Show the thank-you card */
-        document.getElementById('thankyou-message').style.display = 'block';
-    }
-});
-</script>
-
-<script src="scripts.js"></script>
 </body>
 </html>
