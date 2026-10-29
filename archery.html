@@ -2,17 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Windsor Sportsmen’s Club</title>
+    <title>Archery – Windsor Sportsmen's Club</title>
 
-    <link rel="stylesheet" href="styles.css?v=7">
+    <!-- =========================================================
+         PAGE STYLESHEETS
+    ========================================================== -->
 
+    <link rel="stylesheet" href="styles/nav.css">
+    <link rel="stylesheet" href="styles/archery.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    
 </head>
 
-<body class="archery-page">
+<body class="archery-bg">
 
-<!-- =========================================================
+   <!-- =========================================================
      NAVIGATION (DIRECTLY INCLUDED)
 ========================================================= -->
 <header>
@@ -69,169 +75,474 @@
 
         </ul>
     </nav>
-</header>
 
-<!-- ARCHERY HEADER IMAGE -->
-<section class="archery-header">
-    <img 
-        src="images/Archery-Header1.png" 
-        alt="Archery Header Image" 
-        class="archery-header-img"
-    >
-</section>
+<!-- =================================================
+     ARCHERY PAGE
+================================================== -->
 
-<!-- ⭐ ARCHERY INFO — CARD 1 -->
-<section class="outer-card">
-    <div class="inner-card green-card">
+<main id="archery-page">
 
-        <h2 class="archery-title">Thursday Night Archery</h2>
+    <!-- HERO BANNER -->
 
-        <p class="archery-season">
-            The Archery Season will officially begin April 30th, 2026
-        </p>
+    <header class="archery-hero" style="margin-top: 120px;">
 
-    </div>
-</section>
+        <!-- HEADER BACKGROUND IMAGE -->
+        <div class="archery-hero-image"
+             role="img"
+             aria-label="Archery range and bow">
+        </div>
 
-<!-- ⭐ ARCHERY INFO — CARD 2 -->
-<section class="outer-card">
-    <div class="inner-card green-card">
+        <div class="archery-hero-content">
 
-        <p class="archery-subtitle">
-            Thursday Night Archery is Broken Down into 2 Sessions:
-        </p>
+            <p class="archery-hero-eyebrow">
+                WINDSOR SPORTSMEN'S CLUB
+            </p>
 
-        <p class="archery-times">
-            5:30 - 6:30 pm<br>
-            6:30 - 7:30 pm<br>
-            Due to low participation, session 3 has been removed until further notice.<br>
-            Sessions 1 and 2 are open to all ages.<br>
-        </p>
+            <h1>ARCHERY</h1>
 
-        <p class="archery-simple">
-            No Experience Required.<br>
-            No Registration Required.<br>
-            Simply Show up and Shoot
-        </p>
+            <p class="archery-hero-subtitle">
+                ACCURACY. CONCENTRATION. FUN.
+            </p>
 
-        <p class="archery-pricing">
-            $5.00 for Non-Members, $3.00 for Members.
-        </p>
+            <span class="archery-gold-line"></span>
 
-        <p class="archery-weather">
-            Inclement Weather Will Cancel Archery for the Evening
-        </p>
+            <p class="archery-hero-tagline">
+                THURSDAY NIGHT ARCHERY
+            </p>
+
+        </div>
+
+    </header>
+
+<!-- INTRODUCTION -->
+
+<section class="archery-intro archery-container">
+
+    <!-- LEFT SIDE: ARCHERY PHOTO -->
+    <div class="archery-intro-image archery-image-placeholder">
+
+        <img
+            src="images/20261004_140812.jpg"
+            alt="Archery targets at the club"
+        >
 
     </div>
-</section>
 
-<!-- ⭐ ARCHERY INFO — CARD 3 -->
-<section class="outer-card">
-    <div class="inner-card green-card">
+    <!-- RIGHT SIDE: INTRODUCTION TEXT -->
+    <div class="archery-intro-card">
 
-        <p class="archery-private">
-            For private events please contact us using the form below.<br>
-            Private events require a minimum of 10 participants and 4 weeks notice.<br>
-            Pricing subject to change.
+        <p class="archery-small-label">
+            WINDSOR SPORTSMEN'S CLUB
         </p>
 
+        <h2>Thursday Night Archery</h2>
+
+        <span class="archery-heading-line"></span>
+
+        <p class="archery-intro-date">
+            The Archery Season will officially begin
+            <strong>April 30th, 2026</strong>
+        </p>
+
+        <ul class="archery-feature-list">
+
+            <li>
+                <span class="archery-feature-icon" aria-hidden="true">♟</span>
+                <span>No Experience Required</span>
+            </li>
+
+            <li>
+                <span class="archery-feature-icon" aria-hidden="true">✓</span>
+                <span>No Registration Required</span>
+            </li>
+
+            <li>
+                <span class="archery-feature-icon" aria-hidden="true">◎</span>
+                <span>Simply Show Up and Shoot</span>
+            </li>
+
+        </ul>
+
     </div>
+
 </section>
 
-<section class="outer-card wide-card">
-    <div class="inner-card green-card wide-inner">
+        <!-- SESSION TIMES AND PRICING -->
 
-        <div class="archery-image-wrapper">
-            <img src="images/20261004_140812.jpg" alt="Archery Image 1">
-            <img src="images/archery2.png" alt="Archery Image 2">
-            <img src="images/ArcherySet-Up.png" alt="Archery Set Up">
+        <section class="archery-info-grid archery-container"
+                 aria-label="Archery session times and pricing">
+
+            <article class="archery-info-card">
+
+                <span class="archery-info-icon" aria-hidden="true">◷</span>
+
+                <p class="archery-small-label">SESSION 1</p>
+
+                <h3>5:30 – 6:30 pm</h3>
+
+                <span class="archery-mini-line"></span>
+
+                <p>Open to all ages.</p>
+
+            </article>
+
+            <article class="archery-info-card">
+
+                <span class="archery-info-icon" aria-hidden="true">◷</span>
+
+                <p class="archery-small-label">SESSION 2</p>
+
+                <h3>6:30 – 7:30 pm</h3>
+
+                <span class="archery-mini-line"></span>
+
+                <p>Open to all ages.</p>
+
+            </article>
+
+            <article class="archery-info-card">
+
+                <span class="archery-info-icon" aria-hidden="true">$</span>
+
+                <p class="archery-small-label">PRICING</p>
+
+                <div class="archery-prices">
+                    <p>$5.00 for Non-Members</p>
+                    <p>$3.00 for Members</p>
+                </div>
+
+            </article>
+
+        </section>
+
+
+        <!-- WEATHER AND CANCELLATIONS -->
+
+<section class="archery-alert-grid archery-container">
+
+    <article class="archery-weather-card">
+
+        <img
+            src="images/weatherarchery250x72px.png"
+            alt="Archery weather notice"
+            class="archery-weather-image"
+        >
+
+    </article>
+
+    <article class="archery-cancellation-card">
+
+        <div class="archery-warning-icon" aria-hidden="true">!</div>
+
+        <div>
+            <h3>Archery Cancellations</h3>
+            <p>Oct 15th 2026</p>
+        </div>
+
+    </article>
+
+</section>
+
+        <!-- CALENDAR AND PRIVATE EVENTS -->
+
+<section class="archery-lower-grid archery-container">
+
+    <article class="archery-calendar-card">
+
+        <img
+            src="images/calendarimgarchery.png"
+            alt=""
+            class="archery-calendar-image"
+            aria-hidden="true"
+        >
+
+        <div class="archery-calendar-content">
+
+            <span class="archery-calendar-icon"
+                  aria-hidden="true">▦</span>
+
+            <div>
+                <h2>Archery Calendar 2026</h2>
+
+                
+            <a
+                href="https://calendar.google.com/calendar/embed?src=4ce53730cd1fa998a93d1d41cbc800535bea0e3bdc8a513fe752bfe8b943680c%40group.calendar.google.com&ctz=America%2FToronto&showPrint=0&showTabs=0&showCalendars=0&showTz=0"
+                class="archery-button"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <span aria-hidden="true">▣</span>
+                VIEW CALENDAR
+            </a>
+
+            </div>
+
+        </div>
+
+    </article>
+
+            <div class="archery-private-events">
+
+                <div class="archery-private-image archery-image-placeholder">
+
+                    <!-- IMAGE PLACEHOLDER:
+                         Replace images/archery-equipment.jpg with your photo. -->
+
+                    <img
+                        src="images/archery-equipment.jpg"
+                        alt="Archery equipment"
+                        onerror="this.style.display='none'"
+                    >
+
+                    <span class="archery-placeholder-label">
+                        ARCHERY PHOTO
+                    </span>
+
+                </div>
+
+                <article class="archery-private-card">
+
+                    <h2>Private Events</h2>
+
+                    <span class="archery-heading-line"></span>
+
+                    <p>
+                        For private events please contact us using the form below.
+                    </p>
+
+                    <p>
+                        Private events require a minimum of 10 participants
+                        and 4 weeks notice.
+                    </p>
+
+                    <p>Pricing subject to change.</p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONTACT FORM -->
+
+        <section class="archery-contact-section archery-container"
+                 id="contact-archery">
+
+            <div class="archery-contact-intro">
+
+                <div class="archery-contact-heading">
+
+                    <span class="archery-contact-icon"
+                          aria-hidden="true">✉</span>
+
+                    <div>
+                        <h2>Contact Archery</h2>
+                        <span class="archery-heading-line"></span>
+                    </div>
+
+                </div>
+
+                <p>
+                    Have a question about Archery?
+                </p>
+
+                <p>
+                    Send us a message below and it will be delivered directly
+                    to the coordinator.
+                </p>
+
+            </div>
+
+
+            <!--
+                This mailto form opens the visitor's default email program.
+                For reliable direct delivery, connect a form service or backend.
+            -->
+   
+<form
+    class="archery-contact-form"
+    action="https://formsubmit.co/adamveldhuis@hotmail.ca"
+    method="POST"
+>
+    <!-- FormSubmit settings -->
+    <input type="hidden" name="_subject" value="New Archery Inquiry - Windsor Sportsmen's Club">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_captcha" value="false">
+
+    <div class="archery-form-row">
+
+        <div class="archery-form-field">
+            <label for="archery-name">Name *</label>
+            <input
+                type="text"
+                id="archery-name"
+                name="name"
+                placeholder="Your Name"
+                autocomplete="name"
+                required
+            >
+        </div>
+
+        <div class="archery-form-field">
+            <label for="archery-email">Email *</label>
+            <input
+                type="email"
+                id="archery-email"
+                name="email"
+                placeholder="Your Email"
+                autocomplete="email"
+                required
+            >
         </div>
 
     </div>
-</section>
 
-<!-- ARCHERY CANCELLATIONS -->
+    <div class="archery-form-row archery-subject-row">
 
-    <!-- ARCHERY CANCELLATIONS -->
-<section class="outer-card">
-    <div class="inner-card green-card">
+        <div class="archery-form-field">
+            <label for="archery-subject">Subject *</label>
+            <input
+                type="text"
+                id="archery-subject"
+                name="inquiry_subject"
+                placeholder="e.g. Archery Inquiry"
+                required
+            >
+        </div>
 
-        <h2 class="archery-cancel-title">Archery Cancellations</h2>
-
-        <div class="archery-dates">
-            Oct 15th 2026<br>
+        <div class="archery-form-field archery-math-field">
+            <label for="archery-answer">3 + 4 = ? *</label>
+            <input
+                type="number"
+                id="archery-answer"
+                name="math_answer"
+                min="7"
+                max="7"
+                step="1"
+                required
+            >
         </div>
 
     </div>
-</section>
-    
-<!-- ARCHERY CALENDAR -->
-<section class="outer-card wide-card">
-    <div class="inner-card green-card wide-inner">
 
-        <h2 class="archery-calendar-title">Archery Calendar 2026</h2>
+    <div class="archery-form-field">
+        <label for="archery-message">Message *</label>
+        <textarea
+            id="archery-message"
+            name="message"
+            rows="4"
+            placeholder="Write your message here..."
+            required
+        ></textarea>
+    </div>
 
-        <div class="calendar-container">
-            <div class="calendar-wrapper">
-                <iframe 
-                    src="https://calendar.google.com/calendar/embed?src=4ce53730cd1fa998a93d1d41cbc800535bea0e3bdc8a513fe752bfe8b943680c%40group.calendar.google.com&ctz=America%2FToronto&showPrint=0&showTabs=0&showCalendars=0&showTz=0"
-                    style="border:0"
-                    frameborder="0"
-                    scrolling="no">
-                </iframe>
+    <div class="archery-form-bottom">
+
+        <label class="archery-consent">
+            <input
+                type="checkbox"
+                name="consent"
+                value="Agreed"
+                required
+            >
+            <span>
+                I agree that my information may be used to process
+                this inquiry.
+            </span>
+        </label>
+
+        <button type="submit" class="archery-button">
+            SEND MESSAGE
+        </button>
+
+    </div>
+
+</form>
+
+        </section>
+
+    </main>
+
+
+   <!-- =========================================================
+     FOOTER
+========================================================= -->
+    <footer class="footer">
+    <div class="footer-container">
+
+        <div class="footer-column">
+            <h3>WINDSOR SPORTSMEN'S CLUB</h3>
+
+            <div class="footer-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>
+                    2401 Dougall Ave<br>
+                    Windsor, Ontario N8X 1T3
+                </span>
+            </div>
+
+            <div class="footer-item">
+                <i class="fas fa-phone"></i>
+                <span>(519) 966-1243</span>
+            </div>
+
+            <div class="footer-item">
+                <i class="fas fa-envelope"></i>
+                <span>info@windsorsportsmensclub.org</span>
             </div>
         </div>
 
-    </div>
-</section>
+        <div class="footer-column">
+    <h3>QUICK LINKS</h3>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="calendar.html">Calendar</a></li>
+        <li><a href="private-events.html">Rentals</a></li>
+        <li><a href="kitchen.html">Kitchen</a></li>
+    </ul>
+</div>
 
-<section class="archery-cancel">
-  <h2>Contact Archery</h2>
-  <p class="archery-cancel-intro">
-    Have a question about Archery? Send us a message below and it will be delivered directly to the coordinator.
-  </p>
+<div class="footer-column">
+    <h3>MORE</h3>
+    <ul>
+        <li><a href="ofha.html">OFHA</a></li>
+        <li><a href="cheese-cracker.html">Cheese &amp; Cracker</a></li>
+        <li><a href="members.html">Members</a></li>
+    </ul>
+</div>
 
-  <form class="archery-cancel-form" action="https://formsubmit.co/adamveldhuis@hotmail.ca" method="POST">
-    <div class="field-row">
-      <label for="ac-name">Name</label>
-      <input type="text" id="ac-name" name="name" placeholder="Your Name" required>
-    </div>
+        <div class="footer-column">
+            <h3>HOURS</h3>
+            <p>Monday - Friday: Coming Soon!</p>
+            <p>Saturday: Coming Soon!</p>
+            <p>Sunday: Coming Soon!</p>
+        </div>
 
-    <div class="field-row">
-      <label for="ac-email">Email</label>
-      <input type="email" id="ac-email" name="email" placeholder="Your Email" required>
-    </div>
-
-    <div class="field-row">
-      <label for="ac-subject">Subject</label>
-      <input type="text" id="ac-subject" name="subject" placeholder="e.g. Archery Inquiry" required>
-    </div>
-
-    <div class="field-row">
-      <label for="ac-message">Message</label>
-      <textarea id="ac-message" name="message" rows="4" placeholder="Write your message here..." required></textarea>
     </div>
 
-    <div class="field-row field-inline">
-      <label for="ac-captcha">3 + 4 = ?</label>
-      <input type="text" id="ac-captcha" name="captcha" placeholder="Your answer" required>
+    <div class="footer-bottom">
+        © 2026 Windsor Sportsmen's Club. All Rights Reserved.
     </div>
-
-    <div class="field-row field-checkbox">
-      <label>
-        <input type="checkbox" name="consent" required>
-        I agree that my information may be used to process this inquiry.
-      </label>
-    </div>
-
-    <button type="submit" class="ac-submit">Send Message</button>
-  </form>
-</section>
-
-<!-- ⭐ FOOTER -->
-<footer class="site-footer">
-    <p>©2024 Windsor Sportsmen's Club. All Rights Reserved.</p>
 </footer>
+    
+<div id="footer-placeholder"></div>
+<script src="scripts/load-footer.js"></script>
+
+
+    <!-- Mobile navigation toggle -->
+    <script>
+        const menuToggle = document.querySelector(".mobile-menu-toggle");
+        const navLinks = document.querySelector(".nav-links");
+
+        if (menuToggle && navLinks) {
+            menuToggle.addEventListener("click", function () {
+                const isOpen = navLinks.classList.toggle("nav-open");
+                menuToggle.setAttribute("aria-expanded", isOpen);
+            });
+        }
+    </script>
+    
 <script src="scripts.js"></script>
 </body>
 </html>
