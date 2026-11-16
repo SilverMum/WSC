@@ -2,23 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Windsor Sportsmen’s Club</title>
-    <link rel="stylesheet" href="styles.css?v=7">
+    <title>Club Calendar | Windsor Sportsmen's Club</title>
+
+    <link rel="stylesheet" href="styles/nav.css">
     <link rel="stylesheet" href="styles/calendar.css">
-   
 </head>
 
 <body class="calendar-bg">
 
 <!-- =========================================================
-     NAVIGATION (DIRECTLY INCLUDED)
+     NAVIGATION — PRESERVED
 ========================================================= -->
 <header>
     <nav class="main-nav">
 
-        <!-- LOGO -->
         <div class="logo">
             <img src="images/WINDSOR SPORTSMANS REMAKE.png"
                  alt="Windsor Sportsmen’s Club Logo">
@@ -26,7 +25,6 @@
 
         <div class="nav-spacer"></div>
 
-        <!-- NAV LINKS -->
         <ul class="nav-links">
 
             <li><a href="index.html">Home</a></li>
@@ -34,74 +32,217 @@
             <li><a href="private-events.html">Rentals</a></li>
             <li><a href="kitchen.html">Kitchen</a></li>
 
-            <!-- ACTIVITIES DROPDOWN -->
             <li class="dropdown">
                 <a href="#">Activities ▾</a>
 
                 <ul class="dropdown-menu">
-
                     <li><a href="trap-skeet.html">Trap & Skeet</a></li>
                     <li><a href="archery.html">Archery</a></li>
                     <li><a href="air-rifle.html">Air Rifle</a></li>
-                    
+
                     <li>
                         <a href="KnifeAxe.html" class="knifeaxe-link">
                             Knife & Axe<br>
                             <span class="knifeaxe-sub">Throwing</span>
                         </a>
                     </li>
-
                 </ul>
             </li>
 
-             <!-- MORE DROPDOWN -->
             <li class="dropdown">
                 <a href="#">More ▾</a>
 
                 <ul class="dropdown-menu">
-
                     <li><a href="ofha.html">OFHA</a></li>
-                    <li><a href="cheese-cracker.html">Cheese & Cracker</a></li>                
+                    <li><a href="cheese-cracker.html">Cheese & Cracker</a></li>
                     <li><a href="members.html">Members</a></li>
-
                 </ul>
             </li>
 
         </ul>
     </nav>
 </header>
-    
-<!-- Spacer under fixed nav -->
-<section style="height: 180px;"></section>
 
-<!-- ⭐ REMOVED HEADER IMAGE SECTION HERE -->
-
-<!-- ⭐ RED CARD CALENDAR SECTION -->
-<section id="wsc-calendar" class="calendar-page">
-
-    <h1 class="calendar-title">WSC Calendar 2026</h1>
-
-    <div class="calendar-container">
-
-        <div class="calendar-wrapper">
-            <iframe 
-                src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FToronto&showPrint=0&title&showTz=0&showTitle=0&src=ZGQ4ODJmMWJhODBlNTgzYTQwMGI0MzFlNTgxOTY0NjVmZmNlMDViMzJhZDIxOTI2NTg2YjIxMTAzNDBkMmEwMkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23d81b60"
-                style="border-width:0"
-                width="100%"
-                height="600"
-                frameborder="0"
-                scrolling="no">
-            </iframe>
-        </div>
-
-    </div>
-
-</section>
 
 <!-- =========================================================
-     FOOTER
+     SPACE BELOW FIXED NAVIGATION
 ========================================================= -->
-    <footer class="footer">
+<div class="calendar-nav-spacer"></div>
+
+
+<!-- =========================================================
+     MAIN CALENDAR PAGE
+========================================================= -->
+<main id="wsc-calendar" class="calendar-page">
+
+    <!-- PAGE INTRO -->
+    <section class="calendar-heading">
+
+        <p class="calendar-eyebrow">
+            WINDSOR SPORTSMEN'S CLUB
+        </p>
+
+        <h1 class="calendar-title">
+            CLUB <span>CALENDAR</span>
+        </h1>
+
+        <p class="calendar-subtitle">
+            Stay up to date with club events, activities and schedules.
+        </p>
+
+        <div class="heading-divider"></div>
+
+    </section>
+
+
+    <!-- =====================================================
+         CALENDAR LAYOUT
+    ====================================================== -->
+    <section class="calendar-layout">
+
+
+        <!-- LEFT SIDE: ACTIVITY CALENDARS -->
+        <aside class="activity-sidebar">
+
+            <div class="sidebar-heading">
+
+                <span class="sidebar-kicker">
+                    WSC SCHEDULES
+                </span>
+
+                <h2>Activity<br>Calendars</h2>
+
+                <p>
+                    Select an activity below to view its schedule.
+                </p>
+
+            </div>
+
+
+            <!-- TRAP & SKEET -->
+            <a
+                href="https://teamup.com/ksqefxnfm1tv8mriaq"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="activity-calendar-button trap-button">
+
+                <span class="activity-icon">01</span>
+
+                <span class="activity-button-text">
+                    <strong>Trap & Skeet</strong>
+                    <small>Live Range Schedule</small>
+                </span>
+
+                <span class="activity-arrow">↗</span>
+
+            </a>
+
+            <p class="seasonal-note">NEW winter schedule</p>
+
+            <!-- ARCHERY -->
+            <a
+                href="https://calendar.google.com/calendar/embed?src=4ce53730cd1fa998a93d1d41cbc800535bea0e3bdc8a513fe752bfe8b943680c%40group.calendar.google.com&ctz=America%2FToronto&showPrint=0&showTabs=0&showCalendars=0&showTz=0"
+                class="activity-calendar-button archery-button"
+                target="_blank"
+                rel="noopener noreferrer">
+
+                <span class="activity-icon">02</span>
+
+                <span class="activity-button-text">
+                <strong>Archery</strong>
+                <small>View Archery Calendar</small>
+                </span>
+
+                <span class="activity-arrow">→</span>
+
+            </a>
+
+            <p class="seasonal-note">See you next spring!</p>
+
+
+            <!-- FUTURE CALENDAR PLACEHOLDER -->
+            <!--
+            To add another activity calendar later,
+            copy one of the buttons above and change:
+
+            1. The link destination
+            2. The activity number
+            3. The activity name
+            4. The description
+            -->
+
+
+            <div class="sidebar-note">
+
+                <span class="note-line"></span>
+
+                <p>
+                    More activity calendars will be added as
+                    they become available.
+                </p>
+
+            </div>
+
+        </aside>
+
+
+
+        <!-- RIGHT SIDE: MAIN CLUB CALENDAR -->
+        <section class="main-calendar-panel">
+
+            <div class="main-calendar-header">
+
+                <div>
+                    <span class="calendar-panel-kicker">
+                        CLUB-WIDE EVENTS
+                    </span>
+
+                    <h2>WSC Calendar 2026</h2>
+
+                    <p>
+                        Upcoming events and important club dates.
+                    </p>
+                </div>
+
+                <div class="live-indicator">
+                    <span class="live-dot"></span>
+                    LIVE CALENDAR
+                </div>
+
+            </div>
+
+
+            <!-- EXISTING GOOGLE CALENDAR -->
+            <div class="calendar-frame-wrapper">
+
+                <iframe
+                    src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FToronto&showPrint=0&title&showTz=0&showTitle=0&src=ZGQ4ODJmMWJhODBlNTgzYTQwMGI0MzFlNTgxOTY0NjVmZmNlMDViMzJhZDIxOTI2NTg2YjIxMTAzNDBkMmEwMkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23d81b60"
+                    width="100%"
+                    height="600"
+                    frameborder="0"
+                    scrolling="no"
+                    title="Windsor Sportsmen's Club Main Calendar">
+                </iframe>
+
+            </div>
+
+            <div class="calendar-panel-footer">
+                <span>WINDSOR SPORTSMEN'S CLUB</span>
+                <span>ALL TIMES EASTERN</span>
+            </div>
+
+        </section>
+
+    </section>
+
+</main>
+
+
+<!-- =========================================================
+     FOOTER — PRESERVED
+========================================================= -->
+<footer class="footer">
+
     <div class="footer-container">
 
         <div class="footer-column">
@@ -126,27 +267,33 @@
             </div>
         </div>
 
-        <div class="footer-column">
-    <h3>QUICK LINKS</h3>
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="calendar.html">Calendar</a></li>
-        <li><a href="private-events.html">Rentals</a></li>
-        <li><a href="kitchen.html">Kitchen</a></li>
-    </ul>
-</div>
 
-<div class="footer-column">
-    <h3>MORE</h3>
-    <ul>
-        <li><a href="ofha.html">OFHA</a></li>
-        <li><a href="cheese-cracker.html">Cheese &amp; Cracker</a></li>
-        <li><a href="members.html">Members</a></li>
-    </ul>
-</div>
+        <div class="footer-column">
+            <h3>QUICK LINKS</h3>
+
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="calendar.html">Calendar</a></li>
+                <li><a href="private-events.html">Rentals</a></li>
+                <li><a href="kitchen.html">Kitchen</a></li>
+            </ul>
+        </div>
+
+
+        <div class="footer-column">
+            <h3>MORE</h3>
+
+            <ul>
+                <li><a href="ofha.html">OFHA</a></li>
+                <li><a href="cheese-cracker.html">Cheese & Cracker</a></li>
+                <li><a href="members.html">Members</a></li>
+            </ul>
+        </div>
+
 
         <div class="footer-column">
             <h3>HOURS</h3>
+
             <p>Monday - Friday: Coming Soon!</p>
             <p>Saturday: Coming Soon!</p>
             <p>Sunday: Coming Soon!</p>
@@ -154,14 +301,17 @@
 
     </div>
 
+
     <div class="footer-bottom">
         © 2026 Windsor Sportsmen's Club. All Rights Reserved.
     </div>
-        
+
 </footer>
-    
+
+
 <div id="footer-placeholder"></div>
 
 <script src="scripts.js"></script>
+
 </body>
 </html>
