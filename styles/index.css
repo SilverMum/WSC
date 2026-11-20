@@ -728,3 +728,46 @@
     }
 
 }
+
+
+/* =========================================================
+   FACEBOOK CARD — CHEESE & CRACKER BACKGROUND
+========================================================= */
+
+.home .facebook-card {
+    /* Use the Cheese & Cracker Club image */
+    background-image: url("../images/Cheese and Cracker Club homepage.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+
+    /* Fill the entire Facebook column */
+    width: 100%;
+    max-width: none;
+    min-height: 400px;
+    box-sizing: border-box;
+
+    /* Keep Facebook content at the top */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+
+    padding: 20px 18px;
+
+    /* Remove the old card appearance */
+    border: none;
+    box-shadow: none;
+    border-radius: 8px;
+}
+
+/* Make sure the card also fills its space on mobile */
+@media (max-width: 600px) {
+    .home .facebook-card {
+        width: 100%;
+        max-width: none;
+        min-height: 400px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
