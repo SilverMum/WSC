@@ -771,3 +771,109 @@
         margin-right: 0;
     }
 }
+
+
+/* =========================================================
+   FACEBOOK + CHEESE & CRACKER COLUMN
+========================================================= */
+
+.home .facebook-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 22px;
+    width: 100%;
+}
+
+/* Remove old Cheese & Cracker background image */
+.home .facebook-card {
+    background-image: none !important;
+    min-height: auto;
+    height: auto;
+    width: 100%;
+    max-width: 300px;
+    flex-shrink: 0;
+}
+
+/* Cheese & Cracker information card */
+.home .cheese-club-card {
+    width: 100%;
+    max-width: 300px;
+    padding: 22px 18px;
+    background: #f3eee6;
+    border: 1.5px solid #d8cfc0;
+    border-radius: 10px;
+    text-align: center;
+    color: #101c2e;
+    font-family: inherit;
+    box-sizing: border-box;
+}
+
+/* Heading */
+.home .cheese-club-card h3 {
+    font-family: inherit;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin: 0 0 12px;
+    color: #101c2e;
+}
+
+/* Decorative divider */
+.home .cheese-club-line {
+    display: block;
+    width: 65px;
+    height: 2px;
+    background: #c0392b;
+    margin: 0 auto 16px;
+}
+
+/* Main information */
+.home .cheese-club-card p {
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.6;
+    margin: 0 0 12px;
+    color: #101c2e;
+}
+
+.home .cheese-club-card strong {
+    font-weight: 700;
+}
+
+/* Welcome message */
+.home .cheese-club-card .cheese-club-welcome {
+    color: #c0392b;
+    font-weight: 700;
+    margin-top: 14px;
+}
+
+/* Annual membership fee */
+.home .cheese-club-card .cheese-club-fee {
+    font-size: 18px;
+    font-weight: 700;
+    color: #c0392b;
+    margin: 10px 0;
+}
+
+/* Closing message */
+.home .cheese-club-card .cheese-club-closing {
+    font-weight: 700;
+    margin: 14px 0 0;
+    letter-spacing: 1px;
+}
+
+/* Mobile adjustments */
+@media (max-width: 600px) {
+
+    .home .facebook-column {
+        gap: 18px;
+    }
+
+    .home .cheese-club-card {
+        max-width: 100%;
+        padding: 22px 20px;
+    }
+
+}
